@@ -38,6 +38,13 @@
       <Association Name="congViec_nhanVien" Member="nhanViens" ThisKey="maCV" OtherKey="maCV" Type="nhanVien" />
     </Type>
   </Table>
+  <Table Name="dbo.HangSP" Member="HangSPs">
+    <Type Name="HangSP">
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="HangSP_sanPham" Member="sanPhams" ThisKey="maHang" OtherKey="maHang" Type="sanPham" />
+    </Type>
+  </Table>
   <Table Name="dbo.hoadDonNhap" Member="hoadDonNhaps">
     <Type Name="hoadDonNhap">
       <Column Name="maHDN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -68,6 +75,8 @@
     <Type Name="khachHang">
       <Column Name="maKH" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -88,6 +97,9 @@
     <Type Name="nhanVien">
       <Column Name="maNV" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngVaoLam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -114,9 +126,11 @@
       <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="sanPham_chiTietHDN" Member="chiTietHDNs" ThisKey="maSP" OtherKey="maSP" Type="chiTietHDN" />
       <Association Name="sanPham_chiTietHDX" Member="chiTietHDXes" ThisKey="maSP" OtherKey="maSP" Type="chiTietHDX" />
       <Association Name="sanPham_chiTietSP" Member="chiTietSPs" ThisKey="maSP" OtherKey="maSP" Type="chiTietSP" />
+      <Association Name="HangSP_sanPham" Member="HangSP" ThisKey="maHang" OtherKey="maHang" Type="HangSP" IsForeignKey="true" />
       <Association Name="nhomSP_sanPham" Member="nhomSP" ThisKey="maLoai" OtherKey="maLoai" Type="nhomSP" IsForeignKey="true" />
     </Type>
   </Table>

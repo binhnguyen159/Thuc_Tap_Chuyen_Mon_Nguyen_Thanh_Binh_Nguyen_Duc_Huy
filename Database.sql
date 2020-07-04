@@ -1,4 +1,5 @@
-﻿create database TTCM
+﻿
+create database TTCM
 go
 use TTCM
 go
@@ -105,9 +106,9 @@ thanhTien float,
 primary key(maHDX,maSP)
 )
 go
-create table GioHang(
+--create table GioHang(
 	
-)
+--)
 
 go
 alter table nhanVien add foreign key(maCV) references congViec(maCV)
@@ -121,6 +122,8 @@ go
 alter table hoadDonXuat add foreign key (maNV) references nhanVien(maNV)
 go
 alter table sanPham add foreign key (maLoai) references nhomSP (maLoai)
+go
+alter table Sanpham add foreign key (mahang) references HangSP (maHang)
 go
 alter table chiTietHDN add foreign key (maSP) references sanPham(maSP)
 go

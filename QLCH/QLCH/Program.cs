@@ -16,11 +16,12 @@ namespace QLCH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
+            //<<<<<<< HEAD
+            //            Application.Run(new frmFuction());
+            //=======
+            //            Application.Run(new FrmSale());
+            //>>>>>>> f71822bad9db7fcd445c073b8b21cec2ab8ee825
             Application.Run(new frmFuction());
-=======
-            Application.Run(new FrmSale());
->>>>>>> f71822bad9db7fcd445c073b8b21cec2ab8ee825
         }
     }
 }
