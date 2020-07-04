@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCH.Uc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace QLCH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSale());
+            Application.Run(new FormTest());
         }
     }
 }

@@ -32,14 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuction));
             this.pnlTab = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.pnlLogo = new Guna.UI.WinForms.GunaPanel();
-            this.pnlTitle = new Guna.UI.WinForms.GunaPanel();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.pnlContent = new Guna.UI.WinForms.GunaPanel();
-            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.ptbBack = new Guna.UI.WinForms.GunaPictureBox();
-            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
+            this.btnProvider = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnReport = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -47,14 +40,22 @@
             this.btnProducts = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnCustomer = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnEmployees = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.pnlLogo = new Guna.UI.WinForms.GunaPanel();
             this.ptbLogo = new Guna.UI.WinForms.GunaPictureBox();
+            this.pnlTitle = new Guna.UI.WinForms.GunaPanel();
+            this.ptbBack = new Guna.UI.WinForms.GunaPictureBox();
+            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.pnlContent = new Guna.UI.WinForms.GunaPanel();
+            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnlTab.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTab
@@ -64,12 +65,13 @@
             this.pnlTab.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTab.Location = new System.Drawing.Point(0, 0);
             this.pnlTab.Name = "pnlTab";
-            this.pnlTab.Size = new System.Drawing.Size(264, 691);
+            this.pnlTab.Size = new System.Drawing.Size(264, 700);
             this.pnlTab.TabIndex = 0;
             // 
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.btnProvider);
             this.gunaPanel1.Controls.Add(this.btnBuy);
             this.gunaPanel1.Controls.Add(this.btnSell);
             this.gunaPanel1.Controls.Add(this.btnReport);
@@ -80,74 +82,39 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 255);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(264, 436);
+            this.gunaPanel1.Size = new System.Drawing.Size(264, 445);
             this.gunaPanel1.TabIndex = 1;
             // 
-            // pnlLogo
+            // btnProvider
             // 
-            this.pnlLogo.Controls.Add(this.ptbLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(264, 255);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.Color.White;
-            this.pnlTitle.Controls.Add(this.ptbBack);
-            this.pnlTitle.Controls.Add(this.ptbExit);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(264, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(965, 35);
-            this.pnlTitle.TabIndex = 1;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.pnlTab;
-            // 
-            // pnlContent
-            // 
-            this.pnlContent.BackColor = System.Drawing.Color.White;
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(264, 35);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(965, 656);
-            this.pnlContent.TabIndex = 2;
-            // 
-            // gunaDragControl2
-            // 
-            this.gunaDragControl2.TargetControl = this.pnlContent;
-            // 
-            // gunaDragControl3
-            // 
-            this.gunaDragControl3.TargetControl = this.pnlTitle;
-            // 
-            // ptbBack
-            // 
-            this.ptbBack.BaseColor = System.Drawing.Color.White;
-            this.ptbBack.Image = global::QLCH.Properties.Resources.icons8_back_48;
-            this.ptbBack.Location = new System.Drawing.Point(891, 0);
-            this.ptbBack.Name = "ptbBack";
-            this.ptbBack.Size = new System.Drawing.Size(35, 35);
-            this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbBack.TabIndex = 2;
-            this.ptbBack.TabStop = false;
-            this.ptbBack.Click += new System.EventHandler(this.ptbBack_Click);
-            // 
-            // ptbExit
-            // 
-            this.ptbExit.BaseColor = System.Drawing.Color.White;
-            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
-            this.ptbExit.Location = new System.Drawing.Point(930, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(35, 35);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbExit.TabIndex = 0;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
+            this.btnProvider.AnimationHoverSpeed = 0.07F;
+            this.btnProvider.AnimationSpeed = 0.03F;
+            this.btnProvider.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnProvider.BorderColor = System.Drawing.Color.Black;
+            this.btnProvider.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnProvider.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnProvider.CheckedForeColor = System.Drawing.Color.White;
+            this.btnProvider.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnProvider.CheckedImage")));
+            this.btnProvider.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnProvider.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(62)))), ((int)(((byte)(140)))));
+            this.btnProvider.Image = ((System.Drawing.Image)(resources.GetObject("btnProvider.Image")));
+            this.btnProvider.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnProvider.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnProvider.Location = new System.Drawing.Point(5, 391);
+            this.btnProvider.Name = "btnProvider";
+            this.btnProvider.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnProvider.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProvider.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProvider.OnHoverImage = null;
+            this.btnProvider.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnProvider.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProvider.Size = new System.Drawing.Size(253, 49);
+            this.btnProvider.TabIndex = 8;
+            this.btnProvider.Text = "Provider";
+            this.btnProvider.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
             // 
             // btnBuy
             // 
@@ -363,6 +330,15 @@
             this.btnEmployees.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEmployees.Click += new System.EventHandler(this.btnEngineer_Click);
             // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.ptbLogo);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(264, 255);
+            this.pnlLogo.TabIndex = 0;
+            // 
             // ptbLogo
             // 
             this.ptbLogo.BaseColor = System.Drawing.Color.White;
@@ -375,11 +351,68 @@
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
             // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.White;
+            this.pnlTitle.Controls.Add(this.ptbBack);
+            this.pnlTitle.Controls.Add(this.ptbExit);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(264, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(965, 35);
+            this.pnlTitle.TabIndex = 1;
+            // 
+            // ptbBack
+            // 
+            this.ptbBack.BaseColor = System.Drawing.Color.White;
+            this.ptbBack.Image = global::QLCH.Properties.Resources.icons8_back_48;
+            this.ptbBack.Location = new System.Drawing.Point(891, 0);
+            this.ptbBack.Name = "ptbBack";
+            this.ptbBack.Size = new System.Drawing.Size(35, 35);
+            this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbBack.TabIndex = 2;
+            this.ptbBack.TabStop = false;
+            this.ptbBack.Click += new System.EventHandler(this.ptbBack_Click);
+            // 
+            // ptbExit
+            // 
+            this.ptbExit.BaseColor = System.Drawing.Color.White;
+            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
+            this.ptbExit.Location = new System.Drawing.Point(930, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(35, 35);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbExit.TabIndex = 0;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.pnlTab;
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.Color.White;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(264, 35);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(965, 665);
+            this.pnlContent.TabIndex = 2;
+            // 
+            // gunaDragControl2
+            // 
+            this.gunaDragControl2.TargetControl = this.pnlContent;
+            // 
+            // gunaDragControl3
+            // 
+            this.gunaDragControl3.TargetControl = this.pnlTitle;
+            // 
             // frmFuction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 691);
+            this.ClientSize = new System.Drawing.Size(1229, 700);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlTab);
@@ -390,10 +423,10 @@
             this.pnlTab.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,5 +451,6 @@
         private Guna.UI.WinForms.GunaAdvenceButton btnBill;
         private Guna.UI.WinForms.GunaAdvenceButton btnProducts;
         private Guna.UI.WinForms.GunaAdvenceButton btnCustomer;
+        private Guna.UI.WinForms.GunaAdvenceButton btnProvider;
     }
 }

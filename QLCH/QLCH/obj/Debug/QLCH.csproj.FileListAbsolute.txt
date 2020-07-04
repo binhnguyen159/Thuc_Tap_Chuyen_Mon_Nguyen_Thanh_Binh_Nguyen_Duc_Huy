@@ -80,3 +80,5 @@ D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCProvider.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FormTest.resources

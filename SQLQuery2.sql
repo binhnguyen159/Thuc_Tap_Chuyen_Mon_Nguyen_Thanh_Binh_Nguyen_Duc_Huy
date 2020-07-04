@@ -31,3 +31,24 @@ create proc deleteSP(@maSP nvarchar(50))
 as begin
 delete sanPham where maSP=@maSP
 end
+
+go
+create proc addProvider(@maNCC nvarchar(50),
+@tenNCC nvarchar(50),
+@email nvarchar(50),
+@diaChi nvarchar(50),
+@sdt nvarchar(50))
+as begin
+insert into nhaCungCap values (@maNCC,@tenNCC,@email,@diaChi,@sdt)
+end
+go
+create proc updateProvider(
+@maNCC nvarchar(50),
+@tenNCC nvarchar(50),
+@email nvarchar(50),
+@diaChi nvarchar(50),
+@sdt nvarchar(50))
+as begin
+update nhaCungCap set tenNCC=@tenNCC,email=@email,diaChi=@diaChi,sdt=@sdt where maNCC=@maNCC
+end
+go

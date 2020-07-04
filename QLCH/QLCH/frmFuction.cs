@@ -57,5 +57,13 @@ namespace QLCH
             pnlContent.Controls.Add(employees);
             employees.Show();
         }
+
+        private void btnProvider_Click(object sender, EventArgs e)
+        {
+            UCProvider uCProvider = new UCProvider();
+            pnlContent.Controls.Clear();
+            pnlContent.Controls.Add(uCProvider);
+            uCProvider.Show();
+        }
     }
 }
