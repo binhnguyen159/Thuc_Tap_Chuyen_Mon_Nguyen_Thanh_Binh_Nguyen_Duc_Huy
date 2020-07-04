@@ -57,5 +57,21 @@ namespace QLCH
             pnlContent.Controls.Add(employees);
             employees.Show();
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            Uc_Customer customer = new Uc_Customer();
+            pnlContent.Controls.Add(customer);
+            customer.Show();
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            Uc_Products products = new Uc_Products();
+            pnlContent.Controls.Clear();
+            pnlContent.Controls.Add(products);
+            products.Show();
+        }
     }
 }

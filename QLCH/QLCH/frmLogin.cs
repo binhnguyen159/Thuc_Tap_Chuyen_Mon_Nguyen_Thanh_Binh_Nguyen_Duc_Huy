@@ -177,6 +177,7 @@ namespace QLCH
             llbTime.Text = "Change password >> " + counter.ToString() + "s";
             if (counter == 0)
             {
+                GetOTP();
                 llbTime.Text = "Change password";
                 timer1.Stop();
                 llbTime.Enabled = false;

@@ -80,12 +80,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Uc\frmProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Uc\frmProducts.Designer.cs">
-      <DependentUpon>frmProducts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Uc\UcBill_Sell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,9 +132,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Uc\frmProducts.resx">
-      <DependentUpon>frmProducts.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Uc\UcBill_Sell.resx">
       <DependentUpon>UcBill_Sell.cs</DependentUpon>
     </EmbeddedResource>
