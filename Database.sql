@@ -106,9 +106,11 @@ thanhTien float,
 primary key(maHDX,maSP)
 )
 go
---create table GioHang(
+create table GioHang(
+	magio nvarchar(50),
+	masp nvarchar(50),
 	
---)
+)
 
 go
 alter table nhanVien add foreign key(maCV) references congViec(maCV)
