@@ -46,16 +46,16 @@
             this.txtPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dgvEmployees = new Guna.UI.WinForms.GunaDataGridView();
-            this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.btnDel = new Guna.UI.WinForms.GunaButton();
-            this.btnUp = new Guna.UI.WinForms.GunaButton();
-            this.btnFind = new Guna.UI.WinForms.GunaButton();
             this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.e = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cv = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnAdd = new Guna.UI.WinForms.GunaButton();
+            this.btnDel = new Guna.UI.WinForms.GunaButton();
+            this.btnUp = new Guna.UI.WinForms.GunaButton();
+            this.btnFind = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
@@ -92,20 +92,20 @@
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(253, 37);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(202, 37);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(21, 13);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(82, 13);
             this.bunifuCustomLabel1.TabIndex = 2;
-            this.bunifuCustomLabel1.Text = "ID:";
+            this.bunifuCustomLabel1.Text = "Empolyees\'s ID:";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(240, 80);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(179, 81);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(38, 13);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(99, 13);
             this.bunifuCustomLabel2.TabIndex = 2;
-            this.bunifuCustomLabel2.Text = "Name:";
+            this.bunifuCustomLabel2.Text = "Empolyees\'s Name:";
             // 
             // bunifuCustomLabel3
             // 
@@ -296,6 +296,46 @@
             this.dgvEmployees.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.dgvEmployees.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // manv
+            // 
+            this.manv.HeaderText = "ID";
+            this.manv.Name = "manv";
+            this.manv.ReadOnly = true;
+            // 
+            // tennv
+            // 
+            this.tennv.HeaderText = "Name";
+            this.tennv.Name = "tennv";
+            this.tennv.ReadOnly = true;
+            // 
+            // e
+            // 
+            this.e.HeaderText = "Email";
+            this.e.Name = "e";
+            this.e.ReadOnly = true;
+            // 
+            // dc
+            // 
+            this.dc.HeaderText = "Address";
+            this.dc.Name = "dc";
+            this.dc.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.HeaderText = "Phone number";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // cv
+            // 
+            this.cv.HeaderText = "Job";
+            this.cv.Name = "cv";
+            this.cv.ReadOnly = true;
+            this.cv.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cv.Text = "Detail";
+            this.cv.UseColumnTextForButtonValue = true;
+            // 
             // btnAdd
             // 
             this.btnAdd.AnimationHoverSpeed = 0.07F;
@@ -383,46 +423,6 @@
             this.btnFind.Size = new System.Drawing.Size(79, 33);
             this.btnFind.TabIndex = 5;
             this.btnFind.Text = "Find";
-            // 
-            // manv
-            // 
-            this.manv.HeaderText = "ID";
-            this.manv.Name = "manv";
-            this.manv.ReadOnly = true;
-            // 
-            // tennv
-            // 
-            this.tennv.HeaderText = "Name";
-            this.tennv.Name = "tennv";
-            this.tennv.ReadOnly = true;
-            // 
-            // e
-            // 
-            this.e.HeaderText = "Email";
-            this.e.Name = "e";
-            this.e.ReadOnly = true;
-            // 
-            // dc
-            // 
-            this.dc.HeaderText = "Address";
-            this.dc.Name = "dc";
-            this.dc.ReadOnly = true;
-            // 
-            // sdt
-            // 
-            this.sdt.HeaderText = "Phone number";
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            // 
-            // cv
-            // 
-            this.cv.HeaderText = "Job";
-            this.cv.Name = "cv";
-            this.cv.ReadOnly = true;
-            this.cv.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cv.Text = "Detail";
-            this.cv.UseColumnTextForButtonValue = true;
             // 
             // Uc_Employees
             // 

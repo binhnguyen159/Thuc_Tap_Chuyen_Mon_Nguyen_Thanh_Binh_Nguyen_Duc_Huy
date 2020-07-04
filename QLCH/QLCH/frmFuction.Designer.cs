@@ -32,7 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuction));
             this.pnlTab = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+<<<<<<< HEAD
             this.btnProvider = new Guna.UI.WinForms.GunaAdvenceButton();
+=======
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnReport = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -85,6 +88,7 @@
             this.gunaPanel1.Size = new System.Drawing.Size(264, 445);
             this.gunaPanel1.TabIndex = 1;
             // 
+<<<<<<< HEAD
             // btnProvider
             // 
             this.btnProvider.AnimationHoverSpeed = 0.07F;
@@ -116,6 +120,8 @@
             this.btnProvider.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
             // 
+=======
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             // btnBuy
             // 
             this.btnBuy.AnimationHoverSpeed = 0.07F;
@@ -268,6 +274,7 @@
             this.btnProducts.TabIndex = 3;
             this.btnProducts.Text = "Products";
             this.btnProducts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnCustomer
             // 
@@ -298,6 +305,7 @@
             this.btnCustomer.TabIndex = 2;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnEmployees
             // 
@@ -397,7 +405,11 @@
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(264, 35);
             this.pnlContent.Name = "pnlContent";
+<<<<<<< HEAD
             this.pnlContent.Size = new System.Drawing.Size(965, 665);
+=======
+            this.pnlContent.Size = new System.Drawing.Size(965, 656);
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             this.pnlContent.TabIndex = 2;
             // 
             // gunaDragControl2

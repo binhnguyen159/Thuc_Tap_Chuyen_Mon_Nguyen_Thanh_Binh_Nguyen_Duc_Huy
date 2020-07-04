@@ -1,3 +1,5 @@
+use TTCM
+go
 create proc addSP( @maSP nvarchar(50),
 @tenSP nvarchar(50),
 @gia float,
@@ -32,6 +34,7 @@ as begin
 delete sanPham where maSP=@maSP
 end
 
+<<<<<<< HEAD:SQLQuery2.sql
 go
 create proc addProvider(@maNCC nvarchar(50),
 @tenNCC nvarchar(50),
@@ -52,3 +55,5 @@ as begin
 update nhaCungCap set tenNCC=@tenNCC,email=@email,diaChi=@diaChi,sdt=@sdt where maNCC=@maNCC
 end
 go
+=======
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb:Procedure.sql

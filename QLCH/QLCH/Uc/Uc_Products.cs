@@ -24,6 +24,7 @@ namespace QLCH.Uc
         int ma;
         int dem = 0;
         int choose;
+        string id = "";
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -45,6 +46,7 @@ namespace QLCH.Uc
                 }
                 ma = dem + 1;
                 label1.Text = ma.ToString();
+                id = ma.ToString();
                 dem = 0;
             }
         }
@@ -79,7 +81,7 @@ namespace QLCH.Uc
                 }
                 else
                 {
-                    db.addSP("sp" + label1.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString());
+                    db.addSP("sp" + id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString());
                     Uc_Products_Load(sender, e);
                 }
             }
@@ -92,7 +94,7 @@ namespace QLCH.Uc
                 }
                 else
                 {
-                    db.updateSP(label1.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString());
+                    db.updateSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString());
                     Uc_Products_Load(sender, e);
                 }
             }
@@ -102,7 +104,7 @@ namespace QLCH.Uc
         {
             panelSave_Delete.Visible = false;
             gunaGroupBox1.Visible = true;
-            //Form1_Load(sender, e);
+            Uc_Products_Load(sender, e);
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -118,7 +120,7 @@ namespace QLCH.Uc
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            Uc_Products_Load(sender, e);
         }
 
         private void Uc_Products_Load(object sender, EventArgs e)
@@ -128,16 +130,21 @@ namespace QLCH.Uc
             //// TODO: This line of code loads data into the 'loaiSP.nhomSP' table. You can move, or remove it, as needed.
             //this.nhomSPTableAdapter.Fill(this.loaiSP.nhomSP);
 
-            //comboBox1.Text = "";
-            //txtTenSP.Text = "";
-            //txtGia.Text = "";
-            //txtTenSP.Enabled = false;
-            //txtGia.Enabled = false;
-            //comboBox1.DisplayMember = "tenLoai";
-            //comboBox1.ValueMember = "maLoai";
-            //comboBox1.DataSource = db.nhomSPs;
-            //dataGridView1.AutoGenerateColumns = false;
-            //dataGridView1.DataSource = db.select_SP();
+            var nsp = from u in db.nhomSPs
+                      select u;
+
+            cbbType.Text = "";
+            txtTenSP.Text = "";
+            txtGia.Text = "";
+            txtTenSP.Enabled = false;
+            txtGia.Enabled = false;
+            //nhomSP nsp = db.nhomSPs();
+            
+            cbbType.DisplayMember = "tenLoai";
+            cbbType.ValueMember = "maLoai";
+            cbbType.DataSource = nsp;
+            dgvProduct.AutoGenerateColumns = false;
+            dgvProduct.DataSource = db.select_SP();
             //btnUpdate.Visible = false;
             //btnDelete.Visible = false;
         }
@@ -167,6 +174,18 @@ namespace QLCH.Uc
                 }
             }
             btnAdd.Enabled = false;
+        }
+        int i = 0;
+        private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            i = e.RowIndex;
+            txtTenSP.Text = dgvProduct.Rows[i].Cells[1].Value.ToString();
+            txtGia.Text = dgvProduct.Rows[i].Cells[2].Value.ToString();
+        }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            i = e.RowIndex;
         }
     }
 }
