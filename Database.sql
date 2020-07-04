@@ -1,7 +1,6 @@
 ﻿create database TTCM
 go
 use TTCM
-
 go
 create table sanPham (
 maSP nvarchar(50) primary key,
@@ -11,11 +10,17 @@ anh image,
 soLuong int,
 thongSo nvarchar(50),
 maLoai nvarchar(50),
+maHang nvarchar (50)
 )
 go
 create table nhomSP(
 maLoai nvarchar(50) primary key,
 tenLoai nvarchar(50)
+)
+go
+create table HangSP(
+maHang nvarchar(50) primary key,
+tenHang nvarchar(50)
 )
 go
 create table chiTietSP(
@@ -36,6 +41,8 @@ go
 create table khachHang(
 maKH nvarchar(50) primary key,
 tenKH nvarchar(50),
+gioiTinh nvarchar(50) check ( gioiTinh in (N'Nam',N'Nữ')),
+ngSinh date,
 email nvarchar(50),
 diaChi nvarchar(50),
 sdt nvarchar(50)
@@ -44,6 +51,9 @@ go
 create table nhanVien(
 maNV nvarchar(50) primary key,
 tenNV nvarchar(50),
+gioiTinh nvarchar(50) check ( gioiTinh in (N'Nam',N'Nữ')),
+ngSinh date,
+ngVaoLam date,
 email nvarchar(50),
 diaChi nvarchar(50),
 sdt nvarchar(50),
@@ -94,7 +104,10 @@ soLuong int,
 thanhTien float,
 primary key(maHDX,maSP)
 )
-
+go
+create table GioHang(
+	
+)
 
 go
 alter table nhanVien add foreign key(maCV) references congViec(maCV)
