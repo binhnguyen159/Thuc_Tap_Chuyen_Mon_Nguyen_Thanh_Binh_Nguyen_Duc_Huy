@@ -77,10 +77,10 @@
             // btnSelect
             // 
             this.btnSelect.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.ImageOptions.Image")));
-            this.btnSelect.Location = new System.Drawing.Point(483, 364);
+            this.btnSelect.Location = new System.Drawing.Point(486, 346);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnSelect.Size = new System.Drawing.Size(127, 23);
+            this.btnSelect.Size = new System.Drawing.Size(127, 41);
             this.btnSelect.TabIndex = 23;
             this.btnSelect.Text = "Select picture";
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
