@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCCartProduct));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbProductName = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
-            this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.lbNumber = new System.Windows.Forms.Label();
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
-            this.btnUp = new Guna.UI.WinForms.GunaButton();
-            this.btnDown = new Guna.UI.WinForms.GunaButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbPriceDefault = new System.Windows.Forms.Label();
+            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
+            this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.btnUp = new Guna.UI.WinForms.GunaButton();
+            this.lbNumber = new System.Windows.Forms.Label();
+            this.btnDown = new Guna.UI.WinForms.GunaButton();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbProductName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,25 +58,27 @@
             this.panel1.Size = new System.Drawing.Size(427, 107);
             this.panel1.TabIndex = 1;
             // 
-            // lbProductName
+            // lbPriceDefault
             // 
-            this.lbProductName.AutoSize = true;
-            this.lbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProductName.Location = new System.Drawing.Point(6, 45);
-            this.lbProductName.Name = "lbProductName";
-            this.lbProductName.Size = new System.Drawing.Size(41, 13);
-            this.lbProductName.TabIndex = 0;
-            this.lbProductName.Text = "label1";
+            this.lbPriceDefault.AutoSize = true;
+            this.lbPriceDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPriceDefault.Location = new System.Drawing.Point(174, 83);
+            this.lbPriceDefault.Name = "lbPriceDefault";
+            this.lbPriceDefault.Size = new System.Drawing.Size(28, 13);
+            this.lbPriceDefault.TabIndex = 4;
+            this.lbPriceDefault.Text = "101";
             // 
-            // lbPrice
+            // gunaImageButton1
             // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(302, 45);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(28, 13);
-            this.lbPrice.TabIndex = 1;
-            this.lbPrice.Text = "100";
+            this.gunaImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaImageButton1.Image")));
+            this.gunaImageButton1.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaImageButton1.Location = new System.Drawing.Point(374, 37);
+            this.gunaImageButton1.Name = "gunaImageButton1";
+            this.gunaImageButton1.OnHoverImage = null;
+            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.gunaImageButton1.Size = new System.Drawing.Size(37, 32);
+            this.gunaImageButton1.TabIndex = 3;
+            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
             // 
             // gunaElipsePanel1
             // 
@@ -90,30 +92,6 @@
             this.gunaElipsePanel1.Radius = 7;
             this.gunaElipsePanel1.Size = new System.Drawing.Size(107, 32);
             this.gunaElipsePanel1.TabIndex = 2;
-            // 
-            // lbNumber
-            // 
-            this.lbNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbNumber.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbNumber.Location = new System.Drawing.Point(35, 0);
-            this.lbNumber.Name = "lbNumber";
-            this.lbNumber.Size = new System.Drawing.Size(35, 32);
-            this.lbNumber.TabIndex = 5;
-            this.lbNumber.Text = "1";
-            this.lbNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbNumber.TextChanged += new System.EventHandler(this.lbNumber_TextChanged);
-            // 
-            // gunaImageButton1
-            // 
-            this.gunaImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaImageButton1.Image")));
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaImageButton1.Location = new System.Drawing.Point(374, 37);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(37, 32);
-            this.gunaImageButton1.TabIndex = 3;
-            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
             // 
             // btnUp
             // 
@@ -134,9 +112,22 @@
             this.btnUp.OnHoverForeColor = System.Drawing.Color.White;
             this.btnUp.OnHoverImage = null;
             this.btnUp.OnPressedColor = System.Drawing.Color.Black;
+            this.btnUp.Radius = 7;
             this.btnUp.Size = new System.Drawing.Size(37, 32);
             this.btnUp.TabIndex = 7;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            // 
+            // lbNumber
+            // 
+            this.lbNumber.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbNumber.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbNumber.Location = new System.Drawing.Point(35, 0);
+            this.lbNumber.Name = "lbNumber";
+            this.lbNumber.Size = new System.Drawing.Size(35, 32);
+            this.lbNumber.TabIndex = 5;
+            this.lbNumber.Text = "1";
+            this.lbNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbNumber.TextChanged += new System.EventHandler(this.lbNumber_TextChanged);
             // 
             // btnDown
             // 
@@ -157,9 +148,30 @@
             this.btnDown.OnHoverForeColor = System.Drawing.Color.White;
             this.btnDown.OnHoverImage = null;
             this.btnDown.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDown.Radius = 7;
             this.btnDown.Size = new System.Drawing.Size(35, 32);
             this.btnDown.TabIndex = 6;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.Location = new System.Drawing.Point(302, 45);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(28, 13);
+            this.lbPrice.TabIndex = 1;
+            this.lbPrice.Text = "100";
+            // 
+            // lbProductName
+            // 
+            this.lbProductName.AutoSize = true;
+            this.lbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductName.Location = new System.Drawing.Point(6, 45);
+            this.lbProductName.Name = "lbProductName";
+            this.lbProductName.Size = new System.Drawing.Size(41, 13);
+            this.lbProductName.TabIndex = 0;
+            this.lbProductName.Text = "label1";
             // 
             // pictureBox1
             // 
@@ -170,16 +182,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lbPriceDefault
-            // 
-            this.lbPriceDefault.AutoSize = true;
-            this.lbPriceDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPriceDefault.Location = new System.Drawing.Point(174, 83);
-            this.lbPriceDefault.Name = "lbPriceDefault";
-            this.lbPriceDefault.Size = new System.Drawing.Size(28, 13);
-            this.lbPriceDefault.TabIndex = 4;
-            this.lbPriceDefault.Text = "101";
             // 
             // UCCartProduct
             // 
