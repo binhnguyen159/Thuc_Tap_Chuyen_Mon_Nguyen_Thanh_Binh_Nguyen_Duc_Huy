@@ -97,7 +97,7 @@ namespace QLCH.Uc
                     else if(nsp.Count() >= 1)
                     {
                         string str = sp.maLoai.ToString().Trim().Substring(4);
-                        db.addSP("sp" + id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                        db.addSP("SP" + id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
                         Uc_Products_Load(sender, e);
                     }
                     
@@ -174,31 +174,9 @@ namespace QLCH.Uc
             //btnDelete.Visible = false;
         }
 
-    
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void ptbExit_Click(object sender, EventArgs e)
         {
-            int i = dataGridView1.CurrentRow.Index;
-            label1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            txtTenSP.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            txtGia.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            cbbType.SelectedValue = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-            sanPham sp = db.sanPhams.Where(s => s.maSP == label1.Text).FirstOrDefault();
-            if (sp == null || sp.anh == null)
-            {
-
-            }
-            else
-            {
-                MemoryStream img = new MemoryStream(sp.anh.ToArray());
-                Image image = Image.FromStream(img);
-                if (image == null) { return; }
-                else
-                {
-                    pictureBox1.Image = image;
-                }
-            }
-            btnAdd.Enabled = false;
+            Application.Exit();
         }
         int i = 0;
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)

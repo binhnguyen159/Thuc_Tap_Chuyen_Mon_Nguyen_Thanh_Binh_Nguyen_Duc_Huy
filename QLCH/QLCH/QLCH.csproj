@@ -137,7 +137,7 @@
     <Compile Include="Uc\Uc_Products.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Uc\Uc_Products.Designer.cs">
+    <Compile Include="Uc\Uc_Products.designer.cs">
       <DependentUpon>Uc_Products.cs</DependentUpon>
     </Compile>
     <Compile Include="Uc\Uc_Report.cs">
