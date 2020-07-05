@@ -195,9 +195,9 @@ namespace QLCH.Uc
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.addSP")]
-		public int addSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> gia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string thongSo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maLoai)
+		public int addSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> gia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string thongSo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maLoai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHang)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, tenSP, gia, anh, soLuong, thongSo, maLoai);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, tenSP, gia, anh, soLuong, thongSo, maLoai, maHang);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -216,9 +216,65 @@ namespace QLCH.Uc
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateSP")]
-		public int updateSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> gia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maLoai)
+		public int updateSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> gia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maLoai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHang)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, tenSP, gia, anh, maLoai);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, tenSP, gia, anh, maLoai, maHang);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.KH_Del")]
+		public int KH_Del([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.KH_Ins")]
+		public int KH_Ins([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ns, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ema, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string dc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sdt)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten, gt, ns, ema, dc, sdt);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.KH_Up")]
+		public int KH_Up([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ns, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ema, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string dc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sdt)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten, gt, ns, ema, dc, sdt);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.KH_Sel")]
+		public ISingleResult<KH_SelResult> KH_Sel()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<KH_SelResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NV_Del")]
+		public int NV_Del([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NV_Ins")]
+		public int NV_Ins([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ns, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> nvl, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ema, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string dc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sdt)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten, gt, ns, nvl, ema, dc, sdt);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NV_Sel")]
+		public ISingleResult<NV_SelResult> NV_Sel()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<NV_SelResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NV_Up")]
+		public int NV_Up([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ns, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> nvl, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ema, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string dc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sdt)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten, gt, ns, nvl, ema, dc, sdt);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -3012,6 +3068,8 @@ namespace QLCH.Uc
 		
 		private string _maLoai;
 		
+		private string _maHang;
+		
 		private string _maLoai1;
 		
 		private string _tenLoai;
@@ -3132,6 +3190,22 @@ namespace QLCH.Uc
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maHang", DbType="NVarChar(50)")]
+		public string maHang
+		{
+			get
+			{
+				return this._maHang;
+			}
+			set
+			{
+				if ((this._maHang != value))
+				{
+					this._maHang = value;
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLoai1", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string maLoai1
 		{
@@ -3160,6 +3234,328 @@ namespace QLCH.Uc
 				if ((this._tenLoai != value))
 				{
 					this._tenLoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class KH_SelResult
+	{
+		
+		private string _maKH;
+		
+		private string _tenKH;
+		
+		private string _gioiTinh;
+		
+		private System.Nullable<System.DateTime> _ngSinh;
+		
+		private string _email;
+		
+		private string _diaChi;
+		
+		private string _sdt;
+		
+		public KH_SelResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maKH
+		{
+			get
+			{
+				return this._maKH;
+			}
+			set
+			{
+				if ((this._maKH != value))
+				{
+					this._maKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKH", DbType="NVarChar(50)")]
+		public string tenKH
+		{
+			get
+			{
+				return this._tenKH;
+			}
+			set
+			{
+				if ((this._tenKH != value))
+				{
+					this._tenKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioiTinh", DbType="NVarChar(50)")]
+		public string gioiTinh
+		{
+			get
+			{
+				return this._gioiTinh;
+			}
+			set
+			{
+				if ((this._gioiTinh != value))
+				{
+					this._gioiTinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngSinh", DbType="Date")]
+		public System.Nullable<System.DateTime> ngSinh
+		{
+			get
+			{
+				return this._ngSinh;
+			}
+			set
+			{
+				if ((this._ngSinh != value))
+				{
+					this._ngSinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this._email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_diaChi", DbType="NVarChar(50)")]
+		public string diaChi
+		{
+			get
+			{
+				return this._diaChi;
+			}
+			set
+			{
+				if ((this._diaChi != value))
+				{
+					this._diaChi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sdt", DbType="NVarChar(50)")]
+		public string sdt
+		{
+			get
+			{
+				return this._sdt;
+			}
+			set
+			{
+				if ((this._sdt != value))
+				{
+					this._sdt = value;
+				}
+			}
+		}
+	}
+	
+	public partial class NV_SelResult
+	{
+		
+		private string _maNV;
+		
+		private string _tenNV;
+		
+		private string _gioiTinh;
+		
+		private System.Nullable<System.DateTime> _ngSinh;
+		
+		private System.Nullable<System.DateTime> _ngVaoLam;
+		
+		private string _email;
+		
+		private string _diaChi;
+		
+		private string _sdt;
+		
+		private string _passWords;
+		
+		private string _maCV;
+		
+		public NV_SelResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maNV", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maNV
+		{
+			get
+			{
+				return this._maNV;
+			}
+			set
+			{
+				if ((this._maNV != value))
+				{
+					this._maNV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenNV", DbType="NVarChar(50)")]
+		public string tenNV
+		{
+			get
+			{
+				return this._tenNV;
+			}
+			set
+			{
+				if ((this._tenNV != value))
+				{
+					this._tenNV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioiTinh", DbType="NVarChar(50)")]
+		public string gioiTinh
+		{
+			get
+			{
+				return this._gioiTinh;
+			}
+			set
+			{
+				if ((this._gioiTinh != value))
+				{
+					this._gioiTinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngSinh", DbType="Date")]
+		public System.Nullable<System.DateTime> ngSinh
+		{
+			get
+			{
+				return this._ngSinh;
+			}
+			set
+			{
+				if ((this._ngSinh != value))
+				{
+					this._ngSinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngVaoLam", DbType="Date")]
+		public System.Nullable<System.DateTime> ngVaoLam
+		{
+			get
+			{
+				return this._ngVaoLam;
+			}
+			set
+			{
+				if ((this._ngVaoLam != value))
+				{
+					this._ngVaoLam = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this._email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_diaChi", DbType="NVarChar(50)")]
+		public string diaChi
+		{
+			get
+			{
+				return this._diaChi;
+			}
+			set
+			{
+				if ((this._diaChi != value))
+				{
+					this._diaChi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sdt", DbType="NVarChar(50)")]
+		public string sdt
+		{
+			get
+			{
+				return this._sdt;
+			}
+			set
+			{
+				if ((this._sdt != value))
+				{
+					this._sdt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWords", DbType="NVarChar(50)")]
+		public string passWords
+		{
+			get
+			{
+				return this._passWords;
+			}
+			set
+			{
+				if ((this._passWords != value))
+				{
+					this._passWords = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maCV", DbType="NVarChar(50)")]
+		public string maCV
+		{
+			get
+			{
+				return this._maCV;
+			}
+			set
+			{
+				if ((this._maCV != value))
+				{
+					this._maCV = value;
 				}
 			}
 		}

@@ -41,7 +41,6 @@
             this.cbbType = new System.Windows.Forms.ComboBox();
             this.txtTenSP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.btnRefresh = new Guna.UI.WinForms.GunaButton();
             this.btnDelete = new Guna.UI.WinForms.GunaButton();
             this.btnUpdate = new Guna.UI.WinForms.GunaButton();
@@ -51,33 +50,31 @@
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvProduct = new Guna.UI.WinForms.GunaDataGridView();
-            this.nhomSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.ptbExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ct = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nhomSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.cbbBrand = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panelSave_Delete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomSPBindingSource)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelect
             // 
             this.btnSelect.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.ImageOptions.Image")));
-            this.btnSelect.Location = new System.Drawing.Point(486, 346);
+            this.btnSelect.Location = new System.Drawing.Point(486, 331);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnSelect.Size = new System.Drawing.Size(127, 41);
@@ -94,12 +91,14 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.txtGia);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.cbbBrand);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.cbbType);
             this.panel2.Controls.Add(this.txtTenSP);
-            this.panel2.Location = new System.Drawing.Point(12, 83);
+            this.panel2.Location = new System.Drawing.Point(12, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 147);
+            this.panel2.Size = new System.Drawing.Size(317, 187);
             this.panel2.TabIndex = 19;
             // 
             // txtGia
@@ -164,16 +163,6 @@
             // 
             this.gunaElipse1.Radius = 7;
             this.gunaElipse1.TargetControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            this.label1.Visible = false;
             // 
             // btnRefresh
             // 
@@ -281,7 +270,7 @@
             this.panelSave_Delete.BaseColor = System.Drawing.Color.White;
             this.panelSave_Delete.Controls.Add(this.btnSave);
             this.panelSave_Delete.Controls.Add(this.btnCancel);
-            this.panelSave_Delete.Location = new System.Drawing.Point(739, 208);
+            this.panelSave_Delete.Location = new System.Drawing.Point(739, 173);
             this.panelSave_Delete.Name = "panelSave_Delete";
             this.panelSave_Delete.Radius = 7;
             this.panelSave_Delete.Size = new System.Drawing.Size(199, 127);
@@ -389,12 +378,12 @@
             this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvProduct.Location = new System.Drawing.Point(12, 393);
+            this.dgvProduct.Location = new System.Drawing.Point(12, 378);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(941, 260);
+            this.dgvProduct.Size = new System.Drawing.Size(941, 275);
             this.dgvProduct.TabIndex = 21;
             this.dgvProduct.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Cyan;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
@@ -420,71 +409,6 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
-            // 
-            // nhomSPBindingSource
-            // 
-            this.nhomSPBindingSource.DataMember = "nhomSP";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // gunaGroupBox1
-            // 
-            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Controls.Add(this.btnRefresh);
-            this.gunaGroupBox1.Controls.Add(this.btnDelete);
-            this.gunaGroupBox1.Controls.Add(this.btnUpdate);
-            this.gunaGroupBox1.Controls.Add(this.btnAdd);
-            this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGroupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaGroupBox1.Location = new System.Drawing.Point(739, 53);
-            this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Radius = 7;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(199, 145);
-            this.gunaGroupBox1.TabIndex = 18;
-            this.gunaGroupBox1.Text = "Function";
-            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.ptbExit);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(965, 38);
-            this.panel1.TabIndex = 17;
-            // 
-            // gunaElipsePanel1
-            // 
-            this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel1.Controls.Add(this.pictureBox1);
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(336, 54);
-            this.gunaElipsePanel1.Name = "gunaElipsePanel1";
-            this.gunaElipsePanel1.Radius = 7;
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(397, 306);
-            this.gunaElipsePanel1.TabIndex = 20;
-            // 
-            // ptbExit
-            // 
-            this.ptbExit.BackColor = System.Drawing.Color.White;
-            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbExit.Image = ((System.Drawing.Image)(resources.GetObject("ptbExit.Image")));
-            this.ptbExit.ImageActive = null;
-            this.ptbExit.Location = new System.Drawing.Point(918, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(47, 38);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbExit.TabIndex = 3;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Zoom = 10;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
             // Column5
             // 
@@ -533,6 +457,63 @@
             this.ct.Text = "More";
             this.ct.UseColumnTextForButtonValue = true;
             // 
+            // nhomSPBindingSource
+            // 
+            this.nhomSPBindingSource.DataMember = "nhomSP";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // gunaGroupBox1
+            // 
+            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.Controls.Add(this.btnRefresh);
+            this.gunaGroupBox1.Controls.Add(this.btnDelete);
+            this.gunaGroupBox1.Controls.Add(this.btnUpdate);
+            this.gunaGroupBox1.Controls.Add(this.btnAdd);
+            this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGroupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaGroupBox1.Location = new System.Drawing.Point(739, 18);
+            this.gunaGroupBox1.Name = "gunaGroupBox1";
+            this.gunaGroupBox1.Radius = 7;
+            this.gunaGroupBox1.Size = new System.Drawing.Size(199, 145);
+            this.gunaGroupBox1.TabIndex = 18;
+            this.gunaGroupBox1.Text = "Function";
+            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // gunaElipsePanel1
+            // 
+            this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel1.Controls.Add(this.pictureBox1);
+            this.gunaElipsePanel1.Location = new System.Drawing.Point(336, 19);
+            this.gunaElipsePanel1.Name = "gunaElipsePanel1";
+            this.gunaElipsePanel1.Radius = 7;
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(397, 306);
+            this.gunaElipsePanel1.TabIndex = 20;
+            // 
+            // cbbBrand
+            // 
+            this.cbbBrand.FormattingEnabled = true;
+            this.cbbBrand.Location = new System.Drawing.Point(152, 144);
+            this.cbbBrand.Name = "cbbBrand";
+            this.cbbBrand.Size = new System.Drawing.Size(147, 21);
+            this.cbbBrand.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Brand:";
+            // 
             // Uc_Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,7 +523,6 @@
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gunaGroupBox1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gunaElipsePanel1);
             this.Name = "Uc_Products";
             this.Size = new System.Drawing.Size(965, 656);
@@ -554,10 +534,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomSPBindingSource)).EndInit();
             this.gunaGroupBox1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.gunaElipsePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,17 +559,16 @@
         private Guna.UI.WinForms.GunaButton btnDelete;
         private Guna.UI.WinForms.GunaButton btnUpdate;
         private Guna.UI.WinForms.GunaButton btnAdd;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private Bunifu.Framework.UI.BunifuImageButton ptbExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nsp;
         private System.Windows.Forms.DataGridViewButtonColumn ct;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbbBrand;
     }
 }

@@ -142,6 +142,7 @@
     <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Parameter Name="thongSo" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.deleteSP" Method="deleteSP">
@@ -157,6 +158,7 @@
       <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maLoai1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
@@ -167,6 +169,82 @@
     <Parameter Name="gia" Type="System.Double" DbType="Float" />
     <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
     <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KH_Del" Method="KH_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KH_Ins" Method="KH_Ins">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gt" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ns" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ema" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KH_Up" Method="KH_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gt" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ns" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ema" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KH_Sel" Method="KH_Sel">
+    <ElementType Name="KH_SelResult">
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NV_Del" Method="NV_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NV_Ins" Method="NV_Ins">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gt" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ns" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="nvl" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ema" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NV_Sel" Method="NV_Sel">
+    <ElementType Name="NV_SelResult">
+      <Column Name="maNV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngVaoLam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="passWords" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NV_Up" Method="NV_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gt" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ns" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="nvl" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ema" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

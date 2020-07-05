@@ -19,12 +19,15 @@ namespace QLCH.Uc
             InitializeComponent();
         }
 
+        
+
         DataClasses1DataContext db = new DataClasses1DataContext();
         Bitmap bitmap;
         int ma;
         int dem = 0;
         int choose;
         string id = "";
+        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -45,7 +48,7 @@ namespace QLCH.Uc
                     dem++;
                 }
                 ma = dem + 1;
-                label1.Text = ma.ToString();
+                //label1.Text = ma.ToString();
                 id = ma.ToString();
                 dem = 0;
             }
@@ -63,7 +66,7 @@ namespace QLCH.Uc
             DialogResult dialogResult = MessageBox.Show("Are you sure want to delete that Product ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                db.deleteSP(label1.Text);
+                db.deleteSP(id);
             }
         }
 
@@ -71,30 +74,46 @@ namespace QLCH.Uc
         {
             MemoryStream stream = new MemoryStream();
             pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+            var nsp = from u in db.nhomSPs select u;
+            var hsp = from u in db.HangSPs select u;
             if (choose == 1)
             {
-
                 if (txtTenSP.Text == "" || txtGia.Text == "")
                 {
-                    MessageBox.Show("Vui lòng nhập tên sản phẩm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill all the information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtTenSP.Focus();
                 }
                 else
                 {
-                    db.addSP("sp" + id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString());
-                    Uc_Products_Load(sender, e);
+                    nhomSP sp = db.nhomSPs.OrderByDescending(s=>s.maLoai).FirstOrDefault();
+                    if (nsp.Count() == 0)
+                    {
+                        nhomSP nsp_Add = new nhomSP();
+                        nsp_Add.maLoai = "Nhom1";
+                        nsp_Add.tenLoai = cbbType.Text;
+                        db.nhomSPs.InsertOnSubmit(nsp_Add);
+                        db.SubmitChanges();
+                    }
+                    else if(nsp.Count() >= 1)
+                    {
+                        string str = sp.maLoai.ToString().Trim().Substring(4);
+                        db.addSP("sp" + id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                        Uc_Products_Load(sender, e);
+                    }
+                    
+                    
                 }
             }
             if (choose == 2)
             {
                 if (txtTenSP.Text == "" || txtGia.Text == "")
                 {
-                    MessageBox.Show("Vui lòng nhập tên sản phẩm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill all the information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtTenSP.Focus();
                 }
                 else
                 {
-                    db.updateSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString());
+                    //db.updateSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
                     Uc_Products_Load(sender, e);
                 }
             }
@@ -130,9 +149,10 @@ namespace QLCH.Uc
             //// TODO: This line of code loads data into the 'loaiSP.nhomSP' table. You can move, or remove it, as needed.
             //this.nhomSPTableAdapter.Fill(this.loaiSP.nhomSP);
 
-            var nsp = from u in db.nhomSPs
-                      select u;
+            var nsp = from u in db.nhomSPs select u;
 
+            var hsp = from u in db.HangSPs select u;
+                        
             cbbType.Text = "";
             txtTenSP.Text = "";
             txtGia.Text = "";
@@ -143,6 +163,11 @@ namespace QLCH.Uc
             cbbType.DisplayMember = "tenLoai";
             cbbType.ValueMember = "maLoai";
             cbbType.DataSource = nsp;
+
+            cbbBrand.DisplayMember = "tenHang";
+            cbbBrand.ValueMember = "maHang";
+            cbbBrand.DataSource = hsp;
+
             dgvProduct.AutoGenerateColumns = false;
             dgvProduct.DataSource = db.select_SP();
             //btnUpdate.Visible = false;

@@ -16,5 +16,19 @@ namespace QLCH.Uc
         {
             InitializeComponent();
         }
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            Uc_Bill_Buy_Load(sender, e);
+        }
+
+        private void Uc_Bill_Buy_Load(object sender, EventArgs e)
+        {
+            DateTime from, to;
+            from = dtpFrom.Value;
+            to = dtpTo.Value;
+            var locHD = db.hoadDonNhaps.Where(s => s.ngayNhap >= from && s.ngayNhap <= to);
+            dgvBillBuy.DataSource = locHD;
+        }
     }
 }
