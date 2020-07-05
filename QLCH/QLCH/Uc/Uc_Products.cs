@@ -174,9 +174,31 @@ namespace QLCH.Uc
             //btnDelete.Visible = false;
         }
 
-        private void ptbExit_Click(object sender, EventArgs e)
+    
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Application.Exit();
+            int i = dataGridView1.CurrentRow.Index;
+            label1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            txtTenSP.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txtGia.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            cbbType.SelectedValue = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+            sanPham sp = db.sanPhams.Where(s => s.maSP == label1.Text).FirstOrDefault();
+            if (sp == null || sp.anh == null)
+            {
+
+            }
+            else
+            {
+                MemoryStream img = new MemoryStream(sp.anh.ToArray());
+                Image image = Image.FromStream(img);
+                if (image == null) { return; }
+                else
+                {
+                    pictureBox1.Image = image;
+                }
+            }
+            btnAdd.Enabled = false;
         }
         int i = 0;
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)

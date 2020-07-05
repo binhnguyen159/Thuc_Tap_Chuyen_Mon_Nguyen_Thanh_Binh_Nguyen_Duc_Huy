@@ -36,6 +36,7 @@ as begin
 delete sanPham where maSP=@maSP
 end
 
+<<<<<<< HEAD
 -- Thêm, sửa, xóa khách hàng
 --Thêm
 create proc KH_Ins (
@@ -98,3 +99,28 @@ begin
 						sdt = @sdt
 	where maNV=@ma
 end
+=======
+<<<<<<< HEAD:SQLQuery2.sql
+go
+create proc addProvider(@maNCC nvarchar(50),
+@tenNCC nvarchar(50),
+@email nvarchar(50),
+@diaChi nvarchar(50),
+@sdt nvarchar(50))
+as begin
+insert into nhaCungCap values (@maNCC,@tenNCC,@email,@diaChi,@sdt)
+end
+go
+create proc updateProvider(
+@maNCC nvarchar(50),
+@tenNCC nvarchar(50),
+@email nvarchar(50),
+@diaChi nvarchar(50),
+@sdt nvarchar(50))
+as begin
+update nhaCungCap set tenNCC=@tenNCC,email=@email,diaChi=@diaChi,sdt=@sdt where maNCC=@maNCC
+end
+go
+=======
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb:Procedure.sql
+>>>>>>> 7b4a1af0456ed5ad8e845db50bc65898bf27069e

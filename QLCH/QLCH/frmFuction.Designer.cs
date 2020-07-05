@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuction));
             this.pnlTab = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+<<<<<<< HEAD
+            this.btnProvider = new Guna.UI.WinForms.GunaAdvenceButton();
+=======
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnReport = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -64,12 +68,13 @@
             this.pnlTab.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTab.Location = new System.Drawing.Point(0, 0);
             this.pnlTab.Name = "pnlTab";
-            this.pnlTab.Size = new System.Drawing.Size(264, 691);
+            this.pnlTab.Size = new System.Drawing.Size(264, 700);
             this.pnlTab.TabIndex = 0;
             // 
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.btnProvider);
             this.gunaPanel1.Controls.Add(this.btnBuy);
             this.gunaPanel1.Controls.Add(this.btnSell);
             this.gunaPanel1.Controls.Add(this.btnReport);
@@ -80,9 +85,43 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 255);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(264, 436);
+            this.gunaPanel1.Size = new System.Drawing.Size(264, 445);
             this.gunaPanel1.TabIndex = 1;
             // 
+<<<<<<< HEAD
+            // btnProvider
+            // 
+            this.btnProvider.AnimationHoverSpeed = 0.07F;
+            this.btnProvider.AnimationSpeed = 0.03F;
+            this.btnProvider.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnProvider.BorderColor = System.Drawing.Color.Black;
+            this.btnProvider.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnProvider.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnProvider.CheckedForeColor = System.Drawing.Color.White;
+            this.btnProvider.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnProvider.CheckedImage")));
+            this.btnProvider.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnProvider.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(62)))), ((int)(((byte)(140)))));
+            this.btnProvider.Image = ((System.Drawing.Image)(resources.GetObject("btnProvider.Image")));
+            this.btnProvider.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnProvider.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnProvider.Location = new System.Drawing.Point(5, 391);
+            this.btnProvider.Name = "btnProvider";
+            this.btnProvider.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnProvider.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProvider.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProvider.OnHoverImage = null;
+            this.btnProvider.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnProvider.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProvider.Size = new System.Drawing.Size(253, 49);
+            this.btnProvider.TabIndex = 8;
+            this.btnProvider.Text = "Provider";
+            this.btnProvider.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
+            // 
+=======
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             // btnBuy
             // 
             this.btnBuy.AnimationHoverSpeed = 0.07F;
@@ -366,7 +405,11 @@
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(264, 35);
             this.pnlContent.Name = "pnlContent";
+<<<<<<< HEAD
+            this.pnlContent.Size = new System.Drawing.Size(965, 665);
+=======
             this.pnlContent.Size = new System.Drawing.Size(965, 656);
+>>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             this.pnlContent.TabIndex = 2;
             // 
             // gunaDragControl2
@@ -381,7 +424,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 691);
+            this.ClientSize = new System.Drawing.Size(1229, 700);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlTab);
@@ -420,5 +463,6 @@
         private Guna.UI.WinForms.GunaAdvenceButton btnBill;
         private Guna.UI.WinForms.GunaAdvenceButton btnProducts;
         private Guna.UI.WinForms.GunaAdvenceButton btnCustomer;
+        private Guna.UI.WinForms.GunaAdvenceButton btnProvider;
     }
 }
