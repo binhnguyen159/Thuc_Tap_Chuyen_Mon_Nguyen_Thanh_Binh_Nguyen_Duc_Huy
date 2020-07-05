@@ -140,6 +140,12 @@
     <Compile Include="Uc\Uc_Customer.Designer.cs">
       <DependentUpon>Uc_Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\Uc_DanhMuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Uc_DanhMuc.Designer.cs">
+      <DependentUpon>Uc_DanhMuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\Uc_Employees.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="Uc\Uc_Report.Designer.cs">
       <DependentUpon>Uc_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Uc_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Uc_TaiKhoan.Designer.cs">
+      <DependentUpon>Uc_TaiKhoan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmFuction.resx">
       <DependentUpon>frmFuction.cs</DependentUpon>
@@ -204,6 +216,9 @@
     <EmbeddedResource Include="Uc\Uc_Customer.resx">
       <DependentUpon>Uc_Customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Uc_DanhMuc.resx">
+      <DependentUpon>Uc_DanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_Employees.resx">
       <DependentUpon>Uc_Employees.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_Report.resx">
       <DependentUpon>Uc_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Uc_TaiKhoan.resx">
+      <DependentUpon>Uc_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

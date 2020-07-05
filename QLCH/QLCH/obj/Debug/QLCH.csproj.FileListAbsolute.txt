@@ -127,3 +127,5 @@ D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.UCProvider.resources
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources
+C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_DanhMuc.resources
+C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_TaiKhoan.resources

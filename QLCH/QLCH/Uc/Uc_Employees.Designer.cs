@@ -29,19 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_Employees));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dgvEmployees = new Guna.UI.WinForms.GunaDataGridView();
             this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,23 +55,27 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dtpNVL = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.txtID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.chbSex = new System.Windows.Forms.CheckBox();
+            this.chbNVL = new System.Windows.Forms.CheckBox();
+            this.chbNS = new System.Windows.Forms.CheckBox();
+            this.chbName = new System.Windows.Forms.CheckBox();
+            this.btnRefresh = new Guna.UI.WinForms.GunaButton();
+            this.btnHuy = new Guna.UI.WinForms.GunaButton();
+            this.btnLuu = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.btnDel = new Guna.UI.WinForms.GunaButton();
             this.btnUp = new Guna.UI.WinForms.GunaButton();
             this.btnFind = new Guna.UI.WinForms.GunaButton();
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.btnHuy = new Guna.UI.WinForms.GunaButton();
-            this.btnLuu = new Guna.UI.WinForms.GunaButton();
-            this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
-            this.chbName = new System.Windows.Forms.CheckBox();
-            this.chbNS = new System.Windows.Forms.CheckBox();
-            this.chbNVL = new System.Windows.Forms.CheckBox();
-            this.chbSex = new System.Windows.Forms.CheckBox();
-            this.btnRefresh = new Guna.UI.WinForms.GunaButton();
+            this.txtAddress = new Guna.UI.WinForms.GunaLineTextBox();
+            this.txtEmail = new Guna.UI.WinForms.GunaLineTextBox();
+            this.txtName = new Guna.UI.WinForms.GunaLineTextBox();
+            this.txtPhone = new Guna.UI.WinForms.GunaLineTextBox();
+            this.txtID = new Guna.UI.WinForms.GunaLineTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -85,7 +85,7 @@
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(25, 28);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 28);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(71, 13);
             this.bunifuCustomLabel1.TabIndex = 2;
@@ -127,110 +127,26 @@
             this.bunifuCustomLabel5.TabIndex = 2;
             this.bunifuCustomLabel5.Text = "Email:";
             // 
-            // txtName
-            // 
-            this.txtName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.HintForeColor = System.Drawing.Color.Empty;
-            this.txtName.HintText = "";
-            this.txtName.isPassword = false;
-            this.txtName.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtName.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtName.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtName.LineThickness = 3;
-            this.txtName.Location = new System.Drawing.Point(98, 54);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(193, 31);
-            this.txtName.TabIndex = 3;
-            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAddress.HintForeColor = System.Drawing.Color.Empty;
-            this.txtAddress.HintText = "";
-            this.txtAddress.isPassword = false;
-            this.txtAddress.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtAddress.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtAddress.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtAddress.LineThickness = 3;
-            this.txtAddress.Location = new System.Drawing.Point(428, 92);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(283, 31);
-            this.txtAddress.TabIndex = 3;
-            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.BackColor = System.Drawing.Color.White;
-            this.txtPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPhone.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPhone.HintText = "";
-            this.txtPhone.isPassword = false;
-            this.txtPhone.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtPhone.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtPhone.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtPhone.LineThickness = 3;
-            this.txtPhone.Location = new System.Drawing.Point(428, 14);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(204, 31);
-            this.txtPhone.TabIndex = 3;
-            this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
-            this.txtEmail.HintText = "";
-            this.txtEmail.isPassword = false;
-            this.txtEmail.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtEmail.LineThickness = 3;
-            this.txtEmail.Location = new System.Drawing.Point(428, 53);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(204, 31);
-            this.txtEmail.TabIndex = 3;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // dgvEmployees
             // 
             this.dgvEmployees.AllowUserToAddRows = false;
             this.dgvEmployees.AllowUserToDeleteRows = false;
             this.dgvEmployees.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployees.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmployees.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvEmployees.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvEmployees.ColumnHeadersHeight = 21;
             this.dgvEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.manv,
@@ -242,14 +158,14 @@
             this.sdt,
             this.dc,
             this.cv});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvEmployees.EnableHeadersVisualStyles = false;
             this.dgvEmployees.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
@@ -446,35 +362,10 @@
             this.dtpNVL.Text = "Sunday, July 5, 2020";
             this.dtpNVL.Value = new System.DateTime(2020, 7, 5, 8, 14, 46, 264);
             // 
-            // txtID
-            // 
-            this.txtID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.Enabled = false;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtID.HintForeColor = System.Drawing.Color.Empty;
-            this.txtID.HintText = "";
-            this.txtID.isPassword = false;
-            this.txtID.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtID.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtID.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtID.LineThickness = 3;
-            this.txtID.Location = new System.Drawing.Point(98, 14);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(193, 31);
-            this.txtID.TabIndex = 3;
-            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // gunaElipse1
             // 
             this.gunaElipse1.Radius = 8;
             this.gunaElipse1.TargetControl = this.gunaGroupBox1;
-            // 
-            // gunaElipse2
-            // 
-            this.gunaElipse2.TargetControl = this;
             // 
             // gunaGroupBox1
             // 
@@ -492,6 +383,136 @@
             this.gunaGroupBox1.TabIndex = 30;
             this.gunaGroupBox1.Text = "Chức năng";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.TargetControl = this;
+            // 
+            // gunaPanel1
+            // 
+            this.gunaPanel1.Controls.Add(this.btnHuy);
+            this.gunaPanel1.Controls.Add(this.btnLuu);
+            this.gunaPanel1.Location = new System.Drawing.Point(588, 160);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.Size = new System.Drawing.Size(339, 60);
+            this.gunaPanel1.TabIndex = 31;
+            this.gunaPanel1.Visible = false;
+            // 
+            // gunaPanel2
+            // 
+            this.gunaPanel2.Controls.Add(this.chbSex);
+            this.gunaPanel2.Controls.Add(this.chbNVL);
+            this.gunaPanel2.Controls.Add(this.chbNS);
+            this.gunaPanel2.Controls.Add(this.chbName);
+            this.gunaPanel2.Location = new System.Drawing.Point(295, 3);
+            this.gunaPanel2.Name = "gunaPanel2";
+            this.gunaPanel2.Size = new System.Drawing.Size(40, 216);
+            this.gunaPanel2.TabIndex = 32;
+            // 
+            // chbSex
+            // 
+            this.chbSex.AutoSize = true;
+            this.chbSex.Location = new System.Drawing.Point(13, 102);
+            this.chbSex.Name = "chbSex";
+            this.chbSex.Size = new System.Drawing.Size(15, 14);
+            this.chbSex.TabIndex = 4;
+            this.chbSex.UseVisualStyleBackColor = true;
+            // 
+            // chbNVL
+            // 
+            this.chbNVL.AutoSize = true;
+            this.chbNVL.Location = new System.Drawing.Point(13, 181);
+            this.chbNVL.Name = "chbNVL";
+            this.chbNVL.Size = new System.Drawing.Size(15, 14);
+            this.chbNVL.TabIndex = 3;
+            this.chbNVL.UseVisualStyleBackColor = true;
+            // 
+            // chbNS
+            // 
+            this.chbNS.AutoSize = true;
+            this.chbNS.Location = new System.Drawing.Point(13, 140);
+            this.chbNS.Name = "chbNS";
+            this.chbNS.Size = new System.Drawing.Size(15, 14);
+            this.chbNS.TabIndex = 2;
+            this.chbNS.UseVisualStyleBackColor = true;
+            // 
+            // chbName
+            // 
+            this.chbName.AutoSize = true;
+            this.chbName.Location = new System.Drawing.Point(13, 64);
+            this.chbName.Name = "chbName";
+            this.chbName.Size = new System.Drawing.Size(15, 14);
+            this.chbName.TabIndex = 1;
+            this.chbName.UseVisualStyleBackColor = true;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AnimationHoverSpeed = 0.07F;
+            this.btnRefresh.AnimationSpeed = 0.03F;
+            this.btnRefresh.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.btnRefresh.BorderColor = System.Drawing.Color.Black;
+            this.btnRefresh.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRefresh.Location = new System.Drawing.Point(411, 173);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnRefresh.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRefresh.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRefresh.OnHoverImage = null;
+            this.btnRefresh.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRefresh.Size = new System.Drawing.Size(102, 33);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.AnimationHoverSpeed = 0.07F;
+            this.btnHuy.AnimationSpeed = 0.03F;
+            this.btnHuy.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.btnHuy.BorderColor = System.Drawing.Color.Black;
+            this.btnHuy.FocusedColor = System.Drawing.Color.Empty;
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnHuy.Location = new System.Drawing.Point(186, 13);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnHuy.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnHuy.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnHuy.OnHoverImage = null;
+            this.btnHuy.OnPressedColor = System.Drawing.Color.Black;
+            this.btnHuy.Size = new System.Drawing.Size(86, 33);
+            this.btnHuy.TabIndex = 9;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.AnimationHoverSpeed = 0.07F;
+            this.btnLuu.AnimationSpeed = 0.03F;
+            this.btnLuu.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.btnLuu.BorderColor = System.Drawing.Color.Black;
+            this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLuu.Location = new System.Drawing.Point(72, 13);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLuu.OnHoverImage = null;
+            this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLuu.Size = new System.Drawing.Size(87, 33);
+            this.btnLuu.TabIndex = 8;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnAdd
             // 
@@ -585,137 +606,83 @@
             this.btnFind.Text = "Find";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // gunaPanel1
+            // txtAddress
             // 
-            this.gunaPanel1.Controls.Add(this.btnHuy);
-            this.gunaPanel1.Controls.Add(this.btnLuu);
-            this.gunaPanel1.Location = new System.Drawing.Point(588, 160);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(339, 60);
-            this.gunaPanel1.TabIndex = 31;
-            this.gunaPanel1.Visible = false;
+            this.txtAddress.BackColor = System.Drawing.Color.White;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAddress.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtAddress.Location = new System.Drawing.Point(433, 97);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.Size = new System.Drawing.Size(230, 26);
+            this.txtAddress.TabIndex = 34;
             // 
-            // btnHuy
+            // txtEmail
             // 
-            this.btnHuy.AnimationHoverSpeed = 0.07F;
-            this.btnHuy.AnimationSpeed = 0.03F;
-            this.btnHuy.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnHuy.BorderColor = System.Drawing.Color.Black;
-            this.btnHuy.FocusedColor = System.Drawing.Color.Empty;
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHuy.Location = new System.Drawing.Point(186, 13);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnHuy.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnHuy.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnHuy.OnHoverImage = null;
-            this.btnHuy.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHuy.Size = new System.Drawing.Size(86, 33);
-            this.btnHuy.TabIndex = 9;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtEmail.Location = new System.Drawing.Point(433, 55);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.Size = new System.Drawing.Size(230, 26);
+            this.txtEmail.TabIndex = 35;
             // 
-            // btnLuu
+            // txtName
             // 
-            this.btnLuu.AnimationHoverSpeed = 0.07F;
-            this.btnLuu.AnimationSpeed = 0.03F;
-            this.btnLuu.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnLuu.BorderColor = System.Drawing.Color.Black;
-            this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(72, 13);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLuu.OnHoverImage = null;
-            this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLuu.Size = new System.Drawing.Size(87, 33);
-            this.btnLuu.TabIndex = 8;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtName.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtName.Location = new System.Drawing.Point(98, 59);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.Size = new System.Drawing.Size(160, 26);
+            this.txtName.TabIndex = 36;
             // 
-            // gunaPanel2
+            // txtPhone
             // 
-            this.gunaPanel2.Controls.Add(this.chbSex);
-            this.gunaPanel2.Controls.Add(this.chbNVL);
-            this.gunaPanel2.Controls.Add(this.chbNS);
-            this.gunaPanel2.Controls.Add(this.chbName);
-            this.gunaPanel2.Location = new System.Drawing.Point(295, 3);
-            this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(40, 216);
-            this.gunaPanel2.TabIndex = 32;
+            this.txtPhone.BackColor = System.Drawing.Color.White;
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhone.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtPhone.Location = new System.Drawing.Point(433, 14);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PasswordChar = '\0';
+            this.txtPhone.Size = new System.Drawing.Size(230, 26);
+            this.txtPhone.TabIndex = 37;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
-            // chbName
+            // txtID
             // 
-            this.chbName.AutoSize = true;
-            this.chbName.Location = new System.Drawing.Point(13, 64);
-            this.chbName.Name = "chbName";
-            this.chbName.Size = new System.Drawing.Size(15, 14);
-            this.chbName.TabIndex = 1;
-            this.chbName.UseVisualStyleBackColor = true;
-            // 
-            // chbNS
-            // 
-            this.chbNS.AutoSize = true;
-            this.chbNS.Location = new System.Drawing.Point(13, 140);
-            this.chbNS.Name = "chbNS";
-            this.chbNS.Size = new System.Drawing.Size(15, 14);
-            this.chbNS.TabIndex = 2;
-            this.chbNS.UseVisualStyleBackColor = true;
-            // 
-            // chbNVL
-            // 
-            this.chbNVL.AutoSize = true;
-            this.chbNVL.Location = new System.Drawing.Point(13, 181);
-            this.chbNVL.Name = "chbNVL";
-            this.chbNVL.Size = new System.Drawing.Size(15, 14);
-            this.chbNVL.TabIndex = 3;
-            this.chbNVL.UseVisualStyleBackColor = true;
-            // 
-            // chbSex
-            // 
-            this.chbSex.AutoSize = true;
-            this.chbSex.Location = new System.Drawing.Point(13, 102);
-            this.chbSex.Name = "chbSex";
-            this.chbSex.Size = new System.Drawing.Size(15, 14);
-            this.chbSex.TabIndex = 4;
-            this.chbSex.UseVisualStyleBackColor = true;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AnimationHoverSpeed = 0.07F;
-            this.btnRefresh.AnimationSpeed = 0.03F;
-            this.btnRefresh.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnRefresh.BorderColor = System.Drawing.Color.Black;
-            this.btnRefresh.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRefresh.Location = new System.Drawing.Point(411, 173);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnRefresh.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRefresh.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRefresh.OnHoverImage = null;
-            this.btnRefresh.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRefresh.Size = new System.Drawing.Size(102, 33);
-            this.btnRefresh.TabIndex = 6;
-            this.btnRefresh.Text = "Làm mới";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.txtID.BackColor = System.Drawing.Color.White;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.Enabled = false;
+            this.txtID.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtID.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtID.Location = new System.Drawing.Point(98, 15);
+            this.txtID.Name = "txtID";
+            this.txtID.PasswordChar = '\0';
+            this.txtID.Size = new System.Drawing.Size(82, 26);
+            this.txtID.TabIndex = 38;
             // 
             // Uc_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.gunaPanel1);
@@ -728,11 +695,6 @@
             this.Controls.Add(this.rdbMale);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.dgvEmployees);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel3);
@@ -757,10 +719,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtAddress;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPhone;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Guna.UI.WinForms.GunaDataGridView dgvEmployees;
         private Guna.UI.WinForms.GunaDateTimePicker dtpBirthday;
         private Guna.UI.WinForms.GunaRadioButton rdbFemale;
@@ -778,7 +736,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dc;
         private System.Windows.Forms.DataGridViewButtonColumn cv;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtID;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
@@ -795,5 +752,10 @@
         private System.Windows.Forms.CheckBox chbNS;
         private System.Windows.Forms.CheckBox chbName;
         private Guna.UI.WinForms.GunaButton btnRefresh;
+        private Guna.UI.WinForms.GunaLineTextBox txtAddress;
+        private Guna.UI.WinForms.GunaLineTextBox txtEmail;
+        private Guna.UI.WinForms.GunaLineTextBox txtName;
+        private Guna.UI.WinForms.GunaLineTextBox txtPhone;
+        private Guna.UI.WinForms.GunaLineTextBox txtID;
     }
 }

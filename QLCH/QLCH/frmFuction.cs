@@ -68,9 +68,9 @@ namespace QLCH
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             pnlContent.Controls.Clear();
-            Uc_Customer customer = new Uc_Customer();
-            pnlContent.Controls.Add(customer);
-            customer.Show();
+            Uc_DanhMuc danhmuc = new Uc_DanhMuc();
+            pnlContent.Controls.Add(danhmuc);
+            danhmuc.Show();
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
@@ -79,6 +79,16 @@ namespace QLCH
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(products);
             products.Show();
+        }
+
+        private void frmFuction_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pnlContent_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -25,11 +25,6 @@ namespace QLCH.Uc
             public static string manv = "0";
         }
 
-        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-                e.Handled = true;
-        }
 
         private void Uc_Employees_Load(object sender, EventArgs e)
         {
@@ -364,6 +359,12 @@ namespace QLCH.Uc
                 frmAssign assign = new frmAssign();
                 assign.ShowDialog();
             }
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

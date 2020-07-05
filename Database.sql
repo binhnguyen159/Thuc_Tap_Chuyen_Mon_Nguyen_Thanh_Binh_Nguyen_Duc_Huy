@@ -59,7 +59,8 @@ email nvarchar(50),
 diaChi nvarchar(50),
 sdt nvarchar(50),
 passWords nvarchar(50), 
-maCV nvarchar(50)
+maCV nvarchar(50),
+tendn nvarchar(50)
 )
 go
 create table congViec(

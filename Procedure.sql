@@ -73,12 +73,12 @@ begin
 select * from nhanVien
 end
 --Thêm
-create proc NV_Ins (
+alter proc NV_Ins (
 @ma nvarchar(50), @ten nvarchar(50),
 @gt nvarchar(50), @ns date, @nvl date, 
 @ema nvarchar(50), @dc nvarchar(50), @sdt nvarchar(50)
 ) as begin
-insert into nhanVien values (@ma, @ten, @gt, @ns, @nvl, @ema, @dc, @sdt,null,null)
+insert into nhanVien values (@ma, @ten, @gt, @ns, @nvl, @ema, @dc, @sdt,null,null,null)
 end
 --Xóa
 create proc NV_Del (@ma nvarchar(50)) 
