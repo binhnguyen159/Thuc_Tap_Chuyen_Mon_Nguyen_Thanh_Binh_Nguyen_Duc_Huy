@@ -58,14 +58,13 @@ namespace QLCH
             employees.Show();
         }
 
-<<<<<<< HEAD
         private void btnProvider_Click(object sender, EventArgs e)
         {
             UCProvider uCProvider = new UCProvider();
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(uCProvider);
             uCProvider.Show();
-=======
+        }
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             pnlContent.Controls.Clear();
@@ -80,7 +79,6 @@ namespace QLCH
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(products);
             products.Show();
->>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
         }
     }
 }

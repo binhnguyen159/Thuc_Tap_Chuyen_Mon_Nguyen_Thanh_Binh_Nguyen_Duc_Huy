@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TTCM" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HT0NP1M;Initial Catalog=TTCM;Integrated Security=True" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MONKEYDASUS;Initial Catalog=TTCM;Persist Security Info=True;User ID=sa" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.chiTietHDN" Member="chiTietHDNs">
     <Type Name="chiTietHDN">
       <Column Name="maHDN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -7,25 +7,8 @@
       <Column Name="donGia" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="sanPham_chiTietHDN" Member="sanPham" ThisKey="maSP" OtherKey="maSP" Type="sanPham" IsForeignKey="true" />
       <Association Name="hoadDonNhap_chiTietHDN" Member="hoadDonNhap" ThisKey="maHDN" OtherKey="maHDN" Type="hoadDonNhap" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.sanPham" Member="sanPhams">
-    <Type Name="sanPham">
-      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="sanPham_chiTietHDN" Member="chiTietHDNs" ThisKey="maSP" OtherKey="maSP" Type="chiTietHDN" />
-      <Association Name="sanPham_chiTietHDX" Member="chiTietHDXes" ThisKey="maSP" OtherKey="maSP" Type="chiTietHDX" />
-      <Association Name="sanPham_chiTietSP" Member="chiTietSPs" ThisKey="maSP" OtherKey="maSP" Type="chiTietSP" />
-      <Association Name="HangSP_sanPham" Member="HangSP" ThisKey="maHang" OtherKey="maHang" Type="HangSP" IsForeignKey="true" />
-      <Association Name="nhomSP_sanPham" Member="nhomSP" ThisKey="maLoai" OtherKey="maLoai" Type="nhomSP" IsForeignKey="true" />
+      <Association Name="sanPham_chiTietHDN" Member="sanPham" ThisKey="maSP" OtherKey="maSP" Type="sanPham" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.chiTietHDX" Member="chiTietHDXes">
@@ -35,8 +18,8 @@
       <Column Name="donGia" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="sanPham_chiTietHDX" Member="sanPham" ThisKey="maSP" OtherKey="maSP" Type="sanPham" IsForeignKey="true" />
       <Association Name="hoadDonXuat_chiTietHDX" Member="hoadDonXuat" ThisKey="maHDX" OtherKey="maHDX" Type="hoadDonXuat" IsForeignKey="true" />
+      <Association Name="sanPham_chiTietHDX" Member="sanPham" ThisKey="maSP" OtherKey="maSP" Type="sanPham" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.chiTietSP" Member="chiTietSPs">
@@ -55,15 +38,12 @@
       <Association Name="congViec_nhanVien" Member="nhanViens" ThisKey="maCV" OtherKey="maCV" Type="nhanVien" />
     </Type>
   </Table>
-<<<<<<< HEAD
   <Table Name="dbo.GioHang" Member="GioHangs">
     <Type Name="GioHang">
       <Column Name="magio" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-=======
->>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
   <Table Name="dbo.HangSP" Member="HangSPs">
     <Type Name="HangSP">
       <Column Name="maHang" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -106,8 +86,6 @@
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="khachHang_hoadDonXuat" Member="hoadDonXuats" ThisKey="maKH" OtherKey="maKH" Type="hoadDonXuat" />
     </Type>
   </Table>
@@ -133,9 +111,6 @@
       <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="passWords" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="ngVaoLam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="nhanVien_hoadDonNhap" Member="hoadDonNhaps" ThisKey="maNV" OtherKey="maNV" Type="hoadDonNhap" />
       <Association Name="nhanVien_hoadDonXuat" Member="hoadDonXuats" ThisKey="maNV" OtherKey="maNV" Type="hoadDonXuat" />
       <Association Name="congViec_nhanVien" Member="congViec" ThisKey="maCV" OtherKey="maCV" Type="congViec" IsForeignKey="true" />
@@ -148,8 +123,6 @@
       <Association Name="nhomSP_sanPham" Member="sanPhams" ThisKey="maLoai" OtherKey="maLoai" Type="sanPham" />
     </Type>
   </Table>
-<<<<<<< HEAD
-=======
   <Table Name="dbo.sanPham" Member="sanPhams">
     <Type Name="sanPham">
       <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -167,7 +140,6 @@
       <Association Name="nhomSP_sanPham" Member="nhomSP" ThisKey="maLoai" OtherKey="maLoai" Type="nhomSP" IsForeignKey="true" />
     </Type>
   </Table>
->>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
   <Function Name="dbo.addSP" Method="addSP">
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
@@ -183,44 +155,11 @@
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.select_SP" Method="select_SP">
-    <ElementType Name="select_SPResult">
-      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
-      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maLoai1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.updateSP" Method="updateSP">
-    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="gia" Type="System.Double" DbType="Float" />
-    <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
-    <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.KH_Del" Method="KH_Del">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.KH_Ins" Method="KH_Ins">
-    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="gt" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="ns" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="ema" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="dc" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.KH_Up" Method="KH_Up">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="gt" Type="System.String" DbType="NVarChar(50)" />
@@ -240,6 +179,16 @@
       <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.KH_Up" Method="KH_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gt" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ns" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ema" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.NV_Del" Method="NV_Del">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
@@ -281,20 +230,27 @@
     <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.addProvider" Method="addProvider">
-    <Parameter Name="maNCC" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenNCC" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
+  <Function Name="dbo.select_SP" Method="select_SP">
+    <ElementType Name="select_SPResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maLoai1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
   </Function>
-  <Function Name="dbo.updateProvider" Method="updateProvider">
-    <Parameter Name="maNCC" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenNCC" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
+  <Function Name="dbo.updateSP" Method="updateSP">
+    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gia" Type="System.Double" DbType="Float" />
+    <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

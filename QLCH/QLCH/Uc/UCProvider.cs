@@ -63,7 +63,7 @@ namespace QLCH.Uc
                 }
                 else
                 {
-                    db.addProvider("ncc" + lbMa.Text, txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhoneNumber.Text);
+                    //db.addProvider("ncc" + lbMa.Text, txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhoneNumber.Text);
                     UCProvider_Load(sender, e);
                 }
             }
@@ -76,7 +76,7 @@ namespace QLCH.Uc
                 }
                 else
                 {
-                    db.updateProvider(lbMa.Text, txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhoneNumber.Text);
+                    //db.updateProvider(lbMa.Text, txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhoneNumber.Text);
                     UCProvider_Load(sender, e);
                 }
             }

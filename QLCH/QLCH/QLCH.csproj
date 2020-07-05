@@ -86,6 +86,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="frmAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssign.Designer.cs">
+      <DependentUpon>frmAssign.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\UcBill_Sell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,12 @@
     </Compile>
     <Compile Include="Uc\UCShowProduct.Designer.cs">
       <DependentUpon>UCShowProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Uc_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Uc_Account.Designer.cs">
+      <DependentUpon>Uc_Account.cs</DependentUpon>
     </Compile>
     <Compile Include="Uc\Uc_Bill_Buy.cs">
       <SubType>UserControl</SubType>
@@ -165,6 +177,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frmAssign.resx">
+      <DependentUpon>frmAssign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uc\UcBill_Sell.resx">
       <DependentUpon>UcBill_Sell.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\UCShowProduct.resx">
       <DependentUpon>UCShowProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Uc_Account.resx">
+      <DependentUpon>Uc_Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_Bill_Buy.resx">
       <DependentUpon>Uc_Bill_Buy.cs</DependentUpon>

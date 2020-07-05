@@ -58,7 +58,6 @@ C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.pdb
 <<<<<<< HEAD
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
 =======
-=======
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe.config
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.pdb
@@ -120,10 +119,11 @@ D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
-<<<<<<< HEAD
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCProvider.resources
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FormTest.resources
-=======
 >>>>>>> f71822bad9db7fcd445c073b8b21cec2ab8ee825
 >>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
 >>>>>>> 7b4a1af0456ed5ad8e845db50bc65898bf27069e
+C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.UCProvider.resources
+C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
+C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources

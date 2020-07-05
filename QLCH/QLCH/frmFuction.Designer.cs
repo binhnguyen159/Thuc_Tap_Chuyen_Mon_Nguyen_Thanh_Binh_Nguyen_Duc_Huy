@@ -32,10 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuction));
             this.pnlTab = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-<<<<<<< HEAD
             this.btnProvider = new Guna.UI.WinForms.GunaAdvenceButton();
-=======
->>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnReport = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -52,6 +49,8 @@
             this.pnlContent = new Guna.UI.WinForms.GunaPanel();
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.lbID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlTab.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -88,7 +87,6 @@
             this.gunaPanel1.Size = new System.Drawing.Size(264, 445);
             this.gunaPanel1.TabIndex = 1;
             // 
-<<<<<<< HEAD
             // btnProvider
             // 
             this.btnProvider.AnimationHoverSpeed = 0.07F;
@@ -120,8 +118,6 @@
             this.btnProvider.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
             // 
-=======
->>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             // btnBuy
             // 
             this.btnBuy.AnimationHoverSpeed = 0.07F;
@@ -362,6 +358,8 @@
             // pnlTitle
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.White;
+            this.pnlTitle.Controls.Add(this.lbID);
+            this.pnlTitle.Controls.Add(this.label1);
             this.pnlTitle.Controls.Add(this.ptbBack);
             this.pnlTitle.Controls.Add(this.ptbExit);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -405,11 +403,7 @@
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(264, 35);
             this.pnlContent.Name = "pnlContent";
-<<<<<<< HEAD
             this.pnlContent.Size = new System.Drawing.Size(965, 665);
-=======
-            this.pnlContent.Size = new System.Drawing.Size(965, 656);
->>>>>>> 46112605d9a90d3477e9a1c02785010c56ae5ceb
             this.pnlContent.TabIndex = 2;
             // 
             // gunaDragControl2
@@ -419,6 +413,24 @@
             // gunaDragControl3
             // 
             this.gunaDragControl3.TargetControl = this.pnlTitle;
+            // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(508, 11);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(13, 13);
+            this.lbID.TabIndex = 3;
+            this.lbID.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(443, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Xin chào:";
             // 
             // frmFuction
             // 
@@ -437,6 +449,7 @@
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.pnlTitle.ResumeLayout(false);
+            this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
             this.ResumeLayout(false);
@@ -464,5 +477,7 @@
         private Guna.UI.WinForms.GunaAdvenceButton btnProducts;
         private Guna.UI.WinForms.GunaAdvenceButton btnCustomer;
         private Guna.UI.WinForms.GunaAdvenceButton btnProvider;
+        private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Label label1;
     }
 }
