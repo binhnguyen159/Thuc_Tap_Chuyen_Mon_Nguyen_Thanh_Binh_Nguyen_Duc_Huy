@@ -22,13 +22,13 @@ namespace QLCH
         GunaButton button;
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            //foreach (var a in db.nhomSPs)
-            //{
-            //    button = new GunaButton();
-            //    button.Height = 35;
-            //    button.Text = a.tenLoai.ToString();
-            //    flowLayoutPanel1.Controls.Add(button);
-            //}
+            foreach (var a in db.nhomSPs)
+            {
+                button = new GunaButton();
+                button.Height = 35;
+                button.Text = a.tenLoai.ToString();
+                flowLayoutPanel1.Controls.Add(button);
+            }
             UCShowProduct uCShowProduct = new UCShowProduct();
             panelShowSP.Controls.Add(uCShowProduct);
             uCShowProduct.Show();

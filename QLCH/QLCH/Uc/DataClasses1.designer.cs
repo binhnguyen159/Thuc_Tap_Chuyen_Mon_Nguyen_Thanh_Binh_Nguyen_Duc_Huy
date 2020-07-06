@@ -66,10 +66,16 @@ namespace QLCH.Uc
     partial void InsertnhanVien(nhanVien instance);
     partial void UpdatenhanVien(nhanVien instance);
     partial void DeletenhanVien(nhanVien instance);
+    partial void InsertCTGio(CTGio instance);
+    partial void UpdateCTGio(CTGio instance);
+    partial void DeleteCTGio(CTGio instance);
+    partial void InsertGioHang(GioHang instance);
+    partial void UpdateGioHang(GioHang instance);
+    partial void DeleteGioHang(GioHang instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::QLCH.Properties.Settings.Default.TTCMConnectionString, mappingSource)
+				base(global::QLCH.Properties.Settings.Default.TTCMConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -127,14 +133,6 @@ namespace QLCH.Uc
 			get
 			{
 				return this.GetTable<congViec>();
-			}
-		}
-		
-		public System.Data.Linq.Table<GioHang> GioHangs
-		{
-			get
-			{
-				return this.GetTable<GioHang>();
 			}
 		}
 		
@@ -199,6 +197,22 @@ namespace QLCH.Uc
 			get
 			{
 				return this.GetTable<nhanVien>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CTGio> CTGios
+		{
+			get
+			{
+				return this.GetTable<CTGio>();
+			}
+		}
+		
+		public System.Data.Linq.Table<GioHang> GioHangs
+		{
+			get
+			{
+				return this.GetTable<GioHang>();
 			}
 		}
 		
@@ -284,6 +298,20 @@ namespace QLCH.Uc
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten, gt, ns, nvl, ema, dc, sdt);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.select_cart")]
+		public ISingleResult<select_cartResult> select_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maKH)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKH);
+			return ((ISingleResult<select_cartResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.select_detailCart")]
+		public ISingleResult<select_detailCartResult> select_detailCart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGio);
+			return ((ISingleResult<select_detailCartResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -1053,51 +1081,6 @@ namespace QLCH.Uc
 		{
 			this.SendPropertyChanging();
 			entity.congViec = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GioHang")]
-	public partial class GioHang
-	{
-		
-		private string _magio;
-		
-		private string _masp;
-		
-		public GioHang()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_magio", DbType="NVarChar(50)")]
-		public string magio
-		{
-			get
-			{
-				return this._magio;
-			}
-			set
-			{
-				if ((this._magio != value))
-				{
-					this._magio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masp", DbType="NVarChar(50)")]
-		public string masp
-		{
-			get
-			{
-				return this._masp;
-			}
-			set
-			{
-				if ((this._masp != value))
-				{
-					this._masp = value;
-				}
-			}
 		}
 	}
 	
@@ -3128,6 +3111,226 @@ namespace QLCH.Uc
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CTGio")]
+	public partial class CTGio : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _maCTG;
+		
+		private System.Nullable<int> _magio;
+		
+		private string _masp;
+		
+		private System.Nullable<int> _soluong;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmaCTGChanging(int value);
+    partial void OnmaCTGChanged();
+    partial void OnmagioChanging(System.Nullable<int> value);
+    partial void OnmagioChanged();
+    partial void OnmaspChanging(string value);
+    partial void OnmaspChanged();
+    partial void OnsoluongChanging(System.Nullable<int> value);
+    partial void OnsoluongChanged();
+    #endregion
+		
+		public CTGio()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maCTG", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int maCTG
+		{
+			get
+			{
+				return this._maCTG;
+			}
+			set
+			{
+				if ((this._maCTG != value))
+				{
+					this.OnmaCTGChanging(value);
+					this.SendPropertyChanging();
+					this._maCTG = value;
+					this.SendPropertyChanged("maCTG");
+					this.OnmaCTGChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_magio", DbType="Int")]
+		public System.Nullable<int> magio
+		{
+			get
+			{
+				return this._magio;
+			}
+			set
+			{
+				if ((this._magio != value))
+				{
+					this.OnmagioChanging(value);
+					this.SendPropertyChanging();
+					this._magio = value;
+					this.SendPropertyChanged("magio");
+					this.OnmagioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masp", DbType="NVarChar(50)")]
+		public string masp
+		{
+			get
+			{
+				return this._masp;
+			}
+			set
+			{
+				if ((this._masp != value))
+				{
+					this.OnmaspChanging(value);
+					this.SendPropertyChanging();
+					this._masp = value;
+					this.SendPropertyChanged("masp");
+					this.OnmaspChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
+		public System.Nullable<int> soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this.OnsoluongChanging(value);
+					this.SendPropertyChanging();
+					this._soluong = value;
+					this.SendPropertyChanged("soluong");
+					this.OnsoluongChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GioHang")]
+	public partial class GioHang : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _magio;
+		
+		private string _makh;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmagioChanging(int value);
+    partial void OnmagioChanged();
+    partial void OnmakhChanging(string value);
+    partial void OnmakhChanged();
+    #endregion
+		
+		public GioHang()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_magio", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int magio
+		{
+			get
+			{
+				return this._magio;
+			}
+			set
+			{
+				if ((this._magio != value))
+				{
+					this.OnmagioChanging(value);
+					this.SendPropertyChanging();
+					this._magio = value;
+					this.SendPropertyChanged("magio");
+					this.OnmagioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_makh", DbType="NVarChar(50)")]
+		public string makh
+		{
+			get
+			{
+				return this._makh;
+			}
+			set
+			{
+				if ((this._makh != value))
+				{
+					this.OnmakhChanging(value);
+					this.SendPropertyChanging();
+					this._makh = value;
+					this.SendPropertyChanged("makh");
+					this.OnmakhChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	public partial class KH_SelResult
 	{
 		
@@ -3633,6 +3836,148 @@ namespace QLCH.Uc
 				if ((this._tenLoai != value))
 				{
 					this._tenLoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class select_cartResult
+	{
+		
+		private int _magio;
+		
+		private string _tenKH;
+		
+		public select_cartResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_magio", DbType="Int NOT NULL")]
+		public int magio
+		{
+			get
+			{
+				return this._magio;
+			}
+			set
+			{
+				if ((this._magio != value))
+				{
+					this._magio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKH", DbType="NVarChar(50)")]
+		public string tenKH
+		{
+			get
+			{
+				return this._tenKH;
+			}
+			set
+			{
+				if ((this._tenKH != value))
+				{
+					this._tenKH = value;
+				}
+			}
+		}
+	}
+	
+	public partial class select_detailCartResult
+	{
+		
+		private string _masp;
+		
+		private string _tenSP;
+		
+		private System.Data.Linq.Binary _anh;
+		
+		private System.Nullable<double> _gia;
+		
+		private System.Nullable<int> _soLuong;
+		
+		public select_detailCartResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masp", DbType="NVarChar(50)")]
+		public string masp
+		{
+			get
+			{
+				return this._masp;
+			}
+			set
+			{
+				if ((this._masp != value))
+				{
+					this._masp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSP", DbType="NVarChar(50)")]
+		public string tenSP
+		{
+			get
+			{
+				return this._tenSP;
+			}
+			set
+			{
+				if ((this._tenSP != value))
+				{
+					this._tenSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anh", DbType="Image")]
+		public System.Data.Linq.Binary anh
+		{
+			get
+			{
+				return this._anh;
+			}
+			set
+			{
+				if ((this._anh != value))
+				{
+					this._anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gia", DbType="Float")]
+		public System.Nullable<double> gia
+		{
+			get
+			{
+				return this._gia;
+			}
+			set
+			{
+				if ((this._gia != value))
+				{
+					this._gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soLuong", DbType="Int")]
+		public System.Nullable<int> soLuong
+		{
+			get
+			{
+				return this._soLuong;
+			}
+			set
+			{
+				if ((this._soLuong != value))
+				{
+					this._soLuong = value;
 				}
 			}
 		}

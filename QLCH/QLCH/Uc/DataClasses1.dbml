@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TTCM" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MONKEYDASUS;Initial Catalog=TTCM;Persist Security Info=True;User ID=sa" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HT0NP1M;Initial Catalog=TTCM;Integrated Security=True" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.chiTietHDN" Member="chiTietHDNs">
     <Type Name="chiTietHDN">
       <Column Name="maHDN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -36,12 +36,6 @@
       <Column Name="tenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="bacLuong" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="congViec_nhanVien" Member="nhanViens" ThisKey="maCV" OtherKey="maCV" Type="nhanVien" />
-    </Type>
-  </Table>
-  <Table Name="dbo.GioHang" Member="GioHangs">
-    <Type Name="GioHang">
-      <Column Name="magio" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.HangSP" Member="HangSPs">
@@ -139,6 +133,20 @@
       <Association Name="nhanVien_hoadDonNhap" Member="hoadDonNhaps" ThisKey="maNV" OtherKey="maNV" Type="hoadDonNhap" />
       <Association Name="nhanVien_hoadDonXuat" Member="hoadDonXuats" ThisKey="maNV" OtherKey="maNV" Type="hoadDonXuat" />
       <Association Name="congViec_nhanVien" Member="congViec" ThisKey="maCV" OtherKey="maCV" Type="congViec" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTGio" Member="CTGios">
+    <Type Name="CTGio">
+      <Column Name="maCTG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="magio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GioHang" Member="GioHangs">
+    <Type Name="GioHang">
+      <Column Name="magio" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="makh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.addSP" Method="addSP">
@@ -253,5 +261,22 @@
     <Parameter Name="dc" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.select_cart" Method="select_cart">
+    <Parameter Name="maKH" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="select_cartResult">
+      <Column Name="magio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_detailCart" Method="select_detailCart">
+    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="select_detailCartResult">
+      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

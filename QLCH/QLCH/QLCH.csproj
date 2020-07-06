@@ -92,6 +92,12 @@
     <Compile Include="frmAssign.Designer.cs">
       <DependentUpon>frmAssign.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\FrmCartProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\FrmCartProduct.Designer.cs">
+      <DependentUpon>FrmCartProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\UcBill_Sell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </Compile>
     <EmbeddedResource Include="frmAssign.resx">
       <DependentUpon>frmAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\FrmCartProduct.resx">
+      <DependentUpon>FrmCartProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\UcBill_Sell.resx">
       <DependentUpon>UcBill_Sell.cs</DependentUpon>

@@ -36,11 +36,14 @@ namespace QLCH.Uc
         private void gunaImageButton1_Click(object sender, EventArgs e)
         {
             //code xoa this UC
+
+            //this.Controls.
         }
 
         private void UCCartProduct_Load(object sender, EventArgs e)
         {
             lbPrice.Text = lbPriceDefault.Text;
+            
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19.25, 12.625" name="DataClasses1">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19, 12.625" name="DataClasses1">
   <DataContextMoniker Name="/DataClasses1DataContext" />
   <nestedChildShapes>
     <classShape Id="6802edc4-fa8b-48a0-917e-addee8958ec4" absoluteBounds="2.125, 4.875, 2, 1.7708968098958327">
@@ -24,12 +24,6 @@
       <DataClassMoniker Name="/DataClasses1DataContext/congViec" />
       <nestedChildShapes>
         <elementListCompartment Id="1413926c-ea24-41dc-8493-7d486d9ebc62" absoluteBounds="12.765, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="a5334ea4-880e-4042-8a7c-4b4844920398" absoluteBounds="17, 5.125, 2, 1.1939925130208338">
-      <DataClassMoniker Name="/DataClasses1DataContext/GioHang" />
-      <nestedChildShapes>
-        <elementListCompartment Id="326346b3-90ba-4aef-8636-e852b0084494" absoluteBounds="17.015, 5.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="d3d84da2-8078-4197-adc3-0b574bc74d71" absoluteBounds="7.625, 2.75, 2, 1.1939925130208327">
@@ -143,26 +137,38 @@
         <elementListCompartment Id="f4c787ed-0330-4304-bef8-bdeed91c3a56" absoluteBounds="7.515, 9.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.5 : 10.2315991210937); (5.5 : 10.2315991210937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.5 : 10.2315991210937); (5.5 : 10.2315991210937)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/nhanVien/nhanVien_hoadDonNhap" />
       <nodes>
         <classShapeMoniker Id="8bfbe0c8-dbbf-40bf-a821-72f267f3b411" />
         <classShapeMoniker Id="5eba523a-bc82-43c2-9995-3c761fa97500" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(9.5 : 10.09375); (15.28125 : 10.09375); (15.28125 : 9.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.5 : 10.09375); (15.28125 : 10.09375); (15.28125 : 9.0881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/nhanVien/nhanVien_hoadDonXuat" />
       <nodes>
         <classShapeMoniker Id="8bfbe0c8-dbbf-40bf-a821-72f267f3b411" />
         <classShapeMoniker Id="5aaacbaa-57da-4c36-8950-2e16032bd084" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(12.75 : 11.4431469726562); (9.5 : 11.4431469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(12.75 : 11.4431469726562); (9.5 : 11.4431469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/congViec/congViec_nhanVien" />
       <nodes>
         <classShapeMoniker Id="8c53237b-64b4-4c1b-8b12-92cc5697b8bd" />
         <classShapeMoniker Id="8bfbe0c8-dbbf-40bf-a821-72f267f3b411" />
       </nodes>
     </associationConnector>
+    <classShape Id="5bce1ab6-4709-432d-9ca6-1705b73c5dbc" absoluteBounds="13.75, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/CTGio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ba20177-97b0-40c2-9daf-562b9935c5d1" absoluteBounds="13.765, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="064455e7-1314-49b1-ae4f-6c6ca46856d6" absoluteBounds="11.375, 1.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClasses1DataContext/GioHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7bd4ffb-4d2b-4b88-9a1c-b8e84a6f03bf" absoluteBounds="11.39, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
