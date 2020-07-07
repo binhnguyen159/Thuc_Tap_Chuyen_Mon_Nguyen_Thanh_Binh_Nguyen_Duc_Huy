@@ -16,7 +16,7 @@ namespace QLCH.Uc
         {
             InitializeComponent();
         }
-        UCCartProduct uCCartProduct;
+       
 
         private void btnUp_Click(object sender, EventArgs e)
         {

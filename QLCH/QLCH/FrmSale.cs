@@ -19,16 +19,17 @@ namespace QLCH
             InitializeComponent();
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
-        GunaButton button;
+        //GunaButton button;
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            foreach (var a in db.nhomSPs)
-            {
-                button = new GunaButton();
-                button.Height = 35;
-                button.Text = a.tenLoai.ToString();
-                flowLayoutPanel1.Controls.Add(button);
-            }
+            //foreach (var a in db.nhomSPs)
+            //{
+            //    button = new GunaButton();
+            //    button.Height = 35;
+            //    button.Text = a.tenLoai.ToString();
+            //    flowLayoutPanel1.Controls.Add(button);
+            //}
+            panelShowSP.Controls.Clear();
             UCShowProduct uCShowProduct = new UCShowProduct();
             panelShowSP.Controls.Add(uCShowProduct);
             uCShowProduct.Show();

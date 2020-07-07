@@ -106,8 +106,24 @@ select gh.magio,kh.tenKH from khachHang kh, GioHang gh
 where gh.makh=kh.maKH and kh.maKH=@maKH
 end
 go
-create proc select_detailCart(@maGio int)
+alter proc select_detailCart(@maGio int)
 as begin
-select CTGio.masp,sanPham.tenSP,sanPham.anh,sanPham.gia,sanPham.soLuong from CTGio,sanPham
+select CTGio.masp,sanPham.tenSP,sanPham.anh,sanPham.gia,CTGio.soLuong,CTGio.maCTG from CTGio,sanPham
 where CTGio.masp=sanPham.maSP and CTGio.magio=@maGio
 end
+go
+
+use TTCM
+go
+create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int)
+as begin 
+insert into CTGio values (@maGio,@maSP,@soLuong)
+end
+
+go
+--exec insert_cart 1,N'sp6',5
+go
+ create proc delete_CTcart(@maCTG int)
+ as begin
+ delete CTGio where maCTG=@maCTG
+ end

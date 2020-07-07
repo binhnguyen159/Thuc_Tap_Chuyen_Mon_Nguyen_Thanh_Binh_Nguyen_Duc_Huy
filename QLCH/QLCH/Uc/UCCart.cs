@@ -19,11 +19,12 @@ namespace QLCH.Uc
         {
             static public String productId;
             static public String productName;
-            static public double productPrice;
+         
             static public double productDefaultPrice;
             static public String productUnit;
             static public int productQuantity;
             static public Image productImg;
+            static public int IDCartDetail;
         }
         public UCCart()
         {
@@ -34,16 +35,16 @@ namespace QLCH.Uc
         {
             // foreach(var h in db.s)
 
-            // chưa sắp xếp thứ tự 
             foreach (var a in db.select_detailCart(1))
             {
 
                 tranferData.productId = a.masp;
                 tranferData.productName = a.tenSP;
-                tranferData.productPrice = Convert.ToDouble(a.gia);
+                
                 tranferData.productDefaultPrice = Convert.ToDouble(a.gia);
                 tranferData.productQuantity = Convert.ToInt32(a.soLuong);
                 tranferData.productImg = convertImg(a.masp);
+                tranferData.IDCartDetail = a.maCTG;
 
 
                 FrmCartProduct cartProduct = new FrmCartProduct();

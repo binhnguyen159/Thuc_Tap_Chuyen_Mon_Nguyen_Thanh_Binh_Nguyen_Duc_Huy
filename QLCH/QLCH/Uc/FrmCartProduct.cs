@@ -18,9 +18,10 @@ namespace QLCH.Uc
             InitializeComponent();
 
         }
-
+        DataClasses1DataContext db = new DataClasses1DataContext();
         private void gunaImageButton1_Click(object sender, EventArgs e)
         {
+            db.delete_CTcart(Convert.ToInt32(lbMaCTGio.Text));
             this.Close();
         }
 
@@ -39,25 +40,27 @@ namespace QLCH.Uc
 
         private void lbNumber_TextChanged(object sender, EventArgs e)
         {
-            if (lbNumber.Text != "")
-            {
-                lbPrice.Text = (Convert.ToDouble(lbPriceDefault.Text) * Convert.ToInt32(lbNumber.Text)).ToString("N0");
-            }
-            else
+            if (lbNumber.Text.Trim() == "" || lbNumber.Text.Trim() == null)
             {
                 lbNumber.Text = "0";
             }
-        }
+            else if (lbNumber.Text.Trim() != "" || lbNumber.Text.Trim() != null)
+            {
+                lbPrice.Text =(price * Convert.ToInt32(lbNumber.Text)).ToString("N0")+"VNĐ";
+            }
 
+        }
+        double price;
         private void FrmCartProduct_Load(object sender, EventArgs e)
         {
+            lbMaCTGio.Text = UCCart.tranferData.IDCartDetail.ToString();
             lbProductName.Text = UCCart.tranferData.productName;
-            lbPriceDefault.Text = UCCart.tranferData.productDefaultPrice.ToString("N0")+ "VNĐ";
-            lbPrice.Text = UCCart.tranferData.productPrice.ToString("N0") + "VNĐ";
-            //UCCart.tranferData.productQuantity;
+            lbPriceDefault.Text = UCCart.tranferData.productDefaultPrice.ToString();
+            lbNumber.Text = UCCart.tranferData.productQuantity.ToString();
             lbProductName.Text = UCCart.tranferData.productName;
             pictureBox1.Image = UCCart.tranferData.productImg;
-            lbPrice.Text = lbPriceDefault.Text;
+            lbPrice.Text = (Convert.ToDouble(lbPriceDefault.Text) * Convert.ToInt32(lbNumber.Text)).ToString("N0") + "VNĐ";
+            price = Convert.ToDouble(lbPriceDefault.Text);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCartProduct));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbMaCTGio = new System.Windows.Forms.Label();
             this.lbPriceDefault = new System.Windows.Forms.Label();
             this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.btnUp = new Guna.UI.WinForms.GunaButton();
+            this.lbNumber = new System.Windows.Forms.TextBox();
             this.btnDown = new Guna.UI.WinForms.GunaButton();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbProductName = new System.Windows.Forms.Label();
-            this.lbUnitName = new System.Windows.Forms.Label();
-            this.lbNumber = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
@@ -48,7 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lbUnitName);
+            this.panel1.Controls.Add(this.lbMaCTGio);
             this.panel1.Controls.Add(this.lbPriceDefault);
             this.panel1.Controls.Add(this.gunaImageButton1);
             this.panel1.Controls.Add(this.gunaElipsePanel1);
@@ -60,11 +60,21 @@
             this.panel1.Size = new System.Drawing.Size(566, 112);
             this.panel1.TabIndex = 3;
             // 
+            // lbMaCTGio
+            // 
+            this.lbMaCTGio.AutoSize = true;
+            this.lbMaCTGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaCTGio.Location = new System.Drawing.Point(246, 81);
+            this.lbMaCTGio.Name = "lbMaCTGio";
+            this.lbMaCTGio.Size = new System.Drawing.Size(52, 13);
+            this.lbMaCTGio.TabIndex = 5;
+            this.lbMaCTGio.Text = "lbCTGia";
+            // 
             // lbPriceDefault
             // 
             this.lbPriceDefault.AutoSize = true;
             this.lbPriceDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPriceDefault.Location = new System.Drawing.Point(283, 9);
+            this.lbPriceDefault.Location = new System.Drawing.Point(264, 9);
             this.lbPriceDefault.Name = "lbPriceDefault";
             this.lbPriceDefault.Size = new System.Drawing.Size(28, 13);
             this.lbPriceDefault.TabIndex = 4;
@@ -89,7 +99,7 @@
             this.gunaElipsePanel1.Controls.Add(this.btnUp);
             this.gunaElipsePanel1.Controls.Add(this.lbNumber);
             this.gunaElipsePanel1.Controls.Add(this.btnDown);
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(224, 37);
+            this.gunaElipsePanel1.Location = new System.Drawing.Point(205, 37);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Radius = 7;
             this.gunaElipsePanel1.Size = new System.Drawing.Size(132, 32);
@@ -119,6 +129,20 @@
             this.btnUp.Size = new System.Drawing.Size(37, 32);
             this.btnUp.TabIndex = 7;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            // 
+            // lbNumber
+            // 
+            this.lbNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbNumber.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumber.Location = new System.Drawing.Point(35, 0);
+            this.lbNumber.Name = "lbNumber";
+            this.lbNumber.Size = new System.Drawing.Size(60, 23);
+            this.lbNumber.TabIndex = 6;
+            this.lbNumber.Text = "1";
+            this.lbNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lbNumber.TextChanged += new System.EventHandler(this.lbNumber_TextChanged);
+            this.lbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // btnDown
             // 
@@ -165,29 +189,6 @@
             this.lbProductName.TabIndex = 0;
             this.lbProductName.Text = "label1";
             // 
-            // lbUnitName
-            // 
-            this.lbUnitName.AutoSize = true;
-            this.lbUnitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUnitName.Location = new System.Drawing.Point(265, 81);
-            this.lbUnitName.Name = "lbUnitName";
-            this.lbUnitName.Size = new System.Drawing.Size(61, 13);
-            this.lbUnitName.TabIndex = 5;
-            this.lbUnitName.Text = "Donvitinh";
-            // 
-            // lbNumber
-            // 
-            this.lbNumber.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNumber.Location = new System.Drawing.Point(35, 0);
-            this.lbNumber.Name = "lbNumber";
-            this.lbNumber.Size = new System.Drawing.Size(60, 30);
-            this.lbNumber.TabIndex = 6;
-            this.lbNumber.Text = "1";
-            this.lbNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lbNumber.TextChanged += new System.EventHandler(this.lbNumber_TextChanged);
-            this.lbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
@@ -229,7 +230,7 @@
         private Guna.UI.WinForms.GunaButton btnDown;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbProductName;
-        private System.Windows.Forms.Label lbUnitName;
+        private System.Windows.Forms.Label lbMaCTGio;
         private System.Windows.Forms.TextBox lbNumber;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

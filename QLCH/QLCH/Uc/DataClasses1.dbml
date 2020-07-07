@@ -269,6 +269,12 @@
       <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.insert_cart" Method="insert_cart">
+    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.select_detailCart" Method="select_detailCart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
     <ElementType Name="select_detailCartResult">
@@ -277,6 +283,11 @@
       <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
       <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maCTG" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.delete_CTcart" Method="delete_CTcart">
+    <Parameter Name="maCTG" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

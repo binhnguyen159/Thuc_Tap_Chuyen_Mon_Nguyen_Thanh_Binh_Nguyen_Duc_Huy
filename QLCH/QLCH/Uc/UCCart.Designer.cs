@@ -65,11 +65,11 @@
             // 
             this.lbBill.AutoSize = true;
             this.lbBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBill.Location = new System.Drawing.Point(827, 141);
+            this.lbBill.Location = new System.Drawing.Point(825, 141);
             this.lbBill.Name = "lbBill";
-            this.lbBill.Size = new System.Drawing.Size(30, 16);
+            this.lbBill.Size = new System.Drawing.Size(36, 16);
             this.lbBill.TabIndex = 4;
-            this.lbBill.Text = "Bill";
+            this.lbBill.Text = "Cart";
             // 
             // panelProductList
             // 
@@ -139,7 +139,7 @@
             this.btnCancel.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCancel.Location = new System.Drawing.Point(758, 595);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(221)))), ((int)(((byte)(193)))));
+            this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnCancel.OnHoverForeColor = System.Drawing.Color.White;
             this.btnCancel.OnHoverImage = null;
