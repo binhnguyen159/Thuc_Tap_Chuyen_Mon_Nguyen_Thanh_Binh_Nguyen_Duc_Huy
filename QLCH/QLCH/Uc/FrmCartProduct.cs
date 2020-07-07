@@ -12,7 +12,10 @@ namespace QLCH.Uc
 {
     public partial class FrmCartProduct : Form
     {
-
+        public class tranferPrice
+        {
+            static public double totalPrice;
+        }
         public FrmCartProduct()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace QLCH.Uc
         private void btnUp_Click(object sender, EventArgs e)
         {
             lbNumber.Text = (Convert.ToInt32(lbNumber.Text) + 1).ToString();
+            
         }
 
         private void btnDown_Click(object sender, EventArgs e)
@@ -35,6 +39,7 @@ namespace QLCH.Uc
             if (Convert.ToInt32(lbNumber.Text) > 0)
             {
                 lbNumber.Text = (Convert.ToInt32(lbNumber.Text) - 1).ToString();
+                tranferPrice.totalPrice = Convert.ToDouble(price * Convert.ToInt32(lbNumber.Text));
             }
         }
 
@@ -61,6 +66,8 @@ namespace QLCH.Uc
             pictureBox1.Image = UCCart.tranferData.productImg;
             lbPrice.Text = (Convert.ToDouble(lbPriceDefault.Text) * Convert.ToInt32(lbNumber.Text)).ToString("N0") + "VNĐ";
             price = Convert.ToDouble(lbPriceDefault.Text);
+
+           
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

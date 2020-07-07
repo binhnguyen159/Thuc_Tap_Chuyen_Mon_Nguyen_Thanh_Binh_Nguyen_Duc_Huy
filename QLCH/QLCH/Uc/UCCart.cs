@@ -31,6 +31,9 @@ namespace QLCH.Uc
             InitializeComponent();
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
+
+        double totalPrice=0;
+        double tong = 0;
         private void UCCart_Load(object sender, EventArgs e)
         {
             // foreach(var h in db.s)
@@ -45,7 +48,7 @@ namespace QLCH.Uc
                 tranferData.productQuantity = Convert.ToInt32(a.soLuong);
                 tranferData.productImg = convertImg(a.masp);
                 tranferData.IDCartDetail = a.maCTG;
-
+                
 
                 FrmCartProduct cartProduct = new FrmCartProduct();
                 cartProduct.Dock = DockStyle.Top;
@@ -53,14 +56,13 @@ namespace QLCH.Uc
                 panelProductList.Controls.Add(cartProduct);
                 cartProduct.Show();
 
+                tong = FrmCartProduct.tranferPrice.totalPrice;
+                totalPrice += tong;
 
 
-
-
-                //load anh len
-                //
-                //Load database cart
             }
+            
+            lbTotalPrice.Text = totalPrice.ToString();
         }
         private Image convertImg(String masp)
         {
