@@ -21,16 +21,6 @@ namespace QLCH.Uc
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
         int function = 0;
-        private void btnGetPic_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            if(open.ShowDialog() == DialogResult.OK)
-            {
-                open.Filter = "Pictures files (*.jpg,*jpeg,*.jpe,*.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-                //ptbAvatar.Image = new Bitmap(open.FileName);
-                //ptbAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {

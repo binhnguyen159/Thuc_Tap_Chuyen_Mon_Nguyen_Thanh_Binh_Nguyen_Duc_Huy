@@ -112,7 +112,15 @@ namespace QLCH.Uc
                 btnDrop.Enabled = false;
                 btnCreate.Enabled = false;
             }
-                
+            else if (button.Text.Equals("Tìm kiếm"))
+            {
+                choose = 4;
+                btnDrop.Enabled = false;
+                btnCreate.Enabled = false;
+                btnDrop.Enabled = false;
+                btnSetPass.Enabled = false;
+                txtTenDN.Enabled = true;
+            }
 
             pnlChange.Enabled = true;
         }
@@ -167,6 +175,7 @@ namespace QLCH.Uc
                             {
                                 SendMail(nv.tenNV, nv.email);
                                 db.ACC_Add(txtMaNV.Text, txtTenDN.Text, MaHoaMD5(pass));
+                                Uc_TaiKhoan_Load(sender, e);
                             }
                         }
                         break;
@@ -174,16 +183,33 @@ namespace QLCH.Uc
                 case 2:
                     {
                         db.ACC_Del(txtMaNV.Text);
+                        Uc_TaiKhoan_Load(sender, e);
                         break;
                     }
                 case 3:
                     {
                         SendMail(nv.tenNV, nv.email);
                         db.ACC_Up(txtMaNV.Text, MaHoaMD5(pass));
+                        Uc_TaiKhoan_Load(sender, e);
+                        break;
+                    }
+                case 4:
+                    {
+                        if (rdbMaNV.Checked == true)
+                        {
+                            dgvTaiKhoan.DataSource = db.ACC_FindID(txtMaNV.Text);
+                        }
+
+                        else if (rdbTenDN.Checked == true)
+                            dgvTaiKhoan.DataSource = db.ACC_FindTenDN(txtTenDN.Text);
                         break;
                     }
             }
-            Uc_TaiKhoan_Load(sender, e);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

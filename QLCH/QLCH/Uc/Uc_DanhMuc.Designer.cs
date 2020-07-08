@@ -141,7 +141,6 @@
             // pnlNCC
             // 
             this.pnlNCC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlNCC.Location = new System.Drawing.Point(3, 3);
             this.pnlNCC.Name = "pnlNCC";
             this.pnlNCC.Size = new System.Drawing.Size(951, 622);

@@ -41,9 +41,10 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
-            this.chbMaNV = new System.Windows.Forms.CheckBox();
-            this.chbTenDN = new System.Windows.Forms.CheckBox();
+            this.rdbMaNV = new System.Windows.Forms.RadioButton();
+            this.rdbTenDN = new System.Windows.Forms.RadioButton();
             this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
+            this.txtMaNV = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtTenDN = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -54,7 +55,6 @@
             this.pnlChange = new Guna.UI.WinForms.GunaPanel();
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
-            this.txtMaNV = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaPanel1.SuspendLayout();
             this.pnlDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
@@ -207,30 +207,32 @@
             // 
             // gunaPanel3
             // 
-            this.gunaPanel3.Controls.Add(this.chbMaNV);
-            this.gunaPanel3.Controls.Add(this.chbTenDN);
+            this.gunaPanel3.Controls.Add(this.rdbMaNV);
+            this.gunaPanel3.Controls.Add(this.rdbTenDN);
             this.gunaPanel3.Location = new System.Drawing.Point(342, 37);
             this.gunaPanel3.Name = "gunaPanel3";
             this.gunaPanel3.Size = new System.Drawing.Size(40, 107);
             this.gunaPanel3.TabIndex = 5;
             // 
-            // chbMaNV
+            // rdbMaNV
             // 
-            this.chbMaNV.AutoSize = true;
-            this.chbMaNV.Location = new System.Drawing.Point(14, 29);
-            this.chbMaNV.Name = "chbMaNV";
-            this.chbMaNV.Size = new System.Drawing.Size(15, 14);
-            this.chbMaNV.TabIndex = 1;
-            this.chbMaNV.UseVisualStyleBackColor = true;
+            this.rdbMaNV.AutoSize = true;
+            this.rdbMaNV.Checked = true;
+            this.rdbMaNV.Location = new System.Drawing.Point(14, 30);
+            this.rdbMaNV.Name = "rdbMaNV";
+            this.rdbMaNV.Size = new System.Drawing.Size(14, 13);
+            this.rdbMaNV.TabIndex = 6;
+            this.rdbMaNV.TabStop = true;
+            this.rdbMaNV.UseVisualStyleBackColor = true;
             // 
-            // chbTenDN
+            // rdbTenDN
             // 
-            this.chbTenDN.AutoSize = true;
-            this.chbTenDN.Location = new System.Drawing.Point(14, 80);
-            this.chbTenDN.Name = "chbTenDN";
-            this.chbTenDN.Size = new System.Drawing.Size(15, 14);
-            this.chbTenDN.TabIndex = 0;
-            this.chbTenDN.UseVisualStyleBackColor = true;
+            this.rdbTenDN.AutoSize = true;
+            this.rdbTenDN.Location = new System.Drawing.Point(14, 80);
+            this.rdbTenDN.Name = "rdbTenDN";
+            this.rdbTenDN.Size = new System.Drawing.Size(14, 13);
+            this.rdbTenDN.TabIndex = 7;
+            this.rdbTenDN.UseVisualStyleBackColor = true;
             // 
             // btnTimKiem
             // 
@@ -243,7 +245,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTimKiem.Location = new System.Drawing.Point(428, 78);
+            this.btnTimKiem.Location = new System.Drawing.Point(422, 78);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -253,6 +255,21 @@
             this.btnTimKiem.Size = new System.Drawing.Size(121, 42);
             this.btnTimKiem.TabIndex = 5;
             this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.BackColor = System.Drawing.Color.White;
+            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNV.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtMaNV.Location = new System.Drawing.Point(170, 54);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.PasswordChar = '\0';
+            this.txtMaNV.Size = new System.Drawing.Size(160, 26);
+            this.txtMaNV.TabIndex = 2;
             // 
             // txtTenDN
             // 
@@ -321,7 +338,7 @@
             this.gunaPanel2.Controls.Add(this.btnCreate);
             this.gunaPanel2.Controls.Add(this.pnlChange);
             this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gunaPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaPanel2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaPanel2.Location = new System.Drawing.Point(637, 0);
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(314, 622);
@@ -429,21 +446,6 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtMaNV
-            // 
-            this.txtMaNV.BackColor = System.Drawing.Color.White;
-            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.Enabled = false;
-            this.txtMaNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.ForeColor = System.Drawing.Color.Black;
-            this.txtMaNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtMaNV.Location = new System.Drawing.Point(170, 54);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.PasswordChar = '\0';
-            this.txtMaNV.Size = new System.Drawing.Size(160, 26);
-            this.txtMaNV.TabIndex = 2;
-            // 
             // Uc_TaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,8 +484,6 @@
         private Guna.UI.WinForms.GunaButton btnSave;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
         private Guna.UI.WinForms.GunaPanel gunaPanel3;
-        private System.Windows.Forms.CheckBox chbMaNV;
-        private System.Windows.Forms.CheckBox chbTenDN;
         private Guna.UI.WinForms.GunaButton btnTimKiem;
         private Guna.UI.WinForms.GunaDataGridView dgvTaiKhoan;
         private Guna.UI.WinForms.GunaPanel pnlChange;
@@ -493,5 +493,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private Guna.UI.WinForms.GunaLineTextBox txtMaNV;
+        private System.Windows.Forms.RadioButton rdbTenDN;
+        private System.Windows.Forms.RadioButton rdbMaNV;
     }
 }

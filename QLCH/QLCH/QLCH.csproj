@@ -116,6 +116,12 @@
     <Compile Include="Uc\UCCartProduct.Designer.cs">
       <DependentUpon>UCCartProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\Uc_NCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Uc_NCC.Designer.cs">
+      <DependentUpon>Uc_NCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\Uc_Provider.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\UCCartProduct.resx">
       <DependentUpon>UCCartProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Uc_NCC.resx">
+      <DependentUpon>Uc_NCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_Provider.resx">
       <DependentUpon>Uc_Provider.cs</DependentUpon>

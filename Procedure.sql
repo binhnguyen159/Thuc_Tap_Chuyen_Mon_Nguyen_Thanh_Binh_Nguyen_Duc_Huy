@@ -125,7 +125,18 @@ begin
 	update nhanVien set passWords = null, tendn = null where maNV = @ma
 end
 select maNV,tendn,passWords from nhanVien
---=======
+--FindID
+create proc ACC_FindID (@ma nvarchar(50)) as
+begin
+	select maNV, tenNV, ngSinh, tendn from nhanVien where maNV like '%' + @ma + '%'
+end
+--Find tên đăng nhập
+alter proc ACC_FindTenDN (@tdn nvarchar(50)) as
+begin
+	select maNV, tenNV, ngSinh, tendn from nhanVien where tendn like '%' + @tdn + '%'
+end
+exec acc_findId N'1'
+exec acc_FindTenDN N'h'
 go
 create proc select_cart(@maKH nvarchar(50))
 as begin
@@ -154,4 +165,55 @@ go
  as begin
  delete CTGio where maCTG=@maCTG
  end
--->>>>>>> d952e4b925ab4043c172fea4f06b8d2a06ab2067
+ --NHÀ CUNG CẤP
+ --Load
+ create proc NCC_Sel as
+ begin
+	select * from nhaCungCap
+ end
+ go
+ --thêm
+ create proc NCC_Ins (
+ @ma nvarchar(50), @ten nvarchar(50),
+ @email nvarchar(50),@dc nvarchar(50),
+ @dt nvarchar(50)) as
+ begin
+	insert into nhaCungCap values(@ma,@ten,@email,@dc,@dt)
+ end
+ go
+ --xóa
+ create proc NCC_Del (@ma nvarchar(50)) as
+ begin
+	delete nhaCungCap where maNCC = @ma
+ end
+ go
+ --Sửa
+ create proc NCC_Up (
+ @ma nvarchar(50), @ten nvarchar(50),
+ @email nvarchar(50),@dc nvarchar(50),
+ @dt nvarchar(50)
+ ) as begin
+	update nhaCungCap set tenNCC=@ten, email = @email,
+							diaChi=@dc, sdt = @dt
+						where maNCC = @ma
+ end
+ go
+ --Tìm theo id
+ alter proc NCC_FindiD (@ma nvarchar(50)) as
+ begin
+	select * from nhaCungCap where maNCC like '%'+@ma+'%'
+ end
+ go
+ --Tìm theo tên
+  alter proc NCC_FindName(@name nvarchar(50)) as
+ begin
+	select * from nhaCungCap where tenNCC like  N'%'+@name+N'%'
+ end
+ go
+ --Tìm theo địa chỉ
+  alter proc NCC_FindAddress (@address nvarchar(50)) as
+ begin
+	select * from nhaCungCap where diaChi like N'%'+@address+N'%'
+ end
+ go
+ exec NCC_FindiD '1'

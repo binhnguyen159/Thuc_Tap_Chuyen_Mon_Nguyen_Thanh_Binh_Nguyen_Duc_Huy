@@ -63,7 +63,7 @@ namespace QLCH
             Uc_Provider uCProvider = new Uc_Provider();
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(uCProvider);
-            uCProvider.Show();
+            //uCProvider.Show();
         }
         private void btnCustomer_Click(object sender, EventArgs e)
         {

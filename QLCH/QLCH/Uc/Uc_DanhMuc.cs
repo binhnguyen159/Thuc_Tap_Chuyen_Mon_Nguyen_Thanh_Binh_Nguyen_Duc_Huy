@@ -45,7 +45,7 @@ namespace QLCH.Uc
                 case 3:
                     {
                         pnlNCC.Controls.Clear();
-                        Uc_Provider provider = new Uc_Provider();
+                        Uc_NCC provider = new Uc_NCC();
                         pnlNCC.Controls.Add(provider);
                         break;
                     }

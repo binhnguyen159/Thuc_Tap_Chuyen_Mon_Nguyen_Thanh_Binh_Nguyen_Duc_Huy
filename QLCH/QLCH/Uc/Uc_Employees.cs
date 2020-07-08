@@ -361,7 +361,7 @@ namespace QLCH.Uc
             }
         }
 
-        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        private void bunifuMaterialTextbox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;

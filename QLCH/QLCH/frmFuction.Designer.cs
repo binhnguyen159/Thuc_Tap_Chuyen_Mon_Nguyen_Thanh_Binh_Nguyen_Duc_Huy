@@ -98,7 +98,7 @@
             this.btnProvider.Image = ((System.Drawing.Image)(resources.GetObject("btnProvider.Image")));
             this.btnProvider.ImageSize = new System.Drawing.Size(20, 20);
             this.btnProvider.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnProvider.Location = new System.Drawing.Point(5, 226);
+            this.btnProvider.Location = new System.Drawing.Point(5, 392);
             this.btnProvider.Name = "btnProvider";
             this.btnProvider.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnProvider.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -330,7 +330,6 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(965, 665);
             this.pnlContent.TabIndex = 2;
-            //this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
             // 
             // gunaDragControl2
             // 
