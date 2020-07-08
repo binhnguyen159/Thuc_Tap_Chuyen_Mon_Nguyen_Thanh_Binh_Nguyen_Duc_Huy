@@ -99,7 +99,7 @@ begin
 	where maNV=@ma
 end
 
-<<<<<<< HEAD
+--<<<<<<< HEAD
 --TÀI KHOẢN
 --Thống kê danh sách
 create proc ACC_Sel as
@@ -125,7 +125,7 @@ begin
 	update nhanVien set passWords = null, tendn = null where maNV = @ma
 end
 select maNV,tendn,passWords from nhanVien
-=======
+--=======
 go
 create proc select_cart(@maKH nvarchar(50))
 as begin
@@ -154,4 +154,4 @@ go
  as begin
  delete CTGio where maCTG=@maCTG
  end
->>>>>>> d952e4b925ab4043c172fea4f06b8d2a06ab2067
+-->>>>>>> d952e4b925ab4043c172fea4f06b8d2a06ab2067

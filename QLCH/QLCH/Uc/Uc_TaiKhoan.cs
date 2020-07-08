@@ -63,9 +63,10 @@ namespace QLCH.Uc
 
         private void Uc_TaiKhoan_Load(object sender, EventArgs e)
         {
-            var manv = from u in db.nhanViens
-                       select u.maNV;
-            cbbMaNV.DataSource = manv;
+            //cbbMaNV.DropDownStyle = ComboBoxStyle.DropDown;
+            //var manv = from u in db.nhanViens
+            //           select u.maNV;
+            //cbbMaNV.DataSource = manv;
 
             dgvTaiKhoan.AutoGenerateColumns = false;
             dgvTaiKhoan.DataSource = db.ACC_Sel();
@@ -77,7 +78,7 @@ namespace QLCH.Uc
             if (i >= 0)
             {
 
-                cbbMaNV.Text = dgvTaiKhoan.Rows[i].Cells[0].Value.ToString();
+                txtMaNV.Text = dgvTaiKhoan.Rows[i].Cells[0].Value.ToString();
                 if (dgvTaiKhoan.Rows[i].Cells[3].Value == null)
                     txtTenDN.Text = "";
                 else
@@ -152,7 +153,7 @@ namespace QLCH.Uc
         {
             pass = "";
             SetPass();
-            nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(cbbMaNV.Text)).FirstOrDefault();
+            nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(txtMaNV.Text)).FirstOrDefault();
             nhanVien nv2 = db.nhanViens.Where(s => s.tendn.Equals(txtTenDN.Text)).FirstOrDefault();
             switch (choose)
             {
@@ -165,20 +166,20 @@ namespace QLCH.Uc
                             if (nv2 == null)
                             {
                                 SendMail(nv.tenNV, nv.email);
-                                db.ACC_Add(cbbMaNV.Text, txtTenDN.Text, MaHoaMD5(pass));
+                                db.ACC_Add(txtMaNV.Text, txtTenDN.Text, MaHoaMD5(pass));
                             }
                         }
                         break;
                     }
                 case 2:
                     {
-                        db.ACC_Del(cbbMaNV.Text);
+                        db.ACC_Del(txtMaNV.Text);
                         break;
                     }
                 case 3:
                     {
                         SendMail(nv.tenNV, nv.email);
-                        db.ACC_Up(cbbMaNV.Text, MaHoaMD5(pass));
+                        db.ACC_Up(txtMaNV.Text, MaHoaMD5(pass));
                         break;
                     }
             }

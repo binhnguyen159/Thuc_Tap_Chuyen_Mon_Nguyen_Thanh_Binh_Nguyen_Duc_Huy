@@ -330,10 +330,7 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(965, 665);
             this.pnlContent.TabIndex = 2;
-<<<<<<< HEAD
-=======
-            this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
->>>>>>> d952e4b925ab4043c172fea4f06b8d2a06ab2067
+            //this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
             // 
             // gunaDragControl2
             // 

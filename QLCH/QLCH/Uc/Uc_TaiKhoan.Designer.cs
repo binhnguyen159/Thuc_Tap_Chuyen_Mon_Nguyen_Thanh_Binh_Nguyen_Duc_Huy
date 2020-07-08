@@ -54,7 +54,7 @@
             this.pnlChange = new Guna.UI.WinForms.GunaPanel();
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
-            this.cbbMaNV = new Guna.UI.WinForms.GunaComboBox();
+            this.txtMaNV = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaPanel1.SuspendLayout();
             this.pnlDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
@@ -188,9 +188,9 @@
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Controls.Add(this.cbbMaNV);
             this.gunaGroupBox1.Controls.Add(this.gunaPanel3);
             this.gunaGroupBox1.Controls.Add(this.btnTimKiem);
+            this.gunaGroupBox1.Controls.Add(this.txtMaNV);
             this.gunaGroupBox1.Controls.Add(this.txtTenDN);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel1);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel2);
@@ -429,23 +429,20 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // cbbMaNV
+            // txtMaNV
             // 
-            this.cbbMaNV.BackColor = System.Drawing.Color.Transparent;
-            this.cbbMaNV.BaseColor = System.Drawing.Color.White;
-            this.cbbMaNV.BorderColor = System.Drawing.Color.Silver;
-            this.cbbMaNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbMaNV.FocusedColor = System.Drawing.Color.Empty;
-            this.cbbMaNV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaNV.ForeColor = System.Drawing.Color.Black;
-            this.cbbMaNV.FormattingEnabled = true;
-            this.cbbMaNV.Location = new System.Drawing.Point(170, 60);
-            this.cbbMaNV.Name = "cbbMaNV";
-            this.cbbMaNV.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbbMaNV.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbbMaNV.Size = new System.Drawing.Size(126, 23);
-            this.cbbMaNV.TabIndex = 6;
+            this.txtMaNV.BackColor = System.Drawing.Color.White;
+            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNV.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtMaNV.Location = new System.Drawing.Point(170, 54);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.PasswordChar = '\0';
+            this.txtMaNV.Size = new System.Drawing.Size(160, 26);
+            this.txtMaNV.TabIndex = 2;
             // 
             // Uc_TaiKhoan
             // 
@@ -495,6 +492,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private Guna.UI.WinForms.GunaComboBox cbbMaNV;
+        private Guna.UI.WinForms.GunaLineTextBox txtMaNV;
     }
 }
