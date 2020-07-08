@@ -107,10 +107,17 @@ thanhTien float,
 primary key(maHDX,maSP)
 )
 go
-create table GioHang(
-	magio nvarchar(50),
+create table GioHang
+(
+	magio int IDENTITY primary key,
+	makh nvarchar(50)
+)
+create table CTGio(
+	maCTG int identity primary key,
+	magio int ,
 	masp nvarchar(50),
-	
+	soluong int,
+
 )
 
 go

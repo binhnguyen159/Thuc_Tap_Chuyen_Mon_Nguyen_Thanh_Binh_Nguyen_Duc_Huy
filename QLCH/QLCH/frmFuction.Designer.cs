@@ -85,7 +85,7 @@
             // 
             this.btnProvider.AnimationHoverSpeed = 0.07F;
             this.btnProvider.AnimationSpeed = 0.03F;
-            this.btnProvider.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnProvider.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
             this.btnProvider.BorderColor = System.Drawing.Color.Black;
             this.btnProvider.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnProvider.CheckedBorderColor = System.Drawing.Color.Black;
@@ -98,7 +98,7 @@
             this.btnProvider.Image = ((System.Drawing.Image)(resources.GetObject("btnProvider.Image")));
             this.btnProvider.ImageSize = new System.Drawing.Size(20, 20);
             this.btnProvider.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnProvider.Location = new System.Drawing.Point(5, 391);
+            this.btnProvider.Location = new System.Drawing.Point(5, 226);
             this.btnProvider.Name = "btnProvider";
             this.btnProvider.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnProvider.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -116,7 +116,7 @@
             // 
             this.btnBuy.AnimationHoverSpeed = 0.07F;
             this.btnBuy.AnimationSpeed = 0.03F;
-            this.btnBuy.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnBuy.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
             this.btnBuy.BorderColor = System.Drawing.Color.Black;
             this.btnBuy.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnBuy.CheckedBorderColor = System.Drawing.Color.Black;
@@ -129,7 +129,7 @@
             this.btnBuy.Image = ((System.Drawing.Image)(resources.GetObject("btnBuy.Image")));
             this.btnBuy.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBuy.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnBuy.Location = new System.Drawing.Point(22, 226);
+            this.btnBuy.Location = new System.Drawing.Point(20, 282);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBuy.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -147,7 +147,7 @@
             // 
             this.btnSell.AnimationHoverSpeed = 0.07F;
             this.btnSell.AnimationSpeed = 0.03F;
-            this.btnSell.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSell.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
             this.btnSell.BorderColor = System.Drawing.Color.Black;
             this.btnSell.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnSell.CheckedBorderColor = System.Drawing.Color.Black;
@@ -160,7 +160,7 @@
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
             this.btnSell.ImageSize = new System.Drawing.Size(20, 20);
             this.btnSell.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSell.Location = new System.Drawing.Point(22, 281);
+            this.btnSell.Location = new System.Drawing.Point(20, 337);
             this.btnSell.Name = "btnSell";
             this.btnSell.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSell.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -178,7 +178,7 @@
             // 
             this.btnReport.AnimationHoverSpeed = 0.07F;
             this.btnReport.AnimationSpeed = 0.03F;
-            this.btnReport.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnReport.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
             this.btnReport.BorderColor = System.Drawing.Color.Black;
             this.btnReport.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnReport.CheckedBorderColor = System.Drawing.Color.Black;
@@ -208,7 +208,7 @@
             // 
             this.btnBill.AnimationHoverSpeed = 0.07F;
             this.btnBill.AnimationSpeed = 0.03F;
-            this.btnBill.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnBill.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
             this.btnBill.BorderColor = System.Drawing.Color.Black;
             this.btnBill.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnBill.CheckedBorderColor = System.Drawing.Color.Black;
@@ -239,7 +239,7 @@
             // 
             this.btnProducts.AnimationHoverSpeed = 0.07F;
             this.btnProducts.AnimationSpeed = 0.03F;
-            this.btnProducts.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnProducts.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(188)))), ((int)(((byte)(239)))));
             this.btnProducts.BorderColor = System.Drawing.Color.Black;
             this.btnProducts.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnProducts.CheckedBorderColor = System.Drawing.Color.Black;
@@ -270,7 +270,7 @@
             // 
             this.btnCustomer.AnimationHoverSpeed = 0.07F;
             this.btnCustomer.AnimationSpeed = 0.03F;
-            this.btnCustomer.BaseColor = System.Drawing.Color.DarkTurquoise;
+            this.btnCustomer.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
             this.btnCustomer.BorderColor = System.Drawing.Color.Black;
             this.btnCustomer.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnCustomer.CheckedBorderColor = System.Drawing.Color.Black;
@@ -279,7 +279,7 @@
             this.btnCustomer.CheckedLineColor = System.Drawing.Color.DimGray;
             this.btnCustomer.FocusedColor = System.Drawing.Color.Empty;
             this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(62)))), ((int)(((byte)(140)))));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCustomer.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
@@ -330,6 +330,10 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(965, 665);
             this.pnlContent.TabIndex = 2;
+<<<<<<< HEAD
+=======
+            this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
+>>>>>>> d952e4b925ab4043c172fea4f06b8d2a06ab2067
             // 
             // gunaDragControl2
             // 

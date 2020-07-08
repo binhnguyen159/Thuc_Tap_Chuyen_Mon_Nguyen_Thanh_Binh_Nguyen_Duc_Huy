@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19.25, 12.625" name="DataClasses1">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19, 12.625" name="DataClasses1">
   <DataContextMoniker Name="/DataClasses1DataContext" />
   <nestedChildShapes>
     <classShape Id="6802edc4-fa8b-48a0-917e-addee8958ec4" absoluteBounds="2.125, 4.875, 2, 1.7708968098958327">
@@ -24,12 +24,6 @@
       <DataClassMoniker Name="/DataClasses1DataContext/congViec" />
       <nestedChildShapes>
         <elementListCompartment Id="1413926c-ea24-41dc-8493-7d486d9ebc62" absoluteBounds="12.765, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="a5334ea4-880e-4042-8a7c-4b4844920398" absoluteBounds="17, 5.125, 2, 1.1939925130208338">
-      <DataClassMoniker Name="/DataClasses1DataContext/GioHang" />
-      <nestedChildShapes>
-        <elementListCompartment Id="326346b3-90ba-4aef-8636-e852b0084494" absoluteBounds="17.015, 5.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="d3d84da2-8078-4197-adc3-0b574bc74d71" absoluteBounds="7.625, 2.75, 2, 1.1939925130208327">
@@ -164,5 +158,17 @@
         <classShapeMoniker Id="8bfbe0c8-dbbf-40bf-a821-72f267f3b411" />
       </nodes>
     </associationConnector>
+    <classShape Id="5bce1ab6-4709-432d-9ca6-1705b73c5dbc" absoluteBounds="13.75, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/CTGio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ba20177-97b0-40c2-9daf-562b9935c5d1" absoluteBounds="13.765, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="064455e7-1314-49b1-ae4f-6c6ca46856d6" absoluteBounds="11.375, 1.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClasses1DataContext/GioHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7bd4ffb-4d2b-4b88-9a1c-b8e84a6f03bf" absoluteBounds="11.39, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

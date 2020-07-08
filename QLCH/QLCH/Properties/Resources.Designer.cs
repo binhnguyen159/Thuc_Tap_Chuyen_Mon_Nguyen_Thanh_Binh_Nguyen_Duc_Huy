@@ -183,6 +183,16 @@ namespace QLCH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_shopify_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-shopify-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shopping_bag_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shopping-bag-100", resourceCulture);

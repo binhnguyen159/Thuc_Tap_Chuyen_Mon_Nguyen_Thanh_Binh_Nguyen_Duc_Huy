@@ -99,6 +99,7 @@ begin
 	where maNV=@ma
 end
 
+<<<<<<< HEAD
 --TÀI KHOẢN
 --Thống kê danh sách
 create proc ACC_Sel as
@@ -124,3 +125,33 @@ begin
 	update nhanVien set passWords = null, tendn = null where maNV = @ma
 end
 select maNV,tendn,passWords from nhanVien
+=======
+go
+create proc select_cart(@maKH nvarchar(50))
+as begin
+select gh.magio,kh.tenKH from khachHang kh, GioHang gh
+where gh.makh=kh.maKH and kh.maKH=@maKH
+end
+go
+alter proc select_detailCart(@maGio int)
+as begin
+select CTGio.masp,sanPham.tenSP,sanPham.anh,sanPham.gia,CTGio.soLuong,CTGio.maCTG from CTGio,sanPham
+where CTGio.masp=sanPham.maSP and CTGio.magio=@maGio
+end
+go
+
+use TTCM
+go
+create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int)
+as begin 
+insert into CTGio values (@maGio,@maSP,@soLuong)
+end
+
+go
+--exec insert_cart 1,N'sp6',5
+go
+ create proc delete_CTcart(@maCTG int)
+ as begin
+ delete CTGio where maCTG=@maCTG
+ end
+>>>>>>> d952e4b925ab4043c172fea4f06b8d2a06ab2067
