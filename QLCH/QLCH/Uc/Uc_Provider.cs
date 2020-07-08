@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLCH.Uc
 {
-    public partial class UCProvider : UserControl
+    public partial class Uc_Provider : UserControl
     {
-        public UCProvider()
+        public Uc_Provider()
         {
             InitializeComponent();
         }
@@ -22,8 +22,8 @@ namespace QLCH.Uc
         int dem = 0;
         private void UCProvider_Load(object sender, EventArgs e)
         {
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = db.nhaCungCaps;
+            dgvNCC.AutoGenerateColumns = false;
+            dgvNCC.DataSource = db.nhaCungCaps;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace QLCH.Uc
                     dem++;
                 }
                 ma = dem + 1;
-                lbMa.Text = ma.ToString();
+                txtID.Text = ma.ToString();
                 dem = 0;
             }
         }
@@ -84,12 +84,12 @@ namespace QLCH.Uc
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = dataGridView1.CurrentRow.Index;
-            lbMa.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            txtProviderName.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            txtEmail.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            txtAddress.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            txtPhoneNumber.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            int i = dgvNCC.CurrentRow.Index;
+            txtID.Text = dgvNCC.Rows[i].Cells[0].Value.ToString();
+            txtProviderName.Text = dgvNCC.Rows[i].Cells[1].Value.ToString();
+            txtEmail.Text = dgvNCC.Rows[i].Cells[2].Value.ToString();
+            txtAddress.Text = dgvNCC.Rows[i].Cells[3].Value.ToString();
+            txtPhoneNumber.Text = dgvNCC.Rows[i].Cells[4].Value.ToString();
             btnAdd.Enabled = false;
         }
 

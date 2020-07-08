@@ -97,7 +97,7 @@ namespace QLCH
         private void btLogin_Click(object sender, EventArgs e)
         {
             nhanVien nv = dt.nhanViens.Where(s =>   s.passWords.Equals(MaHoaMD5(txtPassword.Text))
-                                                    && s.maNV.Equals(txtAcount.Text))
+                                                    && s.tendn.Equals(txtAcount.Text))
                                                     .FirstOrDefault();
             if (nv != null)
             {
@@ -116,6 +116,41 @@ namespace QLCH
                 e.Handled = true;
         }
 
+        void SendMail(string tenNV, string email)
+        {
+            string bodyemail = "Xin Chào " + tenNV + " Chúng Tôi Đã Nhận Được Yêu Cầu Cần Hổ Trợ Của Bạn: \n\n"
+                                    + "\tChúng Tôi Sẽ Hướng Dẫn Bạn Cách Đổi Mật Khẩu\n"
+                                    + "Bước 1: Tại Phần Đổi Mật Khẩu, Bạn Nhập Tên Tài Khoản Của Bạn\n"
+                                    + "Bước 2: Tiếp Theo Bạn Cần Nhập Mã Xác Minh \n"
+                                    + "\t\t=> Mã Xác Minh Của Bạn Là: " + OTP
+                                    + "\nBước 3: Nhập Mật Khẩu Mới Của Bạn, Xong Bạn Click Vào Đổi Mật Khẩu";
+
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("gearharis@gmail.com");
+                mail.To.Add(email);
+                mail.Subject = "Gear Haris - The best choice for gamer";
+                mail.Body = bodyemail;
+                SmtpClient smptClient = new SmtpClient();
+                smptClient.Host = "smtp.gmail.com";
+                NetworkCredential credential = new NetworkCredential();
+                credential.UserName = "gearharis@gmail.com";
+                credential.Password = "haris0071";
+                smptClient.Credentials = credential;
+                smptClient.Port = 587;
+                smptClient.EnableSsl = true;
+                smptClient.Send(mail);
+
+
+                MessageBox.Show("Đã gửi mã xác minh về Email Mời Kiểm Tra Để Đổi Mật Khẩu", "Thông báo", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnOTP_Click(object sender, EventArgs e)
         {
             OTP = "";
@@ -125,6 +160,41 @@ namespace QLCH
             if (nv != null)
             {
                 GetOTP();
+                //string bodyemail = "Xin Chào " + nv.tenNV + " Chúng Tôi Đã Nhận Được Yêu Cầu Cần Hổ Trợ Của Bạn: \n\n"
+                //                    + "\tChúng Tôi Sẽ Hướng Dẫn Bạn Cách Đổi Mật Khẩu\n"
+                //                    + "Bước 1: Tại Phần Đổi Mật Khẩu, Bạn Nhập Tên Tài Khoản Của Bạn\n"
+                //                    + "Bước 2: Tiếp Theo Bạn Cần Nhập Mã Xác Minh \n"
+                //                    + "\t\t=> Mã Xác Minh Của Bạn Là: " + OTP
+                //                    + "\nBước 3: Nhập Mật Khẩu Mới Của Bạn, Xong Bạn Click Vào Đổi Mật Khẩu";
+
+                //try
+                //{
+                //    MailMessage mail = new MailMessage();
+                //    mail.From = new MailAddress("gearharis@gmail.com");
+                //    mail.To.Add(nv.email);
+                //    mail.Subject = "Gear Haris - The best choice for gamer";
+                //    mail.Body = OTP;
+                //    SmtpClient smptClient = new SmtpClient();
+                //    smptClient.Host = "smtp.gmail.com";
+                //    NetworkCredential credential = new NetworkCredential();
+                //    credential.UserName = "gearharis@gmail.com";
+                //    credential.Password = "haris0071";
+                //    smptClient.Credentials = credential;
+                //    smptClient.Port = 587;
+                //    smptClient.EnableSsl = true;
+                //    smptClient.Send(mail);
+
+
+                //    MessageBox.Show("Đã gửi mã xác minh về Email Mời Kiểm Tra Để Đổi Mật Khẩu", "Thông báo", MessageBoxButtons.OK);
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
+                SendMail(nv.tenNV, nv.email);
+                counter = 60;
+                timer1.Start();
+                llbTime.Enabled = true;
             }
             else
             {
@@ -133,41 +203,10 @@ namespace QLCH
             }
 
 
-            //string bodyemail = "Xin Chào " + nv.tenNV + " Chúng Tôi Đã Nhận Được Yêu Cầu Cần Hổ Trợ Của Bạn: \n\n"
-            //                        + "\tChúng Tôi Sẽ Hướng Dẫn Bạn Cách Đổi Mật Khẩu\n"
-            //                        + "Bước 1: Tại Phần Đổi Mật Khẩu, Bạn Nhập Tên Tài Khoản Của Bạn\n"
-            //                        + "Bước 2: Tiếp Theo Bạn Cần Nhập Mã Xác Minh \n"
-            //                        + "\t\t=> Mã Xác Minh Của Bạn Là: " + OTP
-            //                        + "\nBước 3: Nhập Mật Khẩu Mới Của Bạn, Xong Bạn Click Vào Đổi Mật Khẩu";
-            GetOTP();
-            MessageBox.Show(OTP);
-            //try
-            //{
-            //    MailMessage mail = new MailMessage();
-            //    mail.From = new MailAddress("gearharis@gmail.com");
-            //    mail.To.Add("gearharis@gmail.com");
-            //    mail.Subject = "Gear Haris - The best choice for gamer";
-            //    mail.Body = OTP;
-            //    SmtpClient smptClient = new SmtpClient();
-            //    smptClient.Host = "smtp.gmail.com";
-            //    NetworkCredential credential = new NetworkCredential();
-            //    credential.UserName = "gearharis@gmail.com";
-            //    credential.Password = "haris0071";
-            //    smptClient.Credentials = credential;
-            //    smptClient.Port = 587;
-            //    smptClient.EnableSsl = true;
-            //    smptClient.Send(mail);
-
-
-            //    MessageBox.Show("Đã gửi mã xác minh về Email Mời Kiểm Tra Để Đổi Mật Khẩu", "Thông báo", MessageBoxButtons.OK);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            counter = 60;
-            timer1.Start();
-            llbTime.Enabled = true;
+            
+            //GetOTP();
+            //MessageBox.Show(OTP);
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

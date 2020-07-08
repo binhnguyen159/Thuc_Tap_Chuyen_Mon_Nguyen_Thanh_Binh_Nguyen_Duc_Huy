@@ -42,6 +42,13 @@ namespace QLCH.Uc
                         pnlTaiKhoan.Controls.Add(taiKhoan);
                         break;;
                     }
+                case 3:
+                    {
+                        pnlNCC.Controls.Clear();
+                        Uc_Provider provider = new Uc_Provider();
+                        pnlNCC.Controls.Add(provider);
+                        break;
+                    }
             }
             
         }

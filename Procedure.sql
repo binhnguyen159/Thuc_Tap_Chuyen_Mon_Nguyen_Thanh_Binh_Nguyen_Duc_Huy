@@ -98,3 +98,29 @@ begin
 						sdt = @sdt
 	where maNV=@ma
 end
+
+--TÀI KHOẢN
+--Thống kê danh sách
+create proc ACC_Sel as
+begin
+	select maNV, tenNV, ngSinh, tendn from nhanVien
+end
+go
+--Thêm
+alter proc ACC_Add (@ma nvarchar(50), @dn nvarchar(50),@pass nvarchar(50))
+as begin
+	update nhanVien set tendn = @dn, passWords = @pass where maNV = @ma
+end
+go
+--Sửa
+alter proc ACC_Up (@ma nvarchar(50),@pass nvarchar(50)) as
+begin
+	update nhanVien set passWords = @pass where maNV = @ma
+end
+go
+--Xóa
+alter proc ACC_Del (@ma nvarchar(50)) as
+begin
+	update nhanVien set passWords = null, tendn = null where maNV = @ma
+end
+select maNV,tendn,passWords from nhanVien

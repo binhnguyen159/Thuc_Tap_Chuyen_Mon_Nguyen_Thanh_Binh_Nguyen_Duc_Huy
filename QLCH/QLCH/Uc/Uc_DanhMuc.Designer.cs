@@ -37,10 +37,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pnlNhanVien = new Guna.UI.WinForms.GunaPanel();
             this.tctDanhMuc = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pnlNCC = new Guna.UI.WinForms.GunaPanel();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tctDanhMuc.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -114,6 +117,7 @@
             this.tctDanhMuc.Controls.Add(this.tabPage1);
             this.tctDanhMuc.Controls.Add(this.tabPage2);
             this.tctDanhMuc.Controls.Add(this.tabPage3);
+            this.tctDanhMuc.Controls.Add(this.tabPage4);
             this.tctDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tctDanhMuc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tctDanhMuc.Location = new System.Drawing.Point(0, 0);
@@ -122,6 +126,26 @@
             this.tctDanhMuc.Size = new System.Drawing.Size(965, 656);
             this.tctDanhMuc.TabIndex = 1;
             this.tctDanhMuc.SelectedIndexChanged += new System.EventHandler(this.tctDanhMuc_SelectedIndexChanged);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.pnlNCC);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(957, 628);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Nhà cung cấp";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // pnlNCC
+            // 
+            this.pnlNCC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlNCC.Location = new System.Drawing.Point(3, 3);
+            this.pnlNCC.Name = "pnlNCC";
+            this.pnlNCC.Size = new System.Drawing.Size(951, 622);
+            this.pnlNCC.TabIndex = 0;
             // 
             // Uc_DanhMuc
             // 
@@ -134,6 +158,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tctDanhMuc.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +173,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private Guna.UI.WinForms.GunaPanel pnlNhanVien;
         private System.Windows.Forms.TabControl tctDanhMuc;
+        private System.Windows.Forms.TabPage tabPage4;
+        private Guna.UI.WinForms.GunaPanel pnlNCC;
     }
 }
