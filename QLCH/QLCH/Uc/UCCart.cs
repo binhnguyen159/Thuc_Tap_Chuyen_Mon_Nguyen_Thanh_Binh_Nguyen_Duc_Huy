@@ -62,6 +62,7 @@ namespace QLCH.Uc
 
             }
             
+            
             lbTotalPrice.Text = totalPrice.ToString();
         }
         private Image convertImg(String masp)
@@ -83,6 +84,14 @@ namespace QLCH.Uc
         private void btnCancel_Click(object sender, EventArgs e)
         {
             panelProductList.Controls.Clear();
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            foreach(var h in db.CTGios)
+            {
+                //db.insert
+            }
         }
     }
 }
