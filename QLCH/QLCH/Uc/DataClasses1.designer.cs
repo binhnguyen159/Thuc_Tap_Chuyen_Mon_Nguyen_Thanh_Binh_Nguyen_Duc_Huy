@@ -141,14 +141,6 @@ namespace QLCH.Uc
 			}
 		}
 		
-		public System.Data.Linq.Table<GioHang> GioHangs
-		{
-			get
-			{
-				return this.GetTable<GioHang>();
-			}
-		}
-		
 		public System.Data.Linq.Table<HangSP> HangSPs
 		{
 			get
@@ -210,6 +202,14 @@ namespace QLCH.Uc
 			get
 			{
 				return this.GetTable<sanPham>();
+			}
+		}
+		
+		public System.Data.Linq.Table<GioHang> GioHangs
+		{
+			get
+			{
+				return this.GetTable<GioHang>();
 			}
 		}
 		
@@ -322,6 +322,34 @@ namespace QLCH.Uc
 		public int updateSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> gia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maLoai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHang)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, tenSP, gia, anh, maLoai, maHang);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.select_detailCart")]
+		public ISingleResult<select_detailCartResult> select_detailCart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGio);
+			return ((ISingleResult<select_detailCartResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.select_cart")]
+		public ISingleResult<select_cartResult> select_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maKH)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKH);
+			return ((ISingleResult<select_cartResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delete_CTcart")]
+		public int delete_CTcart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maCTG)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maCTG);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_cart")]
+		public int insert_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGio, maSP, soLuong);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -1225,51 +1253,6 @@ namespace QLCH.Uc
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GioHang")]
-	public partial class GioHang
-	{
-		
-		private string _magio;
-		
-		private string _masp;
-		
-		public GioHang()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_magio", DbType="NVarChar(50)")]
-		public string magio
-		{
-			get
-			{
-				return this._magio;
-			}
-			set
-			{
-				if ((this._magio != value))
-				{
-					this._magio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masp", DbType="NVarChar(50)")]
-		public string masp
-		{
-			get
-			{
-				return this._masp;
-			}
-			set
-			{
-				if ((this._masp != value))
-				{
-					this._masp = value;
-				}
 			}
 		}
 	}
@@ -3301,6 +3284,51 @@ namespace QLCH.Uc
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GioHang")]
+	public partial class GioHang
+	{
+		
+		private string _magio;
+		
+		private string _makh;
+		
+		public GioHang()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_magio", DbType="NVarChar(50)")]
+		public string magio
+		{
+			get
+			{
+				return this._magio;
+			}
+			set
+			{
+				if ((this._magio != value))
+				{
+					this._magio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_makh", DbType="NVarChar(50)")]
+		public string makh
+		{
+			get
+			{
+				return this._makh;
+			}
+			set
+			{
+				if ((this._makh != value))
+				{
+					this._makh = value;
+				}
+			}
+		}
+	}
+	
 	public partial class ACC_SelResult
 	{
 		
@@ -3904,6 +3932,166 @@ namespace QLCH.Uc
 				if ((this._tenLoai != value))
 				{
 					this._tenLoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class select_detailCartResult
+	{
+		
+		private string _masp;
+		
+		private string _tenSP;
+		
+		private System.Data.Linq.Binary _anh;
+		
+		private System.Nullable<double> _gia;
+		
+		private System.Nullable<int> _soLuong;
+		
+		private int _maCTG;
+		
+		public select_detailCartResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masp", DbType="NVarChar(50)")]
+		public string masp
+		{
+			get
+			{
+				return this._masp;
+			}
+			set
+			{
+				if ((this._masp != value))
+				{
+					this._masp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSP", DbType="NVarChar(50)")]
+		public string tenSP
+		{
+			get
+			{
+				return this._tenSP;
+			}
+			set
+			{
+				if ((this._tenSP != value))
+				{
+					this._tenSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anh", DbType="Image")]
+		public System.Data.Linq.Binary anh
+		{
+			get
+			{
+				return this._anh;
+			}
+			set
+			{
+				if ((this._anh != value))
+				{
+					this._anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gia", DbType="Float")]
+		public System.Nullable<double> gia
+		{
+			get
+			{
+				return this._gia;
+			}
+			set
+			{
+				if ((this._gia != value))
+				{
+					this._gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soLuong", DbType="Int")]
+		public System.Nullable<int> soLuong
+		{
+			get
+			{
+				return this._soLuong;
+			}
+			set
+			{
+				if ((this._soLuong != value))
+				{
+					this._soLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maCTG", DbType="Int NOT NULL")]
+		public int maCTG
+		{
+			get
+			{
+				return this._maCTG;
+			}
+			set
+			{
+				if ((this._maCTG != value))
+				{
+					this._maCTG = value;
+				}
+			}
+		}
+	}
+	
+	public partial class select_cartResult
+	{
+		
+		private string _magio;
+		
+		private string _tenKH;
+		
+		public select_cartResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_magio", DbType="NVarChar(50)")]
+		public string magio
+		{
+			get
+			{
+				return this._magio;
+			}
+			set
+			{
+				if ((this._magio != value))
+				{
+					this._magio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKH", DbType="NVarChar(50)")]
+		public string tenKH
+		{
+			get
+			{
+				return this._tenKH;
+			}
+			set
+			{
+				if ((this._tenKH != value))
+				{
+					this._tenKH = value;
 				}
 			}
 		}
