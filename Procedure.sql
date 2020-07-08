@@ -133,7 +133,7 @@ select gh.magio,kh.tenKH from khachHang kh, GioHang gh
 where gh.makh=kh.maKH and kh.maKH=@maKH
 end
 go
-alter proc select_detailCart(@maGio int)
+create proc select_detailCart(@maGio int)
 as begin
 select CTGio.masp,sanPham.tenSP,sanPham.anh,sanPham.gia,CTGio.soLuong,CTGio.maCTG from CTGio,sanPham
 where CTGio.masp=sanPham.maSP and CTGio.magio=@maGio
