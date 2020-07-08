@@ -308,9 +308,14 @@
     <Parameter Name="maCTG" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+<<<<<<< HEAD
+  <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
+    <Parameter Name="maCTGio" Type="System.Int32" DbType="Int" />
+=======
   <Function Name="dbo.insert_cart" Method="insert_cart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
+>>>>>>> b8694212c370b8fd894c14f7bf024d3db0664a04
     <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>

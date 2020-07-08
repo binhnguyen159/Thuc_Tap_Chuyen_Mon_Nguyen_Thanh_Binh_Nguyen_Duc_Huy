@@ -159,12 +159,54 @@ insert into CTGio values (@maGio,@maSP,@soLuong)
 end
 
 go
+
+create proc update_SoLuongGio (@maCTGio int ,@soLuong int)
+as begin
+update CTGio set soluong=@soLuong where maCTG=@maCTGio
+end
+go
+
+
 --exec insert_cart 1,N'sp6',5
 go
+<<<<<<< HEAD
+--đang suy nghĩ
+ --create proc delete_CTcart(@maCTG int)
+ --as begin
+ --delete CTGio where maCTG=@maCTG
+ --end
+ --go
+ --create proc insert_hdx(@maHDX nvarchar(50),
+ --@maNV nvarchar(50),
+ --@maKH nvarchar(50),
+ --@ngayBan date,
+ --@tongTien float,
+ --@trangThai nvarchar(50))
+ --as begin 
+ --insert into hoadDonXuat values (@maHDX,@maKH,@maNV,@ngayBan,@tongTien,@trangThai)
+ --end
+
+ go
+ --có dùng
+-- create proc insert_ctHDX(@maHDX nvarchar(50),@maSP nvarchar(50),@donGia float,@soLuong int,@thanhTien float)
+-- as begin
+-- declare @bienTam int
+-- set @bienTam=(select soLuong from chiTietHDX where maHDX=@maHDX and maSP=@maSP)
+--	if(not exists(select * from chiTietHDX where maHDX=@maHDX and maSP=@maSP))
+--		begin 
+--			insert into chiTietHDX values(@maHDX,@maSP,@donGia,@soLuong,@thanhTien)
+--		end
+--	else
+--		begin
+--			update chiTietHDX set soLuong=@bienTam+@soLuong where maSP=@maSP and maHDX=@maHDX
+--		end
+--end
+=======
  create proc delete_CTcart(@maCTG int)
  as begin
  delete CTGio where maCTG=@maCTG
  end
+<<<<<<< HEAD
  --NHÀ CUNG CẤP
  --Load
  create proc NCC_Sel as
@@ -217,3 +259,7 @@ go
  end
  go
  exec NCC_FindiD '1'
+=======
+-->>>>>>> d952e4b925ab4043c172fea4f06b8d2a06ab2067
+>>>>>>> b8694212c370b8fd894c14f7bf024d3db0664a04
+>>>>>>> 2884edc269d3f0f57d24ff296145e99126e69e0e

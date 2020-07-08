@@ -32,14 +32,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbMaCTGio = new System.Windows.Forms.Label();
             this.lbPriceDefault = new System.Windows.Forms.Label();
+            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.btnUp = new Guna.UI.WinForms.GunaButton();
             this.lbNumber = new System.Windows.Forms.TextBox();
+            this.btnDown = new Guna.UI.WinForms.GunaButton();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbProductName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
-            this.btnUp = new Guna.UI.WinForms.GunaButton();
-            this.btnDown = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +82,18 @@
             this.lbPriceDefault.Text = "101";
             this.lbPriceDefault.Visible = false;
             // 
+            // gunaImageButton1
+            // 
+            this.gunaImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaImageButton1.Image")));
+            this.gunaImageButton1.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaImageButton1.Location = new System.Drawing.Point(496, 37);
+            this.gunaImageButton1.Name = "gunaImageButton1";
+            this.gunaImageButton1.OnHoverImage = null;
+            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.gunaImageButton1.Size = new System.Drawing.Size(37, 32);
+            this.gunaImageButton1.TabIndex = 3;
+            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
+            // 
             // gunaElipsePanel1
             // 
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
@@ -94,6 +106,31 @@
             this.gunaElipsePanel1.Radius = 7;
             this.gunaElipsePanel1.Size = new System.Drawing.Size(132, 32);
             this.gunaElipsePanel1.TabIndex = 2;
+            // 
+            // btnUp
+            // 
+            this.btnUp.AnimationHoverSpeed = 0.07F;
+            this.btnUp.AnimationSpeed = 0.03F;
+            this.btnUp.BackColor = System.Drawing.Color.Transparent;
+            this.btnUp.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.btnUp.BorderColor = System.Drawing.Color.Black;
+            this.btnUp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnUp.FocusedColor = System.Drawing.Color.Empty;
+            this.btnUp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUp.ForeColor = System.Drawing.Color.White;
+            this.btnUp.Image = ((System.Drawing.Image)(resources.GetObject("btnUp.Image")));
+            this.btnUp.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnUp.Location = new System.Drawing.Point(95, 0);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(221)))), ((int)(((byte)(193)))));
+            this.btnUp.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnUp.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnUp.OnHoverImage = null;
+            this.btnUp.OnPressedColor = System.Drawing.Color.Black;
+            this.btnUp.Radius = 7;
+            this.btnUp.Size = new System.Drawing.Size(37, 32);
+            this.btnUp.TabIndex = 7;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
             // lbNumber
             // 
@@ -108,6 +145,31 @@
             this.lbNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lbNumber.TextChanged += new System.EventHandler(this.lbNumber_TextChanged);
             this.lbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // btnDown
+            // 
+            this.btnDown.AnimationHoverSpeed = 0.07F;
+            this.btnDown.AnimationSpeed = 0.03F;
+            this.btnDown.BackColor = System.Drawing.Color.Transparent;
+            this.btnDown.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.btnDown.BorderColor = System.Drawing.Color.Black;
+            this.btnDown.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDown.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDown.ForeColor = System.Drawing.Color.White;
+            this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
+            this.btnDown.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDown.Location = new System.Drawing.Point(0, 0);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(221)))), ((int)(((byte)(193)))));
+            this.btnDown.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDown.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDown.OnHoverImage = null;
+            this.btnDown.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDown.Radius = 7;
+            this.btnDown.Size = new System.Drawing.Size(35, 32);
+            this.btnDown.TabIndex = 6;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // lbPrice
             // 
@@ -138,68 +200,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // gunaImageButton1
-            // 
-            this.gunaImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaImageButton1.Image")));
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaImageButton1.Location = new System.Drawing.Point(496, 37);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(37, 32);
-            this.gunaImageButton1.TabIndex = 3;
-            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
-            // 
-            // btnUp
-            // 
-            this.btnUp.AnimationHoverSpeed = 0.07F;
-            this.btnUp.AnimationSpeed = 0.03F;
-            this.btnUp.BackColor = System.Drawing.Color.Transparent;
-            this.btnUp.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.btnUp.BorderColor = System.Drawing.Color.Black;
-            this.btnUp.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnUp.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUp.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUp.ForeColor = System.Drawing.Color.White;
-            this.btnUp.Image = ((System.Drawing.Image)(resources.GetObject("btnUp.Image")));
-            this.btnUp.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUp.Location = new System.Drawing.Point(95, 0);
-            this.btnUp.Name = "btnUp";
-            this.btnUp.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(221)))), ((int)(((byte)(193)))));
-            this.btnUp.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUp.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnUp.OnHoverImage = null;
-            this.btnUp.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUp.Radius = 7;
-            this.btnUp.Size = new System.Drawing.Size(37, 32);
-            this.btnUp.TabIndex = 7;
-            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
-            // 
-            // btnDown
-            // 
-            this.btnDown.AnimationHoverSpeed = 0.07F;
-            this.btnDown.AnimationSpeed = 0.03F;
-            this.btnDown.BackColor = System.Drawing.Color.Transparent;
-            this.btnDown.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.btnDown.BorderColor = System.Drawing.Color.Black;
-            this.btnDown.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDown.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDown.ForeColor = System.Drawing.Color.White;
-            this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
-            this.btnDown.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDown.Location = new System.Drawing.Point(0, 0);
-            this.btnDown.Name = "btnDown";
-            this.btnDown.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(221)))), ((int)(((byte)(193)))));
-            this.btnDown.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDown.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDown.OnHoverImage = null;
-            this.btnDown.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDown.Radius = 7;
-            this.btnDown.Size = new System.Drawing.Size(35, 32);
-            this.btnDown.TabIndex = 6;
-            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // FrmCartProduct
             // 

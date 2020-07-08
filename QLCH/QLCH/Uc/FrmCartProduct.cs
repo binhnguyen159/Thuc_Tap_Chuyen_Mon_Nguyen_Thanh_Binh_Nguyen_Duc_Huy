@@ -15,6 +15,7 @@ namespace QLCH.Uc
         public class tranferPrice
         {
             static public double totalPrice;
+            static public int signal;
         }
         public FrmCartProduct()
         {
@@ -31,7 +32,9 @@ namespace QLCH.Uc
         private void btnUp_Click(object sender, EventArgs e)
         {
             lbNumber.Text = (Convert.ToInt32(lbNumber.Text) + 1).ToString();
-            
+            db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
+            UCCart uC = new UCCart();
+            uC.Show();
         }
 
         private void btnDown_Click(object sender, EventArgs e)
@@ -39,7 +42,9 @@ namespace QLCH.Uc
             if (Convert.ToInt32(lbNumber.Text) > 0)
             {
                 lbNumber.Text = (Convert.ToInt32(lbNumber.Text) - 1).ToString();
-                tranferPrice.totalPrice = Convert.ToDouble(price * Convert.ToInt32(lbNumber.Text));
+                db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
+                UCCart uC = new UCCart();
+                uC.Show();
             }
         }
 
@@ -52,6 +57,7 @@ namespace QLCH.Uc
             else if (lbNumber.Text.Trim() != "" || lbNumber.Text.Trim() != null)
             {
                 lbPrice.Text =(price * Convert.ToInt32(lbNumber.Text)).ToString("N0")+"VNĐ";
+                tranferPrice.totalPrice = Convert.ToDouble(price * Convert.ToInt32(lbNumber.Text));
             }
 
         }
@@ -67,7 +73,9 @@ namespace QLCH.Uc
             lbPrice.Text = (Convert.ToDouble(lbPriceDefault.Text) * Convert.ToInt32(lbNumber.Text)).ToString("N0") + "VNĐ";
             price = Convert.ToDouble(lbPriceDefault.Text);
 
-           
+
+            tranferPrice.totalPrice = Convert.ToDouble(price * Convert.ToInt32(lbNumber.Text));
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
