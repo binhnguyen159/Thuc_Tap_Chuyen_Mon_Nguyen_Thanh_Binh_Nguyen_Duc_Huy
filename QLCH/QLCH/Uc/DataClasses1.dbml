@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TTCM" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MONKEYDASUS;Initial Catalog=TTCM;Persist Security Info=True;User ID=sa" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HT0NP1M;Initial Catalog=TTCM;Integrated Security=True" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.chiTietHDN" Member="chiTietHDNs">
     <Type Name="chiTietHDN">
       <Column Name="maHDN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -36,14 +36,6 @@
       <Column Name="tenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="bacLuong" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="congViec_nhanVien" Member="nhanViens" ThisKey="maCV" OtherKey="maCV" Type="nhanVien" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CTGio" Member="CTGios">
-    <Type Name="CTGio">
-      <Column Name="maCTG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="magio" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.HangSP" Member="HangSPs">
@@ -147,6 +139,16 @@
     <Type Name="GioHang">
       <Column Name="magio" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="makh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTGio" Member="CTGios">
+    <Type Name="CTGio">
+      <Column Name="maCTG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="magio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="masp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="donGia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.ACC_Add" Method="ACC_Add">
@@ -277,15 +279,6 @@
       <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.updateSP" Method="updateSP">
-    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="gia" Type="System.Double" DbType="Float" />
-    <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
-    <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.select_detailCart" Method="select_detailCart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
     <ElementType Name="select_detailCartResult">
@@ -306,17 +299,6 @@
   </Function>
   <Function Name="dbo.delete_CTcart" Method="delete_CTcart">
     <Parameter Name="maCTG" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-<<<<<<< HEAD
-  <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
-    <Parameter Name="maCTGio" Type="System.Int32" DbType="Int" />
-=======
-  <Function Name="dbo.insert_cart" Method="insert_cart">
-    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
-    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
->>>>>>> b8694212c370b8fd894c14f7bf024d3db0664a04
-    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ACC_FindID" Method="ACC_FindID">
@@ -394,6 +376,25 @@
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.insert_cart" Method="insert_cart">
+    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donGia" Type="System.Double" DbType="Float" />
+    <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
+    <Parameter Name="maCTGio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.selectTotalPrice" Method="selectTotalPrice">
+    <ElementType Name="selectTotalPriceResult">
+      <Column Name="a" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

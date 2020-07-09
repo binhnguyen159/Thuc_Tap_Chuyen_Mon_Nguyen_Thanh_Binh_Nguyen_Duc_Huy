@@ -12,29 +12,33 @@ namespace QLCH.Uc
 {
     public partial class FrmCartProduct : Form
     {
+        private fFRMLOAD ldd;
         public class tranferPrice
         {
             static public double totalPrice;
             static public int signal;
         }
-        public FrmCartProduct()
+        private tranferDataGG data;
+        public FrmCartProduct(fFRMLOAD lddd, tranferDataGG dt)
         {
             InitializeComponent();
-
+            ldd = lddd;
+            data = dt;
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void gunaImageButton1_Click(object sender, EventArgs e)
         {
             db.delete_CTcart(Convert.ToInt32(lbMaCTGio.Text));
+            ldd();
             this.Close();
         }
+
 
         private void btnUp_Click(object sender, EventArgs e)
         {
             lbNumber.Text = (Convert.ToInt32(lbNumber.Text) + 1).ToString();
-            db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
-            UCCart uC = new UCCart();
-            uC.Show();
+            db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
+            ldd();
         }
 
         private void btnDown_Click(object sender, EventArgs e)
@@ -42,9 +46,9 @@ namespace QLCH.Uc
             if (Convert.ToInt32(lbNumber.Text) > 0)
             {
                 lbNumber.Text = (Convert.ToInt32(lbNumber.Text) - 1).ToString();
-                db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
-                UCCart uC = new UCCart();
-                uC.Show();
+                db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
+
+                ldd();
             }
         }
 
@@ -56,25 +60,31 @@ namespace QLCH.Uc
             }
             else if (lbNumber.Text.Trim() != "" || lbNumber.Text.Trim() != null)
             {
-                lbPrice.Text =(price * Convert.ToInt32(lbNumber.Text)).ToString("N0")+"VNĐ";
-                tranferPrice.totalPrice = Convert.ToDouble(price * Convert.ToInt32(lbNumber.Text));
+                lbPrice.Text = (price * Convert.ToInt32(lbNumber.Text)).ToString();
             }
 
         }
         double price;
         private void FrmCartProduct_Load(object sender, EventArgs e)
         {
-            lbMaCTGio.Text = UCCart.tranferData.IDCartDetail.ToString();
-            lbProductName.Text = UCCart.tranferData.productName;
-            lbPriceDefault.Text = UCCart.tranferData.productDefaultPrice.ToString();
-            lbNumber.Text = UCCart.tranferData.productQuantity.ToString();
-            lbProductName.Text = UCCart.tranferData.productName;
-            pictureBox1.Image = UCCart.tranferData.productImg;
-            lbPrice.Text = (Convert.ToDouble(lbPriceDefault.Text) * Convert.ToInt32(lbNumber.Text)).ToString("N0") + "VNĐ";
-            price = Convert.ToDouble(lbPriceDefault.Text);
 
 
-            tranferPrice.totalPrice = Convert.ToDouble(price * Convert.ToInt32(lbNumber.Text));
+            try
+            {
+                lbMaCTGio.Text = data.IDCartDetail1.ToString();
+                lbProductName.Text = data.ProductName;
+                lbPriceDefault.Text = data.ProductDefaultPrice.ToString();
+                lbNumber.Text = data.ProductQuantity.ToString();
+                lbProductName.Text = data.ProductName;
+                pictureBox1.Image = data.ProductImg;
+                lbPrice.Text = (Convert.ToDouble(lbPriceDefault.Text) * Convert.ToInt32(lbNumber.Text)).ToString();
+                price = Convert.ToDouble(lbPriceDefault.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
 

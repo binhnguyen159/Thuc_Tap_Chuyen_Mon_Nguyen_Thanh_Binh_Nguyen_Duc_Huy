@@ -103,7 +103,7 @@ namespace QLCH.Uc
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
 
-            db.insert_cart(1, lbMa.Text, Convert.ToInt32(numericSoLuong.Value));
+            db.insert_cart(1, lbMa.Text, Convert.ToInt32(numericSoLuong.Value),Convert.ToDouble(lbGia.Text),Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value)* Convert.ToDouble(lbGia.Text)));
         }
 
 

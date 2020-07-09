@@ -42,10 +42,11 @@ namespace QLCH
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            UCCart uCCart = new UCCart();
+            FrmCart frmCart = new FrmCart();
             panelShowSP.Controls.Clear();
-            panelShowSP.Controls.Add(uCCart);
-            uCCart.Show();
+            frmCart.TopLevel = false;
+            panelShowSP.Controls.Add(frmCart);
+            frmCart.Show();
         }
     }
 }

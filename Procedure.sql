@@ -144,19 +144,43 @@ select gh.magio,kh.tenKH from khachHang kh, GioHang gh
 where gh.makh=kh.maKH and kh.maKH=@maKH
 end
 go
-create proc select_detailCart(@maGio int)
+create proc select_detailCart (@maGio int)
 as begin
 select CTGio.masp,sanPham.tenSP,sanPham.anh,sanPham.gia,CTGio.soLuong,CTGio.maCTG from CTGio,sanPham
 where CTGio.masp=sanPham.maSP and CTGio.magio=@maGio
 end
 go
 
+
+
+go
+alter proc selectTotalPrice 
+as begin 
+select SUM(thanhTien) as 'a' from CTGio 
+end
+
 use TTCM
 go
-create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int)
+alter proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
 as begin 
-insert into CTGio values (@maGio,@maSP,@soLuong)
+if(not exists(select * from CTGio where masp=@maSP))
+	begin
+		insert into CTGio values (@maGio,@maSP,@soLuong,@donGia,@thanhTien)
+	end
+else
+	begin
+		update CTGio set soluong=soluong+@soLuong where masp=@maSP
+	end
 end
+go
+
+alter proc update_SoLuongGio (@maCTGio int ,@soLuong int,@thanhTien float)
+as begin
+update CTGio set soluong=@soLuong,thanhTien=@thanhTien where maCTG=@maCTGio
+end
+go
+
+exec update_SoLuongGio 1, 10
 
 go
 --exec insert_cart 1,N'sp6',5
@@ -216,3 +240,8 @@ go
 	select * from nhaCungCap where diaChi like N'%'+@address+N'%'
  end
  go
+
+ create proc selectCTGio(@maGio int)
+ as begin
+ select * from CTGio where magio=@maGio
+ end

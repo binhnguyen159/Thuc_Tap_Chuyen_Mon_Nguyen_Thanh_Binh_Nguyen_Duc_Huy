@@ -66,10 +66,9 @@
             this.lbMaCTGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaCTGio.Location = new System.Drawing.Point(246, 81);
             this.lbMaCTGio.Name = "lbMaCTGio";
-            this.lbMaCTGio.Size = new System.Drawing.Size(52, 13);
+            this.lbMaCTGio.Size = new System.Drawing.Size(14, 13);
             this.lbMaCTGio.TabIndex = 5;
-            this.lbMaCTGio.Text = "lbCTGia";
-            this.lbMaCTGio.Visible = false;
+            this.lbMaCTGio.Text = "1";
             // 
             // lbPriceDefault
             // 

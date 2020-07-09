@@ -14,6 +14,7 @@ using System.Windows.Forms;
 
 namespace QLCH
 {
+    public delegate void fFRMLOAD();
     public partial class frmLogin : Form
     {
         public frmLogin()
