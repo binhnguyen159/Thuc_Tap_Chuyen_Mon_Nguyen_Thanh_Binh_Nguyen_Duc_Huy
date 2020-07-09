@@ -245,3 +245,9 @@ go
  as begin
  select * from CTGio where magio=@maGio
  end
+ go
+
+ create proc cthdx_insert(@maHDX nvarchar(50),@maSP nvarchar(50),@donGia float,@soLuong int,@thanhTien float)
+ as begin
+ insert into chiTietHDX values (@maHDX,@maSP,@donGia,@soLuong,@thanhTien)
+ end 

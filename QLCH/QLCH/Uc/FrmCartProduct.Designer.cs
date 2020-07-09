@@ -118,6 +118,7 @@
             this.btnUp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUp.ForeColor = System.Drawing.Color.White;
             this.btnUp.Image = ((System.Drawing.Image)(resources.GetObject("btnUp.Image")));
+            this.btnUp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUp.ImageSize = new System.Drawing.Size(20, 20);
             this.btnUp.Location = new System.Drawing.Point(95, 0);
             this.btnUp.Name = "btnUp";
@@ -157,6 +158,7 @@
             this.btnDown.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDown.ForeColor = System.Drawing.Color.White;
             this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
+            this.btnDown.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDown.ImageSize = new System.Drawing.Size(20, 20);
             this.btnDown.Location = new System.Drawing.Point(0, 0);
             this.btnDown.Name = "btnDown";

@@ -74,7 +74,14 @@ namespace QLCH.Uc
 
         }
 
-
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            //chưa xong
+            foreach(var a in db.CTGios)
+            {
+              //  db.cthdx_insert("HDX", a.masp, Convert.ToDouble(a.donGia), Convert.ToInt32(a.soluong), Convert.ToDouble(a.thanhTien));
+            }
+        }
     }
 
 }

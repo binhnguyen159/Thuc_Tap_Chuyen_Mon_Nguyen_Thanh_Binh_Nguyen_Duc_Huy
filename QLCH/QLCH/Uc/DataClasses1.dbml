@@ -301,15 +301,12 @@
     <Parameter Name="maCTG" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-
-=======
   <Function Name="dbo.insert_cart" Method="insert_cart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
->>>>>>> 78cc0fbc3f894a5fca3fdcf99d8ed9e7ecbc09bb
   <Function Name="dbo.ACC_FindID" Method="ACC_FindID">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="ACC_FindIDResult">
@@ -405,5 +402,13 @@
     <ElementType Name="selectTotalPriceResult">
       <Column Name="a" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.cthdx_insert" Method="cthdx_insert">
+    <Parameter Name="maHDX" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="donGia" Type="System.Double" DbType="Float" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

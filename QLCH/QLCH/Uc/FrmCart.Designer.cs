@@ -149,6 +149,7 @@
             this.gunaButton1.TabIndex = 13;
             this.gunaButton1.Text = "Pay";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // FrmCart
             // 
