@@ -122,12 +122,6 @@
     <Compile Include="Uc\Uc_NCC.Designer.cs">
       <DependentUpon>Uc_NCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc\Uc_Provider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\Uc_Provider.Designer.cs">
-      <DependentUpon>Uc_Provider.cs</DependentUpon>
-    </Compile>
     <Compile Include="Uc\UCShowProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,17 +158,17 @@
     <Compile Include="Uc\Uc_Employees.Designer.cs">
       <DependentUpon>Uc_Employees.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc\Uc_Products.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\Uc_Products.designer.cs">
-      <DependentUpon>Uc_Products.cs</DependentUpon>
-    </Compile>
     <Compile Include="Uc\Uc_Report.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Uc\Uc_Report.Designer.cs">
       <DependentUpon>Uc_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Uc_SanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Uc_SanPham.Designer.cs">
+      <DependentUpon>Uc_SanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="Uc\Uc_TaiKhoan.cs">
       <SubType>UserControl</SubType>
@@ -219,9 +213,6 @@
     <EmbeddedResource Include="Uc\Uc_NCC.resx">
       <DependentUpon>Uc_NCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Uc\Uc_Provider.resx">
-      <DependentUpon>Uc_Provider.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Uc\UCShowProduct.resx">
       <DependentUpon>UCShowProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,11 +231,11 @@
     <EmbeddedResource Include="Uc\Uc_Employees.resx">
       <DependentUpon>Uc_Employees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Uc\Uc_Products.resx">
-      <DependentUpon>Uc_Products.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_Report.resx">
       <DependentUpon>Uc_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Uc_SanPham.resx">
+      <DependentUpon>Uc_SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_TaiKhoan.resx">
       <DependentUpon>Uc_TaiKhoan.cs</DependentUpon>

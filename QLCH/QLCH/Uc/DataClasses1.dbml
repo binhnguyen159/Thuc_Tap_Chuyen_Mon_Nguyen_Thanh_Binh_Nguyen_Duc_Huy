@@ -277,15 +277,6 @@
       <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.updateSP" Method="updateSP">
-    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="gia" Type="System.Double" DbType="Float" />
-    <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
-    <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.select_detailCart" Method="select_detailCart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
     <ElementType Name="select_detailCartResult">
@@ -308,14 +299,9 @@
     <Parameter Name="maCTG" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-<<<<<<< HEAD
-  <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
-    <Parameter Name="maCTGio" Type="System.Int32" DbType="Int" />
-=======
   <Function Name="dbo.insert_cart" Method="insert_cart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
->>>>>>> b8694212c370b8fd894c14f7bf024d3db0664a04
     <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>

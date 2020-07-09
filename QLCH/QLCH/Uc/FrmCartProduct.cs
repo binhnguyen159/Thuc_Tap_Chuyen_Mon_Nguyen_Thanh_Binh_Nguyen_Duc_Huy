@@ -32,7 +32,7 @@ namespace QLCH.Uc
         private void btnUp_Click(object sender, EventArgs e)
         {
             lbNumber.Text = (Convert.ToInt32(lbNumber.Text) + 1).ToString();
-            db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
+            ////db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
             UCCart uC = new UCCart();
             uC.Show();
         }
@@ -42,7 +42,7 @@ namespace QLCH.Uc
             if (Convert.ToInt32(lbNumber.Text) > 0)
             {
                 lbNumber.Text = (Convert.ToInt32(lbNumber.Text) - 1).ToString();
-                db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
+                //db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
                 UCCart uC = new UCCart();
                 uC.Show();
             }
