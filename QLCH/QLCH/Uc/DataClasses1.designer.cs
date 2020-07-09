@@ -339,8 +339,6 @@ namespace QLCH.Uc
 			return ((int)(result.ReturnValue));
 		}
 		
-<<<<<<< HEAD
-=======
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_cart")]
 		public int insert_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong)
 		{
@@ -348,7 +346,6 @@ namespace QLCH.Uc
 			return ((int)(result.ReturnValue));
 		}
 		
->>>>>>> 78cc0fbc3f894a5fca3fdcf99d8ed9e7ecbc09bb
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ACC_FindID")]
 		public ISingleResult<ACC_FindIDResult> ACC_FindID([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
 		{
@@ -411,7 +408,6 @@ namespace QLCH.Uc
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name);
 			return ((ISingleResult<NCC_FindNameResult>)(result.ReturnValue));
 		}
-<<<<<<< HEAD
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_cart")]
 		public int insert_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> donGia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> thanhTien)
@@ -433,8 +429,6 @@ namespace QLCH.Uc
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<selectTotalPriceResult>)(result.ReturnValue));
 		}
-=======
->>>>>>> 78cc0fbc3f894a5fca3fdcf99d8ed9e7ecbc09bb
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.chiTietHDN")]

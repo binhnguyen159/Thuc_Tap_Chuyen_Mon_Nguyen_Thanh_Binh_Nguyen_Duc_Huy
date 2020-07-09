@@ -37,14 +37,14 @@ namespace QLCH.Uc
         private void btnUp_Click(object sender, EventArgs e)
         {
             lbNumber.Text = (Convert.ToInt32(lbNumber.Text) + 1).ToString();
-<<<<<<< HEAD
+
             db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
             ldd();
-=======
+
             ////db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
             UCCart uC = new UCCart();
             uC.Show();
->>>>>>> 78cc0fbc3f894a5fca3fdcf99d8ed9e7ecbc09bb
+
         }
 
         private void btnDown_Click(object sender, EventArgs e)
@@ -52,15 +52,15 @@ namespace QLCH.Uc
             if (Convert.ToInt32(lbNumber.Text) > 0)
             {
                 lbNumber.Text = (Convert.ToInt32(lbNumber.Text) - 1).ToString();
-<<<<<<< HEAD
+
                 db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
 
                 ldd();
-=======
+
                 //db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
                 UCCart uC = new UCCart();
                 uC.Show();
->>>>>>> 78cc0fbc3f894a5fca3fdcf99d8ed9e7ecbc09bb
+
             }
         }
 

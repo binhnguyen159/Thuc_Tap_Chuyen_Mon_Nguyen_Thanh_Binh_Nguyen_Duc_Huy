@@ -1,259 +1,25 @@
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.frmFuction.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCartProduct.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.UcBill_Sell.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Provider.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Bill_Buy.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Customer.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_DanhMuc.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Employees.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Products.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Report.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_TaiKhoan.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.cache
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.csproj.CoreCompileInputs.cache
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\QLCH.exe.config
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\QLCH.exe
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\QLCH.pdb
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.csproj.CopyComplete
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.exe
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.pdb
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\QLCH.exe.config
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\QLCH.exe
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\QLCH.pdb
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.xml
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.xml
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.xml
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.xml
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.frmFuction.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCartProduct.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.UcBill_Sell.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Provider.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Bill_Buy.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Customer.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_DanhMuc.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Employees.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Products.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Report.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_TaiKhoan.resources
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.cache
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.csproj.CoreCompileInputs.cache
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.csproj.CopyComplete
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.exe
-C:\Users\nguye\Desktop\New folder\QLCH\QLCH\obj\Debug\QLCH.pdb
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmFuction.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCartProduct.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UcBill_Sell.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Provider.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Bill_Buy.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Customer.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_DanhMuc.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Employees.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Products.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Report.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_TaiKhoan.resources
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.cache
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CoreCompileInputs.cache
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.exe
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.pdb
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe.config
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.pdb
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.xml
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.xml
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.xml
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.xml
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-F:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CopyComplete
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe.config
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.pdb
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Data.v19.1.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Printing.v19.1.Core.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Sparkline.v19.1.Core.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Utils.v19.1.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.XtraEditors.v19.1.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmFuction.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCartProduct.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UcBill_Sell.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Bill_Buy.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Customer.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_DanhMuc.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Employees.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Report.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_TaiKhoan.resources
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.cache
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CoreCompileInputs.cache
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CopyComplete
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.exe
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.pdb
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_NCC.resources
-<<<<<<< HEAD
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmFuction.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCart.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCartProduct.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UcBill_Sell.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_NCC.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Bill_Buy.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Customer.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_DanhMuc.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Employees.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Report.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_SanPham.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_TaiKhoan.resources
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.cache
+D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CoreCompileInputs.cache
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe.config
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.exe
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\QLCH.pdb
@@ -295,33 +61,6 @@ D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\de\D
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmFuction.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.frmAssign.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCartProduct.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UcBill_Sell.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCart.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCCartProduct.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_NCC.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Provider.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UCShowProduct.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Account.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Bill_Buy.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Customer.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_DanhMuc.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Employees.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Products.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_Report.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_TaiKhoan.resources
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.cache
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CoreCompileInputs.cache
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CopyComplete
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.exe
 D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.pdb
-D:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.FrmCart.resources
-=======
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.Uc_SanPham.resources
->>>>>>> 78cc0fbc3f894a5fca3fdcf99d8ed9e7ecbc09bb

@@ -301,7 +301,7 @@
     <Parameter Name="maCTG" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-<<<<<<< HEAD
+
 =======
   <Function Name="dbo.insert_cart" Method="insert_cart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
