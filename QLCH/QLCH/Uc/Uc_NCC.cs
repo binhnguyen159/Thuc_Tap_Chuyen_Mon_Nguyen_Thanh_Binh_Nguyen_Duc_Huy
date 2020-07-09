@@ -32,6 +32,7 @@ namespace QLCH.Uc
             {
                 choose = 1;
                 btnTimKiem.Enabled = false;
+                btnAdd.Enabled = true;
                 btnDelete.Enabled = false;
                 btnUpdate.Enabled = false;
                 gunaGroupBox1.Enabled = false;
@@ -43,6 +44,7 @@ namespace QLCH.Uc
                 btnTimKiem.Enabled = false;
                 txtID.Enabled = true;
                 btnAdd.Enabled = false;
+                btnDelete.Enabled = true;
                 btnUpdate.Enabled = false;
                 gunaGroupBox1.Enabled = false;
                 pnlSave.Enabled = true;
@@ -53,7 +55,9 @@ namespace QLCH.Uc
                 txtID.Enabled = true;
                 btnAdd.Enabled = false;
                 btnDelete.Enabled = false;
+
                 btnTimKiem.Enabled = false;
+                btnUpdate.Enabled = true;
                 gunaGroupBox1.Enabled = false;
                 pnlSave.Enabled = true;
             }
@@ -80,7 +84,7 @@ namespace QLCH.Uc
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -107,7 +111,6 @@ namespace QLCH.Uc
             txtEmail.Text = dgvNCC.Rows[i].Cells[2].Value.ToString();
             txtAddress.Text = dgvNCC.Rows[i].Cells[3].Value.ToString();
             txtPhone.Text = dgvNCC.Rows[i].Cells[4].Value.ToString();
-            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -173,6 +176,14 @@ namespace QLCH.Uc
                 }
             }
             
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

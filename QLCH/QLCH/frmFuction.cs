@@ -60,7 +60,7 @@ namespace QLCH
 
         private void btnProvider_Click(object sender, EventArgs e)
         {
-            Uc_Provider uCProvider = new Uc_Provider();
+            Uc_SanPham uCProvider = new Uc_SanPham();
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(uCProvider);
             //uCProvider.Show();
@@ -75,7 +75,7 @@ namespace QLCH
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            Uc_Products products = new Uc_Products();
+            Uc_SanPham products = new Uc_SanPham();
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(products);
             products.Show();
