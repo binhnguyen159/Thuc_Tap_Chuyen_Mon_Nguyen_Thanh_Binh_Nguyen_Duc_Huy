@@ -258,3 +258,21 @@ go
  as begin
  insert into chiTietHDX values (@maHDX,@maSP,@donGia,@soLuong,@thanhTien)
  end 
+
+ go 
+ create proc hdx_select
+ as begin
+ select * from hoadDonXuat,khachHang,nhanVien 
+ where hoadDonXuat.maKH=khachHang.maKH and hoadDonXuat.maNV=nhanVien.maNV
+ end
+ go
+ use TTCM
+ go
+create proc bill_search(@a nvarchar(50))
+as begin
+select kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai, nv.tenNV
+from khachHang kh, hoadDonXuat hdx ,nhanVien nv
+where CONCAT(kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai, nv.tenNV)like '%'+@a+'%' and hdx.maKH = kh.maKH and hdx.maNV=nv.maNV
+group by kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai, nv.tenNV
+end
+go

@@ -103,7 +103,6 @@ C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmFuction.resources
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
 C:\Users\nguye\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources

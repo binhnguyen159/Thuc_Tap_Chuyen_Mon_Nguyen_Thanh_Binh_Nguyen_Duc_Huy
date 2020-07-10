@@ -35,8 +35,8 @@
             this.lbTotalPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,10 +46,11 @@
             this.panelProductList.AutoScroll = true;
             this.panelProductList.BackColor = System.Drawing.Color.Transparent;
             this.panelProductList.BaseColor = System.Drawing.Color.White;
-            this.panelProductList.Location = new System.Drawing.Point(8, 3);
+            this.panelProductList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelProductList.Location = new System.Drawing.Point(0, 0);
             this.panelProductList.Name = "panelProductList";
             this.panelProductList.Radius = 7;
-            this.panelProductList.Size = new System.Drawing.Size(719, 650);
+            this.panelProductList.Size = new System.Drawing.Size(719, 656);
             this.panelProductList.TabIndex = 15;
             // 
             // lbBill
@@ -87,19 +88,6 @@
             this.gunaElipse1.Radius = 10;
             this.gunaElipse1.TargetControl = this.gunaCirclePictureBox1;
             // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = global::QLCH.Properties.Resources.icons8_shopify_100;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(787, 18);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 16;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
             // btnCancel
             // 
             this.btnCancel.AnimationHoverSpeed = 0.07F;
@@ -124,6 +112,19 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // gunaCirclePictureBox1
+            // 
+            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.Image = global::QLCH.Properties.Resources.icons8_shopify_100;
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(787, 18);
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox1.TabIndex = 16;
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
             // gunaButton1
             // 
@@ -155,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(950, 656);
             this.Controls.Add(this.panelProductList);
             this.Controls.Add(this.lbBill);
@@ -165,6 +167,7 @@
             this.Controls.Add(this.gunaButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCart";
             this.Load += new System.EventHandler(this.FrmCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
