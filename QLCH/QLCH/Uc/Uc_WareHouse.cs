@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLCH.Uc.WareHouse;
+using System.IO;
 
 namespace QLCH.Uc
 {
@@ -23,11 +24,57 @@ namespace QLCH.Uc
         private void Uc_WareHouse_Load(object sender, EventArgs e)
         {
             fpnlProduct.Controls.Clear();
-            var sp = db.sanPhams;
-            foreach(sanPham item in db.sanPhams)
+            
+                foreach (sanPham item in db.sanPhams)
+                {
+                    MemoryStream stream = new MemoryStream(item.anh.ToArray());
+
+                    Uc_ProductShow uc_Product = new Uc_ProductShow(item.maSP, item.tenSP, Image.FromStream(stream), Convert.ToInt32(item.soLuong));
+
+                    fpnlProduct.Controls.Add(uc_Product);
+
+                }
+        }
+
+        private void cbbTypeFind_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if (cbbTypeFind.Text == "Hãng sản phẩm")
             {
-                Uc_ProductShow uc_Product = new Uc_ProductShow();
-                
+                var sp = from u in db.select_SP()
+                         where u.tenHang.ToUpper().Contains(txtData.Text.ToUpper())
+                         select u;
+                fpnlProduct.Controls.Clear();
+                foreach (var item in sp/*db.select_SP().Where(s => s.tenHang.Equals(txtData.Text))*/)
+                {
+                    MemoryStream stream = new MemoryStream(item.anh.ToArray());
+
+                    Uc_ProductShow uc_Product = new Uc_ProductShow(item.maSP, item.tenSP, Image.FromStream(stream), Convert.ToInt32(item.soLuong));
+
+                    fpnlProduct.Controls.Add(uc_Product);
+
+                }
+            }
+            else if (cbbTypeFind.Text == "Nhóm sản phẩm")
+            {
+                fpnlProduct.Controls.Clear();
+                var sp = from u in db.select_SP()
+                         //where String.Compare(u.tenLoai, txtData.Text, true)==0
+                         where u.tenLoai.ToUpper().Contains(txtData.Text.ToUpper())
+                         select u;
+                foreach (var item in sp)
+                {
+                    MemoryStream stream = new MemoryStream(item.anh.ToArray());
+
+                    Uc_ProductShow uc_Product = new Uc_ProductShow(item.maSP, item.tenSP, Image.FromStream(stream), Convert.ToInt32(item.soLuong));
+
+                    fpnlProduct.Controls.Add(uc_Product);
+
+                }
             }
         }
     }

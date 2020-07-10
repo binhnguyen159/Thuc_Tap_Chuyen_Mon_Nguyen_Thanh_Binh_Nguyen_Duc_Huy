@@ -239,7 +239,7 @@
             this.txtEmail.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.LineColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(137, 110);
+            this.txtEmail.Location = new System.Drawing.Point(137, 93);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.Size = new System.Drawing.Size(190, 28);
@@ -248,7 +248,7 @@
             // gunaLabel2
             // 
             this.gunaLabel2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(31, 110);
+            this.gunaLabel2.Location = new System.Drawing.Point(31, 93);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(100, 28);
             this.gunaLabel2.TabIndex = 3;
@@ -262,7 +262,7 @@
             this.txtAddress.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.LineColor = System.Drawing.Color.Black;
-            this.txtAddress.Location = new System.Drawing.Point(452, 110);
+            this.txtAddress.Location = new System.Drawing.Point(452, 93);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.Size = new System.Drawing.Size(219, 28);
@@ -422,7 +422,7 @@
             this.txtProviderName.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtProviderName.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProviderName.LineColor = System.Drawing.Color.Black;
-            this.txtProviderName.Location = new System.Drawing.Point(137, 57);
+            this.txtProviderName.Location = new System.Drawing.Point(137, 53);
             this.txtProviderName.Name = "txtProviderName";
             this.txtProviderName.PasswordChar = '\0';
             this.txtProviderName.Size = new System.Drawing.Size(190, 28);
@@ -431,7 +431,7 @@
             // gunaLabel3
             // 
             this.gunaLabel3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(395, 110);
+            this.gunaLabel3.Location = new System.Drawing.Point(395, 93);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(51, 28);
             this.gunaLabel3.TabIndex = 5;
@@ -441,7 +441,7 @@
             // gunaLabel1
             // 
             this.gunaLabel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(19, 57);
+            this.gunaLabel1.Location = new System.Drawing.Point(19, 53);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(112, 28);
             this.gunaLabel1.TabIndex = 1;
@@ -451,7 +451,7 @@
             // gunaLabel4
             // 
             this.gunaLabel4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(346, 57);
+            this.gunaLabel4.Location = new System.Drawing.Point(346, 53);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(100, 28);
             this.gunaLabel4.TabIndex = 7;
@@ -490,7 +490,7 @@
             this.txtPhone.LineIdleColor = System.Drawing.Color.Black;
             this.txtPhone.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtPhone.LineThickness = 3;
-            this.txtPhone.Location = new System.Drawing.Point(452, 49);
+            this.txtPhone.Location = new System.Drawing.Point(452, 45);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(193, 36);

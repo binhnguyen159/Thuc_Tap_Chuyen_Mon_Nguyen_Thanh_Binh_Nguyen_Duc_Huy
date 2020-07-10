@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_WareHouse));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btnFind = new Guna.UI.WinForms.GunaButton();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.btnAdd = new Guna.UI.WinForms.GunaButton();
+            this.btnDe = new Guna.UI.WinForms.GunaButton();
+            this.btnUp = new Guna.UI.WinForms.GunaButton();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.cbbTypeFind = new Guna.UI.WinForms.GunaComboBox();
             this.txtData = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.pnlSave = new Guna.UI.WinForms.GunaPanel();
-            this.fpnlProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
-            this.btnFind = new Guna.UI.WinForms.GunaButton();
-            this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.btnDe = new Guna.UI.WinForms.GunaButton();
-            this.btnUp = new Guna.UI.WinForms.GunaButton();
+            this.fpnlProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaElipsePanel2.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -53,136 +53,6 @@
             // 
             this.gunaElipse1.Radius = 6;
             this.gunaElipse1.TargetControl = this.btnFind;
-            // 
-            // gunaElipsePanel2
-            // 
-            this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel2.Controls.Add(this.btnAdd);
-            this.gunaElipsePanel2.Controls.Add(this.btnDe);
-            this.gunaElipsePanel2.Controls.Add(this.btnUp);
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(731, 3);
-            this.gunaElipsePanel2.Name = "gunaElipsePanel2";
-            this.gunaElipsePanel2.Size = new System.Drawing.Size(231, 650);
-            this.gunaElipsePanel2.TabIndex = 0;
-            // 
-            // gunaGroupBox1
-            // 
-            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Controls.Add(this.cbbTypeFind);
-            this.gunaGroupBox1.Controls.Add(this.btnFind);
-            this.gunaGroupBox1.Controls.Add(this.txtData);
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.gunaGroupBox1.Location = new System.Drawing.Point(3, 3);
-            this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(730, 144);
-            this.gunaGroupBox1.TabIndex = 2;
-            this.gunaGroupBox1.Text = "Tìm kiếm";
-            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // cbbTypeFind
-            // 
-            this.cbbTypeFind.BackColor = System.Drawing.Color.Transparent;
-            this.cbbTypeFind.BaseColor = System.Drawing.Color.White;
-            this.cbbTypeFind.BorderColor = System.Drawing.Color.Silver;
-            this.cbbTypeFind.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbTypeFind.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTypeFind.FocusedColor = System.Drawing.Color.Empty;
-            this.cbbTypeFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTypeFind.ForeColor = System.Drawing.Color.Black;
-            this.cbbTypeFind.FormattingEnabled = true;
-            this.cbbTypeFind.Items.AddRange(new object[] {
-            "Mã sản phẩm",
-            "Tên sản phẩm"});
-            this.cbbTypeFind.Location = new System.Drawing.Point(258, 37);
-            this.cbbTypeFind.Name = "cbbTypeFind";
-            this.cbbTypeFind.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbbTypeFind.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbbTypeFind.Size = new System.Drawing.Size(216, 23);
-            this.cbbTypeFind.TabIndex = 5;
-            // 
-            // txtData
-            // 
-            this.txtData.BackColor = System.Drawing.Color.White;
-            this.txtData.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtData.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtData.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtData.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtData.Location = new System.Drawing.Point(238, 72);
-            this.txtData.Name = "txtData";
-            this.txtData.PasswordChar = '\0';
-            this.txtData.Size = new System.Drawing.Size(242, 26);
-            this.txtData.TabIndex = 3;
-            // 
-            // gunaElipse2
-            // 
-            this.gunaElipse2.Radius = 7;
-            this.gunaElipse2.TargetControl = this.gunaGroupBox1;
-            // 
-            // pnlSave
-            // 
-            this.pnlSave.BackColor = System.Drawing.Color.White;
-            this.pnlSave.Controls.Add(this.gunaButton6);
-            this.pnlSave.Controls.Add(this.gunaButton5);
-            this.pnlSave.Location = new System.Drawing.Point(731, 436);
-            this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(231, 200);
-            this.pnlSave.TabIndex = 10;
-            // 
-            // fpnlProduct
-            // 
-            this.fpnlProduct.AutoScroll = true;
-            this.fpnlProduct.BackColor = System.Drawing.Color.White;
-            this.fpnlProduct.Location = new System.Drawing.Point(3, 144);
-            this.fpnlProduct.Name = "fpnlProduct";
-            this.fpnlProduct.Size = new System.Drawing.Size(730, 509);
-            this.fpnlProduct.TabIndex = 11;
-            // 
-            // gunaButton6
-            // 
-            this.gunaButton6.AnimationHoverSpeed = 0.07F;
-            this.gunaButton6.AnimationSpeed = 0.03F;
-            this.gunaButton6.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
-            this.gunaButton6.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton6.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton6.ForeColor = System.Drawing.Color.White;
-            this.gunaButton6.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton6.Image")));
-            this.gunaButton6.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton6.Location = new System.Drawing.Point(63, 121);
-            this.gunaButton6.Name = "gunaButton6";
-            this.gunaButton6.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton6.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton6.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton6.OnHoverImage = null;
-            this.gunaButton6.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton6.Size = new System.Drawing.Size(95, 41);
-            this.gunaButton6.TabIndex = 11;
-            this.gunaButton6.Text = "Cancel";
-            // 
-            // gunaButton5
-            // 
-            this.gunaButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaButton5.AnimationSpeed = 0.03F;
-            this.gunaButton5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
-            this.gunaButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton5.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton5.ForeColor = System.Drawing.Color.White;
-            this.gunaButton5.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton5.Image")));
-            this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton5.Location = new System.Drawing.Point(63, 37);
-            this.gunaButton5.Name = "gunaButton5";
-            this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton5.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton5.OnHoverImage = null;
-            this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton5.Size = new System.Drawing.Size(95, 41);
-            this.gunaButton5.TabIndex = 10;
-            this.gunaButton5.Text = "Save";
             // 
             // btnFind
             // 
@@ -205,6 +75,19 @@
             this.btnFind.Size = new System.Drawing.Size(85, 41);
             this.btnFind.TabIndex = 4;
             this.btnFind.Text = "Find";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // gunaElipsePanel2
+            // 
+            this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel2.Controls.Add(this.btnAdd);
+            this.gunaElipsePanel2.Controls.Add(this.btnDe);
+            this.gunaElipsePanel2.Controls.Add(this.btnUp);
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(731, 3);
+            this.gunaElipsePanel2.Name = "gunaElipsePanel2";
+            this.gunaElipsePanel2.Size = new System.Drawing.Size(231, 650);
+            this.gunaElipsePanel2.TabIndex = 0;
             // 
             // btnAdd
             // 
@@ -271,6 +154,126 @@
             this.btnUp.Size = new System.Drawing.Size(95, 41);
             this.btnUp.TabIndex = 5;
             this.btnUp.Text = "Update";
+            // 
+            // gunaGroupBox1
+            // 
+            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.Controls.Add(this.cbbTypeFind);
+            this.gunaGroupBox1.Controls.Add(this.btnFind);
+            this.gunaGroupBox1.Controls.Add(this.txtData);
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.gunaGroupBox1.Location = new System.Drawing.Point(3, 3);
+            this.gunaGroupBox1.Name = "gunaGroupBox1";
+            this.gunaGroupBox1.Size = new System.Drawing.Size(730, 144);
+            this.gunaGroupBox1.TabIndex = 2;
+            this.gunaGroupBox1.Text = "Tìm kiếm";
+            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // cbbTypeFind
+            // 
+            this.cbbTypeFind.BackColor = System.Drawing.Color.Transparent;
+            this.cbbTypeFind.BaseColor = System.Drawing.Color.White;
+            this.cbbTypeFind.BorderColor = System.Drawing.Color.Silver;
+            this.cbbTypeFind.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTypeFind.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTypeFind.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbTypeFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTypeFind.ForeColor = System.Drawing.Color.Black;
+            this.cbbTypeFind.FormattingEnabled = true;
+            this.cbbTypeFind.Items.AddRange(new object[] {
+            "Hãng sản phẩm",
+            "Nhóm sản phẩm"});
+            this.cbbTypeFind.Location = new System.Drawing.Point(258, 37);
+            this.cbbTypeFind.Name = "cbbTypeFind";
+            this.cbbTypeFind.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbbTypeFind.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbTypeFind.Size = new System.Drawing.Size(216, 23);
+            this.cbbTypeFind.TabIndex = 5;
+            this.cbbTypeFind.SelectedIndexChanged += new System.EventHandler(this.cbbTypeFind_SelectedIndexChanged);
+            // 
+            // txtData
+            // 
+            this.txtData.BackColor = System.Drawing.Color.White;
+            this.txtData.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtData.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtData.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtData.Location = new System.Drawing.Point(238, 72);
+            this.txtData.Name = "txtData";
+            this.txtData.PasswordChar = '\0';
+            this.txtData.Size = new System.Drawing.Size(242, 26);
+            this.txtData.TabIndex = 3;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 7;
+            this.gunaElipse2.TargetControl = this.gunaGroupBox1;
+            // 
+            // pnlSave
+            // 
+            this.pnlSave.BackColor = System.Drawing.Color.White;
+            this.pnlSave.Controls.Add(this.gunaButton6);
+            this.pnlSave.Controls.Add(this.gunaButton5);
+            this.pnlSave.Location = new System.Drawing.Point(731, 436);
+            this.pnlSave.Name = "pnlSave";
+            this.pnlSave.Size = new System.Drawing.Size(231, 200);
+            this.pnlSave.TabIndex = 10;
+            // 
+            // gunaButton6
+            // 
+            this.gunaButton6.AnimationHoverSpeed = 0.07F;
+            this.gunaButton6.AnimationSpeed = 0.03F;
+            this.gunaButton6.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
+            this.gunaButton6.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton6.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton6.ForeColor = System.Drawing.Color.White;
+            this.gunaButton6.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton6.Image")));
+            this.gunaButton6.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton6.Location = new System.Drawing.Point(63, 121);
+            this.gunaButton6.Name = "gunaButton6";
+            this.gunaButton6.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton6.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton6.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton6.OnHoverImage = null;
+            this.gunaButton6.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton6.Size = new System.Drawing.Size(95, 41);
+            this.gunaButton6.TabIndex = 11;
+            this.gunaButton6.Text = "Cancel";
+            // 
+            // gunaButton5
+            // 
+            this.gunaButton5.AnimationHoverSpeed = 0.07F;
+            this.gunaButton5.AnimationSpeed = 0.03F;
+            this.gunaButton5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
+            this.gunaButton5.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton5.ForeColor = System.Drawing.Color.White;
+            this.gunaButton5.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton5.Image")));
+            this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton5.Location = new System.Drawing.Point(63, 37);
+            this.gunaButton5.Name = "gunaButton5";
+            this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton5.OnHoverImage = null;
+            this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton5.Size = new System.Drawing.Size(95, 41);
+            this.gunaButton5.TabIndex = 10;
+            this.gunaButton5.Text = "Save";
+            // 
+            // fpnlProduct
+            // 
+            this.fpnlProduct.AutoScroll = true;
+            this.fpnlProduct.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.fpnlProduct.BackColor = System.Drawing.Color.White;
+            this.fpnlProduct.Location = new System.Drawing.Point(3, 144);
+            this.fpnlProduct.Name = "fpnlProduct";
+            this.fpnlProduct.Size = new System.Drawing.Size(730, 509);
+            this.fpnlProduct.TabIndex = 11;
             // 
             // Uc_WareHouse
             // 

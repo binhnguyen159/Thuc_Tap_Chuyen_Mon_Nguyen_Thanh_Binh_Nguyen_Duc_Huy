@@ -117,10 +117,12 @@ create table CTGio(
 	magio int ,
 	masp nvarchar(50),
 	soluong int,
+	donGia float,
+	thanhTien float
 
 )
-alter table CTGio add donGia float
-alter table CTGio add thanhTien float
+
+
 
 
 go

@@ -15,7 +15,9 @@ go
 
 alter proc select_SP
 as begin
-select * from sanPham,nhomSP where sanPham.maLoai=nhomSP.maLoai
+select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+from sanPham s, nhomSP n, HangSP h
+where n.maLoai=s.maLoai and h.maHang=s.maHang
 end
 
 go
@@ -25,10 +27,15 @@ alter proc updateSP(
 @gia float,
 @anh image,
 @maLoai nvarchar(50),
-@maHang nvarchar(50)
-)
+@maHang nvarchar(50))
 as begin
-update sanPham set tenSP=@tenSP,gia=@gia,anh=@anh,maLoai=@maLoai, maHang=@maHang where maSP=@maSP
+update sanPham set 
+	tenSP = @tenSP, 
+	gia = @gia,
+	anh = @anh,
+	maLoai = @maLoai, 
+	maHang = @maHang 
+	where maSP=@maSP
 end
 go
 create proc deleteSP(@maSP nvarchar(50))
@@ -161,7 +168,7 @@ end
 
 use TTCM
 go
-alter proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
 as begin 
 if(not exists(select * from CTGio where masp=@maSP))
 	begin
