@@ -119,6 +119,9 @@ create table CTGio(
 	soluong int,
 
 )
+alter table CTGio add donGia float
+alter table CTGio add thanhTien float
+
 
 go
 alter table nhanVien add foreign key(maCV) references congViec(maCV)

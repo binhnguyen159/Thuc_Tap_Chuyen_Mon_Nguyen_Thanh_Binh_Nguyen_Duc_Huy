@@ -92,12 +92,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Uc\FrmCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\FrmCart.Designer.cs">
+      <DependentUpon>FrmCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\FrmCartProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Uc\FrmCartProduct.Designer.cs">
       <DependentUpon>FrmCartProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\tranferDataGG.cs" />
     <Compile Include="Uc\UcBill_Sell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +216,9 @@
     </Compile>
     <EmbeddedResource Include="frmAssign.resx">
       <DependentUpon>frmAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\FrmCart.resx">
+      <DependentUpon>FrmCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\FrmCartProduct.resx">
       <DependentUpon>FrmCartProduct.cs</DependentUpon>

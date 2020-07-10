@@ -66,10 +66,9 @@
             this.lbMaCTGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaCTGio.Location = new System.Drawing.Point(246, 81);
             this.lbMaCTGio.Name = "lbMaCTGio";
-            this.lbMaCTGio.Size = new System.Drawing.Size(52, 13);
+            this.lbMaCTGio.Size = new System.Drawing.Size(14, 13);
             this.lbMaCTGio.TabIndex = 5;
-            this.lbMaCTGio.Text = "lbCTGia";
-            this.lbMaCTGio.Visible = false;
+            this.lbMaCTGio.Text = "1";
             // 
             // lbPriceDefault
             // 
@@ -119,6 +118,7 @@
             this.btnUp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUp.ForeColor = System.Drawing.Color.White;
             this.btnUp.Image = ((System.Drawing.Image)(resources.GetObject("btnUp.Image")));
+            this.btnUp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUp.ImageSize = new System.Drawing.Size(20, 20);
             this.btnUp.Location = new System.Drawing.Point(95, 0);
             this.btnUp.Name = "btnUp";
@@ -158,6 +158,7 @@
             this.btnDown.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDown.ForeColor = System.Drawing.Color.White;
             this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
+            this.btnDown.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDown.ImageSize = new System.Drawing.Size(20, 20);
             this.btnDown.Location = new System.Drawing.Point(0, 0);
             this.btnDown.Name = "btnDown";

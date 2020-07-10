@@ -38,6 +38,8 @@
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbTest = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,11 +154,32 @@
             this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(801, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lbTest
+            // 
+            this.lbTest.AutoSize = true;
+            this.lbTest.Location = new System.Drawing.Point(825, 281);
+            this.lbTest.Name = "lbTest";
+            this.lbTest.Size = new System.Drawing.Size(35, 13);
+            this.lbTest.TabIndex = 10;
+            this.lbTest.Text = "label2";
+            // 
             // UCCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.lbTest);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.gunaCirclePictureBox1);
             this.Controls.Add(this.panelProductList);
@@ -182,5 +205,7 @@
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaButton btnCancel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbTest;
     }
 }
