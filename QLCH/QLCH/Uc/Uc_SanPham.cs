@@ -16,5 +16,10 @@ namespace QLCH.Uc
         {
             InitializeComponent();
         }
+
+        private void Uc_SanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

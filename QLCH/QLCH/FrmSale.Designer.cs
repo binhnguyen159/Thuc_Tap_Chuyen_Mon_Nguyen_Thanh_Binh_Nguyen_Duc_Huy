@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSale));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelShowSP = new System.Windows.Forms.Panel();
             this.panelSubMenu = new System.Windows.Forms.Panel();
@@ -38,19 +39,18 @@
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btnSetting = new Guna.UI.WinForms.GunaButton();
             this.btnBill = new Guna.UI.WinForms.GunaButton();
             this.btnCart = new Guna.UI.WinForms.GunaButton();
             this.btnProduct = new Guna.UI.WinForms.GunaButton();
             this.btnHome = new Guna.UI.WinForms.GunaButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.panelMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -67,6 +67,15 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(177, 691);
             this.panelMenu.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.gunaButton1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 356);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(177, 122);
+            this.panel2.TabIndex = 0;
             // 
             // panel1
             // 
@@ -113,6 +122,31 @@
             // gunaDragControl3
             // 
             this.gunaDragControl3.TargetControl = this.panelShowSP;
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(0, 0);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Radius = 7;
+            this.gunaButton1.Size = new System.Drawing.Size(177, 42);
+            this.gunaButton1.TabIndex = 6;
+            this.gunaButton1.Text = "Setting";
             // 
             // btnSetting
             // 
@@ -163,6 +197,7 @@
             this.btnBill.Size = new System.Drawing.Size(177, 42);
             this.btnBill.TabIndex = 3;
             this.btnBill.Text = "Bill";
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnCart
             // 
@@ -253,40 +288,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.gunaButton1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 356);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 122);
-            this.panel2.TabIndex = 0;
-            // 
-            // gunaButton1
-            // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(0, 0);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 7;
-            this.gunaButton1.Size = new System.Drawing.Size(177, 42);
-            this.gunaButton1.TabIndex = 6;
-            this.gunaButton1.Text = "Setting";
-            // 
             // FrmSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,12 +299,13 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSale";
             this.panelMenu.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

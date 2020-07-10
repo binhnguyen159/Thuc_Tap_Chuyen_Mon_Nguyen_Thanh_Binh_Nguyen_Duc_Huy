@@ -117,5 +117,11 @@ namespace QLCH.Uc
 
 
         }
+
+        private void gunaGradientButton2_Click(object sender, EventArgs e)
+        {
+            FrmCart frmCart = new FrmCart();
+            frmCart.Show();
+        }
     }
 }

@@ -48,5 +48,14 @@ namespace QLCH
             panelShowSP.Controls.Add(frmCart);
             frmCart.Show();
         }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            UcBill_Sell ucBill_Sell = new UcBill_Sell();
+            panelShowSP.Controls.Clear();
+            ucBill_Sell.Dock = DockStyle.Fill;
+            panelShowSP.Controls.Add(ucBill_Sell);
+            ucBill_Sell.Show();
+        }
     }
 }
