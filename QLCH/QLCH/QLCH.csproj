@@ -183,6 +183,18 @@
     <Compile Include="Uc\Uc_TaiKhoan.Designer.cs">
       <DependentUpon>Uc_TaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\Uc_WareHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Uc_WareHouse.Designer.cs">
+      <DependentUpon>Uc_WareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\WareHouse\Uc_ProductShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\WareHouse\Uc_ProductShow.Designer.cs">
+      <DependentUpon>Uc_ProductShow.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmFuction.resx">
       <DependentUpon>frmFuction.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +261,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_TaiKhoan.resx">
       <DependentUpon>Uc_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Uc_WareHouse.resx">
+      <DependentUpon>Uc_WareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\WareHouse\Uc_ProductShow.resx">
+      <DependentUpon>Uc_ProductShow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
