@@ -161,9 +161,13 @@ end
 
 use TTCM
 go
-alter proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
-as begin 
-if(not exists(select * from CTGio where masp=@maSP))
+alter proc insert_cart(@maGio int,@maKH nvarchar,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+as begin
+if(not exists(select * from GioHang where magio=@maGio))
+	begin 
+		insert into GioHang values (@maKH)
+	end
+else if(not exists(select * from CTGio where masp=@maSP))
 	begin
 		insert into CTGio values (@maGio,@maSP,@soLuong,@donGia,@thanhTien)
 	end
@@ -269,3 +273,8 @@ where CONCAT(kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien
 group by kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai, nv.tenNV
 end
 go
+create proc khachHang_search(@tenKH nvarchar(50))
+as begin
+select maKH,tenKH from khachHang
+where CONCAT(maKH,tenKH) like '%' +@tenKH+'%'
+end

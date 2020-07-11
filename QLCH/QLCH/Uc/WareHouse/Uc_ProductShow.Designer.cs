@@ -99,6 +99,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_ProductShow";
             this.Size = new System.Drawing.Size(239, 223);
+            this.Load += new System.EventHandler(this.Uc_ProductShow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

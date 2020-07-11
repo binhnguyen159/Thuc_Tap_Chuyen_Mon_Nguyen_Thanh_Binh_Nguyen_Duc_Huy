@@ -16,5 +16,10 @@ namespace QLCH.Uc.WareHouse
         {
             InitializeComponent();
         }
+
+        private void Uc_ProductShow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

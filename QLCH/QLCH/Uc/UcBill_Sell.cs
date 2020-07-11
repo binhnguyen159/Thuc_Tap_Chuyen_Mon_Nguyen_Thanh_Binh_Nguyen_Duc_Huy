@@ -47,6 +47,12 @@ namespace QLCH.Uc
         private void txtSearch_OnValueChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = db.bill_search(txtSearch.Text);
+
+        }
+
+        private void gunaGradientButton2_Click(object sender, EventArgs e)
+        {
+            UcBill_Sell_Load(sender, e);
         }
     }
 }

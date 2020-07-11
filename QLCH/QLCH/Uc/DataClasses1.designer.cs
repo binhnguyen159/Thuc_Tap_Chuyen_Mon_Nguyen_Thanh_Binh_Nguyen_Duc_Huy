@@ -339,13 +339,6 @@ namespace QLCH.Uc
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_cart")]
-		public int insert_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGio, maSP, soLuong);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ACC_FindID")]
 		public ISingleResult<ACC_FindIDResult> ACC_FindID([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
 		{
@@ -409,13 +402,6 @@ namespace QLCH.Uc
 			return ((ISingleResult<NCC_FindNameResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_cart")]
-		public int insert_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> donGia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> thanhTien)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGio, maSP, soLuong, donGia, thanhTien);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_SoLuongGio")]
 		public int update_SoLuongGio([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maCTGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> thanhTien)
 		{
@@ -449,6 +435,20 @@ namespace QLCH.Uc
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), a);
 			return ((ISingleResult<bill_searchResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.khachHang_search")]
+		public ISingleResult<khachHang_searchResult> khachHang_search([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenKH)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tenKH);
+			return ((ISingleResult<khachHang_searchResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insert_cart")]
+		public int insert_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(1)")] string maKH, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> donGia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> thanhTien)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGio, maKH, maSP, soLuong, donGia, thanhTien);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -5408,6 +5408,50 @@ namespace QLCH.Uc
 				if ((this._tenNV != value))
 				{
 					this._tenNV = value;
+				}
+			}
+		}
+	}
+	
+	public partial class khachHang_searchResult
+	{
+		
+		private string _maKH;
+		
+		private string _tenKH;
+		
+		public khachHang_searchResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maKH
+		{
+			get
+			{
+				return this._maKH;
+			}
+			set
+			{
+				if ((this._maKH != value))
+				{
+					this._maKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKH", DbType="NVarChar(50)")]
+		public string tenKH
+		{
+			get
+			{
+				return this._tenKH;
+			}
+			set
+			{
+				if ((this._tenKH != value))
+				{
+					this._tenKH = value;
 				}
 			}
 		}
