@@ -36,6 +36,8 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lbSL = new Guna.UI.WinForms.GunaLabel();
             this.pnlNoti = new Guna.UI.WinForms.GunaElipsePanel();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(72, 151);
+            this.gunaLabel1.Location = new System.Drawing.Point(53, 139);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(43, 15);
             this.gunaLabel1.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbID.Location = new System.Drawing.Point(121, 151);
+            this.lbID.Location = new System.Drawing.Point(102, 139);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(43, 15);
             this.lbID.TabIndex = 1;
@@ -74,7 +76,7 @@
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(11, 175);
+            this.gunaLabel3.Location = new System.Drawing.Point(16, 163);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(44, 15);
             this.gunaLabel3.TabIndex = 1;
@@ -82,19 +84,19 @@
             // 
             // lbName
             // 
-            this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbName.Location = new System.Drawing.Point(61, 175);
+            this.lbName.Location = new System.Drawing.Point(66, 163);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(43, 15);
+            this.lbName.Size = new System.Drawing.Size(150, 35);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Mã SP:";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(63, 198);
+            this.gunaLabel2.Location = new System.Drawing.Point(63, 202);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(57, 15);
             this.gunaLabel2.TabIndex = 1;
@@ -104,7 +106,7 @@
             // 
             this.lbSL.AutoSize = true;
             this.lbSL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbSL.Location = new System.Drawing.Point(124, 198);
+            this.lbSL.Location = new System.Drawing.Point(124, 202);
             this.lbSL.Name = "lbSL";
             this.lbSL.Size = new System.Drawing.Size(43, 15);
             this.lbSL.TabIndex = 1;
@@ -119,10 +121,32 @@
             this.pnlNoti.Size = new System.Drawing.Size(10, 10);
             this.pnlNoti.TabIndex = 2;
             // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(34, 229);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(75, 23);
+            this.btnImport.TabIndex = 3;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = true;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(125, 229);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.TabIndex = 3;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // Uc_ProductShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.pnlNoti);
             this.Controls.Add(this.lbSL);
             this.Controls.Add(this.lbName);
@@ -133,7 +157,7 @@
             this.Controls.Add(this.ptbAnh);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_ProductShow";
-            this.Size = new System.Drawing.Size(235, 223);
+            this.Size = new System.Drawing.Size(235, 270);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -150,5 +174,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel lbSL;
         private Guna.UI.WinForms.GunaElipsePanel pnlNoti;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnRemove;
     }
 }

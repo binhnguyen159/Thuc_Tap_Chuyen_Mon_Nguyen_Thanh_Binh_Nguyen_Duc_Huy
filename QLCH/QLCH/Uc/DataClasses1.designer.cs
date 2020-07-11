@@ -72,6 +72,12 @@ namespace QLCH.Uc
     partial void InsertGioHang(GioHang instance);
     partial void UpdateGioHang(GioHang instance);
     partial void DeleteGioHang(GioHang instance);
+    partial void InsertCTPhieuNhap(CTPhieuNhap instance);
+    partial void UpdateCTPhieuNhap(CTPhieuNhap instance);
+    partial void DeleteCTPhieuNhap(CTPhieuNhap instance);
+    partial void InsertPhieuNhap(PhieuNhap instance);
+    partial void UpdatePhieuNhap(PhieuNhap instance);
+    partial void DeletePhieuNhap(PhieuNhap instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -213,6 +219,22 @@ namespace QLCH.Uc
 			get
 			{
 				return this.GetTable<GioHang>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CTPhieuNhap> CTPhieuNhaps
+		{
+			get
+			{
+				return this.GetTable<CTPhieuNhap>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PhieuNhap> PhieuNhaps
+		{
+			get
+			{
+				return this.GetTable<PhieuNhap>();
 			}
 		}
 		
@@ -452,6 +474,20 @@ namespace QLCH.Uc
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<select_SPResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.PN_Del")]
+		public int PN_Del([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.PN_Ins")]
+		public int PN_Ins([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string manv, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ng)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, manv, ng);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -3494,6 +3530,226 @@ namespace QLCH.Uc
 					this._makh = value;
 					this.SendPropertyChanged("makh");
 					this.OnmakhChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CTPhieuNhap")]
+	public partial class CTPhieuNhap : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _maphieu;
+		
+		private string _masp;
+		
+		private System.Nullable<int> _sl;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmaphieuChanging(string value);
+    partial void OnmaphieuChanged();
+    partial void OnmaspChanging(string value);
+    partial void OnmaspChanged();
+    partial void OnslChanging(System.Nullable<int> value);
+    partial void OnslChanged();
+    #endregion
+		
+		public CTPhieuNhap()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maphieu", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string maphieu
+		{
+			get
+			{
+				return this._maphieu;
+			}
+			set
+			{
+				if ((this._maphieu != value))
+				{
+					this.OnmaphieuChanging(value);
+					this.SendPropertyChanging();
+					this._maphieu = value;
+					this.SendPropertyChanged("maphieu");
+					this.OnmaphieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masp", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string masp
+		{
+			get
+			{
+				return this._masp;
+			}
+			set
+			{
+				if ((this._masp != value))
+				{
+					this.OnmaspChanging(value);
+					this.SendPropertyChanging();
+					this._masp = value;
+					this.SendPropertyChanged("masp");
+					this.OnmaspChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sl", DbType="Int")]
+		public System.Nullable<int> sl
+		{
+			get
+			{
+				return this._sl;
+			}
+			set
+			{
+				if ((this._sl != value))
+				{
+					this.OnslChanging(value);
+					this.SendPropertyChanging();
+					this._sl = value;
+					this.SendPropertyChanged("sl");
+					this.OnslChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PhieuNhap")]
+	public partial class PhieuNhap : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _maphieu;
+		
+		private string _manv;
+		
+		private System.Nullable<System.DateTime> _ngLapPhieu;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmaphieuChanging(string value);
+    partial void OnmaphieuChanged();
+    partial void OnmanvChanging(string value);
+    partial void OnmanvChanged();
+    partial void OnngLapPhieuChanging(System.Nullable<System.DateTime> value);
+    partial void OnngLapPhieuChanged();
+    #endregion
+		
+		public PhieuNhap()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maphieu", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string maphieu
+		{
+			get
+			{
+				return this._maphieu;
+			}
+			set
+			{
+				if ((this._maphieu != value))
+				{
+					this.OnmaphieuChanging(value);
+					this.SendPropertyChanging();
+					this._maphieu = value;
+					this.SendPropertyChanged("maphieu");
+					this.OnmaphieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manv", DbType="NVarChar(50)")]
+		public string manv
+		{
+			get
+			{
+				return this._manv;
+			}
+			set
+			{
+				if ((this._manv != value))
+				{
+					this.OnmanvChanging(value);
+					this.SendPropertyChanging();
+					this._manv = value;
+					this.SendPropertyChanged("manv");
+					this.OnmanvChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngLapPhieu", DbType="Date")]
+		public System.Nullable<System.DateTime> ngLapPhieu
+		{
+			get
+			{
+				return this._ngLapPhieu;
+			}
+			set
+			{
+				if ((this._ngLapPhieu != value))
+				{
+					this.OnngLapPhieuChanging(value);
+					this.SendPropertyChanging();
+					this._ngLapPhieu = value;
+					this.SendPropertyChanged("ngLapPhieu");
+					this.OnngLapPhieuChanged();
 				}
 			}
 		}

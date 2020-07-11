@@ -83,57 +83,102 @@ namespace QLCH.Uc
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MemoryStream stream = new MemoryStream();
-            pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+
             var sp = from u in db.sanPhams select u;
             var nsp = from u in db.nhomSPs select u;
             var hsp = from u in db.HangSPs select u;
-            if (txtTenSP.Text == "" || txtGia.Text == "")
+
+            if (choose == 3)
             {
-                MessageBox.Show("Please fill all the information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTenSP.Focus();
+                db.deleteSP(txtMaSP.Text);
+                Uc_SanPham_Load(sender, e);
             }
             else
             {
-                switch (choose)
+                if (txtTenSP.Text == "" || txtGia.Text == "")
                 {
-                    case 1:
-                        {
-                            if (sp.Count() == 0)
+                    MessageBox.Show("Please fill all the information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtTenSP.Focus();
+                }
+                else
+                {
+                    
+                    switch (choose)
+                    {
+                        case 1:
                             {
-                                db.addSP("SP1", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                MemoryStream stream = new MemoryStream();
+                                pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+                                if (sp.Count() == 0)
+                                {
+                                    db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                }
+                                else
+                                {
+
+
+                                    //for (int i = 0; i < 1001; i++)
+                                    //{
+                                    //    sanPham ssp = db.sanPhams.OrderByDescending(s => s.maSP).FirstOrDefault();
+                                    //    stt = Convert.ToInt32(ssp.maSP.ToString().Trim().Substring(2)) + 1;
+                                    //    if (stt / 10 >= 100000)
+                                    //        id = "SP" + stt;
+                                    //    else if (stt / 10 >= 1000 && stt / 10 < 10000)
+                                    //        id = "SP0" + stt;
+                                    //    else if (stt / 10 >= 100 && stt / 10 < 1000)
+                                    //        id = "SP00" + stt;
+                                    //    else if (stt / 10 >= 10 && stt / 10 < 100)
+                                    //        id = "SP000" + stt;
+                                    //    else if (stt / 10 >= 1 && stt / 10 < 10)
+                                    //        id = "SP0000" + stt;
+                                    //    else if (stt / 10 < 1)
+                                    //        id = "SP00000" + stt;
+                                    //    db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), null, 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+
+                                    //}
+                                    sanPham ssp = db.sanPhams.OrderByDescending(s => s.maSP).FirstOrDefault();
+                                    stt = Convert.ToInt32(ssp.maSP.ToString().Trim().Substring(2)) + 1;
+                                    if (stt / 10 >= 100000)
+                                        id = "SP" + stt;
+                                    else if (stt / 10 >= 1000 && stt / 10 < 10000)
+                                        id = "SP0" + stt;
+                                    else if (stt / 10 >= 100 && stt / 10 < 1000)
+                                        id = "SP00" + stt;
+                                    else if (stt / 10 >= 10 && stt / 10 < 100)
+                                        id = "SP000" + stt;
+                                    else if (stt / 10 >= 1 && stt / 10 < 10)
+                                        id = "SP0000" + stt;
+                                    else if (stt / 10 < 1)
+                                        id = "SP00000" + stt;
+                                    db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                }
+                                Uc_SanPham_Load(sender, e);
+                                break;
                             }
-                            else
+                        case 2:
                             {
-                                sanPham ssp = db.sanPhams.OrderByDescending(s => s.maSP).FirstOrDefault();
 
-                                stt = Convert.ToInt32(ssp.maSP.ToString().Trim().Substring(2)) + 1;
-                                id = "SP" + stt;
-                                db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                if (pictureBox1.Image == null)
+                                {
+                                    db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                }
+                                else
+                                {
+                                    MemoryStream stream = new MemoryStream();
+                                    pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+                                    db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+
+                                }
+                                Uc_SanPham_Load(sender, e);
+
+                                break;
                             }
-                            Uc_SanPham_Load(sender, e);
+                    }
 
-                            break;
-                        }
-                    case 2:
-                        {
-
-                            db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
-                            Uc_SanPham_Load(sender, e);
-
-                            break;
-                        }
-
-                    case 3:
-                        {
-                            db.deleteSP(txtMaSP.Text);
-                            Uc_SanPham_Load(sender, e);
-                            break;
-                        }
                 }
             }
-            
-            
+
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -173,15 +218,22 @@ namespace QLCH.Uc
                 cbbBrand.Text = dgvProduct.Rows[i].Cells[5].Value.ToString();
 
                 var sp = db.select_SP().Where(s => s.maSP == txtMaSP.Text).FirstOrDefault();
+                if (sp.anh == null)
 
-                MemoryStream stream = new MemoryStream(sp.anh.ToArray());
-                if (stream == null)
-                    return;
+                    pictureBox1.Image = null;
+
                 else
                 {
-                    pictureBox1.Image = Image.FromStream(stream);
-                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    MemoryStream stream = new MemoryStream(sp.anh.ToArray());
+                    if (stream == null)
+                        return;
+                    else
+                    {
+                        pictureBox1.Image = Image.FromStream(stream);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
                 }
+                
             }
 
         }

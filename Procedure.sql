@@ -276,3 +276,21 @@ where CONCAT(kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien
 group by kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai, nv.tenNV
 end
 go
+--PHIẾU NHẬP
+--Thêm
+create proc PN_Ins (@ma nvarchar(50), @manv nvarchar(50), @ng date) as
+begin
+	insert into PhieuNhap values (@ma,@manv,@ng)
+end
+go
+--Xóa
+create proc PN_Del (@ma nvarchar(50)) as
+begin
+	delete PhieuNhap where maphieu = @ma
+end
+go
+--Sửa
+--create proc PN_Up (@ma nvarchar(50), @manv nvarchar(50), @ng date) as
+--begin
+--	update PhieuNhap set where maphieu= --(@ma,@manv,@ng)
+--end

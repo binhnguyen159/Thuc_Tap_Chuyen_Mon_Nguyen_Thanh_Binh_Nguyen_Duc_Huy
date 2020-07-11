@@ -151,6 +151,20 @@
       <Column Name="makh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.CTPhieuNhap" Member="CTPhieuNhaps">
+    <Type Name="CTPhieuNhap">
+      <Column Name="maphieu" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="masp" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuNhap" Member="PhieuNhaps">
+    <Type Name="PhieuNhap">
+      <Column Name="maphieu" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="manv" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngLapPhieu" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.ACC_Add" Method="ACC_Add">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="dn" Type="System.String" DbType="NVarChar(50)" />
@@ -451,5 +465,15 @@
       <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.PN_Del" Method="PN_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PN_Ins" Method="PN_Ins">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="manv" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ng" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

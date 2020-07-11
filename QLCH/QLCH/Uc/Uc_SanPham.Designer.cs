@@ -49,6 +49,13 @@
             this.txtTenSP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMaSP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dgvProduct = new Guna.UI.WinForms.GunaDataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ct = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.btnRefresh = new Guna.UI.WinForms.GunaButton();
             this.btnDelete = new Guna.UI.WinForms.GunaButton();
@@ -61,13 +68,6 @@
             this.panelSave_Delete = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.btnUpdate = new Guna.UI.WinForms.GunaButton();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ct = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gunaGroupBox2.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -351,6 +351,60 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "maSP";
+            this.Column5.HeaderText = "Product\'s ID";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "tenSP";
+            this.Column2.FillWeight = 150F;
+            this.Column2.HeaderText = "Product\'s name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "gia";
+            this.Column3.HeaderText = "Price";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "soLuong";
+            this.Column4.FillWeight = 50F;
+            this.Column4.HeaderText = "Amount";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // nsp
+            // 
+            this.nsp.DataPropertyName = "tenLoai";
+            this.nsp.HeaderText = "Product type";
+            this.nsp.Name = "nsp";
+            this.nsp.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "tenHang";
+            this.Column1.HeaderText = "Product Brand";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // ct
+            // 
+            this.ct.HeaderText = "Detail";
+            this.ct.Name = "ct";
+            this.ct.ReadOnly = true;
+            this.ct.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ct.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ct.Text = "More";
+            this.ct.UseColumnTextForButtonValue = true;
+            // 
             // gunaElipse1
             // 
             this.gunaElipse1.Radius = 7;
@@ -368,7 +422,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRefresh.Location = new System.Drawing.Point(115, 40);
+            this.btnRefresh.Location = new System.Drawing.Point(127, 45);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRefresh.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -393,7 +447,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete.Location = new System.Drawing.Point(115, 88);
+            this.btnDelete.Location = new System.Drawing.Point(127, 93);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -464,7 +518,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancel.Location = new System.Drawing.Point(138, 18);
+            this.btnCancel.Location = new System.Drawing.Point(127, 18);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -489,7 +543,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(15, 40);
+            this.btnAdd.Location = new System.Drawing.Point(27, 45);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -547,7 +601,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUpdate.Location = new System.Drawing.Point(15, 88);
+            this.btnUpdate.Location = new System.Drawing.Point(27, 93);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -559,60 +613,6 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "maSP";
-            this.Column5.HeaderText = "Product\'s ID";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "tenSP";
-            this.Column2.FillWeight = 150F;
-            this.Column2.HeaderText = "Product\'s name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "gia";
-            this.Column3.HeaderText = "Price";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "soLuong";
-            this.Column4.FillWeight = 50F;
-            this.Column4.HeaderText = "Amount";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // nsp
-            // 
-            this.nsp.DataPropertyName = "tenLoai";
-            this.nsp.HeaderText = "Product type";
-            this.nsp.Name = "nsp";
-            this.nsp.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "tenHang";
-            this.Column1.HeaderText = "Product Brand";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // ct
-            // 
-            this.ct.HeaderText = "Detail";
-            this.ct.Name = "ct";
-            this.ct.ReadOnly = true;
-            this.ct.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ct.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ct.Text = "More";
-            this.ct.UseColumnTextForButtonValue = true;
             // 
             // Uc_SanPham
             // 
