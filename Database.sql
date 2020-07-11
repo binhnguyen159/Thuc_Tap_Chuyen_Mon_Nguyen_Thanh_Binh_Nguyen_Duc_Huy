@@ -112,16 +112,30 @@ create table GioHang
 	magio int IDENTITY primary key,
 	makh nvarchar(50)
 )
+go
 create table CTGio(
 	maCTG int identity primary key,
 	magio int ,
 	masp nvarchar(50),
 	soluong int,
+	donGia float,
+	thanhTien float
 
 )
-alter table CTGio add donGia float
-alter table CTGio add thanhTien float
+go 
+create table PhieuNhap(
+	maphieu nvarchar(50) primary key,
+	manv nvarchar(50),
+	ngLapPhieu date
+)
+go
+create table CTPhieuNhap(
+	maphieu nvarchar(50),
+	masp nvarchar(50),
+	sl int
 
+	primary key (maphieu, masp)
+)
 
 go
 alter table nhanVien add foreign key(maCV) references congViec(maCV)

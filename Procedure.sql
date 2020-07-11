@@ -15,7 +15,9 @@ go
 
 alter proc select_SP
 as begin
-select * from sanPham,nhomSP where sanPham.maLoai=nhomSP.maLoai
+select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+from sanPham s, nhomSP n, HangSP h
+where n.maLoai=s.maLoai and h.maHang=s.maHang
 end
 
 go
@@ -25,10 +27,15 @@ alter proc updateSP(
 @gia float,
 @anh image,
 @maLoai nvarchar(50),
-@maHang nvarchar(50)
-)
+@maHang nvarchar(50))
 as begin
-update sanPham set tenSP=@tenSP,gia=@gia,anh=@anh,maLoai=@maLoai, maHang=@maHang where maSP=@maSP
+update sanPham set 
+	tenSP = @tenSP, 
+	gia = @gia,
+	anh = @anh,
+	maLoai = @maLoai, 
+	maHang = @maHang 
+	where maSP=@maSP
 end
 go
 create proc deleteSP(@maSP nvarchar(50))
@@ -161,6 +168,7 @@ end
 
 use TTCM
 go
+<<<<<<< HEAD
 alter proc insert_cart(@maGio int,@maKH nvarchar,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
 as begin
 if(not exists(select * from GioHang where magio=@maGio))
@@ -168,6 +176,11 @@ if(not exists(select * from GioHang where magio=@maGio))
 		insert into GioHang values (@maKH)
 	end
 else if(not exists(select * from CTGio where masp=@maSP))
+=======
+create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+as begin 
+if(not exists(select * from CTGio where masp=@maSP))
+>>>>>>> 5514b349515c147bcca2454172c071c445794879
 	begin
 		insert into CTGio values (@maGio,@maSP,@soLuong,@donGia,@thanhTien)
 	end
@@ -273,8 +286,29 @@ where CONCAT(kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien
 group by kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai, nv.tenNV
 end
 go
+<<<<<<< HEAD
 create proc khachHang_search(@tenKH nvarchar(50))
 as begin
 select maKH,tenKH from khachHang
 where CONCAT(maKH,tenKH) like '%' +@tenKH+'%'
 end
+=======
+--PHIẾU NHẬP
+--Thêm
+create proc PN_Ins (@ma nvarchar(50), @manv nvarchar(50), @ng date) as
+begin
+	insert into PhieuNhap values (@ma,@manv,@ng)
+end
+go
+--Xóa
+create proc PN_Del (@ma nvarchar(50)) as
+begin
+	delete PhieuNhap where maphieu = @ma
+end
+go
+--Sửa
+--create proc PN_Up (@ma nvarchar(50), @manv nvarchar(50), @ng date) as
+--begin
+--	update PhieuNhap set where maphieu= --(@ma,@manv,@ng)
+--end
+>>>>>>> 5514b349515c147bcca2454172c071c445794879

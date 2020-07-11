@@ -75,10 +75,9 @@ namespace QLCH
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            Uc_SanPham products = new Uc_SanPham();
+            Uc_WareHouse products = new Uc_WareHouse();
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(products);
-            products.Show();
         }
     }
 }

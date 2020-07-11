@@ -31,19 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_WareHouse));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btnFind = new Guna.UI.WinForms.GunaButton();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.btnImport = new Guna.UI.WinForms.GunaButton();
+            this.btnCancle = new Guna.UI.WinForms.GunaButton();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.cbbTypeFind = new Guna.UI.WinForms.GunaComboBox();
             this.txtData = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.pnlSave = new Guna.UI.WinForms.GunaPanel();
-            this.fpnlProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
-            this.btnFind = new Guna.UI.WinForms.GunaButton();
-            this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.btnDe = new Guna.UI.WinForms.GunaButton();
-            this.btnUp = new Guna.UI.WinForms.GunaButton();
+            this.fpnlProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaElipsePanel2.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -54,17 +53,85 @@
             this.gunaElipse1.Radius = 6;
             this.gunaElipse1.TargetControl = this.btnFind;
             // 
+            // btnFind
+            // 
+            this.btnFind.AnimationHoverSpeed = 0.07F;
+            this.btnFind.AnimationSpeed = 0.03F;
+            this.btnFind.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
+            this.btnFind.BorderColor = System.Drawing.Color.Black;
+            this.btnFind.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
+            this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFind.Location = new System.Drawing.Point(496, 62);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFind.OnHoverImage = null;
+            this.btnFind.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFind.Size = new System.Drawing.Size(85, 41);
+            this.btnFind.TabIndex = 4;
+            this.btnFind.Text = "Find";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
             // gunaElipsePanel2
             // 
             this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel2.Controls.Add(this.btnAdd);
-            this.gunaElipsePanel2.Controls.Add(this.btnDe);
-            this.gunaElipsePanel2.Controls.Add(this.btnUp);
+            this.gunaElipsePanel2.Controls.Add(this.btnImport);
+            this.gunaElipsePanel2.Controls.Add(this.btnCancle);
             this.gunaElipsePanel2.Location = new System.Drawing.Point(731, 3);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
             this.gunaElipsePanel2.Size = new System.Drawing.Size(231, 650);
             this.gunaElipsePanel2.TabIndex = 0;
+            // 
+            // btnImport
+            // 
+            this.btnImport.AnimationHoverSpeed = 0.07F;
+            this.btnImport.AnimationSpeed = 0.03F;
+            this.btnImport.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
+            this.btnImport.BorderColor = System.Drawing.Color.Black;
+            this.btnImport.FocusedColor = System.Drawing.Color.Empty;
+            this.btnImport.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.Image")));
+            this.btnImport.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnImport.Location = new System.Drawing.Point(63, 164);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnImport.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnImport.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnImport.OnHoverImage = null;
+            this.btnImport.OnPressedColor = System.Drawing.Color.Black;
+            this.btnImport.Size = new System.Drawing.Size(95, 41);
+            this.btnImport.TabIndex = 7;
+            this.btnImport.Text = "Import";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnCancle
+            // 
+            this.btnCancle.AnimationHoverSpeed = 0.07F;
+            this.btnCancle.AnimationSpeed = 0.03F;
+            this.btnCancle.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
+            this.btnCancle.BorderColor = System.Drawing.Color.Black;
+            this.btnCancle.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCancle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancle.ForeColor = System.Drawing.Color.White;
+            this.btnCancle.Image = ((System.Drawing.Image)(resources.GetObject("btnCancle.Image")));
+            this.btnCancle.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCancle.Location = new System.Drawing.Point(63, 248);
+            this.btnCancle.Name = "btnCancle";
+            this.btnCancle.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCancle.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCancle.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCancle.OnHoverImage = null;
+            this.btnCancle.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCancle.Size = new System.Drawing.Size(95, 41);
+            this.btnCancle.TabIndex = 6;
+            this.btnCancle.Text = "Cancel";
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // gunaGroupBox1
             // 
@@ -79,7 +146,7 @@
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Size = new System.Drawing.Size(730, 144);
             this.gunaGroupBox1.TabIndex = 2;
-            this.gunaGroupBox1.Text = "Tìm kiếm";
+            this.gunaGroupBox1.Text = "Filter";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
             // cbbTypeFind
@@ -94,14 +161,15 @@
             this.cbbTypeFind.ForeColor = System.Drawing.Color.Black;
             this.cbbTypeFind.FormattingEnabled = true;
             this.cbbTypeFind.Items.AddRange(new object[] {
-            "Mã sản phẩm",
-            "Tên sản phẩm"});
+            "Hãng sản phẩm",
+            "Nhóm sản phẩm"});
             this.cbbTypeFind.Location = new System.Drawing.Point(258, 37);
             this.cbbTypeFind.Name = "cbbTypeFind";
             this.cbbTypeFind.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbTypeFind.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbTypeFind.Size = new System.Drawing.Size(216, 23);
             this.cbbTypeFind.TabIndex = 5;
+            this.cbbTypeFind.SelectedIndexChanged += new System.EventHandler(this.cbbTypeFind_SelectedIndexChanged);
             // 
             // txtData
             // 
@@ -130,15 +198,6 @@
             this.pnlSave.Name = "pnlSave";
             this.pnlSave.Size = new System.Drawing.Size(231, 200);
             this.pnlSave.TabIndex = 10;
-            // 
-            // fpnlProduct
-            // 
-            this.fpnlProduct.AutoScroll = true;
-            this.fpnlProduct.BackColor = System.Drawing.Color.White;
-            this.fpnlProduct.Location = new System.Drawing.Point(3, 144);
-            this.fpnlProduct.Name = "fpnlProduct";
-            this.fpnlProduct.Size = new System.Drawing.Size(730, 509);
-            this.fpnlProduct.TabIndex = 11;
             // 
             // gunaButton6
             // 
@@ -184,93 +243,15 @@
             this.gunaButton5.TabIndex = 10;
             this.gunaButton5.Text = "Save";
             // 
-            // btnFind
+            // fpnlProduct
             // 
-            this.btnFind.AnimationHoverSpeed = 0.07F;
-            this.btnFind.AnimationSpeed = 0.03F;
-            this.btnFind.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
-            this.btnFind.BorderColor = System.Drawing.Color.Black;
-            this.btnFind.FocusedColor = System.Drawing.Color.Empty;
-            this.btnFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.White;
-            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
-            this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFind.Location = new System.Drawing.Point(496, 62);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnFind.OnHoverImage = null;
-            this.btnFind.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFind.Size = new System.Drawing.Size(85, 41);
-            this.btnFind.TabIndex = 4;
-            this.btnFind.Text = "Find";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.AnimationHoverSpeed = 0.07F;
-            this.btnAdd.AnimationSpeed = 0.03F;
-            this.btnAdd.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
-            this.btnAdd.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(63, 103);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAdd.OnHoverImage = null;
-            this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAdd.Size = new System.Drawing.Size(95, 41);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Add";
-            // 
-            // btnDe
-            // 
-            this.btnDe.AnimationHoverSpeed = 0.07F;
-            this.btnDe.AnimationSpeed = 0.03F;
-            this.btnDe.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
-            this.btnDe.BorderColor = System.Drawing.Color.Black;
-            this.btnDe.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDe.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDe.ForeColor = System.Drawing.Color.White;
-            this.btnDe.Image = ((System.Drawing.Image)(resources.GetObject("btnDe.Image")));
-            this.btnDe.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDe.Location = new System.Drawing.Point(63, 187);
-            this.btnDe.Name = "btnDe";
-            this.btnDe.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnDe.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDe.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDe.OnHoverImage = null;
-            this.btnDe.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDe.Size = new System.Drawing.Size(95, 41);
-            this.btnDe.TabIndex = 6;
-            this.btnDe.Text = "Delete";
-            // 
-            // btnUp
-            // 
-            this.btnUp.AnimationHoverSpeed = 0.07F;
-            this.btnUp.AnimationSpeed = 0.03F;
-            this.btnUp.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(178)))));
-            this.btnUp.BorderColor = System.Drawing.Color.Black;
-            this.btnUp.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.ForeColor = System.Drawing.Color.White;
-            this.btnUp.Image = ((System.Drawing.Image)(resources.GetObject("btnUp.Image")));
-            this.btnUp.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUp.Location = new System.Drawing.Point(63, 281);
-            this.btnUp.Name = "btnUp";
-            this.btnUp.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnUp.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUp.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnUp.OnHoverImage = null;
-            this.btnUp.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUp.Size = new System.Drawing.Size(95, 41);
-            this.btnUp.TabIndex = 5;
-            this.btnUp.Text = "Update";
+            this.fpnlProduct.AutoScroll = true;
+            this.fpnlProduct.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.fpnlProduct.BackColor = System.Drawing.Color.White;
+            this.fpnlProduct.Location = new System.Drawing.Point(3, 144);
+            this.fpnlProduct.Name = "fpnlProduct";
+            this.fpnlProduct.Size = new System.Drawing.Size(730, 509);
+            this.fpnlProduct.TabIndex = 11;
             // 
             // Uc_WareHouse
             // 
@@ -299,9 +280,8 @@
         private Guna.UI.WinForms.GunaButton btnFind;
         private Guna.UI.WinForms.GunaLineTextBox txtData;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
-        private Guna.UI.WinForms.GunaButton btnAdd;
-        private Guna.UI.WinForms.GunaButton btnDe;
-        private Guna.UI.WinForms.GunaButton btnUp;
+        private Guna.UI.WinForms.GunaButton btnImport;
+        private Guna.UI.WinForms.GunaButton btnCancle;
         private Guna.UI.WinForms.GunaPanel pnlSave;
         private Guna.UI.WinForms.GunaButton gunaButton6;
         private Guna.UI.WinForms.GunaButton gunaButton5;
