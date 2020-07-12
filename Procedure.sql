@@ -177,10 +177,13 @@ as begin
 select SUM(thanhTien) as 'a' from CTGio 
 end
 go
-
-create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
-as begin 
-if(not exists(select * from CTGio where masp=@maSP))
+alter proc insert_cart(@maGio int,@maKH nvarchar,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+as begin
+if(not exists(select * from GioHang where magio=@maGio))
+	begin 
+		insert into GioHang values (@maKH)
+	end
+else if(not exists(select * from CTGio where masp=@maSP))
 	begin
 		insert into CTGio values (@maGio,@maSP,@soLuong,@donGia,@thanhTien)
 	end
@@ -191,7 +194,7 @@ else
 end
 go
 
-alter proc update_SoLuongGio (@maCTGio int ,@soLuong int,@thanhTien float)
+create proc update_SoLuongGio (@maCTGio int ,@soLuong int,@thanhTien float)
 as begin
 update CTGio set soluong=@soLuong,thanhTien=@thanhTien where maCTG=@maCTGio
 end
@@ -286,8 +289,15 @@ where CONCAT(kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien
 group by kh.maKH,kh.tenKH,kh.email,kh.sdt,hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai, nv.tenNV
 end
 go
+create proc khachHang_search(@tenKH nvarchar(50))
+as begin
+select maKH,tenKH from khachHang
+where CONCAT(maKH,tenKH) like '%' +@tenKH+'%'
+end
+=======
 --PHIẾU NHẬP
 --Thêm
+go
 create proc PN_Ins (@ma nvarchar(50), @manv nvarchar(50), @ng date) as
 begin
 	insert into PhieuNhap values (@ma,@manv,@ng)
@@ -304,6 +314,7 @@ go
 --begin
 --	update PhieuNhap set where maphieu= --(@ma,@manv,@ng)
 --end
+go
 
 create proc SP_Filter_Group (@loai nvarchar(50)) as
 begin
@@ -311,6 +322,7 @@ begin
 	from sanPham s, nhomSP n, HangSP h
 	where n.maLoai=s.maLoai and h.maHang=s.maHang and n.tenLoai = @loai
 end
+go
 --exec SP_Filter_Group N'Tai nghe'
 go 
 create proc SP_Filter_Gr_Br (@loai nvarchar(50), @hang nvarchar(50)) as
@@ -418,3 +430,6 @@ begin
 	Update HangSP set tenHang = @ten where maHang = @ma
 end
 go
+=======
+>>>>>>> 5514b349515c147bcca2454172c071c445794879
+>>>>>>> b0f7f60a745e13c7bac7e671185ff6859515110a

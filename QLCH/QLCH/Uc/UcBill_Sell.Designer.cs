@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcBill_Sell));
             this.dataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,28 +41,27 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCusName = new Guna.UI.WinForms.GunaLineTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCusPhone = new Guna.UI.WinForms.GunaLineTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCusAddress = new Guna.UI.WinForms.GunaLineTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtBillPrice = new Guna.UI.WinForms.GunaLineTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBillid = new Guna.UI.WinForms.GunaLineTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtBillDate = new Guna.UI.WinForms.GunaLineTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtBillStatus = new Guna.UI.WinForms.GunaLineTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCusEmail = new Guna.UI.WinForms.GunaLineTextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtStaffName = new Guna.UI.WinForms.GunaLineTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtCusEmail = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBillStatus = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBillDate = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBillid = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBillPrice = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCusAddress = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCusPhone = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gunaGradientButton3 = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,21 +73,21 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -99,14 +98,14 @@
             this.Column6,
             this.detail,
             this.delete});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
@@ -209,32 +208,6 @@
             this.delete.Text = "Delete";
             this.delete.UseColumnTextForButtonValue = true;
             // 
-            // gunaGradientButton1
-            // 
-            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(526, 282);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Radius = 7;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(106, 45);
-            this.gunaGradientButton1.TabIndex = 2;
-            this.gunaGradientButton1.Text = "Send Email";
-            // 
             // gunaGradientButton2
             // 
             this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
@@ -248,7 +221,7 @@
             this.gunaGradientButton2.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton2.Image")));
             this.gunaGradientButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton2.Location = new System.Drawing.Point(638, 282);
+            this.gunaGradientButton2.Location = new System.Drawing.Point(526, 283);
             this.gunaGradientButton2.Name = "gunaGradientButton2";
             this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -260,6 +233,7 @@
             this.gunaGradientButton2.Size = new System.Drawing.Size(106, 45);
             this.gunaGradientButton2.TabIndex = 3;
             this.gunaGradientButton2.Text = "Refresh";
+            this.gunaGradientButton2.Click += new System.EventHandler(this.gunaGradientButton2_Click);
             // 
             // txtSearch
             // 
@@ -335,149 +309,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "information";
             // 
-            // txtCusPhone
+            // txtStaffName
             // 
-            this.txtCusPhone.BackColor = System.Drawing.Color.White;
-            this.txtCusPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCusPhone.Enabled = false;
-            this.txtCusPhone.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtCusPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCusPhone.LineColor = System.Drawing.Color.Black;
-            this.txtCusPhone.Location = new System.Drawing.Point(149, 86);
-            this.txtCusPhone.Name = "txtCusPhone";
-            this.txtCusPhone.PasswordChar = '\0';
-            this.txtCusPhone.Size = new System.Drawing.Size(215, 26);
-            this.txtCusPhone.TabIndex = 3;
+            this.txtStaffName.BackColor = System.Drawing.Color.White;
+            this.txtStaffName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStaffName.Enabled = false;
+            this.txtStaffName.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtStaffName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtStaffName.LineColor = System.Drawing.Color.Black;
+            this.txtStaffName.Location = new System.Drawing.Point(638, 187);
+            this.txtStaffName.Name = "txtStaffName";
+            this.txtStaffName.PasswordChar = '\0';
+            this.txtStaffName.Size = new System.Drawing.Size(215, 26);
+            this.txtStaffName.TabIndex = 17;
             // 
-            // label1
+            // label9
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Customer\'s Phone";
-            // 
-            // txtCusAddress
-            // 
-            this.txtCusAddress.BackColor = System.Drawing.Color.White;
-            this.txtCusAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCusAddress.Enabled = false;
-            this.txtCusAddress.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtCusAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCusAddress.LineColor = System.Drawing.Color.Black;
-            this.txtCusAddress.Location = new System.Drawing.Point(149, 137);
-            this.txtCusAddress.Name = "txtCusAddress";
-            this.txtCusAddress.PasswordChar = '\0';
-            this.txtCusAddress.Size = new System.Drawing.Size(215, 26);
-            this.txtCusAddress.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Customer\'s Addrsess";
-            // 
-            // txtBillPrice
-            // 
-            this.txtBillPrice.BackColor = System.Drawing.Color.White;
-            this.txtBillPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBillPrice.Enabled = false;
-            this.txtBillPrice.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtBillPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBillPrice.LineColor = System.Drawing.Color.Black;
-            this.txtBillPrice.Location = new System.Drawing.Point(431, 237);
-            this.txtBillPrice.Name = "txtBillPrice";
-            this.txtBillPrice.PasswordChar = '\0';
-            this.txtBillPrice.Size = new System.Drawing.Size(215, 26);
-            this.txtBillPrice.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(334, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 19);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Total Price";
-            // 
-            // txtBillid
-            // 
-            this.txtBillid.BackColor = System.Drawing.Color.White;
-            this.txtBillid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBillid.Enabled = false;
-            this.txtBillid.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtBillid.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBillid.LineColor = System.Drawing.Color.Black;
-            this.txtBillid.Location = new System.Drawing.Point(638, 37);
-            this.txtBillid.Name = "txtBillid";
-            this.txtBillid.PasswordChar = '\0';
-            this.txtBillid.Size = new System.Drawing.Size(215, 26);
-            this.txtBillid.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(574, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 19);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Bill";
-            // 
-            // txtBillDate
-            // 
-            this.txtBillDate.BackColor = System.Drawing.Color.White;
-            this.txtBillDate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBillDate.Enabled = false;
-            this.txtBillDate.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtBillDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBillDate.LineColor = System.Drawing.Color.Black;
-            this.txtBillDate.Location = new System.Drawing.Point(638, 86);
-            this.txtBillDate.Name = "txtBillDate";
-            this.txtBillDate.PasswordChar = '\0';
-            this.txtBillDate.Size = new System.Drawing.Size(215, 26);
-            this.txtBillDate.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(553, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 19);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Bill\'s Date";
-            // 
-            // txtBillStatus
-            // 
-            this.txtBillStatus.BackColor = System.Drawing.Color.White;
-            this.txtBillStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBillStatus.Enabled = false;
-            this.txtBillStatus.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtBillStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBillStatus.LineColor = System.Drawing.Color.Black;
-            this.txtBillStatus.Location = new System.Drawing.Point(638, 137);
-            this.txtBillStatus.Name = "txtBillStatus";
-            this.txtBillStatus.PasswordChar = '\0';
-            this.txtBillStatus.Size = new System.Drawing.Size(215, 26);
-            this.txtBillStatus.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(549, 142);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 19);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Bill\'s Status";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(540, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 19);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Staff\'s Name";
             // 
             // txtCusEmail
             // 
@@ -503,29 +357,149 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Customer\'s Email";
             // 
-            // txtStaffName
+            // txtBillStatus
             // 
-            this.txtStaffName.BackColor = System.Drawing.Color.White;
-            this.txtStaffName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStaffName.Enabled = false;
-            this.txtStaffName.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtStaffName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtStaffName.LineColor = System.Drawing.Color.Black;
-            this.txtStaffName.Location = new System.Drawing.Point(638, 187);
-            this.txtStaffName.Name = "txtStaffName";
-            this.txtStaffName.PasswordChar = '\0';
-            this.txtStaffName.Size = new System.Drawing.Size(215, 26);
-            this.txtStaffName.TabIndex = 17;
+            this.txtBillStatus.BackColor = System.Drawing.Color.White;
+            this.txtBillStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBillStatus.Enabled = false;
+            this.txtBillStatus.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBillStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBillStatus.LineColor = System.Drawing.Color.Black;
+            this.txtBillStatus.Location = new System.Drawing.Point(638, 137);
+            this.txtBillStatus.Name = "txtBillStatus";
+            this.txtBillStatus.PasswordChar = '\0';
+            this.txtBillStatus.Size = new System.Drawing.Size(215, 26);
+            this.txtBillStatus.TabIndex = 13;
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(540, 192);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 19);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Staff\'s Name";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(549, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 19);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Bill\'s Status";
+            // 
+            // txtBillDate
+            // 
+            this.txtBillDate.BackColor = System.Drawing.Color.White;
+            this.txtBillDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBillDate.Enabled = false;
+            this.txtBillDate.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBillDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBillDate.LineColor = System.Drawing.Color.Black;
+            this.txtBillDate.Location = new System.Drawing.Point(638, 86);
+            this.txtBillDate.Name = "txtBillDate";
+            this.txtBillDate.PasswordChar = '\0';
+            this.txtBillDate.Size = new System.Drawing.Size(215, 26);
+            this.txtBillDate.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(553, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 19);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Bill\'s Date";
+            // 
+            // txtBillid
+            // 
+            this.txtBillid.BackColor = System.Drawing.Color.White;
+            this.txtBillid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBillid.Enabled = false;
+            this.txtBillid.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBillid.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBillid.LineColor = System.Drawing.Color.Black;
+            this.txtBillid.Location = new System.Drawing.Point(638, 37);
+            this.txtBillid.Name = "txtBillid";
+            this.txtBillid.PasswordChar = '\0';
+            this.txtBillid.Size = new System.Drawing.Size(215, 26);
+            this.txtBillid.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(574, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 19);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Bill";
+            // 
+            // txtBillPrice
+            // 
+            this.txtBillPrice.BackColor = System.Drawing.Color.White;
+            this.txtBillPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBillPrice.Enabled = false;
+            this.txtBillPrice.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBillPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBillPrice.LineColor = System.Drawing.Color.Black;
+            this.txtBillPrice.Location = new System.Drawing.Point(431, 237);
+            this.txtBillPrice.Name = "txtBillPrice";
+            this.txtBillPrice.PasswordChar = '\0';
+            this.txtBillPrice.Size = new System.Drawing.Size(215, 26);
+            this.txtBillPrice.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(334, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 19);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Total Price";
+            // 
+            // txtCusAddress
+            // 
+            this.txtCusAddress.BackColor = System.Drawing.Color.White;
+            this.txtCusAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCusAddress.Enabled = false;
+            this.txtCusAddress.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtCusAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCusAddress.LineColor = System.Drawing.Color.Black;
+            this.txtCusAddress.Location = new System.Drawing.Point(149, 137);
+            this.txtCusAddress.Name = "txtCusAddress";
+            this.txtCusAddress.PasswordChar = '\0';
+            this.txtCusAddress.Size = new System.Drawing.Size(215, 26);
+            this.txtCusAddress.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 19);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Customer\'s Addrsess";
+            // 
+            // txtCusPhone
+            // 
+            this.txtCusPhone.BackColor = System.Drawing.Color.White;
+            this.txtCusPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCusPhone.Enabled = false;
+            this.txtCusPhone.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtCusPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCusPhone.LineColor = System.Drawing.Color.Black;
+            this.txtCusPhone.Location = new System.Drawing.Point(149, 86);
+            this.txtCusPhone.Name = "txtCusPhone";
+            this.txtCusPhone.PasswordChar = '\0';
+            this.txtCusPhone.Size = new System.Drawing.Size(215, 26);
+            this.txtCusPhone.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Customer\'s Phone";
             // 
             // gunaGradientButton3
             // 
@@ -540,7 +514,7 @@
             this.gunaGradientButton3.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton3.Image")));
             this.gunaGradientButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton3.Location = new System.Drawing.Point(750, 281);
+            this.gunaGradientButton3.Location = new System.Drawing.Point(638, 282);
             this.gunaGradientButton3.Name = "gunaGradientButton3";
             this.gunaGradientButton3.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.gunaGradientButton3.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -561,7 +535,6 @@
             this.Controls.Add(this.gunaGradientButton3);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.gunaGradientButton2);
-            this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UcBill_Sell";
@@ -585,7 +558,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn detail;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSearch;
         private System.Windows.Forms.Label label2;

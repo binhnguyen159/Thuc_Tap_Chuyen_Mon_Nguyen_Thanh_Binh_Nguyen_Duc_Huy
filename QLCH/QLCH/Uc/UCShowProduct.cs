@@ -13,7 +13,7 @@ namespace QLCH.Uc
 {
     public partial class UCShowProduct : UserControl
     {
-
+       
         public UCShowProduct()
         {
             InitializeComponent();
@@ -61,7 +61,7 @@ namespace QLCH.Uc
             nhomSP loaiSP = db.nhomSPs.Where(s => s.maLoai == sp.maLoai).FirstOrDefault();
             lbTLSP.Text = loaiSP.tenLoai;
             lbGia.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-
+            panelKH.Visible = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -99,11 +99,14 @@ namespace QLCH.Uc
                 }
             }
         }
+        String CusId;
 
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-
-            db.insert_cart(1, lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
+            // làm cái mã giùm t với ,dđm, cái mã bên giỏ hàng ,t ự tăng, có code r mà, nhìn mà làm 3, ko hiểu gì hết, what the fuck, ,:siỉ nhục code sạch vcl< CHƯA PULL VỀ
+            //pull về di ba
+            //var id
+            //db.insert_cart(,CusId, lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
         }
 
 
@@ -120,8 +123,24 @@ namespace QLCH.Uc
 
         private void gunaGradientButton2_Click(object sender, EventArgs e)
         {
+
             FrmCart frmCart = new FrmCart();
             frmCart.Show();
+        }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+            panelKH.Visible = true;
+            dataGridView2.AutoGenerateColumns = false;
+            dataGridView2.DataSource = db.khachHang_search(txtCusName.Text);
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dataGridView2.CurrentRow.Index;
+            txtCusName.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
+            CusId = dataGridView2.Rows[i].Cells[0].Value.ToString();
+            panelKH.Visible = false;
         }
     }
 }

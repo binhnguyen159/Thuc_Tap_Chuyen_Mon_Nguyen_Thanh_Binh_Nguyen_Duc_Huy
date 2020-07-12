@@ -40,6 +40,10 @@ namespace QLCH.Uc.WareHouse
             }
         }
 
+        private void Uc_ProductShow_Load(object sender, EventArgs e)
+        {
+
+        }
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void btnRemove_Click(object sender, EventArgs e)
         {
