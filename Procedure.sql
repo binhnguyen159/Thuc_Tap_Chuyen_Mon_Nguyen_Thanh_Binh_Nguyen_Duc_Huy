@@ -13,15 +13,18 @@ insert into sanPham values (@maSP,@tenSP,@gia,@anh,@soLuong,@thongSo,@maLoai,@ma
 end
 go
 
-alter proc select_SP
+create proc select_SP
 as begin
 select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
 from sanPham s, nhomSP n, HangSP h
 where n.maLoai=s.maLoai and h.maHang=s.maHang
 end
+exec select_SP
+go
+
 
 go
-alter proc updateSP(
+create proc updateSP(
 @maSP nvarchar(50),
 @tenSP nvarchar(50),
 @gia float,
@@ -42,7 +45,7 @@ create proc deleteSP(@maSP nvarchar(50))
 as begin
 delete sanPham where maSP=@maSP
 end
-
+go
 -- Thêm, sửa, xóa khách hàng
 --Thêm
 create proc KH_Ins (
@@ -58,6 +61,7 @@ as begin
 delete khachHang where maKH = @ma
 end
 --sua
+go
 alter proc KH_Up (
 @ma nvarchar(50), @ten nvarchar(50),
 @gt nvarchar(50), @ns date, @ema nvarchar(50),
@@ -68,6 +72,7 @@ begin
 							email = @ema, diaChi = @dc, sdt = @sdt
 	where maKH=@ma
 end
+go
 --Thống kê danh sách khách hàng
 create proc KH_Sel as
 begin
@@ -75,10 +80,12 @@ select * from khachHang
 end
 --Thêm, sửa, xóa nhân viên
 --Thống kê danh sách nhân viên
+go
 create proc NV_Sel as
 begin
 select * from nhanVien
 end
+go
 --Thêm
 alter proc NV_Ins (
 @ma nvarchar(50), @ten nvarchar(50),
@@ -87,11 +94,13 @@ alter proc NV_Ins (
 ) as begin
 insert into nhanVien values (@ma, @ten, @gt, @ns, @nvl, @ema, @dc, @sdt,null,null,null)
 end
+go
 --Xóa
 create proc NV_Del (@ma nvarchar(50)) 
 as begin
 delete nhanVien where maNV = @ma
 end
+go
 --Sửa
 create proc NV_Up (
 @ma nvarchar(50), @ten nvarchar(50),
@@ -105,7 +114,7 @@ begin
 						sdt = @sdt
 	where maNV=@ma
 end
-
+go
 --<<<<<<< HEAD
 --TÀI KHOẢN
 --Thống kê danh sách
@@ -131,12 +140,14 @@ alter proc ACC_Del (@ma nvarchar(50)) as
 begin
 	update nhanVien set passWords = null, tendn = null where maNV = @ma
 end
-select maNV,tendn,passWords from nhanVien
+--select maNV,tendn,passWords from nhanVien
 --FindID
+go
 create proc ACC_FindID (@ma nvarchar(50)) as
 begin
 	select maNV, tenNV, ngSinh, tendn from nhanVien where maNV like '%' + @ma + '%'
 end
+go
 --Find tên đăng nhập
 alter proc ACC_FindTenDN (@tdn nvarchar(50)) as
 begin
@@ -160,14 +171,13 @@ go
 
 
 
-go
-alter proc selectTotalPrice 
+
+create proc selectTotalPrice 
 as begin 
 select SUM(thanhTien) as 'a' from CTGio 
 end
-
-use TTCM
 go
+
 create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
 as begin 
 if(not exists(select * from CTGio where masp=@maSP))
@@ -187,7 +197,7 @@ update CTGio set soluong=@soLuong,thanhTien=@thanhTien where maCTG=@maCTGio
 end
 go
 
-exec update_SoLuongGio 1, 10
+--exec update_SoLuongGio 1, 10
 
 go
 --exec insert_cart 1,N'sp6',5
@@ -196,8 +206,10 @@ go
  as begin
  delete CTGio where maCTG=@maCTG
  end
+ go
  --NHÀ CUNG CẤP
  --Load
+
  create proc NCC_Sel as
  begin
 	select * from nhaCungCap
@@ -230,19 +242,19 @@ go
  end
  go
  --Tìm theo id
- alter proc NCC_FindiD (@ma nvarchar(50)) as
+ create proc NCC_FindiD (@ma nvarchar(50)) as
  begin
 	select * from nhaCungCap where maNCC like '%'+@ma+'%'
  end
  go
  --Tìm theo tên
-  alter proc NCC_FindName(@name nvarchar(50)) as
+ create proc NCC_FindName(@name nvarchar(50)) as
  begin
 	select * from nhaCungCap where tenNCC like  N'%'+@name+N'%'
  end
  go
  --Tìm theo địa chỉ
-  alter proc NCC_FindAddress (@address nvarchar(50)) as
+  create proc NCC_FindAddress (@address nvarchar(50)) as
  begin
 	select * from nhaCungCap where diaChi like N'%'+@address+N'%'
  end
@@ -265,8 +277,6 @@ go
  select * from hoadDonXuat,khachHang,nhanVien 
  where hoadDonXuat.maKH=khachHang.maKH and hoadDonXuat.maNV=nhanVien.maNV
  end
- go
- use TTCM
  go
 create proc bill_search(@a nvarchar(50))
 as begin
@@ -294,3 +304,117 @@ go
 --begin
 --	update PhieuNhap set where maphieu= --(@ma,@manv,@ng)
 --end
+
+create proc SP_Filter_Group (@loai nvarchar(50)) as
+begin
+	select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+	from sanPham s, nhomSP n, HangSP h
+	where n.maLoai=s.maLoai and h.maHang=s.maHang and n.tenLoai = @loai
+end
+--exec SP_Filter_Group N'Tai nghe'
+go 
+create proc SP_Filter_Gr_Br (@loai nvarchar(50), @hang nvarchar(50)) as
+begin
+	select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+	from sanPham s, nhomSP n, HangSP h
+	where n.maLoai=s.maLoai and h.maHang=s.maHang and n.tenLoai = @loai and h.tenHang = @hang
+end
+go
+create proc SP_Filter_Brand (@hang nvarchar(50)) as
+begin
+	select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+	from sanPham s, nhomSP n, HangSP h
+	where n.maLoai=s.maLoai and h.maHang=s.maHang and h.tenHang = @hang
+end
+go
+create proc SP_Find_id (@ma nvarchar(50)) as
+begin
+	select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+	from sanPham s, nhomSP n, HangSP h
+	where n.maLoai=s.maLoai and h.maHang=s.maHang and s.maSP = @ma
+end
+go
+--NHÓM SẢN PHẨM
+--tìm theo id hoặc name
+alter PROC	NSP_Find (@ma nvarchar(50),@ten nvarchar(50)) as
+begin
+	if (@ma is not null and @ten is not null)
+	begin
+		select * from nhomSP where maLoai like '%' + @ma + '%' and tenLoai like '%' + @ten + '%'
+	end
+	else if(@ten is null)
+	begin
+		select * from nhomSP where maLoai like '%' + @ma + '%'
+	end
+	else if (@ma is null)
+	begin
+		select * from nhomSP where tenLoai like '%' + @ten + '%'
+	end
+end
+go
+--load
+create proc NSP_Sel as
+begin
+	select * from nhomSP
+end
+go
+--Thêm
+create proc NSP_Add (@ma nvarchar(50),@ten nvarchar(50)) as
+begin
+	insert into nhomSP values (@ma,@ten)
+end
+go
+--Xóa
+create proc NSP_Del (@ma nvarchar(50)) as
+begin
+	delete nhomSP where maLoai = @ma
+end
+go
+--Sửa
+create proc NSP_Up (@ma nvarchar(50),@ten nvarchar(50)) as
+begin
+	update nhomSP set tenLoai = @ten where maLoai = @ma
+end
+go
+--HÃNG SẢNG PHẨM
+--Tìm kiếm theo id, name
+alter proc HSP_Find (@ma nvarchar(50), @ten nvarchar(50)) as
+begin
+	if (@ma is not null and @ten is not null)
+	begin
+		select * from HangSP where maHang like '%' + @ma + '%' and tenHang like '%' + @ten + '%'
+	end
+	else if(@ten is null)
+	begin
+		select * from HangSP where maHang like '%' + @ma + '%'
+	end
+	else if (@ma is null)
+	begin
+		select * from HangSP where tenHang like '%' + @ten + '%'
+	end
+end
+go
+--load
+create proc HSP_Sel as
+begin
+	select * from HangSP
+end
+go
+--thêm
+create proc HSP_Ins (@ma nvarchar(50), @ten nvarchar(50)) as
+begin
+	insert into HangSP values (@ma, @ten)
+end
+go
+--xóa
+create proc HSP_Del (@ma nvarchar(50)) as
+begin
+	delete HangSP where maHang = @ma
+end
+go
+--sửa
+create proc HSP_Up (@ma nvarchar(50), @ten nvarchar(50)) as
+begin
+	Update HangSP set tenHang = @ten where maHang = @ma
+end
+go

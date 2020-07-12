@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
+using QLCH.Uc.WareHouse;
 
 namespace QLCH.Uc
 {
@@ -203,7 +204,7 @@ namespace QLCH.Uc
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            Uc_SanPham_Load(sender, e);
+            
         }
         int i = 0;
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)

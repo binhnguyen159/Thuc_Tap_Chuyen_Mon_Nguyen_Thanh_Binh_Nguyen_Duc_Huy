@@ -108,7 +108,7 @@
             this.btnProvider.OnPressedColor = System.Drawing.Color.Black;
             this.btnProvider.Size = new System.Drawing.Size(253, 49);
             this.btnProvider.TabIndex = 8;
-            this.btnProvider.Text = "Provider";
+            this.btnProvider.Text = "Product Management";
             this.btnProvider.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
             // 

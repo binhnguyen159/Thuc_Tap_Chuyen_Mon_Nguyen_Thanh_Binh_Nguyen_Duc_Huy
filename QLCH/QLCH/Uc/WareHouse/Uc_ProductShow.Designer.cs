@@ -90,7 +90,7 @@
             this.lbName.Size = new System.Drawing.Size(150, 35);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Mã SP:";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gunaLabel2
             // 
@@ -157,7 +157,7 @@
             this.Controls.Add(this.ptbAnh);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_ProductShow";
-            this.Size = new System.Drawing.Size(235, 270);
+            this.Size = new System.Drawing.Size(230, 270);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -489,6 +489,104 @@ namespace QLCH.Uc
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, manv, ng);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Filter_Group")]
+		public ISingleResult<SP_Filter_GroupResult> SP_Filter_Group([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string loai)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), loai);
+			return ((ISingleResult<SP_Filter_GroupResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Filter_Gr_Br")]
+		public ISingleResult<SP_Filter_Gr_BrResult> SP_Filter_Gr_Br([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string loai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string hang)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), loai, hang);
+			return ((ISingleResult<SP_Filter_Gr_BrResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Filter_Brand")]
+		public ISingleResult<SP_Filter_BrandResult> SP_Filter_Brand([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string hang)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), hang);
+			return ((ISingleResult<SP_Filter_BrandResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Find_id")]
+		public ISingleResult<SP_Find_idResult> SP_Find_id([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
+			return ((ISingleResult<SP_Find_idResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NSP_Add")]
+		public int NSP_Add([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NSP_Del")]
+		public int NSP_Del([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NSP_Up")]
+		public int NSP_Up([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NSP_Sel")]
+		public ISingleResult<NSP_SelResult> NSP_Sel()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<NSP_SelResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HSP_Del")]
+		public int HSP_Del([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HSP_Ins")]
+		public int HSP_Ins([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HSP_Sel")]
+		public ISingleResult<HSP_SelResult> HSP_Sel()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<HSP_SelResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HSP_Up")]
+		public int HSP_Up([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NSP_Find")]
+		public ISingleResult<NSP_FindResult> NSP_Find([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten);
+			return ((ISingleResult<NSP_FindResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HSP_Find")]
+		public ISingleResult<HSP_FindResult> HSP_Find([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ten)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ten);
+			return ((ISingleResult<HSP_FindResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.chiTietHDN")]
@@ -5638,6 +5736,718 @@ namespace QLCH.Uc
 				if ((this._tenLoai != value))
 				{
 					this._tenLoai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenHang", DbType="NVarChar(50)")]
+		public string tenHang
+		{
+			get
+			{
+				return this._tenHang;
+			}
+			set
+			{
+				if ((this._tenHang != value))
+				{
+					this._tenHang = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SP_Filter_GroupResult
+	{
+		
+		private string _maSP;
+		
+		private string _tenSP;
+		
+		private System.Data.Linq.Binary _anh;
+		
+		private System.Nullable<double> _gia;
+		
+		private System.Nullable<int> _soLuong;
+		
+		private string _tenLoai;
+		
+		private string _tenHang;
+		
+		public SP_Filter_GroupResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSP", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maSP
+		{
+			get
+			{
+				return this._maSP;
+			}
+			set
+			{
+				if ((this._maSP != value))
+				{
+					this._maSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSP", DbType="NVarChar(50)")]
+		public string tenSP
+		{
+			get
+			{
+				return this._tenSP;
+			}
+			set
+			{
+				if ((this._tenSP != value))
+				{
+					this._tenSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anh", DbType="Image")]
+		public System.Data.Linq.Binary anh
+		{
+			get
+			{
+				return this._anh;
+			}
+			set
+			{
+				if ((this._anh != value))
+				{
+					this._anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gia", DbType="Float")]
+		public System.Nullable<double> gia
+		{
+			get
+			{
+				return this._gia;
+			}
+			set
+			{
+				if ((this._gia != value))
+				{
+					this._gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soLuong", DbType="Int")]
+		public System.Nullable<int> soLuong
+		{
+			get
+			{
+				return this._soLuong;
+			}
+			set
+			{
+				if ((this._soLuong != value))
+				{
+					this._soLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLoai", DbType="NVarChar(50)")]
+		public string tenLoai
+		{
+			get
+			{
+				return this._tenLoai;
+			}
+			set
+			{
+				if ((this._tenLoai != value))
+				{
+					this._tenLoai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenHang", DbType="NVarChar(50)")]
+		public string tenHang
+		{
+			get
+			{
+				return this._tenHang;
+			}
+			set
+			{
+				if ((this._tenHang != value))
+				{
+					this._tenHang = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SP_Filter_Gr_BrResult
+	{
+		
+		private string _maSP;
+		
+		private string _tenSP;
+		
+		private System.Data.Linq.Binary _anh;
+		
+		private System.Nullable<double> _gia;
+		
+		private System.Nullable<int> _soLuong;
+		
+		private string _tenLoai;
+		
+		private string _tenHang;
+		
+		public SP_Filter_Gr_BrResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSP", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maSP
+		{
+			get
+			{
+				return this._maSP;
+			}
+			set
+			{
+				if ((this._maSP != value))
+				{
+					this._maSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSP", DbType="NVarChar(50)")]
+		public string tenSP
+		{
+			get
+			{
+				return this._tenSP;
+			}
+			set
+			{
+				if ((this._tenSP != value))
+				{
+					this._tenSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anh", DbType="Image")]
+		public System.Data.Linq.Binary anh
+		{
+			get
+			{
+				return this._anh;
+			}
+			set
+			{
+				if ((this._anh != value))
+				{
+					this._anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gia", DbType="Float")]
+		public System.Nullable<double> gia
+		{
+			get
+			{
+				return this._gia;
+			}
+			set
+			{
+				if ((this._gia != value))
+				{
+					this._gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soLuong", DbType="Int")]
+		public System.Nullable<int> soLuong
+		{
+			get
+			{
+				return this._soLuong;
+			}
+			set
+			{
+				if ((this._soLuong != value))
+				{
+					this._soLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLoai", DbType="NVarChar(50)")]
+		public string tenLoai
+		{
+			get
+			{
+				return this._tenLoai;
+			}
+			set
+			{
+				if ((this._tenLoai != value))
+				{
+					this._tenLoai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenHang", DbType="NVarChar(50)")]
+		public string tenHang
+		{
+			get
+			{
+				return this._tenHang;
+			}
+			set
+			{
+				if ((this._tenHang != value))
+				{
+					this._tenHang = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SP_Filter_BrandResult
+	{
+		
+		private string _maSP;
+		
+		private string _tenSP;
+		
+		private System.Data.Linq.Binary _anh;
+		
+		private System.Nullable<double> _gia;
+		
+		private System.Nullable<int> _soLuong;
+		
+		private string _tenLoai;
+		
+		private string _tenHang;
+		
+		public SP_Filter_BrandResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSP", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maSP
+		{
+			get
+			{
+				return this._maSP;
+			}
+			set
+			{
+				if ((this._maSP != value))
+				{
+					this._maSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSP", DbType="NVarChar(50)")]
+		public string tenSP
+		{
+			get
+			{
+				return this._tenSP;
+			}
+			set
+			{
+				if ((this._tenSP != value))
+				{
+					this._tenSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anh", DbType="Image")]
+		public System.Data.Linq.Binary anh
+		{
+			get
+			{
+				return this._anh;
+			}
+			set
+			{
+				if ((this._anh != value))
+				{
+					this._anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gia", DbType="Float")]
+		public System.Nullable<double> gia
+		{
+			get
+			{
+				return this._gia;
+			}
+			set
+			{
+				if ((this._gia != value))
+				{
+					this._gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soLuong", DbType="Int")]
+		public System.Nullable<int> soLuong
+		{
+			get
+			{
+				return this._soLuong;
+			}
+			set
+			{
+				if ((this._soLuong != value))
+				{
+					this._soLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLoai", DbType="NVarChar(50)")]
+		public string tenLoai
+		{
+			get
+			{
+				return this._tenLoai;
+			}
+			set
+			{
+				if ((this._tenLoai != value))
+				{
+					this._tenLoai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenHang", DbType="NVarChar(50)")]
+		public string tenHang
+		{
+			get
+			{
+				return this._tenHang;
+			}
+			set
+			{
+				if ((this._tenHang != value))
+				{
+					this._tenHang = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SP_Find_idResult
+	{
+		
+		private string _maSP;
+		
+		private string _tenSP;
+		
+		private System.Data.Linq.Binary _anh;
+		
+		private System.Nullable<double> _gia;
+		
+		private System.Nullable<int> _soLuong;
+		
+		private string _tenLoai;
+		
+		private string _tenHang;
+		
+		public SP_Find_idResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSP", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maSP
+		{
+			get
+			{
+				return this._maSP;
+			}
+			set
+			{
+				if ((this._maSP != value))
+				{
+					this._maSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSP", DbType="NVarChar(50)")]
+		public string tenSP
+		{
+			get
+			{
+				return this._tenSP;
+			}
+			set
+			{
+				if ((this._tenSP != value))
+				{
+					this._tenSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anh", DbType="Image")]
+		public System.Data.Linq.Binary anh
+		{
+			get
+			{
+				return this._anh;
+			}
+			set
+			{
+				if ((this._anh != value))
+				{
+					this._anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gia", DbType="Float")]
+		public System.Nullable<double> gia
+		{
+			get
+			{
+				return this._gia;
+			}
+			set
+			{
+				if ((this._gia != value))
+				{
+					this._gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soLuong", DbType="Int")]
+		public System.Nullable<int> soLuong
+		{
+			get
+			{
+				return this._soLuong;
+			}
+			set
+			{
+				if ((this._soLuong != value))
+				{
+					this._soLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLoai", DbType="NVarChar(50)")]
+		public string tenLoai
+		{
+			get
+			{
+				return this._tenLoai;
+			}
+			set
+			{
+				if ((this._tenLoai != value))
+				{
+					this._tenLoai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenHang", DbType="NVarChar(50)")]
+		public string tenHang
+		{
+			get
+			{
+				return this._tenHang;
+			}
+			set
+			{
+				if ((this._tenHang != value))
+				{
+					this._tenHang = value;
+				}
+			}
+		}
+	}
+	
+	public partial class NSP_SelResult
+	{
+		
+		private string _maLoai;
+		
+		private string _tenLoai;
+		
+		public NSP_SelResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLoai", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maLoai
+		{
+			get
+			{
+				return this._maLoai;
+			}
+			set
+			{
+				if ((this._maLoai != value))
+				{
+					this._maLoai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLoai", DbType="NVarChar(50)")]
+		public string tenLoai
+		{
+			get
+			{
+				return this._tenLoai;
+			}
+			set
+			{
+				if ((this._tenLoai != value))
+				{
+					this._tenLoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class HSP_SelResult
+	{
+		
+		private string _maHang;
+		
+		private string _tenHang;
+		
+		public HSP_SelResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maHang", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maHang
+		{
+			get
+			{
+				return this._maHang;
+			}
+			set
+			{
+				if ((this._maHang != value))
+				{
+					this._maHang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenHang", DbType="NVarChar(50)")]
+		public string tenHang
+		{
+			get
+			{
+				return this._tenHang;
+			}
+			set
+			{
+				if ((this._tenHang != value))
+				{
+					this._tenHang = value;
+				}
+			}
+		}
+	}
+	
+	public partial class NSP_FindResult
+	{
+		
+		private string _maLoai;
+		
+		private string _tenLoai;
+		
+		public NSP_FindResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maLoai", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maLoai
+		{
+			get
+			{
+				return this._maLoai;
+			}
+			set
+			{
+				if ((this._maLoai != value))
+				{
+					this._maLoai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenLoai", DbType="NVarChar(50)")]
+		public string tenLoai
+		{
+			get
+			{
+				return this._tenLoai;
+			}
+			set
+			{
+				if ((this._tenLoai != value))
+				{
+					this._tenLoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class HSP_FindResult
+	{
+		
+		private string _maHang;
+		
+		private string _tenHang;
+		
+		public HSP_FindResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maHang", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maHang
+		{
+			get
+			{
+				return this._maHang;
+			}
+			set
+			{
+				if ((this._maHang != value))
+				{
+					this._maHang = value;
 				}
 			}
 		}

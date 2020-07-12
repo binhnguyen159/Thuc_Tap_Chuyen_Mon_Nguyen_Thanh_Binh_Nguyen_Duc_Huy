@@ -325,7 +325,7 @@
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(941, 275);
+            this.dgvProduct.Size = new System.Drawing.Size(941, 204);
             this.dgvProduct.TabIndex = 34;
             this.dgvProduct.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Cyan;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
@@ -627,7 +627,7 @@
             this.Controls.Add(this.gunaGroupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_SanPham";
-            this.Size = new System.Drawing.Size(965, 656);
+            this.Size = new System.Drawing.Size(965, 583);
             this.Load += new System.EventHandler(this.Uc_SanPham_Load);
             this.gunaGroupBox2.ResumeLayout(false);
             this.gunaElipsePanel1.ResumeLayout(false);

@@ -476,4 +476,109 @@
     <Parameter Name="ng" Type="System.DateTime" DbType="Date" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.SP_Filter_Group" Method="SP_Filter_Group">
+    <Parameter Name="loai" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Filter_GroupResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Filter_Gr_Br" Method="SP_Filter_Gr_Br">
+    <Parameter Name="loai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hang" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Filter_Gr_BrResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Filter_Brand" Method="SP_Filter_Brand">
+    <Parameter Name="hang" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Filter_BrandResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Find_id" Method="SP_Find_id">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Find_idResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NSP_Add" Method="NSP_Add">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NSP_Del" Method="NSP_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NSP_Up" Method="NSP_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NSP_Sel" Method="NSP_Sel">
+    <ElementType Name="NSP_SelResult">
+      <Column Name="maLoai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HSP_Del" Method="HSP_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HSP_Ins" Method="HSP_Ins">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HSP_Sel" Method="HSP_Sel">
+    <ElementType Name="HSP_SelResult">
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HSP_Up" Method="HSP_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NSP_Find" Method="NSP_Find">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="NSP_FindResult">
+      <Column Name="maLoai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HSP_Find" Method="HSP_Find">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="HSP_FindResult">
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
