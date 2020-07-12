@@ -40,12 +40,12 @@ namespace QLCH.Uc.WareHouse
             }
         }
 
-<<<<<<< HEAD
+
         private void Uc_ProductShow_Load(object sender, EventArgs e)
         {
 
         }
-=======
+
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void btnRemove_Click(object sender, EventArgs e)
         {
@@ -70,6 +70,6 @@ namespace QLCH.Uc.WareHouse
         //    lbName.Text = name;
         //    ptbAnh.Image = image;
         //}
->>>>>>> 5514b349515c147bcca2454172c071c445794879
+
     }
 }

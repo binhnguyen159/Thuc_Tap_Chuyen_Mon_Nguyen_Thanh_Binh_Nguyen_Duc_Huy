@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using DevExpress.XtraEditors.Filtering.Templates;
 
 namespace QLCH.Uc
 {
     public partial class UCShowProduct : UserControl
     {
-       
+
         public UCShowProduct()
         {
             InitializeComponent();
@@ -29,18 +30,19 @@ namespace QLCH.Uc
         {
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = db.select_SP();
+
             lbMa.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             lbTenSP.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             sanPham sp = db.sanPhams.Where(s => s.maSP == lbMa.Text).FirstOrDefault();
-            txtThongSo.Text = sp.thongSo.ToString();
+            //txtThongSo.Text = sp.thongSo.ToString();
             lbQuantity.Text = sp.soLuong.ToString();
             if (Convert.ToInt32(lbQuantity.Text) == 0)
             {
-                gunaGradientButton1.Enabled = false;
+                btnAddToCart.Enabled = false;
             }
             else
             {
-                gunaGradientButton1.Enabled = true;
+                btnAddToCart.Enabled = true;
             }
 
             if (sp == null || sp.anh == null)
@@ -80,11 +82,11 @@ namespace QLCH.Uc
 
             if (Convert.ToInt32(lbQuantity.Text) == 0)
             {
-                gunaGradientButton1.Enabled = false;
+                btnAddToCart.Enabled = false;
             }
             else
             {
-                gunaGradientButton1.Enabled = true;
+                btnAddToCart.Enabled = true;
             }
             if (sp == null || sp.anh == null)
             { }
@@ -103,10 +105,8 @@ namespace QLCH.Uc
 
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-            // làm cái mã giùm t với ,dđm, cái mã bên giỏ hàng ,t ự tăng, có code r mà, nhìn mà làm 3, ko hiểu gì hết, what the fuck, ,:siỉ nhục code sạch vcl< CHƯA PULL VỀ
-            //pull về di ba
-            var id
-            //db.insert_cart(,CusId, lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
+            
+            db.insert_cart(Convert.ToInt32(lbMaGio.Text), lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
         }
 
 
@@ -141,6 +141,37 @@ namespace QLCH.Uc
             txtCusName.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
             CusId = dataGridView2.Rows[i].Cells[0].Value.ToString();
             panelKH.Visible = false;
+        }
+        int stt = 0;
+        string id = "";
+        int dem;
+        private void btnCreateCart_Click(object sender, EventArgs e)
+        {
+            btnAddToCart.Enabled = true;
+            hoadDonXuat ssp = db.hoadDonXuats.OrderByDescending(s => s.maHDX).FirstOrDefault();
+            stt = Convert.ToInt32(ssp.maHDX.ToString().Trim().Substring(2)) + 1;
+            if (stt / 10 >= 100000)
+                id = "HDX" + stt;
+            else if (stt / 10 >= 1000 && stt / 10 < 10000)
+                id = "HDX0" + stt;
+            else if (stt / 10 >= 100 && stt / 10 < 1000)
+                id = "HDX00" + stt;
+            else if (stt / 10 >= 10 && stt / 10 < 100)
+                id = "HDX000" + stt;
+            else if (stt / 10 >= 1 && stt / 10 < 10)
+                id = "HDX0000" + stt;
+            else if (stt / 10 < 1)
+                id = "HDX00000" + stt;
+            //chua xong
+            db.hdx_insert(id, "ma nv", CusId, 0, "Not Paid", DateTime.Now);
+
+            db.insert_gioHang(CusId);
+            
+            foreach(var a in db.GioHangs)
+            {
+                dem = a.magio;
+            }
+            lbMaGio.Text = dem.ToString();
         }
     }
 }

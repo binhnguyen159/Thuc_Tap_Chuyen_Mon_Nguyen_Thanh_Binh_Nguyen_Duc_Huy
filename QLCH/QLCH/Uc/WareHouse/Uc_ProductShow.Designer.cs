@@ -138,7 +138,7 @@
             this.btnRemove.TabIndex = 3;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+           // this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // Uc_ProductShow
             // 
@@ -157,16 +157,16 @@
             this.Controls.Add(this.ptbAnh);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_ProductShow";
-<<<<<<< HEAD
-            this.Size = new System.Drawing.Size(239, 223);
-            this.Load += new System.EventHandler(this.Uc_ProductShow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
-=======
-            this.Size = new System.Drawing.Size(235, 270);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).EndInit();
->>>>>>> 5514b349515c147bcca2454172c071c445794879
-            this.ResumeLayout(false);
-            this.PerformLayout();
+//<<<<<<< HEAD
+//            this.Size = new System.Drawing.Size(239, 223);
+//            this.Load += new System.EventHandler(this.Uc_ProductShow_Load);
+//            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+//=======
+//            this.Size = new System.Drawing.Size(235, 270);
+//            ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).EndInit();
+//>>>>>>> 5514b349515c147bcca2454172c071c445794879
+//            this.ResumeLayout(false);
+//            this.PerformLayout();
 
         }
 

@@ -43,7 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbTLSP = new System.Windows.Forms.Label();
             this.lbTenSP = new System.Windows.Forms.Label();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnAddToCart = new Guna.UI.WinForms.GunaGradientButton();
             this.txtThongSo = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,13 +56,15 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.lbQuantity = new System.Windows.Forms.Label();
-            this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnSeeCart = new Guna.UI.WinForms.GunaGradientButton();
             this.txtCusName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelKH = new System.Windows.Forms.Panel();
             this.dataGridView2 = new Guna.UI.WinForms.GunaDataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCreateCart = new Guna.UI.WinForms.GunaGradientButton();
+            this.lbMaGio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -142,32 +144,33 @@
             this.lbTenSP.TabIndex = 35;
             this.lbTenSP.Text = "lbProductName";
             // 
-            // gunaGradientButton1
+            // btnAddToCart
             // 
-            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(684, 272);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Radius = 10;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(109, 40);
-            this.gunaGradientButton1.TabIndex = 47;
-            this.gunaGradientButton1.Text = "Add to cart";
-            this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
+            this.btnAddToCart.AnimationHoverSpeed = 0.07F;
+            this.btnAddToCart.AnimationSpeed = 0.03F;
+            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddToCart.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.btnAddToCart.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
+            this.btnAddToCart.BorderColor = System.Drawing.Color.Black;
+            this.btnAddToCart.Enabled = false;
+            this.btnAddToCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.Image")));
+            this.btnAddToCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAddToCart.Location = new System.Drawing.Point(679, 258);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnAddToCart.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
+            this.btnAddToCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAddToCart.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.OnHoverImage = null;
+            this.btnAddToCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAddToCart.Radius = 10;
+            this.btnAddToCart.Size = new System.Drawing.Size(109, 40);
+            this.btnAddToCart.TabIndex = 47;
+            this.btnAddToCart.Text = "Add to cart";
+            this.btnAddToCart.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
             // txtThongSo
             // 
@@ -358,32 +361,32 @@
             this.lbQuantity.Text = "label6";
             this.lbQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // gunaGradientButton2
+            // btnSeeCart
             // 
-            this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton2.AnimationSpeed = 0.03F;
-            this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
-            this.gunaGradientButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton2.Image")));
-            this.gunaGradientButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton2.Location = new System.Drawing.Point(850, 2);
-            this.gunaGradientButton2.Name = "gunaGradientButton2";
-            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
-            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
-            this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.OnHoverImage = null;
-            this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.Radius = 10;
-            this.gunaGradientButton2.Size = new System.Drawing.Size(97, 40);
-            this.gunaGradientButton2.TabIndex = 59;
-            this.gunaGradientButton2.Text = "See cart";
-            this.gunaGradientButton2.Click += new System.EventHandler(this.gunaGradientButton2_Click);
+            this.btnSeeCart.AnimationHoverSpeed = 0.07F;
+            this.btnSeeCart.AnimationSpeed = 0.03F;
+            this.btnSeeCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeeCart.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.btnSeeCart.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
+            this.btnSeeCart.BorderColor = System.Drawing.Color.Black;
+            this.btnSeeCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSeeCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSeeCart.ForeColor = System.Drawing.Color.White;
+            this.btnSeeCart.Image = ((System.Drawing.Image)(resources.GetObject("btnSeeCart.Image")));
+            this.btnSeeCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSeeCart.Location = new System.Drawing.Point(679, 304);
+            this.btnSeeCart.Name = "btnSeeCart";
+            this.btnSeeCart.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnSeeCart.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
+            this.btnSeeCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSeeCart.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSeeCart.OnHoverImage = null;
+            this.btnSeeCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSeeCart.Radius = 10;
+            this.btnSeeCart.Size = new System.Drawing.Size(109, 40);
+            this.btnSeeCart.TabIndex = 59;
+            this.btnSeeCart.Text = "See cart";
+            this.btnSeeCart.Click += new System.EventHandler(this.gunaGradientButton2_Click);
             // 
             // txtCusName
             // 
@@ -447,7 +450,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.ColumnHeadersHeight = 21;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column6});
@@ -481,7 +484,7 @@
             this.dataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGridView2.ThemeStyle.HeaderStyle.Height = 21;
             this.dataGridView2.ThemeStyle.ReadOnly = true;
             this.dataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
@@ -508,15 +511,55 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // btnCreateCart
+            // 
+            this.btnCreateCart.AnimationHoverSpeed = 0.07F;
+            this.btnCreateCart.AnimationSpeed = 0.03F;
+            this.btnCreateCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreateCart.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.btnCreateCart.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
+            this.btnCreateCart.BorderColor = System.Drawing.Color.Black;
+            this.btnCreateCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCreateCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCreateCart.ForeColor = System.Drawing.Color.White;
+            this.btnCreateCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateCart.Image")));
+            this.btnCreateCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCreateCart.Location = new System.Drawing.Point(850, 5);
+            this.btnCreateCart.Name = "btnCreateCart";
+            this.btnCreateCart.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnCreateCart.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
+            this.btnCreateCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCreateCart.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCreateCart.OnHoverImage = null;
+            this.btnCreateCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCreateCart.Radius = 10;
+            this.btnCreateCart.Size = new System.Drawing.Size(97, 37);
+            this.btnCreateCart.TabIndex = 63;
+            this.btnCreateCart.Text = "New Cart";
+            this.btnCreateCart.Click += new System.EventHandler(this.btnCreateCart_Click);
+            // 
+            // lbMaGio
+            // 
+            this.lbMaGio.AutoSize = true;
+            this.lbMaGio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaGio.Location = new System.Drawing.Point(3, 327);
+            this.lbMaGio.Name = "lbMaGio";
+            this.lbMaGio.Size = new System.Drawing.Size(57, 17);
+            this.lbMaGio.TabIndex = 64;
+            this.lbMaGio.Text = "lbMagio";
+            this.lbMaGio.Visible = false;
+            // 
             // UCShowProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lbMaGio);
+            this.Controls.Add(this.btnCreateCart);
             this.Controls.Add(this.panelKH);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.txtCusName);
-            this.Controls.Add(this.gunaGradientButton2);
+            this.Controls.Add(this.btnSeeCart);
             this.Controls.Add(this.lbQuantity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
@@ -525,7 +568,7 @@
             this.Controls.Add(this.txtThongSo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbMaHDX);
-            this.Controls.Add(this.gunaGradientButton1);
+            this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.lbMa);
             this.Controls.Add(this.lbGia);
             this.Controls.Add(this.label2);
@@ -548,7 +591,7 @@
 
         #endregion
         private System.Windows.Forms.Label lbMaHDX;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private Guna.UI.WinForms.GunaGradientButton btnAddToCart;
         private System.Windows.Forms.Label lbMa;
         private System.Windows.Forms.Label lbGia;
         private System.Windows.Forms.Label label4;
@@ -567,12 +610,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbQuantity;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
+        private Guna.UI.WinForms.GunaGradientButton btnSeeCart;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCusName;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Panel panelKH;
         private Guna.UI.WinForms.GunaDataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private Guna.UI.WinForms.GunaGradientButton btnCreateCart;
+        private System.Windows.Forms.Label lbMaGio;
     }
 }

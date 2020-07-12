@@ -35,7 +35,7 @@ namespace QLCH.Uc
             cbbType.Text = "";
             txtTenSP.Text = "";
             txtGia.Text = "";
-            
+
 
             cbbType.DisplayMember = "tenLoai";
             cbbType.ValueMember = "maLoai";
@@ -102,7 +102,7 @@ namespace QLCH.Uc
                 }
                 else
                 {
-                    
+
                     switch (choose)
                     {
                         case 1:
@@ -111,7 +111,8 @@ namespace QLCH.Uc
                                 pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
                                 if (sp.Count() == 0)
                                 {
-                                    db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                    //db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                    db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, null, null);
                                 }
                                 else
                                 {
@@ -150,7 +151,8 @@ namespace QLCH.Uc
                                         id = "SP0000" + stt;
                                     else if (stt / 10 < 1)
                                         id = "SP00000" + stt;
-                                    db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                    //db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+
                                 }
                                 Uc_SanPham_Load(sender, e);
                                 break;
@@ -161,12 +163,14 @@ namespace QLCH.Uc
                                 if (pictureBox1.Image == null)
                                 {
                                     db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+
                                 }
                                 else
                                 {
                                     MemoryStream stream = new MemoryStream();
                                     pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
                                     db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                 
 
                                 }
                                 Uc_SanPham_Load(sender, e);
@@ -233,7 +237,7 @@ namespace QLCH.Uc
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                 }
-                
+
             }
 
         }

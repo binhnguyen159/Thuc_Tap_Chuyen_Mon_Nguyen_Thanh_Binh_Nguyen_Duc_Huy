@@ -79,5 +79,10 @@ namespace QLCH
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(products);
         }
+
+        private void frmFuction_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
