@@ -392,6 +392,13 @@ namespace QLCH.Uc
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.khachHang_search")]
+		public ISingleResult<khachHang_searchResult> khachHang_search([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenKH)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tenKH);
+			return ((ISingleResult<khachHang_searchResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NCC_Del")]
 		public int NCC_Del([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string ma)
 		{
@@ -546,6 +553,13 @@ namespace QLCH.Uc
 			return ((ISingleResult<selectCTGioResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectTotalPrice")]
+		public ISingleResult<selectTotalPriceResult> selectTotalPrice()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<selectTotalPriceResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Filter_Brand")]
 		public ISingleResult<SP_Filter_BrandResult> SP_Filter_Brand([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string hang)
 		{
@@ -574,31 +588,17 @@ namespace QLCH.Uc
 			return ((ISingleResult<SP_Find_idResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateSP")]
-		public int updateSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> gia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maLoai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHang)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, tenSP, gia, anh, maLoai, maHang);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.khachHang_search")]
-		public ISingleResult<khachHang_searchResult> khachHang_search([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenKH)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tenKH);
-			return ((ISingleResult<khachHang_searchResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectTotalPrice")]
-		public ISingleResult<selectTotalPriceResult> selectTotalPrice()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<selectTotalPriceResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_SoLuongGio")]
 		public int update_SoLuongGio([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maCTGio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> thanhTien)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maCTGio, soLuong, thanhTien);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateSP")]
+		public int updateSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> gia, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maLoai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHang)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, tenSP, gia, anh, maLoai, maHang);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -4959,6 +4959,50 @@ namespace QLCH.Uc
 		}
 	}
 	
+	public partial class khachHang_searchResult
+	{
+		
+		private string _maKH;
+		
+		private string _tenKH;
+		
+		public khachHang_searchResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string maKH
+		{
+			get
+			{
+				return this._maKH;
+			}
+			set
+			{
+				if ((this._maKH != value))
+				{
+					this._maKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKH", DbType="NVarChar(50)")]
+		public string tenKH
+		{
+			get
+			{
+				return this._tenKH;
+			}
+			set
+			{
+				if ((this._tenKH != value))
+				{
+					this._tenKH = value;
+				}
+			}
+		}
+	}
+	
 	public partial class NCC_FindAddressResult
 	{
 		
@@ -6055,6 +6099,32 @@ namespace QLCH.Uc
 		}
 	}
 	
+	public partial class selectTotalPriceResult
+	{
+		
+		private System.Nullable<double> _a;
+		
+		public selectTotalPriceResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_a", DbType="Float")]
+		public System.Nullable<double> a
+		{
+			get
+			{
+				return this._a;
+			}
+			set
+			{
+				if ((this._a != value))
+				{
+					this._a = value;
+				}
+			}
+		}
+	}
+	
 	public partial class SP_Filter_BrandResult
 	{
 		
@@ -6586,76 +6656,6 @@ namespace QLCH.Uc
 				if ((this._tenHang != value))
 				{
 					this._tenHang = value;
-				}
-			}
-		}
-	}
-	
-	public partial class khachHang_searchResult
-	{
-		
-		private string _maKH;
-		
-		private string _tenKH;
-		
-		public khachHang_searchResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maKH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string maKH
-		{
-			get
-			{
-				return this._maKH;
-			}
-			set
-			{
-				if ((this._maKH != value))
-				{
-					this._maKH = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKH", DbType="NVarChar(50)")]
-		public string tenKH
-		{
-			get
-			{
-				return this._tenKH;
-			}
-			set
-			{
-				if ((this._tenKH != value))
-				{
-					this._tenKH = value;
-				}
-			}
-		}
-	}
-	
-	public partial class selectTotalPriceResult
-	{
-		
-		private System.Nullable<double> _a;
-		
-		public selectTotalPriceResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_a", DbType="Float")]
-		public System.Nullable<double> a
-		{
-			get
-			{
-				return this._a;
-			}
-			set
-			{
-				if ((this._a != value))
-				{
-					this._a = value;
 				}
 			}
 		}

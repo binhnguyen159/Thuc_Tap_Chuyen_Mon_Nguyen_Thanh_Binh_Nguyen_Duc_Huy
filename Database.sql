@@ -73,10 +73,11 @@ create table hoadDonNhap(
 maHDN nvarchar(50) primary key,
 maNV nvarchar(50),
 maNCC nvarchar(50),
-ngayNhap date,
+ngayNhap date default getdate(),
 tongTien float,
 trangThai nvarchar(50),
 )
+--alter table hoadDonNhap add ngayNhap date default getdate()
 go
 create table chiTietHDN(
 --maCTHDN nvarchar(50) primary key,
@@ -92,10 +93,11 @@ create table hoadDonXuat(
 maHDX nvarchar(50) primary key,
 maNV nvarchar(50),
 maKH nvarchar(50),
-ngayBan date,
+ngayBan date default getdate(),
 tongTien float,
 trangThai nvarchar(50)
 )
+--alter table hoadDonXuat add ngayBan date default getdate()
 go
 create table chiTietHDX(
 --machiTietHDX nvarchar(50) primary key,
@@ -107,9 +109,10 @@ thanhTien float,
 primary key(maHDX,maSP)
 )
 go
+use TTCM
 create table GioHang
 (
-	magio int IDENTITY primary key,
+	magio int identity  primary key,
 	makh nvarchar(50)
 )
 go

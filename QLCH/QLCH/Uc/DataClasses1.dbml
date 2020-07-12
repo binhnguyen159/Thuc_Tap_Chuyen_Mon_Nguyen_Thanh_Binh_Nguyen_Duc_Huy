@@ -346,6 +346,13 @@
     <Parameter Name="sdt" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.khachHang_search" Method="khachHang_search">
+    <Parameter Name="tenKH" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="khachHang_searchResult">
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.NCC_Del" Method="NCC_Del">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
@@ -524,6 +531,11 @@
       <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.selectTotalPrice" Method="selectTotalPrice">
+    <ElementType Name="selectTotalPriceResult">
+      <Column Name="a" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.SP_Filter_Brand" Method="SP_Filter_Brand">
     <Parameter Name="hang" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="SP_Filter_BrandResult">
@@ -573,6 +585,12 @@
       <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
+    <Parameter Name="maCTGio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.updateSP" Method="updateSP">
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
@@ -580,24 +598,6 @@
     <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
     <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.khachHang_search" Method="khachHang_search">
-    <Parameter Name="tenKH" Type="System.String" DbType="NVarChar(50)" />
-    <ElementType Name="khachHang_searchResult">
-      <Column Name="maKH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.selectTotalPrice" Method="selectTotalPrice">
-    <ElementType Name="selectTotalPriceResult">
-      <Column Name="a" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
-    <Parameter Name="maCTGio" Type="System.Int32" DbType="Int" />
-    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
-    <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

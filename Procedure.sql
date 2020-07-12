@@ -48,6 +48,7 @@ end
 go
 -- Thêm, sửa, xóa khách hàng
 --Thêm
+go
 create proc KH_Ins (
 @ma nvarchar(50), @ten nvarchar(50),
 @gt nvarchar(50), @ns date, @ema nvarchar(50),
@@ -56,13 +57,14 @@ create proc KH_Ins (
 insert into khachHang values (@ma,@ten,@gt,@ns,@ema,@dc,@sdt) 
 end
 --xoa
+go
 create proc KH_Del (@ma nvarchar(50)) 
 as begin
 delete khachHang where maKH = @ma
 end
 --sua
 go
-alter proc KH_Up (
+create proc KH_Up (
 @ma nvarchar(50), @ten nvarchar(50),
 @gt nvarchar(50), @ns date, @ema nvarchar(50),
 @dc nvarchar(50), @sdt nvarchar(50)
@@ -74,6 +76,7 @@ begin
 end
 go
 --Thống kê danh sách khách hàng
+go
 create proc KH_Sel as
 begin
 select * from khachHang
@@ -87,7 +90,8 @@ select * from nhanVien
 end
 go
 --Thêm
-alter proc NV_Ins (
+go
+create proc NV_Ins (
 @ma nvarchar(50), @ten nvarchar(50),
 @gt nvarchar(50), @ns date, @nvl date, 
 @ema nvarchar(50), @dc nvarchar(50), @sdt nvarchar(50)
@@ -96,12 +100,14 @@ insert into nhanVien values (@ma, @ten, @gt, @ns, @nvl, @ema, @dc, @sdt,null,nul
 end
 go
 --Xóa
+go
 create proc NV_Del (@ma nvarchar(50)) 
 as begin
 delete nhanVien where maNV = @ma
 end
 go
 --Sửa
+go
 create proc NV_Up (
 @ma nvarchar(50), @ten nvarchar(50),
 @gt nvarchar(50), @ns date, @nvl date,
@@ -115,28 +121,28 @@ begin
 	where maNV=@ma
 end
 go
---<<<<<<< HEAD
 --TÀI KHOẢN
 --Thống kê danh sách
+go
 create proc ACC_Sel as
 begin
 	select maNV, tenNV, ngSinh, tendn from nhanVien
 end
 go
 --Thêm
-alter proc ACC_Add (@ma nvarchar(50), @dn nvarchar(50),@pass nvarchar(50))
+create proc ACC_Add (@ma nvarchar(50), @dn nvarchar(50),@pass nvarchar(50))
 as begin
 	update nhanVien set tendn = @dn, passWords = @pass where maNV = @ma
 end
 go
 --Sửa
-alter proc ACC_Up (@ma nvarchar(50),@pass nvarchar(50)) as
+create proc ACC_Up (@ma nvarchar(50),@pass nvarchar(50)) as
 begin
 	update nhanVien set passWords = @pass where maNV = @ma
 end
 go
 --Xóa
-alter proc ACC_Del (@ma nvarchar(50)) as
+create proc ACC_Del (@ma nvarchar(50)) as
 begin
 	update nhanVien set passWords = null, tendn = null where maNV = @ma
 end
@@ -149,7 +155,8 @@ begin
 end
 go
 --Find tên đăng nhập
-alter proc ACC_FindTenDN (@tdn nvarchar(50)) as
+go
+create proc ACC_FindTenDN (@tdn nvarchar(50)) as
 begin
 	select maNV, tenNV, ngSinh, tendn from nhanVien where tendn like '%' + @tdn + '%'
 end
@@ -169,8 +176,7 @@ where CTGio.masp=sanPham.maSP and CTGio.magio=@maGio
 end
 go
 
-
-
+go
 
 create proc selectTotalPrice 
 as begin 
@@ -184,6 +190,14 @@ if(not exists(select * from GioHang where magio=@maGio))
 		insert into GioHang values (@maKH)
 	end
 else if(not exists(select * from CTGio where masp=@maSP))
+
+go
+use TTCM
+go
+
+alter proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+as begin
+if(not exists(select * from CTGio where masp=@maSP))
 	begin
 		insert into CTGio values (@maGio,@maSP,@soLuong,@donGia,@thanhTien)
 	end
@@ -192,8 +206,20 @@ else
 		update CTGio set soluong=soluong+@soLuong where masp=@maSP
 	end
 end
-go
 
+
+--create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+--	 begin 
+--		if(not exists(select * from CTGio where masp=@maSP))
+--			begin
+--		insert into CTGio values (@maGio,@maSP,@soLuong,@donGia,@thanhTien)
+--	end
+--else
+--	begin
+--		update CTGio set soluong=soluong+@soLuong where masp=@maSP
+--	end
+--end
+go
 create proc update_SoLuongGio (@maCTGio int ,@soLuong int,@thanhTien float)
 as begin
 update CTGio set soluong=@soLuong,thanhTien=@thanhTien where maCTG=@maCTGio
@@ -212,7 +238,6 @@ go
  go
  --NHÀ CUNG CẤP
  --Load
-
  create proc NCC_Sel as
  begin
 	select * from nhaCungCap
@@ -251,7 +276,7 @@ go
  end
  go
  --Tìm theo tên
- create proc NCC_FindName(@name nvarchar(50)) as
+  create proc NCC_FindName(@name nvarchar(50)) as
  begin
 	select * from nhaCungCap where tenNCC like  N'%'+@name+N'%'
  end
@@ -274,7 +299,7 @@ go
  insert into chiTietHDX values (@maHDX,@maSP,@donGia,@soLuong,@thanhTien)
  end 
 
- go 
+ go
  create proc hdx_select
  as begin
  select * from hoadDonXuat,khachHang,nhanVien 
@@ -294,7 +319,7 @@ as begin
 select maKH,tenKH from khachHang
 where CONCAT(maKH,tenKH) like '%' +@tenKH+'%'
 end
-=======
+
 --PHIẾU NHẬP
 --Thêm
 go
@@ -430,6 +455,15 @@ begin
 	Update HangSP set tenHang = @ten where maHang = @ma
 end
 go
-=======
->>>>>>> 5514b349515c147bcca2454172c071c445794879
->>>>>>> b0f7f60a745e13c7bac7e671185ff6859515110a
+go
+create proc hdx_insert(
+@maHDX nvarchar(50),@maNV nvarchar(50),@maKH nvarchar(50),@tongTien float,@trangThai nvarchar(50),@ngayBan date)
+as begin
+insert into hoadDonXuat values (@maHDX,@maNV,@maKH,@tongTien,@trangThai,@ngayBan)
+end
+
+go
+create proc insert_gioHang(@maKh nvarchar(50))
+as begin
+insert into GioHang values (@maKh)
+end

@@ -377,6 +377,7 @@
             this.Name = "frmFuction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFuction";
+            this.Load += new System.EventHandler(this.frmFuction_Load);
             this.pnlTab.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);

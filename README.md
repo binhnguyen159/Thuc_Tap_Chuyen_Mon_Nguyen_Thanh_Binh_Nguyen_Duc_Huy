@@ -14,4 +14,10 @@ Phần của Nguyễn Thanh Bình:
 		+Phân chia sản phẩm theo nhóm sản phẩm và hãng sản phẩm.
 		+Thêm, sửa, xóa, tìm kiếm sản phẩm.
 	
-	 
+Phần của Nguyễn Đức Huy:
+	-Form giỏ hàng: thêm, sửa, xóa giỏ hàng
+	-Form chi tiết giỏ hàng: thêm sửa xóa chi tiết giỏ
+	-Form hóa đơn xuất: 
+		+thêm hóa đơn, xem chi tiết hóa đơn và cập nhật trạng thái của hóa đơn
+		+tìm kiếm hóa đơn theo mã hóa đơn, theo tên khách hàng hoặc theo tên nhân viên bán
+		+in hóa đơn 		
