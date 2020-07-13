@@ -596,6 +596,7 @@
     <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="gia" Type="System.Double" DbType="Float" />
     <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="ts" Type="System.String" DbType="NVarChar(1000)" />
     <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />

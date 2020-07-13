@@ -49,95 +49,71 @@ namespace QLCH.Uc
             dgvProduct.AutoGenerateColumns = false;
             dgvProduct.DataSource = db.select_SP();
 
-
+            txtMaSP.Enabled = false;
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             choose = 1;
-            txtTenSP.Enabled = true;
-            txtGia.Enabled = true;
-            panelSave_Delete.Visible = true;
-            gunaGroupBox1.Visible = false;
+            
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
+            cbbTimKiem.Enabled = true;
+            btnTimKiem.Enabled = true;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            //gunaGroupBox1.Visible = false;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             choose = 2;
-            txtTenSP.Enabled = true;
-            txtGia.Enabled = true;
-            gunaGroupBox1.Visible = false;
-            panelSave_Delete.Visible = true;
+            txtMaSP.Enabled = true;
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
+            cbbTimKiem.Enabled = true;
+            btnTimKiem.Enabled = true;
+            btnDelete.Enabled = false;
+            btnAdd.Enabled = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             choose = 3;
-            gunaGroupBox1.Visible = false;
-            panelSave_Delete.Visible = true;
-            //DialogResult dialogResult = MessageBox.Show("Are you sure want to delete that Product ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //if (dialogResult == DialogResult.Yes)
-            //{
-
-            //}
+            txtMaSP.Enabled = true;
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
+            cbbTimKiem.Enabled = true;
+            btnTimKiem.Enabled = true;
+            btnAdd.Enabled = false;
+            btnUpdate.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             var sp = from u in db.sanPhams select u;
-            var nsp = from u in db.nhomSPs select u;
-            var hsp = from u in db.HangSPs select u;
-
-            if (choose == 3)
+            switch (choose)
             {
-                db.deleteSP(txtMaSP.Text);
-                Uc_SanPham_Load(sender, e);
-            }
-            else
-            {
-                if (txtTenSP.Text == "" || txtGia.Text == "")
-                {
-                    MessageBox.Show("Please fill all the information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtTenSP.Focus();
-                }
-                else
-                {
-
-                    switch (choose)
+                case 1:
                     {
-                        case 1:
+                        if (txtTenSP.Text == "" || txtGia.Text == "")
+                            MessageBox.Show("Please fill all information");
+                        else
+                        {
+                            MemoryStream stream = new MemoryStream();
+                            pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+                            if (sp.Count() == 0)
                             {
-                                MemoryStream stream = new MemoryStream();
-                                pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
-                                if (sp.Count() == 0)
-                                {
-                                    //db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
-                                    db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, null, null);
-                                }
+                                db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null,cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                            }
+                            else
+                            {
+                                sanPham sssp = db.sanPhams.Where(s=>s.tenSP.Equals(txtTenSP.Text)).FirstOrDefault();
+                                if (sssp != null)
+                                    MessageBox.Show("Already have this name");
                                 else
                                 {
-
-
-                                    //for (int i = 0; i < 1001; i++)
-                                    //{
-                                    //    sanPham ssp = db.sanPhams.OrderByDescending(s => s.maSP).FirstOrDefault();
-                                    //    stt = Convert.ToInt32(ssp.maSP.ToString().Trim().Substring(2)) + 1;
-                                    //    if (stt / 10 >= 100000)
-                                    //        id = "SP" + stt;
-                                    //    else if (stt / 10 >= 1000 && stt / 10 < 10000)
-                                    //        id = "SP0" + stt;
-                                    //    else if (stt / 10 >= 100 && stt / 10 < 1000)
-                                    //        id = "SP00" + stt;
-                                    //    else if (stt / 10 >= 10 && stt / 10 < 100)
-                                    //        id = "SP000" + stt;
-                                    //    else if (stt / 10 >= 1 && stt / 10 < 10)
-                                    //        id = "SP0000" + stt;
-                                    //    else if (stt / 10 < 1)
-                                    //        id = "SP00000" + stt;
-                                    //    db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), null, 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
-
-                                    //}
                                     sanPham ssp = db.sanPhams.OrderByDescending(s => s.maSP).FirstOrDefault();
                                     stt = Convert.ToInt32(ssp.maSP.ToString().Trim().Substring(2)) + 1;
                                     if (stt / 10 >= 100000)
@@ -152,46 +128,148 @@ namespace QLCH.Uc
                                         id = "SP0000" + stt;
                                     else if (stt / 10 < 1)
                                         id = "SP00000" + stt;
-                                    //db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
-
+                                    db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, rtxtParameter.Text, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
                                 }
-                                Uc_SanPham_Load(sender, e);
-                                break;
+                                
                             }
-                        case 2:
+                            Uc_SanPham_Load(sender, e);
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (txtMaSP.Text == "" || txtTenSP.Text == "" || txtGia.Text == "" || rtxtParameter.Text == "")
+                            MessageBox.Show("Please fill all information");
+                        else
+                        {
+                            sanPham sssp = db.sanPhams.Where(s => s.tenSP.Equals(txtTenSP.Text)).FirstOrDefault();
+                            if (sssp != null)
+                                MessageBox.Show("Already have this name");
+                            else
                             {
+                                MemoryStream stream = new MemoryStream();
+                                pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+                                db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(),
+                                        rtxtParameter.Text, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
 
-                                if (pictureBox1.Image == null)
-                                {
-                                    db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+                                Uc_SanPham_Load(sender, e);
+                            }
+                        }
+                        break;
+                    }
+                case 3:
+                    {
+                        if (txtMaSP.Text == "")
+                            MessageBox.Show("Enter the id to delete product that you want");
+                        else
+                        {
+                            db.deleteSP(txtMaSP.Text);
+                            Uc_SanPham_Load(sender, e);
+                        }
+                        break;
+                    }
+            }
+            //if (choose == 3)
+            //{
+            //    db.deleteSP(txtMaSP.Text);
+            //    Uc_SanPham_Load(sender, e);
+            //}
+            //else
+            //{
+            //    if (txtTenSP.Text == "" || txtGia.Text == "")
+            //    {
+            //        MessageBox.Show("Please fill all the information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        txtTenSP.Focus();
+            //    }
+            //    else
+            //    {
 
-                                }
-                                else
-                                {
-                                    MemoryStream stream = new MemoryStream();
-                                    pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
-                                    db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+            //        switch (choose)
+            //        {
+            //            case 1:
+            //                {
+            //                    MemoryStream stream = new MemoryStream();
+            //                    pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+            //                    if (sp.Count() == 0)
+            //                    {
+            //                        //db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+            //                        db.addSP("SP000001", txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, null, null);
+            //                    }
+            //                    else
+            //                    {
+
+
+            //                        //for (int i = 0; i < 1001; i++)
+            //                        //{
+            //                        //    sanPham ssp = db.sanPhams.OrderByDescending(s => s.maSP).FirstOrDefault();
+            //                        //    stt = Convert.ToInt32(ssp.maSP.ToString().Trim().Substring(2)) + 1;
+            //                        //    if (stt / 10 >= 100000)
+            //                        //        id = "SP" + stt;
+            //                        //    else if (stt / 10 >= 1000 && stt / 10 < 10000)
+            //                        //        id = "SP0" + stt;
+            //                        //    else if (stt / 10 >= 100 && stt / 10 < 1000)
+            //                        //        id = "SP00" + stt;
+            //                        //    else if (stt / 10 >= 10 && stt / 10 < 100)
+            //                        //        id = "SP000" + stt;
+            //                        //    else if (stt / 10 >= 1 && stt / 10 < 10)
+            //                        //        id = "SP0000" + stt;
+            //                        //    else if (stt / 10 < 1)
+            //                        //        id = "SP00000" + stt;
+            //                        //    db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), null, 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+
+            //                        //}
+            //                        sanPham ssp = db.sanPhams.OrderByDescending(s => s.maSP).FirstOrDefault();
+            //                        stt = Convert.ToInt32(ssp.maSP.ToString().Trim().Substring(2)) + 1;
+            //                        if (stt / 10 >= 100000)
+            //                            id = "SP" + stt;
+            //                        else if (stt / 10 >= 1000 && stt / 10 < 10000)
+            //                            id = "SP0" + stt;
+            //                        else if (stt / 10 >= 100 && stt / 10 < 1000)
+            //                            id = "SP00" + stt;
+            //                        else if (stt / 10 >= 10 && stt / 10 < 100)
+            //                            id = "SP000" + stt;
+            //                        else if (stt / 10 >= 1 && stt / 10 < 10)
+            //                            id = "SP0000" + stt;
+            //                        else if (stt / 10 < 1)
+            //                            id = "SP00000" + stt;
+            //                        //db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+
+            //                    }
+            //                    Uc_SanPham_Load(sender, e);
+            //                    break;
+            //                }
+            //            case 2:
+            //                {
+
+            //                    if (pictureBox1.Image == null)
+            //                    {
+            //                        db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), null, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
+
+            //                    }
+            //                    else
+            //                    {
+            //                        MemoryStream stream = new MemoryStream();
+            //                        pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
+            //                        db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
                                  
 
-                                }
-                                Uc_SanPham_Load(sender, e);
+            //                    }
+            //                    Uc_SanPham_Load(sender, e);
 
-                                break;
-                            }
-                    }
+            //                    break;
+            //                }
+            //        }
 
-                }
-            }
+            //    }
+            //}
 
 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            txtTenSP.Enabled = false;
-            txtGia.Enabled = false;
-            panelSave_Delete.Visible = false;
-            gunaGroupBox1.Visible = true;
+            btnSave.Enabled = false;
+            btnCancel.Enabled = false;
             Uc_SanPham_Load(sender, e);
         }
 
@@ -222,7 +300,7 @@ namespace QLCH.Uc
                 cbbType.Text = dgvProduct.Rows[i].Cells[4].Value.ToString();
                 cbbBrand.Text = dgvProduct.Rows[i].Cells[5].Value.ToString();
 
-                var sp = db.select_SP().Where(s => s.maSP == txtMaSP.Text).FirstOrDefault();
+                var sp = db.sanPhams.Where(s => s.maSP == txtMaSP.Text).FirstOrDefault();
                 if (sp.anh == null)
 
                     pictureBox1.Image = null;
@@ -238,10 +316,15 @@ namespace QLCH.Uc
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                 }
-
+                rtxtParameter.Text = sp.thongSo;
             }
 
         }
 
+        private void txtGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

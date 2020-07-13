@@ -22,13 +22,15 @@ end
 exec select_SP
 go
 
-
+--alter table sanpham
+--alter column thongSo nvarchar(1000)
 go
-create proc updateSP(
+alter proc updateSP(
 @maSP nvarchar(50),
 @tenSP nvarchar(50),
 @gia float,
 @anh image,
+@ts nvarchar(1000),
 @maLoai nvarchar(50),
 @maHang nvarchar(50))
 as begin
@@ -36,6 +38,7 @@ update sanPham set
 	tenSP = @tenSP, 
 	gia = @gia,
 	anh = @anh,
+	thongSo = @ts,
 	maLoai = @maLoai, 
 	maHang = @maHang 
 	where maSP=@maSP

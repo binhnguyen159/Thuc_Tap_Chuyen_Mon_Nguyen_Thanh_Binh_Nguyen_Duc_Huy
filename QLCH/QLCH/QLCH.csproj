@@ -208,6 +208,12 @@
     <Compile Include="Uc\Uc_WareHouse.Designer.cs">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\WareHouse\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\WareHouse\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\WareHouse\frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_WareHouse.resx">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\WareHouse\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>

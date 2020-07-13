@@ -47,10 +47,26 @@ namespace QLCH.Uc.WareHouse
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            Uc_WareHouse.GetChoose.choose = 2;
+            Uc_WareHouse.GetChoose.id = lbID.Text;
+            frmProduct frmProduct = new frmProduct();
+            frmProduct.ShowDialog();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
             db.deleteSP(lbID.Text);
             lbID.Text = "!!!";
             lbName.Text = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
             lbSL.Text = "!!!";
+            btnDel.Visible = false;
+            btnDetail.Visible = false;
+            btnImport.Visible = false;
         }
 
         //public Uc_ProductShow(string id, string name, Image image, string hang)

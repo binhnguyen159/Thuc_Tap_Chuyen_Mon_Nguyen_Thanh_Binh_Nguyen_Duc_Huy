@@ -37,7 +37,8 @@
             this.lbSL = new Guna.UI.WinForms.GunaLabel();
             this.pnlNoti = new Guna.UI.WinForms.GunaElipsePanel();
             this.btnImport = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnDetail = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.ptbAnh.Location = new System.Drawing.Point(34, 3);
             this.ptbAnh.Name = "ptbAnh";
             this.ptbAnh.Size = new System.Drawing.Size(166, 133);
-            this.ptbAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbAnh.TabIndex = 0;
             this.ptbAnh.TabStop = false;
             // 
@@ -123,29 +124,40 @@
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(34, 229);
+            this.btnImport.Location = new System.Drawing.Point(70, 294);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(75, 23);
             this.btnImport.TabIndex = 3;
             this.btnImport.Text = "Import";
             this.btnImport.UseVisualStyleBackColor = true;
             // 
-            // btnRemove
+            // btnDetail
             // 
-            this.btnRemove.Location = new System.Drawing.Point(125, 229);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
-            this.btnRemove.TabIndex = 3;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-           // this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnDetail.Location = new System.Drawing.Point(34, 265);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(75, 23);
+            this.btnDetail.TabIndex = 3;
+            this.btnDetail.Text = "Detail";
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(125, 265);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.TabIndex = 3;
+            this.btnDel.Text = "Delete";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // Uc_ProductShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnDetail);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnImport);
             this.Controls.Add(this.pnlNoti);
             this.Controls.Add(this.lbSL);
@@ -157,23 +169,11 @@
             this.Controls.Add(this.ptbAnh);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_ProductShow";
-            this.Size = new System.Drawing.Size(230, 270);
-            this.Size = new System.Drawing.Size(239, 223);
+            this.Size = new System.Drawing.Size(235, 333);
             this.Load += new System.EventHandler(this.Uc_ProductShow_Load);
-            //((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
-            this.Size = new System.Drawing.Size(235, 270);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-//            this.Size = new System.Drawing.Size(239, 223);
-//            this.Load += new System.EventHandler(this.Uc_ProductShow_Load);
-//            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
-
-//            this.Size = new System.Drawing.Size(235, 270);
-//            ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).EndInit();
-//>>>>>>> 5514b349515c147bcca2454172c071c445794879
-//            this.ResumeLayout(false);
-//            this.PerformLayout();
 
         }
 
@@ -188,6 +188,7 @@
         private Guna.UI.WinForms.GunaLabel lbSL;
         private Guna.UI.WinForms.GunaElipsePanel pnlNoti;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnDetail;
+        private System.Windows.Forms.Button btnDel;
     }
 }

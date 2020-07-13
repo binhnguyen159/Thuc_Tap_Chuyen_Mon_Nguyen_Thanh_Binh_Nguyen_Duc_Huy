@@ -23,9 +23,10 @@ namespace QLCH.Uc
             InitializeComponent();
         }
 
-        public class GetIdBill
+        public class GetChoose
         {
             public static string id = "";
+            public static int choose = 0;
         }
 
         string ma = "", ten = "", nhomsp = "", hangsp = "";
@@ -33,13 +34,13 @@ namespace QLCH.Uc
         int i = 0;
         //, choose = 0;
         DataClasses1DataContext db = new DataClasses1DataContext();
-        private void Uc_WareHouse_Load(object sender, EventArgs e)
+        public void Uc_WareHouse_Load(object sender, EventArgs e)
         {
             cbbBrand.Enabled = false;
             hangsp = "";
             //var sssp = db.select_SP();
             //dgvSP.DataSource = sssp;
-            GetIdBill.id = "";
+            GetChoose.id = "";
             fpnlGroupSP.Controls.Clear();
             foreach(var item in db.nhomSPs)
             {
@@ -69,9 +70,8 @@ namespace QLCH.Uc
                 
             }
             int dem = 0;
-
-            var sp = from u in db.sanPhams
-                     select u;
+            fpnlProduct.Controls.Clear();
+            var sp = db.select_SP();
             foreach (var item in sp)
             {
                 if (item.anh == null)
@@ -105,7 +105,7 @@ namespace QLCH.Uc
                          //where String.Compare(u.tenLoai, txtData.Text, true)==0
                      where u.tenLoai.ToUpper().Contains(nhomsp.ToUpper())
                      select u;
-            int dem = 0;
+            
             int d = db.select_SP().Where(s => s.tenLoai.Equals(nhomsp)).Count() / 50;
             fpnl2.Controls.Clear();
             for (i = 0; i <= d; i++)
@@ -117,6 +117,7 @@ namespace QLCH.Uc
                 fpnl2.Controls.Add(llb);
 
             }
+            int dem = 0;
             foreach (var item in sp)
             {
                 if (item.anh == null)
@@ -274,21 +275,20 @@ namespace QLCH.Uc
 
         private void cbbBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             hangsp = cbbBrand.Text;
             if (nhomsp == "")
                 dgvSP.DataSource = db.select_SP();
             else if (nhomsp != "" && hangsp != "")
                 dgvSP.DataSource = db.SP_Filter_Gr_Br(nhomsp, hangsp);
-            //if (hangsp != "")
-            //    dgvSP.DataSource = db.SP_Filter_Brand(hangsp);
-            
+            if (hangsp != "")
+                dgvSP.DataSource = db.SP_Filter_Brand(hangsp);
+
 
             var sp = from u in db.select_SP()
                      where u.tenLoai.ToUpper().Contains(nhomsp.ToUpper())
                      where u.tenHang.ToUpper().Contains(hangsp.ToUpper())
                      select u;
-            int dem = 0;
+            
             int d = db.SP_Filter_Gr_Br(nhomsp, hangsp).Count() / 50;
             fpnl2.Controls.Clear();
             for (i = 0; i <= d; i++)
@@ -300,6 +300,7 @@ namespace QLCH.Uc
                 fpnl2.Controls.Add(llb);
 
             }
+            int dem = 0;
             fpnlProduct.Controls.Clear();
             foreach (var item in sp)
             {
@@ -323,6 +324,7 @@ namespace QLCH.Uc
         private void btnReload_Click(object sender, EventArgs e)
         {
             fpnlProduct.Controls.Clear();
+            fpnl2.Controls.Clear();
             Uc_WareHouse_Load(sender, e);
         }
 
@@ -406,16 +408,15 @@ namespace QLCH.Uc
 
 
                 fpnl2.Controls.Clear();
-                //int d = db.SP_Find_id(txtID.Text).Count() / 50;
-                //for (i = 0; i <= d; i++)
-                //{
-                //    GunaLinkLabel llb = new GunaLinkLabel();
-                //    llb.AutoSize = true;
-                //    llb.Text = i.ToString();
-                //    llb.Click += llb_Click;
-                //    fpnl2.Controls.Add(llb);
-                //}
             }
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            frmProduct product = new frmProduct();
+            GetChoose.choose = 1;
+            product.ShowDialog();
+            
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -426,42 +427,38 @@ namespace QLCH.Uc
             var phieuNhap = db.PhieuNhaps;
             if (phieuNhap.Count() == 0)
             {
-                GetIdBill.id = "PN000001";
+                GetChoose.id = "PN000001";
                 db.PN_Ins("PN000001", "nv2", d);
             }
             else if (phieuNhap.Count() > 0)
             {
                 var pn = db.PhieuNhaps.OrderByDescending(s => s.maphieu).FirstOrDefault();
                 int stt = Convert.ToInt32(pn.maphieu.Substring(2))+1;
-                GetIdBill.id = "";
+                GetChoose.id = "";
                 if (stt / 10 >= 100000)
-                    GetIdBill.id = "PN" + stt;
+                    GetChoose.id = "PN" + stt;
                 else if (stt / 10 >= 1000 && stt / 10 < 10000)
-                    GetIdBill.id = "PN0" + stt;
+                    GetChoose.id = "PN0" + stt;
                 else if (stt / 10 >= 100 && stt / 10 < 1000)
-                    GetIdBill.id = "PN00" + stt;
+                    GetChoose.id = "PN00" + stt;
                 else if (stt / 10 >= 10 && stt / 10 < 100)
-                    GetIdBill.id = "PN000" + stt;
+                    GetChoose.id = "PN000" + stt;
                 else if (stt / 10 >= 1 && stt / 10 < 10)
-                    GetIdBill.id = "PN0000" + stt;
+                    GetChoose.id = "PN0000" + stt;
                 else if (stt / 10 < 1)
-                    GetIdBill.id = "PN00000" + stt;
-                db.PN_Ins(GetIdBill.id, "nv2", d);
+                    GetChoose.id = "PN00000" + stt;
+                db.PN_Ins(GetChoose.id, "nv2", d);
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            frmSanPham sanPham = new frmSanPham();
-            sanPham.Show();
-        }
+        
 
         private void btnCancle_Click(object sender, EventArgs e)
         {
             btnImport.Visible = true;
             btnCancle.Visible = false;
-            MessageBox.Show(GetIdBill.id);
-            db.PN_Del(GetIdBill.id);
+            MessageBox.Show(GetChoose.id);
+            db.PN_Del(GetChoose.id);
         }
     }
 }
