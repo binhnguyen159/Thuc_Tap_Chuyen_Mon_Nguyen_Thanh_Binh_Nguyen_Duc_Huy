@@ -4,7 +4,7 @@ Thành viên:
 
 •	NGUYỄN THANH BÌNH	MSV:5851071003
 
-•	NGUYỄN ĐỨC HUY 	MSV: 5851071012
+•	NGUYỄN ĐỨC HUY 		MSV: 5851071031
 
 # Đề tài: QUẢN LÍ CỬA HÀNG LAPTOP  – Window Form C#
 
@@ -39,11 +39,11 @@ Thành viên:
 13. Mã hóa mật khẩu trong mục  TÀI KHOẢN (MD5) (Hoàn thành)
 14. Gửi mail cho nhân viên (đổi pass) (hoàn thành) và khách hàng (thông báo chương trình khuyến mãi (chưa hoàn thành))
 # Các tính năng Nâng cao (Nhóm định hướng) và Giảng viên giao( tô đỏ).
-14. Phân quyền tài khoản. (Hoàn thành).
-15. Lưu trữ thông tin khách hàng qua số điện thoại hoặc email. (Hoàn thành).
-16. Quản lý kho hàng. (Hoàn thành).
-17. Đóng gói phần mềm.(Chưa hoàn thành).
-18.Hoàn trả sản phẩm, giảm giá theo thời gian (chưa hoàn thành).
-19. Tìm kiếm thông tin Khách hàng theo SĐT (Chưa hoàn thành).
+15. Phân quyền tài khoản. (Hoàn thành).
+16. Lưu trữ thông tin khách hàng qua số điện thoại hoặc email. (Hoàn thành).
+18. Quản lý kho hàng. (Hoàn thành).
+19. Đóng gói phần mềm.(Chưa hoàn thành).
+20.Hoàn trả sản phẩm, giảm giá theo thời gian (chưa hoàn thành).
+21. Tìm kiếm thông tin Khách hàng theo SĐT (Chưa hoàn thành).
 
 Xin Cảm Ơn !	
