@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCShowProduct));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbMaHDX = new System.Windows.Forms.Label();
             this.lbMa = new System.Windows.Forms.Label();
             this.lbGia = new System.Windows.Forms.Label();
@@ -43,9 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbTLSP = new System.Windows.Forms.Label();
             this.lbTenSP = new System.Windows.Forms.Label();
-            this.btnAddToCart = new Guna.UI.WinForms.GunaGradientButton();
             this.txtThongSo = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.numericSoLuong = new Guna.UI.WinForms.GunaNumeric();
@@ -56,20 +54,22 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.lbQuantity = new System.Windows.Forms.Label();
-            this.btnSeeCart = new Guna.UI.WinForms.GunaGradientButton();
             this.txtCusName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelKH = new System.Windows.Forms.Panel();
             this.dataGridView2 = new Guna.UI.WinForms.GunaDataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCreateCart = new Guna.UI.WinForms.GunaGradientButton();
             this.lbMaGio = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnCreateCart = new Guna.UI.WinForms.GunaGradientButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnSeeCart = new Guna.UI.WinForms.GunaGradientButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddToCart = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panelKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbMaHDX
@@ -81,7 +81,6 @@
             this.lbMaHDX.Size = new System.Drawing.Size(68, 17);
             this.lbMaHDX.TabIndex = 48;
             this.lbMaHDX.Text = "lbMaHDX";
-            this.lbMaHDX.Visible = false;
             // 
             // lbMa
             // 
@@ -144,34 +143,6 @@
             this.lbTenSP.TabIndex = 35;
             this.lbTenSP.Text = "lbProductName";
             // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.AnimationHoverSpeed = 0.07F;
-            this.btnAddToCart.AnimationSpeed = 0.03F;
-            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddToCart.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.btnAddToCart.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
-            this.btnAddToCart.BorderColor = System.Drawing.Color.Black;
-            this.btnAddToCart.Enabled = false;
-            this.btnAddToCart.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.Image")));
-            this.btnAddToCart.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddToCart.Location = new System.Drawing.Point(679, 258);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
-            this.btnAddToCart.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
-            this.btnAddToCart.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAddToCart.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.OnHoverImage = null;
-            this.btnAddToCart.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAddToCart.Radius = 10;
-            this.btnAddToCart.Size = new System.Drawing.Size(109, 40);
-            this.btnAddToCart.TabIndex = 47;
-            this.btnAddToCart.Text = "Add to cart";
-            this.btnAddToCart.Click += new System.EventHandler(this.gunaGradientButton1_Click);
-            // 
             // txtThongSo
             // 
             this.txtThongSo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -184,17 +155,6 @@
             this.txtThongSo.Size = new System.Drawing.Size(354, 111);
             this.txtThongSo.TabIndex = 52;
             this.txtThongSo.Text = "";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(628, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 228);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -242,49 +202,49 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle71;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle72.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle72.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle72.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle72.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle72.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle72;
             this.dataGridView1.ColumnHeadersHeight = 21;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle73.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle73.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle73.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle73.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle73.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle73;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 365);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle74.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle74.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle74.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle74.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle74.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle74.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle74;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(950, 291);
@@ -361,33 +321,6 @@
             this.lbQuantity.Text = "label6";
             this.lbQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnSeeCart
-            // 
-            this.btnSeeCart.AnimationHoverSpeed = 0.07F;
-            this.btnSeeCart.AnimationSpeed = 0.03F;
-            this.btnSeeCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnSeeCart.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.btnSeeCart.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
-            this.btnSeeCart.BorderColor = System.Drawing.Color.Black;
-            this.btnSeeCart.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSeeCart.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSeeCart.ForeColor = System.Drawing.Color.White;
-            this.btnSeeCart.Image = ((System.Drawing.Image)(resources.GetObject("btnSeeCart.Image")));
-            this.btnSeeCart.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSeeCart.Location = new System.Drawing.Point(679, 304);
-            this.btnSeeCart.Name = "btnSeeCart";
-            this.btnSeeCart.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
-            this.btnSeeCart.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
-            this.btnSeeCart.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSeeCart.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSeeCart.OnHoverImage = null;
-            this.btnSeeCart.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSeeCart.Radius = 10;
-            this.btnSeeCart.Size = new System.Drawing.Size(109, 40);
-            this.btnSeeCart.TabIndex = 59;
-            this.btnSeeCart.Text = "See cart";
-            this.btnSeeCart.Click += new System.EventHandler(this.gunaGradientButton2_Click);
-            // 
             // txtCusName
             // 
             this.txtCusName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -408,19 +341,6 @@
             this.txtCusName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCusName.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(392, 4);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(36, 38);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 61;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
             // panelKH
             // 
             this.panelKH.Controls.Add(this.dataGridView2);
@@ -435,33 +355,33 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AllowUserToResizeColumns = false;
             this.dataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle75;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle76.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle76.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle76.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle76.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle76.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle76.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle76;
             this.dataGridView2.ColumnHeadersHeight = 21;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column6});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle77.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle77.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle77.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle77.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle77;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
@@ -511,6 +431,17 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // lbMaGio
+            // 
+            this.lbMaGio.AutoSize = true;
+            this.lbMaGio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaGio.Location = new System.Drawing.Point(3, 327);
+            this.lbMaGio.Name = "lbMaGio";
+            this.lbMaGio.Size = new System.Drawing.Size(57, 17);
+            this.lbMaGio.TabIndex = 64;
+            this.lbMaGio.Text = "lbMagio";
+            this.lbMaGio.Visible = false;
+            // 
             // btnCreateCart
             // 
             this.btnCreateCart.AnimationHoverSpeed = 0.07F;
@@ -538,16 +469,85 @@
             this.btnCreateCart.Text = "New Cart";
             this.btnCreateCart.Click += new System.EventHandler(this.btnCreateCart_Click);
             // 
-            // lbMaGio
+            // bunifuImageButton1
             // 
-            this.lbMaGio.AutoSize = true;
-            this.lbMaGio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaGio.Location = new System.Drawing.Point(3, 327);
-            this.lbMaGio.Name = "lbMaGio";
-            this.lbMaGio.Size = new System.Drawing.Size(57, 17);
-            this.lbMaGio.TabIndex = 64;
-            this.lbMaGio.Text = "lbMagio";
-            this.lbMaGio.Visible = false;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(392, 4);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(36, 33);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 61;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // btnSeeCart
+            // 
+            this.btnSeeCart.AnimationHoverSpeed = 0.07F;
+            this.btnSeeCart.AnimationSpeed = 0.03F;
+            this.btnSeeCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeeCart.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.btnSeeCart.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
+            this.btnSeeCart.BorderColor = System.Drawing.Color.Black;
+            this.btnSeeCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSeeCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSeeCart.ForeColor = System.Drawing.Color.White;
+            this.btnSeeCart.Image = ((System.Drawing.Image)(resources.GetObject("btnSeeCart.Image")));
+            this.btnSeeCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSeeCart.Location = new System.Drawing.Point(679, 304);
+            this.btnSeeCart.Name = "btnSeeCart";
+            this.btnSeeCart.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnSeeCart.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
+            this.btnSeeCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSeeCart.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSeeCart.OnHoverImage = null;
+            this.btnSeeCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSeeCart.Radius = 10;
+            this.btnSeeCart.Size = new System.Drawing.Size(109, 40);
+            this.btnSeeCart.TabIndex = 59;
+            this.btnSeeCart.Text = "See cart";
+            this.btnSeeCart.Click += new System.EventHandler(this.gunaGradientButton2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(628, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 228);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddToCart
+            // 
+            this.btnAddToCart.AnimationHoverSpeed = 0.07F;
+            this.btnAddToCart.AnimationSpeed = 0.03F;
+            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddToCart.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.btnAddToCart.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(180)))), ((int)(((byte)(122)))));
+            this.btnAddToCart.BorderColor = System.Drawing.Color.Black;
+            this.btnAddToCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.Image")));
+            this.btnAddToCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAddToCart.Location = new System.Drawing.Point(679, 258);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnAddToCart.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(186)))), ((int)(((byte)(238)))));
+            this.btnAddToCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAddToCart.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.OnHoverImage = null;
+            this.btnAddToCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAddToCart.Radius = 10;
+            this.btnAddToCart.Size = new System.Drawing.Size(109, 40);
+            this.btnAddToCart.TabIndex = 47;
+            this.btnAddToCart.Text = "Add to cart";
+            this.btnAddToCart.Visible = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
             // UCShowProduct
             // 
@@ -579,11 +579,11 @@
             this.Name = "UCShowProduct";
             this.Size = new System.Drawing.Size(950, 656);
             this.Load += new System.EventHandler(this.UCShowProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panelKH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

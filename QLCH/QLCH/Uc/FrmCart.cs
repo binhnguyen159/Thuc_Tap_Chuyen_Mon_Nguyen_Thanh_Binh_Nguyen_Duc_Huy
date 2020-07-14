@@ -25,7 +25,7 @@ namespace QLCH.Uc
         {
            
             panelProductList.Controls.Clear();
-            foreach (var a in db.select_detailCart(1))
+            foreach (var a in db.select_detailCart(UCShowProduct.tranferIDBill.cartID))
             {
                 tranferDataGG data = new tranferDataGG(a.masp, a.tenSP, Convert.ToDouble(a.gia), Convert.ToInt32(a.soLuong), convertImg(a.masp), a.maCTG);
 
@@ -73,12 +73,65 @@ namespace QLCH.Uc
             lbTotalPrice.Text = totalmoney.ToString();
 
         }
-
+        int stt = 0;
+        string id = "";
+  
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            foreach(var a in db.CTGios)
+
+            var hd = from u in db.hoadDonXuats select u;
+            if (hd.Count() == 0)
             {
-                db.cthdx_insert("hdx"+a.maCTG, a.masp, Convert.ToDouble(a.donGia), Convert.ToInt32(a.soluong), Convert.ToDouble(a.thanhTien));
+
+                db.hdx_insert("hdx000001", frmLogin.GetID.id, UCShowProduct.tranferIDBill.CusId, Convert.ToDouble(lbTotalPrice.Text), "Priced", DateTime.Now);
+
+
+                foreach (var a in db.CTGios)
+                {
+                    db.cthdx_insert("hdx000001", a.masp, Convert.ToDouble(a.donGia), Convert.ToInt32(a.soluong), Convert.ToDouble(a.thanhTien));
+                }
+
+
+            }
+            else
+            {
+                hoadDonXuat ssp = db.hoadDonXuats.OrderByDescending(s => s.maHDX).FirstOrDefault();
+                stt = Convert.ToInt32(ssp.maHDX.ToString().Trim().Substring(3)) + 1;
+                if (stt / 10 >= 100000)
+                    id = "hdx" + stt;
+                else if (stt / 10 >= 1000 && stt / 10 < 10000)
+                    id = "hdx0" + stt;
+                else if (stt / 10 >= 100 && stt / 10 < 1000)
+                    id = "hdx00" + stt;
+                else if (stt / 10 >= 10 && stt / 10 < 100)
+                    id = "hdx000" + stt;
+                else if (stt / 10 >= 1 && stt / 10 < 10)
+                    id = "hdx0000" + stt;
+                else if (stt / 10 < 1)
+                    id = "hdx00000" + stt;
+
+                db.hdx_insert(id, frmLogin.GetID.id, UCShowProduct.tranferIDBill.CusId, Convert.ToDouble(lbTotalPrice.Text), "Priced", DateTime.Now);
+
+
+                foreach (var a in db.CTGios)
+                {
+                    db.cthdx_insert(id, a.masp, Convert.ToDouble(a.donGia), Convert.ToInt32(a.soluong), Convert.ToDouble(a.thanhTien));
+                }
+             
+
+            }
+            db.delete_cart();
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to delete this cart?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                db.delete_cart();
+                //db.update_status_hoadon(UCShowProduct.tranferIDBill.maHDX, "Cancel");
+                this.Close();
             }
         }
     }

@@ -55,6 +55,16 @@ namespace QLCH.Uc.WareHouse
             lbSL.Text = "!!!";
         }
 
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Uc_ProductShow_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
         //public Uc_ProductShow(string id, string name, Image image, string hang)
         //{
         //    InitializeComponent();

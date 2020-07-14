@@ -260,14 +260,23 @@
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.hdx_insert" Method="hdx_insert">
+    <Parameter Name="maHDX" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maNV" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maKH" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tongTien" Type="System.Double" DbType="Float" />
+    <Parameter Name="trangThai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayBan" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.hdx_select" Method="hdx_select">
     <ElementType Name="hdx_selectResult">
       <Column Name="maHDX" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="maNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="maKH1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -287,6 +296,18 @@
       <Column Name="maCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tendn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.insert_cart" Method="insert_cart">
+    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donGia" Type="System.Double" DbType="Float" />
+    <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_gioHang" Method="insert_gioHang">
+    <Parameter Name="maKh" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.KH_Del" Method="KH_Del">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
@@ -485,31 +506,53 @@
       <Column Name="a" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ThemTongTienXuat" Method="ThemTongTienXuat">
+    <Parameter Name="MaHDX" Parameter="maHDX" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
     <Parameter Name="maCTGio" Type="System.Int32" DbType="Int" />
     <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.insert_cart" Method="insert_cart">
-    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
-    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
-    <Parameter Name="donGia" Type="System.Double" DbType="Float" />
-    <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.hdx_insert" Method="hdx_insert">
+  <Function Name="dbo.update_status_hoadon" Method="update_status_hoadon">
     <Parameter Name="maHDX" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maNV" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maKH" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tongTien" Type="System.Double" DbType="Float" />
-    <Parameter Name="trangThai" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="ngayBan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="status" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.insert_gioHang" Method="insert_gioHang">
-    <Parameter Name="maKh" Type="System.String" DbType="NVarChar(50)" />
+  <Function Name="dbo.Product_select" Method="Product_select">
+    <ElementType Name="Product_selectResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.delete_cart" Method="delete_cart">
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.bill_info" Method="bill_info">
+    <Parameter Name="maKH" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="bill_infoResult">
+      <Column Name="maHDX" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

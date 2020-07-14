@@ -36,20 +36,63 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Bunifu-.NET-UI-Framework-1.5.3_ShareAppsCrack.com\Bunifu .NET UI Framework 1.5.3\Crack\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Guna.UI">
       <HintPath>C:\Users\Huyha\OneDrive\Documents\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,6 +105,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillOfCus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillOfCus.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmFuction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,10 +136,17 @@
     <Compile Include="frmAssign.Designer.cs">
       <DependentUpon>frmAssign.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Uc\DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\FrmAddCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\FrmAddCus.Designer.cs">
+      <DependentUpon>FrmAddCus.cs</DependentUpon>
     </Compile>
     <Compile Include="Uc\FrmCart.cs">
       <SubType>Form</SubType>
@@ -104,6 +159,12 @@
     </Compile>
     <Compile Include="Uc\FrmCartProduct.Designer.cs">
       <DependentUpon>FrmCartProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\FrmReportBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\FrmReportBill.Designer.cs">
+      <DependentUpon>FrmReportBill.cs</DependentUpon>
     </Compile>
     <Compile Include="Uc\tranferDataGG.cs" />
     <Compile Include="Uc\UcBill_Sell.cs">
@@ -190,11 +251,23 @@
     <Compile Include="Uc\Uc_WareHouse.Designer.cs">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\WareHouse\Uc_new_showProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\WareHouse\Uc_new_showProduct.Designer.cs">
+      <DependentUpon>Uc_new_showProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\WareHouse\Uc_ProductShow.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Uc\WareHouse\Uc_ProductShow.Designer.cs">
       <DependentUpon>Uc_ProductShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Uc_new_ProductShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Uc_new_ProductShow.Designer.cs">
+      <DependentUpon>Uc_new_ProductShow.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmFuction.resx">
       <DependentUpon>frmFuction.cs</DependentUpon>
@@ -205,6 +278,7 @@
     <EmbeddedResource Include="FrmSale.resx">
       <DependentUpon>FrmSale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -218,12 +292,19 @@
     <EmbeddedResource Include="frmAssign.resx">
       <DependentUpon>frmAssign.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc\FrmAddCus.resx">
+      <DependentUpon>FrmAddCus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uc\FrmCart.resx">
       <DependentUpon>FrmCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\FrmCartProduct.resx">
       <DependentUpon>FrmCartProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc\FrmReportBill.resx">
+      <DependentUpon>FrmReportBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Report1.rdlc" />
     <EmbeddedResource Include="Uc\UcBill_Sell.resx">
       <DependentUpon>UcBill_Sell.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,9 +347,27 @@
     <EmbeddedResource Include="Uc\Uc_WareHouse.resx">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc\WareHouse\Uc_new_showProduct.resx">
+      <DependentUpon>Uc_new_showProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\Uc_ProductShow.resx">
       <DependentUpon>Uc_ProductShow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Uc_new_ProductShow.resx">
+      <DependentUpon>Uc_new_ProductShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BillOfCus.xsc">
+      <DependentUpon>BillOfCus.xsd</DependentUpon>
+    </None>
+    <None Include="BillOfCus.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillOfCus.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BillOfCus.xss">
+      <DependentUpon>BillOfCus.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -352,6 +451,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-shopify-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-skin-type-7-100.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

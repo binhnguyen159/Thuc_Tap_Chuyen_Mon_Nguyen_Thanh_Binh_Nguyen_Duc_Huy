@@ -17,7 +17,7 @@ namespace QLCH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSale());
+            Application.Run(new frmLogin());
         }
     }
 }

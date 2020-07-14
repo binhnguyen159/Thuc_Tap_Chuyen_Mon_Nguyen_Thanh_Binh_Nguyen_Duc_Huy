@@ -14,7 +14,11 @@ namespace QLCH.Uc
 {
     public partial class UCShowProduct : UserControl
     {
-
+        public class tranferIDBill
+        {
+            static public int cartID;
+            static public String CusId;
+        }
         public UCShowProduct()
         {
             InitializeComponent();
@@ -29,12 +33,19 @@ namespace QLCH.Uc
         private void UCShowProduct_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = db.select_SP();
+            dataGridView1.DataSource = db.Product_select();
 
             lbMa.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             lbTenSP.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             sanPham sp = db.sanPhams.Where(s => s.maSP == lbMa.Text).FirstOrDefault();
-            //txtThongSo.Text = sp.thongSo.ToString();
+            if (sp.thongSo == null)
+            {
+                txtThongSo.Text = "No infomations";
+            }
+            else
+            {
+                txtThongSo.Text = sp.thongSo.ToString();
+            }
             lbQuantity.Text = sp.soLuong.ToString();
             if (Convert.ToInt32(lbQuantity.Text) == 0)
             {
@@ -75,9 +86,17 @@ namespace QLCH.Uc
             lbGia.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
 
             lbTLSP.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            //cbloaisp.
+
             sanPham sp = db.sanPhams.Where(s => s.maSP == lbMa.Text.Trim()).FirstOrDefault();
-            txtThongSo.Text = sp.thongSo.ToString();
+            if (sp.thongSo == null)
+            {
+                txtThongSo.Text = "No infomations";
+            }
+            else
+            {
+                txtThongSo.Text = sp.thongSo.ToString();
+
+            }
             lbQuantity.Text = sp.soLuong.ToString();
 
             if (Convert.ToInt32(lbQuantity.Text) == 0)
@@ -101,12 +120,12 @@ namespace QLCH.Uc
                 }
             }
         }
-        String CusId;
+  
 
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-            
-            db.insert_cart(Convert.ToInt32(lbMaGio.Text), lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
+
+           db.insert_cart(Convert.ToInt32(lbMaGio.Text), lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
         }
 
 
@@ -134,44 +153,39 @@ namespace QLCH.Uc
             dataGridView2.AutoGenerateColumns = false;
             dataGridView2.DataSource = db.khachHang_search(txtCusName.Text);
         }
-
+       
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = dataGridView2.CurrentRow.Index;
+            int i = e.RowIndex;
             txtCusName.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
-            CusId = dataGridView2.Rows[i].Cells[0].Value.ToString();
+            tranferIDBill.CusId = dataGridView2.Rows[i].Cells[0].Value.ToString();
             panelKH.Visible = false;
         }
-        int stt = 0;
-        string id = "";
+   
         int dem;
         private void btnCreateCart_Click(object sender, EventArgs e)
         {
-            btnAddToCart.Enabled = true;
-            hoadDonXuat ssp = db.hoadDonXuats.OrderByDescending(s => s.maHDX).FirstOrDefault();
-            stt = Convert.ToInt32(ssp.maHDX.ToString().Trim().Substring(2)) + 1;
-            if (stt / 10 >= 100000)
-                id = "HDX" + stt;
-            else if (stt / 10 >= 1000 && stt / 10 < 10000)
-                id = "HDX0" + stt;
-            else if (stt / 10 >= 100 && stt / 10 < 1000)
-                id = "HDX00" + stt;
-            else if (stt / 10 >= 10 && stt / 10 < 100)
-                id = "HDX000" + stt;
-            else if (stt / 10 >= 1 && stt / 10 < 10)
-                id = "HDX0000" + stt;
-            else if (stt / 10 < 1)
-                id = "HDX00000" + stt;
-            //chua xong
-            db.hdx_insert(id, "ma nv", CusId, 0, "Not Paid", DateTime.Now);
+            btnAddToCart.Visible = true;
 
-            db.insert_gioHang(CusId);
-            
-            foreach(var a in db.GioHangs)
+             db.insert_gioHang(tranferIDBill.CusId);
+
+            foreach (var a in db.GioHangs)
             {
                 dem = a.magio;
             }
             lbMaGio.Text = dem.ToString();
+            tranferIDBill.cartID = Convert.ToInt32(lbMaGio.Text);
+        }
+        private void load_data_after_add_customer()
+        {
+            this.Visible = true;
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAddCus addCus = new FrmAddCus(load_data_after_add_customer);
+            addCus.Show();
         }
     }
 }

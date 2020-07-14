@@ -15,6 +15,8 @@ using System.Windows.Forms;
 namespace QLCH
 {
     public delegate void fFRMLOAD();
+    public delegate void load_Data();
+    public delegate void Exit();
     public partial class frmLogin : Form
     {
         public frmLogin()
@@ -104,6 +106,7 @@ namespace QLCH
             {
                 GetID.id = nv.maNV;
                 frmFuction fuction = new frmFuction();
+                //FrmSale fuction = new FrmSale();
                 this.Hide();
                 fuction.ShowDialog();
             }
@@ -155,7 +158,7 @@ namespace QLCH
         private void btnOTP_Click(object sender, EventArgs e)
         {
             OTP = "";
-            nhanVien nv = dt.nhanViens.Where(s => s.maNV.Equals(txtUsername.Text)
+            nhanVien nv = dt.nhanViens.Where(s => s.tendn.Equals(txtUsername.Text)
                                             && s.email.Equals(txtEmail.Text))
                                         .FirstOrDefault();
             if (nv != null)
@@ -245,5 +248,18 @@ namespace QLCH
             }
         }
 
+        private void pnlLogin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btLogin_Click(sender, e);
+
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace QLCH
         {
             InitializeComponent();
         }
-
+        DataClasses1DataContext db = new DataClasses1DataContext();
         private void ptbBack_Click(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin();
@@ -82,7 +82,8 @@ namespace QLCH
 
         private void frmFuction_Load(object sender, EventArgs e)
         {
-
+            nhanVien nv = db.nhanViens.Where(s => s.maNV == frmLogin.GetID.id).FirstOrDefault();
+            lbName.Text = nv.tenNV.ToString().Trim();
         }
     }
 }

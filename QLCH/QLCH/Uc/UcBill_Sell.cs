@@ -12,6 +12,10 @@ namespace QLCH.Uc
 {
     public partial class UcBill_Sell : UserControl
     {
+        public class tranferId
+        {
+            static public String id;
+        }
         public UcBill_Sell()
         {
             InitializeComponent();
@@ -19,15 +23,17 @@ namespace QLCH.Uc
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void UcBill_Sell_Load(object sender, EventArgs e)
         {
+            btnPrintBill.Visible = false;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = db.hdx_select();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnPrintBill.Visible = true;
             int i = dataGridView1.CurrentRow.Index;
             hoadDonXuat hdx = db.hoadDonXuats.Where(s => s.maHDX == dataGridView1.Rows[i].Cells[0].Value.ToString()).FirstOrDefault();
-
+            tranferId.id = hdx.maHDX;
             khachHang kh = db.khachHangs.Where(s => s.maKH == hdx.maKH).FirstOrDefault();
 
             txtCusName.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
@@ -53,6 +59,13 @@ namespace QLCH.Uc
         private void gunaGradientButton2_Click(object sender, EventArgs e)
         {
             UcBill_Sell_Load(sender, e);
+        }
+
+        private void gunaGradientButton3_Click(object sender, EventArgs e)
+        {
+            
+            FrmReportBill frmReportBill = new FrmReportBill();
+            frmReportBill.Show();
         }
     }
 }

@@ -33,6 +33,7 @@
             this.pnlChangePass = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnChangePassword = new Guna.UI.WinForms.GunaButton();
             this.btnBackOtp = new Guna.UI.WinForms.GunaButton();
+            this.btnBackLogin = new Guna.UI.WinForms.GunaButton();
             this.txtOTP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNewPassword2nd = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNewPassword1st = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -54,7 +55,6 @@
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnBackLogin = new Guna.UI.WinForms.GunaButton();
             this.pnlChangePass.SuspendLayout();
             this.pnlOTP.SuspendLayout();
             this.pnlLogin.SuspendLayout();
@@ -135,6 +135,32 @@
             this.btnBackOtp.Text = "Back to OTP";
             this.btnBackOtp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBackOtp.Click += new System.EventHandler(this.gunaButton1_Click);
+            // 
+            // btnBackLogin
+            // 
+            this.btnBackLogin.AnimationHoverSpeed = 0.07F;
+            this.btnBackLogin.AnimationSpeed = 0.03F;
+            this.btnBackLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackLogin.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.btnBackLogin.BorderColor = System.Drawing.Color.Black;
+            this.btnBackLogin.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBackLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackLogin.ForeColor = System.Drawing.Color.White;
+            this.btnBackLogin.Image = global::QLCH.Properties.Resources.icons8_male_user_24__1_;
+            this.btnBackLogin.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBackLogin.Location = new System.Drawing.Point(209, 420);
+            this.btnBackLogin.Name = "btnBackLogin";
+            this.btnBackLogin.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(85)))), ((int)(((byte)(120)))));
+            this.btnBackLogin.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnBackLogin.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBackLogin.OnHoverImage = null;
+            this.btnBackLogin.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBackLogin.Radius = 15;
+            this.btnBackLogin.Size = new System.Drawing.Size(116, 42);
+            this.btnBackLogin.TabIndex = 3;
+            this.btnBackLogin.Text = "Back to login";
+            this.btnBackLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnBackLogin.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // txtOTP
             // 
@@ -343,6 +369,7 @@
             this.pnlLogin.Quality = 10;
             this.pnlLogin.Size = new System.Drawing.Size(355, 509);
             this.pnlLogin.TabIndex = 2;
+            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
             // ptbExit
             // 
@@ -447,6 +474,7 @@
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.OnValueChanged += new System.EventHandler(this.txtNewPassword1st_OnValueChanged);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // bunifuGradientPanel1
             // 
@@ -489,32 +517,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnBackLogin
-            // 
-            this.btnBackLogin.AnimationHoverSpeed = 0.07F;
-            this.btnBackLogin.AnimationSpeed = 0.03F;
-            this.btnBackLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnBackLogin.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnBackLogin.BorderColor = System.Drawing.Color.Black;
-            this.btnBackLogin.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBackLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackLogin.ForeColor = System.Drawing.Color.White;
-            this.btnBackLogin.Image = global::QLCH.Properties.Resources.icons8_male_user_24__1_;
-            this.btnBackLogin.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBackLogin.Location = new System.Drawing.Point(209, 420);
-            this.btnBackLogin.Name = "btnBackLogin";
-            this.btnBackLogin.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(85)))), ((int)(((byte)(120)))));
-            this.btnBackLogin.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnBackLogin.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnBackLogin.OnHoverImage = null;
-            this.btnBackLogin.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBackLogin.Radius = 15;
-            this.btnBackLogin.Size = new System.Drawing.Size(116, 42);
-            this.btnBackLogin.TabIndex = 3;
-            this.btnBackLogin.Text = "Back to login";
-            this.btnBackLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnBackLogin.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmLogin
             // 

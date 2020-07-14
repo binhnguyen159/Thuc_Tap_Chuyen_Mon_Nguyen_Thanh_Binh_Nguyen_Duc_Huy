@@ -103,6 +103,16 @@ namespace QLCH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrator_male_skin_type_7_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-administrator-male-skin-type-7-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_back_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-back-48", resourceCulture);

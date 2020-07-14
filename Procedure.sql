@@ -339,3 +339,61 @@ create proc insert_gioHang(@maKh nvarchar(50))
 as begin
 insert into GioHang values (@maKh)
 end
+go
+--create proc insert_cthdx(@maHDX nvarchar(50),@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+--as begin
+--if(not exists(select * from CTGio where masp=@maSP))
+--	begin
+--		insert into CTGio values (@maHDX,@maSP,@soLuong,@donGia,@thanhTien)
+--	end
+--else
+--	begin
+--		update CTGio set soluong=soluong+@soLuong where masp=@maSP
+--	end
+--end
+use TTCM
+
+go
+alter proc delete_cart
+as begin
+TRUNCATE table  CTGio
+TRUNCATE table  GioHang
+end
+go
+
+
+create proc update_status_hoadon(@maHDX nvarchar(50),@status nvarchar(50))
+as begin
+update hoadDonXuat set trangThai=@status where maHDX=@maHDX
+end
+
+go
+create proc ThemTongTienXuat(@MaHDX nvarchar(50))
+as begin
+declare @sum float
+set @sum= (select SUM(ct.soLuong*ct.thanhTien) as 'tongTien'
+			from chiTietHDX ct,hoadDonXuat hd
+			where ct.maHDX=hd.maHDX and hd.maHDX=@MaHDX)
+update hoadDonXuat set tongTien=@sum where maHDX=@MaHDX
+end
+go
+-- san pham select
+alter proc Product_select
+as begin
+select sanPham.maSP,sanPham.tenSP,sanPham.gia,nhomSP.tenLoai from sanPham,nhomSP
+where sanPham.maLoai=nhomSP.maLoai
+end
+go
+ create proc bill_info (@maKH nvarchar(50))
+ as begin
+ select hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai,hdx.maKH,hdx.maNV,
+		kh.tenKH,kh.email,kh.diaChi,kh.sdt,
+		nv.tenNV,nv.sdt,
+		sp.tenSP,sp.thongSo,sp.gia,
+		ctHD.soLuong,ctHD.thanhTien,ctHD.maSP
+ from hoadDonXuat hdx,khachHang kh,nhanVien nv,sanPham sp,chiTietHDX ctHD
+ where hdx.maKH=kh.maKH and hdx.maNV=nv.maNV
+		and hdx.maHDX=ctHD.maHDX and ctHD.maSP=sp.maSP and kh.maKH=@maKH
+ end
+ go
+ exec  bill_info N'KH3'
