@@ -185,12 +185,6 @@
     <Compile Include="Uc\UCCartProduct.Designer.cs">
       <DependentUpon>UCCartProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc\Uc_HangSP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\Uc_HangSP.Designer.cs">
-      <DependentUpon>Uc_HangSP.cs</DependentUpon>
-    </Compile>
     <Compile Include="Uc\Uc_NCC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -233,18 +227,6 @@
     <Compile Include="Uc\Uc_Employees.Designer.cs">
       <DependentUpon>Uc_Employees.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc\Uc_NSP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\Uc_NSP.Designer.cs">
-      <DependentUpon>Uc_NSP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Uc\Uc_QLSP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\Uc_QLSP.Designer.cs">
-      <DependentUpon>Uc_QLSP.cs</DependentUpon>
-    </Compile>
     <Compile Include="Uc\Uc_Report.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,25 +251,11 @@
     <Compile Include="Uc\Uc_WareHouse.Designer.cs">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Uc\WareHouse\Uc_new_showProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Uc\WareHouse\Uc_new_showProduct.Designer.cs">
       <DependentUpon>Uc_new_showProduct.cs</DependentUpon>
-=======
-    <Compile Include="Uc\WareHouse\frmProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Uc\WareHouse\frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Uc\WareHouse\frmSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Uc\WareHouse\frmSanPham.Designer.cs">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
->>>>>>> 7c6cf4bbd41294897e3ff613daa4ac03073772af
     </Compile>
     <Compile Include="Uc\WareHouse\Uc_ProductShow.cs">
       <SubType>UserControl</SubType>
@@ -346,9 +314,6 @@
     <EmbeddedResource Include="Uc\UCCartProduct.resx">
       <DependentUpon>UCCartProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Uc\Uc_HangSP.resx">
-      <DependentUpon>Uc_HangSP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_NCC.resx">
       <DependentUpon>Uc_NCC.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,12 +335,6 @@
     <EmbeddedResource Include="Uc\Uc_Employees.resx">
       <DependentUpon>Uc_Employees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Uc\Uc_NSP.resx">
-      <DependentUpon>Uc_NSP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Uc\Uc_QLSP.resx">
-      <DependentUpon>Uc_QLSP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_Report.resx">
       <DependentUpon>Uc_Report.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,16 +347,8 @@
     <EmbeddedResource Include="Uc\Uc_WareHouse.resx">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Uc\WareHouse\Uc_new_showProduct.resx">
       <DependentUpon>Uc_new_showProduct.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Uc\WareHouse\frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Uc\WareHouse\frmSanPham.resx">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
->>>>>>> 7c6cf4bbd41294897e3ff613daa4ac03073772af
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\Uc_ProductShow.resx">
       <DependentUpon>Uc_ProductShow.cs</DependentUpon>

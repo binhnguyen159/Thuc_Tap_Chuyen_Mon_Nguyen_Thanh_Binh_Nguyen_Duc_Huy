@@ -40,33 +40,19 @@ namespace QLCH.Uc.WareHouse
             }
         }
 
+
         private void Uc_ProductShow_Load(object sender, EventArgs e)
         {
 
         }
+
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void btnRemove_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnDetail_Click(object sender, EventArgs e)
-        {
-            Uc_WareHouse.GetChoose.choose = 2;
-            Uc_WareHouse.GetChoose.id = lbID.Text;
-            frmProduct frmProduct = new frmProduct();
-            frmProduct.ShowDialog();
-        }
-
-        private void btnDel_Click(object sender, EventArgs e)
         {
             db.deleteSP(lbID.Text);
             lbID.Text = "!!!";
             lbName.Text = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
             lbSL.Text = "!!!";
-            btnDel.Visible = false;
-            btnDetail.Visible = false;
-            btnImport.Visible = false;
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -94,5 +80,6 @@ namespace QLCH.Uc.WareHouse
         //    lbName.Text = name;
         //    ptbAnh.Image = image;
         //}
+
     }
 }

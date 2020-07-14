@@ -36,30 +36,11 @@
             this.lbSL = new Guna.UI.WinForms.GunaLabel();
             this.pnlNoti = new Guna.UI.WinForms.GunaElipsePanel();
             this.btnImport = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.btnRemove = new System.Windows.Forms.Button();
             this.ptbAnh = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).BeginInit();
             this.SuspendLayout();
             // 
-=======
-            this.btnDetail = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // ptbAnh
-            // 
-            this.ptbAnh.BaseColor = System.Drawing.Color.White;
-            this.ptbAnh.Image = global::QLCH.Properties.Resources.Capture;
-            this.ptbAnh.Location = new System.Drawing.Point(34, 3);
-            this.ptbAnh.Name = "ptbAnh";
-            this.ptbAnh.Size = new System.Drawing.Size(166, 133);
-            this.ptbAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbAnh.TabIndex = 0;
-            this.ptbAnh.TabStop = false;
-            // 
->>>>>>> 7c6cf4bbd41294897e3ff613daa4ac03073772af
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
@@ -98,7 +79,7 @@
             this.lbName.Size = new System.Drawing.Size(150, 35);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Mã SP:";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaLabel2
             // 
@@ -131,7 +112,7 @@
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(70, 294);
+            this.btnImport.Location = new System.Drawing.Point(34, 229);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(75, 23);
             this.btnImport.TabIndex = 3;
@@ -139,9 +120,8 @@
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // btnDetail
+            // btnRemove
             // 
-<<<<<<< HEAD
             this.btnRemove.Location = new System.Drawing.Point(125, 229);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 23);
@@ -159,33 +139,13 @@
             this.ptbAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbAnh.TabIndex = 0;
             this.ptbAnh.TabStop = false;
-=======
-            this.btnDetail.Location = new System.Drawing.Point(34, 265);
-            this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(75, 23);
-            this.btnDetail.TabIndex = 3;
-            this.btnDetail.Text = "Detail";
-            this.btnDetail.UseVisualStyleBackColor = true;
-            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
-            // 
-            // btnDel
-            // 
-            this.btnDel.Location = new System.Drawing.Point(125, 265);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 23);
-            this.btnDel.TabIndex = 3;
-            this.btnDel.Text = "Delete";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
->>>>>>> 7c6cf4bbd41294897e3ff613daa4ac03073772af
             // 
             // Uc_ProductShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnDetail);
-            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnImport);
             this.Controls.Add(this.pnlNoti);
             this.Controls.Add(this.lbSL);
@@ -197,13 +157,8 @@
             this.Controls.Add(this.ptbAnh);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_ProductShow";
-<<<<<<< HEAD
             this.Size = new System.Drawing.Size(231, 263);
             this.Load += new System.EventHandler(this.Uc_ProductShow_Load_1);
-=======
-            this.Size = new System.Drawing.Size(235, 333);
-            this.Load += new System.EventHandler(this.Uc_ProductShow_Load);
->>>>>>> 7c6cf4bbd41294897e3ff613daa4ac03073772af
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,7 +176,6 @@
         private Guna.UI.WinForms.GunaLabel lbSL;
         private Guna.UI.WinForms.GunaElipsePanel pnlNoti;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnDetail;
-        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnRemove;
     }
 }

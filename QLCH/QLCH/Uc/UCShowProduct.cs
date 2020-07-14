@@ -125,16 +125,7 @@ namespace QLCH.Uc
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
 
-<<<<<<< HEAD
            db.insert_cart(Convert.ToInt32(lbMaGio.Text), lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
-=======
-            //var id
-            //db.insert_cart(,CusId, lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
-
-            
-            db.insert_cart(Convert.ToInt32(lbMaGio.Text), lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
-
->>>>>>> 7c6cf4bbd41294897e3ff613daa4ac03073772af
         }
 
 
@@ -174,35 +165,11 @@ namespace QLCH.Uc
         int dem;
         private void btnCreateCart_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             btnAddToCart.Visible = true;
 
              db.insert_gioHang(tranferIDBill.CusId);
 
             foreach (var a in db.GioHangs)
-=======
-            btnAddToCart.Enabled = true;
-            hoadDonXuat ssp = db.hoadDonXuats.OrderByDescending(s => s.maHDX).FirstOrDefault();
-            stt = Convert.ToInt32(ssp.maHDX.ToString().Trim().Substring(2)) + 1;
-            if (stt / 10 >= 100000)
-                id = "HDX" + stt;
-            else if (stt / 10 >= 1000 && stt / 10 < 10000)
-                id = "HDX0" + stt;
-            else if (stt / 10 >= 100 && stt / 10 < 1000)
-                id = "HDX00" + stt;
-            else if (stt / 10 >= 10 && stt / 10 < 100)
-                id = "HDX000" + stt;
-            else if (stt / 10 >= 1 && stt / 10 < 10)
-                id = "HDX0000" + stt;
-            else if (stt / 10 < 1)
-                id = "HDX00000" + stt;
-            //chua xong
-            //db.hdx_insert(id, "ma nv", CusId, 0, "Not Paid", DateTime.Now);
-
-            //db.insert_gioHang(CusId);
-            
-            foreach(var a in db.GioHangs)
->>>>>>> 7c6cf4bbd41294897e3ff613daa4ac03073772af
             {
                 dem = a.magio;
             }
