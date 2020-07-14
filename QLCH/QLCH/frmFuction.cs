@@ -60,7 +60,7 @@ namespace QLCH
 
         private void btnProvider_Click(object sender, EventArgs e)
         {
-            Uc_SanPham uCProvider = new Uc_SanPham();
+            Uc_QLSP uCProvider = new Uc_QLSP();
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(uCProvider);
             //uCProvider.Show();
