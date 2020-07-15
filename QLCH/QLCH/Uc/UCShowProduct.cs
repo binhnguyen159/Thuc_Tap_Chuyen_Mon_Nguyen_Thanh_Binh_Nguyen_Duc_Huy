@@ -120,12 +120,13 @@ namespace QLCH.Uc
                 }
             }
         }
-  
+
 
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-
-           db.insert_cart(Convert.ToInt32(lbMaGio.Text), lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
+            db.insert_cart(Convert.ToInt32(lbMaGio.Text), lbMa.Text, Convert.ToInt32(numericSoLuong.Value), Convert.ToDouble(lbGia.Text), Convert.ToDouble(Convert.ToInt32(numericSoLuong.Value) * Convert.ToDouble(lbGia.Text)));
+            db.update_soluong(lbMa.Text, Convert.ToInt32(lbQuantity.Text));
+            UCShowProduct_Load(sender, e);
         }
 
 
@@ -134,9 +135,15 @@ namespace QLCH.Uc
             //chưa xong
             sanPham sp = db.sanPhams.Where(s => s.maSP == lbMa.Text.Trim()).FirstOrDefault();
 
+            if (Convert.ToInt32(lbQuantity.Text) > 1)
+            {
+                lbQuantity.Text = (sp.soLuong - Convert.ToInt32(numericSoLuong.Value)).ToString();
 
-            lbQuantity.Text = (sp.soLuong - Convert.ToInt32(numericSoLuong.Value)).ToString();
-
+            }
+            else
+            {
+                numericSoLuong.Value = (int)sp.soLuong;
+            }
 
         }
 
@@ -153,7 +160,7 @@ namespace QLCH.Uc
             dataGridView2.AutoGenerateColumns = false;
             dataGridView2.DataSource = db.khachHang_search(txtCusName.Text);
         }
-       
+
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
@@ -161,13 +168,13 @@ namespace QLCH.Uc
             tranferIDBill.CusId = dataGridView2.Rows[i].Cells[0].Value.ToString();
             panelKH.Visible = false;
         }
-   
+
         int dem;
         private void btnCreateCart_Click(object sender, EventArgs e)
         {
             btnAddToCart.Visible = true;
 
-             db.insert_gioHang(tranferIDBill.CusId);
+            db.insert_gioHang(tranferIDBill.CusId);
 
             foreach (var a in db.GioHangs)
             {

@@ -315,6 +315,8 @@ namespace QLCH {
             
             private global::System.Data.DataColumn columnmaSP;
             
+            private global::System.Data.DataColumn columngiamGia;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bill_infoDataTable() {
@@ -494,6 +496,14 @@ namespace QLCH {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn giamGiaColumn {
+                get {
+                    return this.columngiamGia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -547,7 +557,8 @@ namespace QLCH {
                         double gia, 
                         int soLuong, 
                         double thanhTien, 
-                        string maSP) {
+                        string maSP, 
+                        int giamGia) {
                 bill_infoRow rowbill_infoRow = ((bill_infoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         maHDX,
@@ -567,7 +578,8 @@ namespace QLCH {
                         gia,
                         soLuong,
                         thanhTien,
-                        maSP};
+                        maSP,
+                        giamGia};
                 rowbill_infoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowbill_infoRow);
                 return rowbill_infoRow;
@@ -608,6 +620,7 @@ namespace QLCH {
                 this.columnsoLuong = base.Columns["soLuong"];
                 this.columnthanhTien = base.Columns["thanhTien"];
                 this.columnmaSP = base.Columns["maSP"];
+                this.columngiamGia = base.Columns["giamGia"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -649,6 +662,8 @@ namespace QLCH {
                 base.Columns.Add(this.columnthanhTien);
                 this.columnmaSP = new global::System.Data.DataColumn("maSP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmaSP);
+                this.columngiamGia = new global::System.Data.DataColumn("giamGia", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngiamGia);
                 this.columnmaHDX.AllowDBNull = false;
                 this.columnmaHDX.MaxLength = 50;
                 this.columntrangThai.MaxLength = 50;
@@ -1084,6 +1099,22 @@ namespace QLCH {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int giamGia {
+                get {
+                    try {
+                        return ((int)(this[this.tablebill_info.giamGiaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'giamGia\' in table \'bill_info\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebill_info.giamGiaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsngayBanNull() {
                 return this.IsNull(this.tablebill_info.ngayBanColumn);
             }
@@ -1273,6 +1304,18 @@ namespace QLCH {
             public void SetthanhTienNull() {
                 this[this.tablebill_info.thanhTienColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsgiamGiaNull() {
+                return this.IsNull(this.tablebill_info.giamGiaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetgiamGiaNull() {
+                this[this.tablebill_info.giamGiaColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1452,6 +1495,7 @@ namespace QLCH.BillOfCusTableAdapters {
             tableMapping.ColumnMappings.Add("soLuong", "soLuong");
             tableMapping.ColumnMappings.Add("thanhTien", "thanhTien");
             tableMapping.ColumnMappings.Add("maSP", "maSP");
+            tableMapping.ColumnMappings.Add("giamGia", "giamGia");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1471,20 +1515,20 @@ namespace QLCH.BillOfCusTableAdapters {
             this._commandCollection[0].CommandText = "dbo.bill_info";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@maKH", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@maHdx", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BillOfCus.bill_infoDataTable dataTable, string maKH) {
+        public virtual int Fill(BillOfCus.bill_infoDataTable dataTable, string maHdx) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((maKH == null)) {
+            if ((maHdx == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(maKH));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(maHdx));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1497,13 +1541,13 @@ namespace QLCH.BillOfCusTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BillOfCus.bill_infoDataTable GetData(string maKH) {
+        public virtual BillOfCus.bill_infoDataTable GetData(string maHdx) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((maKH == null)) {
+            if ((maHdx == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(maKH));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(maHdx));
             }
             BillOfCus.bill_infoDataTable dataTable = new BillOfCus.bill_infoDataTable();
             this.Adapter.Fill(dataTable);

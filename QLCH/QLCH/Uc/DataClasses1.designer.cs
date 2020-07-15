@@ -322,13 +322,6 @@ namespace QLCH.Uc
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.hdx_insert")]
-		public int hdx_insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHDX, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maNV, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maKH, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> tongTien, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string trangThai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ngayBan)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHDX, maNV, maKH, tongTien, trangThai, ngayBan);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.hdx_select")]
 		public ISingleResult<hdx_selectResult> hdx_select()
 		{
@@ -539,18 +532,32 @@ namespace QLCH.Uc
 			return ((ISingleResult<Product_selectResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delete_cart")]
-		public int delete_cart()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.bill_info")]
+		public ISingleResult<bill_infoResult> bill_info([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHdx)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHdx);
+			return ((ISingleResult<bill_infoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.delete_cart")]
+		public int delete_cart([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maGio)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGio);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.bill_info")]
-		public ISingleResult<bill_infoResult> bill_info([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maKH)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.update_soluong")]
+		public int update_soluong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maSP, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKH);
-			return ((ISingleResult<bill_infoResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSP, soLuong);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.hdx_insert")]
+		public int hdx_insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maHDX, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maNV, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maKH, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Float")] System.Nullable<double> tongTien, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string trangThai, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ngayBan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> giamGia)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHDX, maNV, maKH, tongTien, trangThai, ngayBan, giamGia);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	

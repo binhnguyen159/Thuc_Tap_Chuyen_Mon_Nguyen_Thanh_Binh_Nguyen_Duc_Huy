@@ -160,11 +160,11 @@
     <Compile Include="Uc\FrmCartProduct.Designer.cs">
       <DependentUpon>FrmCartProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc\FrmReportBill.cs">
+    <Compile Include="Uc\Frm_Detail_Bill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Uc\FrmReportBill.Designer.cs">
-      <DependentUpon>FrmReportBill.cs</DependentUpon>
+    <Compile Include="Uc\Frm_Detail_Bill.Designer.cs">
+      <DependentUpon>Frm_Detail_Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="Uc\tranferDataGG.cs" />
     <Compile Include="Uc\UcBill_Sell.cs">
@@ -251,6 +251,12 @@
     <Compile Include="Uc\Uc_WareHouse.Designer.cs">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\WareHouse\Form_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\WareHouse\Form_report.Designer.cs">
+      <DependentUpon>Form_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\WareHouse\Uc_new_showProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,8 +307,8 @@
     <EmbeddedResource Include="Uc\FrmCartProduct.resx">
       <DependentUpon>FrmCartProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Uc\FrmReportBill.resx">
-      <DependentUpon>FrmReportBill.cs</DependentUpon>
+    <EmbeddedResource Include="Uc\Frm_Detail_Bill.resx">
+      <DependentUpon>Frm_Detail_Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Report1.rdlc" />
     <EmbeddedResource Include="Uc\UcBill_Sell.resx">
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\Uc_WareHouse.resx">
       <DependentUpon>Uc_WareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\WareHouse\Form_report.resx">
+      <DependentUpon>Form_report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\Uc_new_showProduct.resx">
       <DependentUpon>Uc_new_showProduct.cs</DependentUpon>
@@ -454,6 +463,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-administrator-male-skin-type-7-100.png" />
+    <None Include="Resources\icons8-delete.png" />
+    <None Include="Resources\icons8-find-user-male-100.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

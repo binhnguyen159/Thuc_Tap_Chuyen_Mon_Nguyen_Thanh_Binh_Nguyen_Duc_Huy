@@ -37,13 +37,21 @@ namespace QLCH.Uc
         private void btnUp_Click(object sender, EventArgs e)
         {
             lbNumber.Text = (Convert.ToInt32(lbNumber.Text) + 1).ToString();
+            sanPham sp = db.sanPhams.Where(s => s.maSP == idProduct).FirstOrDefault();
+            if (Convert.ToInt32(lbNumber.Text) < sp.soLuong)
+            {
+                db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
 
-            db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
-            ldd();
+                
+                db.update_soluong(idProduct, sp.soLuong + Convert.ToInt32(lbNumber.Text));
 
-            ////db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
-            UCCart uC = new UCCart();
-            uC.Show();
+
+                ldd();
+            }
+
+            //////db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
+            //UCCart uC = new UCCart();
+            //uC.Show();
 
         }
 
@@ -54,12 +62,13 @@ namespace QLCH.Uc
                 lbNumber.Text = (Convert.ToInt32(lbNumber.Text) - 1).ToString();
 
                 db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
-
+                sanPham sp = db.sanPhams.Where(s => s.maSP == idProduct).FirstOrDefault();
+                db.update_soluong(idProduct, sp.soLuong + Convert.ToInt32(lbNumber.Text));
                 ldd();
 
-                //db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
-                UCCart uC = new UCCart();
-                uC.Show();
+                ////db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
+                //UCCart uC = new UCCart();
+                //uC.Show();
 
             }
         }
@@ -77,12 +86,14 @@ namespace QLCH.Uc
 
         }
         double price;
+        String idProduct;
         private void FrmCartProduct_Load(object sender, EventArgs e)
         {
 
 
             try
             {
+                idProduct = data.ProductId;
                 lbMaCTGio.Text = data.IDCartDetail1.ToString();
                 lbProductName.Text = data.ProductName;
                 lbPriceDefault.Text = data.ProductDefaultPrice.ToString();

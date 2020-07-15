@@ -1,4 +1,5 @@
 ﻿using QLCH.Uc;
+using QLCH.Uc.WareHouse;
 using System;
 using System.Collections.Generic;
 using System.Linq;

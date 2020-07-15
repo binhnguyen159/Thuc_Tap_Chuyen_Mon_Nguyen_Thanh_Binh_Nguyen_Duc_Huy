@@ -105,8 +105,8 @@ namespace QLCH
             if (nv != null)
             {
                 GetID.id = nv.maNV;
-                frmFuction fuction = new frmFuction();
-                //FrmSale fuction = new FrmSale();
+                //frmFuction fuction = new frmFuction();
+                FrmSale fuction = new FrmSale();
                 this.Hide();
                 fuction.ShowDialog();
             }

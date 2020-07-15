@@ -329,9 +329,9 @@ go
 
 go
 alter proc hdx_insert(
-@maHDX nvarchar(50),@maNV nvarchar(50),@maKH nvarchar(50),@tongTien float,@trangThai nvarchar(50),@ngayBan date)
+@maHDX nvarchar(50),@maNV nvarchar(50),@maKH nvarchar(50),@tongTien float,@trangThai nvarchar(50),@ngayBan date,@giamGia int)
 as begin
-insert into hoadDonXuat values (@maHDX,@maNV,@maKH,@tongTien,@trangThai,@ngayBan)
+insert into hoadDonXuat values (@maHDX,@maNV,@maKH,@tongTien,@trangThai,@ngayBan,@giamGia)
 end
 
 go
@@ -354,10 +354,10 @@ go
 use TTCM
 
 go
-alter proc delete_cart
+alter proc delete_cart(@maGio int)
 as begin
-TRUNCATE table  CTGio
-TRUNCATE table  GioHang
+delete CTGio where CTGio.magio=@maGio
+delete GioHang where GioHang.magio=@maGio
 end
 go
 
@@ -384,16 +384,21 @@ select sanPham.maSP,sanPham.tenSP,sanPham.gia,nhomSP.tenLoai from sanPham,nhomSP
 where sanPham.maLoai=nhomSP.maLoai
 end
 go
- create proc bill_info (@maKH nvarchar(50))
+ alter proc bill_info (@maHdx nvarchar(50))
  as begin
- select hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai,hdx.maKH,hdx.maNV,
+ select hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai,hdx.maKH,hdx.maNV,hdx.giamGia,
 		kh.tenKH,kh.email,kh.diaChi,kh.sdt,
 		nv.tenNV,nv.sdt,
 		sp.tenSP,sp.thongSo,sp.gia,
 		ctHD.soLuong,ctHD.thanhTien,ctHD.maSP
  from hoadDonXuat hdx,khachHang kh,nhanVien nv,sanPham sp,chiTietHDX ctHD
  where hdx.maKH=kh.maKH and hdx.maNV=nv.maNV
-		and hdx.maHDX=ctHD.maHDX and ctHD.maSP=sp.maSP and kh.maKH=@maKH
+		and hdx.maHDX=ctHD.maHDX and ctHD.maSP=sp.maSP and hdx.maHDX=@maHdx
  end
  go
- exec  bill_info N'KH3'
+ exec  bill_info N'hdx000003'
+ go
+ create proc update_soluong(@maSP nvarchar(50),@soLuong int)
+ as begin
+ update sanPham set soLuong=@soLuong where maSP=@maSP
+ end

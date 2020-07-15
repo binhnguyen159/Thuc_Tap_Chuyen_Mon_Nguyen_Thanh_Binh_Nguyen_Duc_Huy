@@ -32,25 +32,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSale));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelShowSP = new System.Windows.Forms.Panel();
-            this.panelSubMenu = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btnSetting = new Guna.UI.WinForms.GunaButton();
             this.btnBill = new Guna.UI.WinForms.GunaButton();
             this.btnCart = new Guna.UI.WinForms.GunaButton();
             this.btnProduct = new Guna.UI.WinForms.GunaButton();
             this.btnHome = new Guna.UI.WinForms.GunaButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelShowSP = new System.Windows.Forms.Panel();
+            this.panelSubMenu = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -76,52 +76,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(177, 122);
             this.panel2.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(177, 146);
-            this.panel1.TabIndex = 0;
-            // 
-            // panelShowSP
-            // 
-            this.panelShowSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShowSP.Location = new System.Drawing.Point(177, 35);
-            this.panelShowSP.Name = "panelShowSP";
-            this.panelShowSP.Size = new System.Drawing.Size(950, 656);
-            this.panelShowSP.TabIndex = 4;
-            // 
-            // panelSubMenu
-            // 
-            this.panelSubMenu.Controls.Add(this.flowLayoutPanel1);
-            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu.Location = new System.Drawing.Point(177, 0);
-            this.panelSubMenu.Name = "panelSubMenu";
-            this.panelSubMenu.Size = new System.Drawing.Size(950, 35);
-            this.panelSubMenu.TabIndex = 3;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(950, 35);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.flowLayoutPanel1;
-            // 
-            // gunaDragControl2
-            // 
-            this.gunaDragControl2.TargetControl = this.panel1;
-            // 
-            // gunaDragControl3
-            // 
-            this.gunaDragControl3.TargetControl = this.panelShowSP;
             // 
             // gunaButton1
             // 
@@ -172,6 +126,7 @@
             this.btnSetting.Size = new System.Drawing.Size(177, 42);
             this.btnSetting.TabIndex = 5;
             this.btnSetting.Text = "Setting";
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnBill
             // 
@@ -277,6 +232,15 @@
             this.btnHome.Text = "Home";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(177, 146);
+            this.panel1.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -287,6 +251,43 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelShowSP
+            // 
+            this.panelShowSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelShowSP.Location = new System.Drawing.Point(177, 35);
+            this.panelShowSP.Name = "panelShowSP";
+            this.panelShowSP.Size = new System.Drawing.Size(950, 656);
+            this.panelShowSP.TabIndex = 4;
+            // 
+            // panelSubMenu
+            // 
+            this.panelSubMenu.Controls.Add(this.flowLayoutPanel1);
+            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenu.Location = new System.Drawing.Point(177, 0);
+            this.panelSubMenu.Name = "panelSubMenu";
+            this.panelSubMenu.Size = new System.Drawing.Size(950, 35);
+            this.panelSubMenu.TabIndex = 3;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(950, 35);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.flowLayoutPanel1;
+            // 
+            // gunaDragControl2
+            // 
+            this.gunaDragControl2.TargetControl = this.panel1;
+            // 
+            // gunaDragControl3
+            // 
+            this.gunaDragControl3.TargetControl = this.panelShowSP;
             // 
             // FrmSale
             // 
@@ -304,8 +305,8 @@
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panelSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

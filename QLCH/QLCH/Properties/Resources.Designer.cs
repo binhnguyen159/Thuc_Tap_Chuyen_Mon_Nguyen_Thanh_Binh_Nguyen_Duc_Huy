@@ -133,6 +133,16 @@ namespace QLCH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-40", resourceCulture);
@@ -146,6 +156,16 @@ namespace QLCH.Properties {
         internal static System.Drawing.Bitmap icons8_delete_60 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_find_user_male_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-find-user-male-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

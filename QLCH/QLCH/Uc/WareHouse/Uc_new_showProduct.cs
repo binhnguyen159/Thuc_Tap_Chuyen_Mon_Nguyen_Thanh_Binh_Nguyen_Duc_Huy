@@ -37,5 +37,10 @@ namespace QLCH.Uc.WareHouse
         {
 
         }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -94,10 +94,13 @@ maHDX nvarchar(50) primary key,
 maNV nvarchar(50),
 maKH nvarchar(50),
 ngayBan date default getdate(),
+giamGia int default 0,
 tongTien float,
-trangThai nvarchar(50)
+trangThai nvarchar(50),
+
 )
---alter table hoadDonXuat add ngayBan date default getdate()
+
+--alter table hoadDonXuat add giamGia int default 0
 go
 create table chiTietHDX(
 --machiTietHDX nvarchar(50) primary key,

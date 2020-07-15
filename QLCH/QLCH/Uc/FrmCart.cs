@@ -23,7 +23,7 @@ namespace QLCH.Uc
 
         private void FrmCart_Load(object sender, EventArgs e)
         {
-           
+
             panelProductList.Controls.Clear();
             foreach (var a in db.select_detailCart(UCShowProduct.tranferIDBill.cartID))
             {
@@ -70,12 +70,14 @@ namespace QLCH.Uc
             {
                 totalmoney += Convert.ToDouble(a.a);
             }
+            lbBeforeDisscount.Text = totalmoney.ToString();
+            totalmoney = totalmoney * (1 - Convert.ToInt32(numericUpDown1.Value)*0.01);
             lbTotalPrice.Text = totalmoney.ToString();
 
         }
         int stt = 0;
         string id = "";
-  
+
         private void gunaButton1_Click(object sender, EventArgs e)
         {
 
@@ -83,14 +85,13 @@ namespace QLCH.Uc
             if (hd.Count() == 0)
             {
 
-                db.hdx_insert("hdx000001", frmLogin.GetID.id, UCShowProduct.tranferIDBill.CusId, Convert.ToDouble(lbTotalPrice.Text), "Priced", DateTime.Now);
+                db.hdx_insert("hdx000001", frmLogin.GetID.id, UCShowProduct.tranferIDBill.CusId, Convert.ToDouble(lbTotalPrice.Text), "Priced", DateTime.Now,Convert.ToInt32(numericUpDown1.Value));
 
 
                 foreach (var a in db.CTGios)
                 {
                     db.cthdx_insert("hdx000001", a.masp, Convert.ToDouble(a.donGia), Convert.ToInt32(a.soluong), Convert.ToDouble(a.thanhTien));
                 }
-
 
             }
             else
@@ -110,17 +111,17 @@ namespace QLCH.Uc
                 else if (stt / 10 < 1)
                     id = "hdx00000" + stt;
 
-                db.hdx_insert(id, frmLogin.GetID.id, UCShowProduct.tranferIDBill.CusId, Convert.ToDouble(lbTotalPrice.Text), "Priced", DateTime.Now);
+                db.hdx_insert(id, frmLogin.GetID.id, UCShowProduct.tranferIDBill.CusId, Convert.ToDouble(lbTotalPrice.Text), "Priced", DateTime.Now, Convert.ToInt32(numericUpDown1.Value));
 
 
                 foreach (var a in db.CTGios)
                 {
                     db.cthdx_insert(id, a.masp, Convert.ToDouble(a.donGia), Convert.ToInt32(a.soluong), Convert.ToDouble(a.thanhTien));
                 }
-             
+
 
             }
-            db.delete_cart();
+            db.delete_cart(UCShowProduct.tranferIDBill.cartID);
             this.Close();
         }
 
@@ -129,10 +130,15 @@ namespace QLCH.Uc
             DialogResult result = MessageBox.Show("Do you want to delete this cart?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                db.delete_cart();
+                db.delete_cart(UCShowProduct.tranferIDBill.cartID);
                 //db.update_status_hoadon(UCShowProduct.tranferIDBill.maHDX, "Cancel");
                 this.Close();
             }
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            loadData_whenUpdateQuantity();
         }
     }
 

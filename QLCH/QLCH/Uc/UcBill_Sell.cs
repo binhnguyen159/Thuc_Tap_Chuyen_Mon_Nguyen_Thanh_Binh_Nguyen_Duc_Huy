@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLCH.Uc.WareHouse;
 
 namespace QLCH.Uc
 {
@@ -48,6 +49,21 @@ namespace QLCH.Uc
             txtStaffName.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
 
             txtBillPrice.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "detail")
+            {
+                Frm_Detail_Bill frm_Detail_Bill = new Frm_Detail_Bill();
+                frm_Detail_Bill.ShowDialog();
+            }
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "delete")
+            {
+                DialogResult result = MessageBox.Show("Are you sure ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    db.update_status_hoadon(hdx.maHDX, "Cancel");
+                    UcBill_Sell_Load(sender, e);
+
+                }
+            }
         }
 
         private void txtSearch_OnValueChanged(object sender, EventArgs e)
@@ -64,7 +80,7 @@ namespace QLCH.Uc
         private void gunaGradientButton3_Click(object sender, EventArgs e)
         {
             
-            FrmReportBill frmReportBill = new FrmReportBill();
+            Form_report frmReportBill = new Form_report();
             frmReportBill.Show();
         }
     }
