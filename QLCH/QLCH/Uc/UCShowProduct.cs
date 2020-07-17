@@ -163,10 +163,15 @@ namespace QLCH.Uc
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = e.RowIndex;
-            txtCusName.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
-            tranferIDBill.CusId = dataGridView2.Rows[i].Cells[0].Value.ToString();
-            panelKH.Visible = false;
+            
+            if (e.RowIndex >= 0)
+            {
+                tranferIDBill.CusId = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCusName.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+               
+                panelKH.Visible = false;
+            }
+          
         }
 
         int dem;

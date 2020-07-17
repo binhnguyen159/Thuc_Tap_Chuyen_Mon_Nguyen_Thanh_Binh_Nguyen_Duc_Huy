@@ -31,69 +31,59 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuction));
             this.pnlTab = new Guna.UI.WinForms.GunaPanel();
-            this.panelMenu = new Guna.UI.WinForms.GunaPanel();
-            this.panelSubMenu = new System.Windows.Forms.Panel();
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.pnlLogo = new Guna.UI.WinForms.GunaPanel();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnlContent = new Guna.UI.WinForms.GunaPanel();
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.lbName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.ptbBack = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnReport = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnProvider = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
+            this.btnProduct = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnStatistical = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBill = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnProducts = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnCustomer = new Guna.UI.WinForms.GunaAdvenceButton();
             this.ptbLogo = new Guna.UI.WinForms.GunaPictureBox();
+            this.btnSaleProduct = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlTab.SuspendLayout();
-            this.panelMenu.SuspendLayout();
-            this.panelSubMenu.SuspendLayout();
+            this.gunaPanel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
+            this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTab
             // 
-            this.pnlTab.Controls.Add(this.panelMenu);
+            this.pnlTab.Controls.Add(this.gunaPanel1);
             this.pnlTab.Controls.Add(this.pnlLogo);
             this.pnlTab.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTab.Location = new System.Drawing.Point(0, 0);
             this.pnlTab.Name = "pnlTab";
-            this.pnlTab.Size = new System.Drawing.Size(264, 700);
+            this.pnlTab.Size = new System.Drawing.Size(264, 707);
             this.pnlTab.TabIndex = 0;
             // 
-            // panelMenu
+            // gunaPanel1
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.White;
-            this.panelMenu.Controls.Add(this.btnReport);
-            this.panelMenu.Controls.Add(this.btnProvider);
-            this.panelMenu.Controls.Add(this.panelSubMenu);
-            this.panelMenu.Controls.Add(this.btnBill);
-            this.panelMenu.Controls.Add(this.btnProducts);
-            this.panelMenu.Controls.Add(this.btnCustomer);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMenu.Location = new System.Drawing.Point(0, 255);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(264, 445);
-            this.panelMenu.TabIndex = 1;
-            // 
-            // panelSubMenu
-            // 
-            this.panelSubMenu.Controls.Add(this.btnBuy);
-            this.panelSubMenu.Controls.Add(this.btnSell);
-            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu.Location = new System.Drawing.Point(0, 147);
-            this.panelSubMenu.Name = "panelSubMenu";
-            this.panelSubMenu.Size = new System.Drawing.Size(264, 88);
-            this.panelSubMenu.TabIndex = 0;
+            this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.btnStatistical);
+            this.gunaPanel1.Controls.Add(this.panel1);
+            this.gunaPanel1.Controls.Add(this.btnBill);
+            this.gunaPanel1.Controls.Add(this.btnSaleProduct);
+            this.gunaPanel1.Controls.Add(this.btnProduct);
+            this.gunaPanel1.Controls.Add(this.btnCustomer);
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 255);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.Size = new System.Drawing.Size(264, 452);
+            this.gunaPanel1.TabIndex = 1;
             // 
             // pnlLogo
             // 
@@ -112,9 +102,9 @@
             // 
             this.pnlContent.BackColor = System.Drawing.Color.White;
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlContent.Location = new System.Drawing.Point(264, 35);
+            this.pnlContent.Location = new System.Drawing.Point(264, 51);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(965, 665);
+            this.pnlContent.Size = new System.Drawing.Size(965, 656);
             this.pnlContent.TabIndex = 2;
             // 
             // gunaDragControl2
@@ -125,43 +115,22 @@
             // 
             this.gunaDragControl3.TargetControl = null;
             // 
-            // lbName
+            // gunaPanel2
             // 
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(961, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(138, 35);
-            this.lbName.TabIndex = 4;
-            this.lbName.Text = "label1";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLCH.Properties.Resources.icons8_administrator_male_skin_type_7_100;
-            this.pictureBox1.Location = new System.Drawing.Point(1105, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ptbExit
-            // 
-            this.ptbExit.BaseColor = System.Drawing.Color.White;
-            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
-            this.ptbExit.Location = new System.Drawing.Point(1194, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(35, 35);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbExit.TabIndex = 0;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
+            this.gunaPanel2.Controls.Add(this.ptbBack);
+            this.gunaPanel2.Controls.Add(this.ptbExit);
+            this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel2.Location = new System.Drawing.Point(264, 0);
+            this.gunaPanel2.Name = "gunaPanel2";
+            this.gunaPanel2.Size = new System.Drawing.Size(965, 35);
+            this.gunaPanel2.TabIndex = 3;
             // 
             // ptbBack
             // 
             this.ptbBack.BaseColor = System.Drawing.Color.White;
+            this.ptbBack.Dock = System.Windows.Forms.DockStyle.Right;
             this.ptbBack.Image = global::QLCH.Properties.Resources.icons8_back_48;
-            this.ptbBack.Location = new System.Drawing.Point(1149, 0);
+            this.ptbBack.Location = new System.Drawing.Point(895, 0);
             this.ptbBack.Name = "ptbBack";
             this.ptbBack.Size = new System.Drawing.Size(35, 35);
             this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,74 +138,56 @@
             this.ptbBack.TabStop = false;
             this.ptbBack.Click += new System.EventHandler(this.ptbBack_Click);
             // 
-            // btnReport
+            // ptbExit
             // 
-            this.btnReport.AnimationHoverSpeed = 0.07F;
-            this.btnReport.AnimationSpeed = 0.03F;
-            this.btnReport.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.btnReport.BorderColor = System.Drawing.Color.Black;
-            this.btnReport.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnReport.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnReport.CheckedForeColor = System.Drawing.Color.White;
-            this.btnReport.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnReport.CheckedImage")));
-            this.btnReport.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReport.FocusedColor = System.Drawing.Color.Empty;
-            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnReport.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnReport.Location = new System.Drawing.Point(0, 284);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnReport.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnReport.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnReport.OnHoverImage = null;
-            this.btnReport.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnReport.OnPressedColor = System.Drawing.Color.Black;
-            this.btnReport.Size = new System.Drawing.Size(264, 49);
-            this.btnReport.TabIndex = 7;
-            this.btnReport.Text = "Report";
-            this.btnReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ptbExit.BaseColor = System.Drawing.Color.White;
+            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
+            this.ptbExit.Location = new System.Drawing.Point(930, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(35, 35);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbExit.TabIndex = 0;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
-            // btnProvider
+            // btnProduct
             // 
-            this.btnProvider.AnimationHoverSpeed = 0.07F;
-            this.btnProvider.AnimationSpeed = 0.03F;
-            this.btnProvider.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.btnProvider.BorderColor = System.Drawing.Color.Black;
-            this.btnProvider.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnProvider.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnProvider.CheckedForeColor = System.Drawing.Color.White;
-            this.btnProvider.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnProvider.CheckedImage")));
-            this.btnProvider.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnProvider.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProvider.FocusedColor = System.Drawing.Color.Empty;
-            this.btnProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProvider.ForeColor = System.Drawing.Color.White;
-            this.btnProvider.Image = ((System.Drawing.Image)(resources.GetObject("btnProvider.Image")));
-            this.btnProvider.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnProvider.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnProvider.Location = new System.Drawing.Point(0, 235);
-            this.btnProvider.Name = "btnProvider";
-            this.btnProvider.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnProvider.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnProvider.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnProvider.OnHoverImage = null;
-            this.btnProvider.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnProvider.OnPressedColor = System.Drawing.Color.Black;
-            this.btnProvider.Size = new System.Drawing.Size(264, 49);
-            this.btnProvider.TabIndex = 8;
-            this.btnProvider.Text = "Provider";
-            this.btnProvider.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
+            this.btnProduct.AnimationHoverSpeed = 0.07F;
+            this.btnProduct.AnimationSpeed = 0.03F;
+            this.btnProduct.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnProduct.BorderColor = System.Drawing.Color.Black;
+            this.btnProduct.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnProduct.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnProduct.CheckedForeColor = System.Drawing.Color.White;
+            this.btnProduct.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnProduct.CheckedImage")));
+            this.btnProduct.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProduct.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.ForeColor = System.Drawing.Color.White;
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnProduct.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnProduct.Location = new System.Drawing.Point(0, 49);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnProduct.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProduct.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProduct.OnHoverImage = null;
+            this.btnProduct.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnProduct.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProduct.Size = new System.Drawing.Size(264, 49);
+            this.btnProduct.TabIndex = 8;
+            this.btnProduct.Text = "Product Management";
+            this.btnProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnProduct.Click += new System.EventHandler(this.btnProvider_Click);
             // 
             // btnBuy
             // 
             this.btnBuy.AnimationHoverSpeed = 0.07F;
             this.btnBuy.AnimationSpeed = 0.03F;
-            this.btnBuy.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.btnBuy.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
             this.btnBuy.BorderColor = System.Drawing.Color.Black;
             this.btnBuy.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnBuy.CheckedBorderColor = System.Drawing.Color.Black;
@@ -245,13 +196,12 @@
             this.btnBuy.CheckedLineColor = System.Drawing.Color.DimGray;
             this.btnBuy.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBuy.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuy.ForeColor = System.Drawing.Color.White;
             this.btnBuy.Image = ((System.Drawing.Image)(resources.GetObject("btnBuy.Image")));
-            this.btnBuy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBuy.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBuy.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnBuy.Location = new System.Drawing.Point(0, 45);
+            this.btnBuy.Location = new System.Drawing.Point(10, 0);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBuy.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -259,17 +209,18 @@
             this.btnBuy.OnHoverImage = null;
             this.btnBuy.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnBuy.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuy.Size = new System.Drawing.Size(264, 46);
+            this.btnBuy.Size = new System.Drawing.Size(254, 49);
             this.btnBuy.TabIndex = 5;
             this.btnBuy.Text = "Buy";
             this.btnBuy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBuy.Visible = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // btnSell
             // 
             this.btnSell.AnimationHoverSpeed = 0.07F;
             this.btnSell.AnimationSpeed = 0.03F;
-            this.btnSell.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.btnSell.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
             this.btnSell.BorderColor = System.Drawing.Color.Black;
             this.btnSell.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnSell.CheckedBorderColor = System.Drawing.Color.Black;
@@ -278,13 +229,12 @@
             this.btnSell.CheckedLineColor = System.Drawing.Color.DimGray;
             this.btnSell.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSell.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.ForeColor = System.Drawing.Color.White;
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
-            this.btnSell.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSell.ImageSize = new System.Drawing.Size(20, 20);
             this.btnSell.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSell.Location = new System.Drawing.Point(0, 0);
+            this.btnSell.Location = new System.Drawing.Point(10, 49);
             this.btnSell.Name = "btnSell";
             this.btnSell.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSell.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -292,17 +242,50 @@
             this.btnSell.OnHoverImage = null;
             this.btnSell.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnSell.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSell.Size = new System.Drawing.Size(264, 45);
+            this.btnSell.Size = new System.Drawing.Size(254, 49);
             this.btnSell.TabIndex = 6;
             this.btnSell.Text = "Sell";
             this.btnSell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSell.Visible = false;
+            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
+            // 
+            // btnStatistical
+            // 
+            this.btnStatistical.AnimationHoverSpeed = 0.07F;
+            this.btnStatistical.AnimationSpeed = 0.03F;
+            this.btnStatistical.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnStatistical.BorderColor = System.Drawing.Color.Black;
+            this.btnStatistical.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnStatistical.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnStatistical.CheckedForeColor = System.Drawing.Color.White;
+            this.btnStatistical.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnStatistical.CheckedImage")));
+            this.btnStatistical.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnStatistical.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStatistical.FocusedColor = System.Drawing.Color.Empty;
+            this.btnStatistical.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistical.ForeColor = System.Drawing.Color.White;
+            this.btnStatistical.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical.Image")));
+            this.btnStatistical.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnStatistical.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnStatistical.Location = new System.Drawing.Point(0, 292);
+            this.btnStatistical.Name = "btnStatistical";
+            this.btnStatistical.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnStatistical.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnStatistical.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnStatistical.OnHoverImage = null;
+            this.btnStatistical.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnStatistical.OnPressedColor = System.Drawing.Color.Black;
+            this.btnStatistical.Size = new System.Drawing.Size(264, 49);
+            this.btnStatistical.TabIndex = 7;
+            this.btnStatistical.Text = "Statistical";
+            this.btnStatistical.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnStatistical.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnBill
             // 
             this.btnBill.AnimationHoverSpeed = 0.07F;
             this.btnBill.AnimationSpeed = 0.03F;
-            this.btnBill.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.btnBill.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
             this.btnBill.BorderColor = System.Drawing.Color.Black;
             this.btnBill.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnBill.CheckedBorderColor = System.Drawing.Color.Black;
@@ -313,10 +296,10 @@
             this.btnBill.FocusedColor = System.Drawing.Color.Empty;
             this.btnBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.ForeColor = System.Drawing.Color.White;
-            this.btnBill.Image = global::QLCH.Properties.Resources.menu;
+            this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
             this.btnBill.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBill.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnBill.Location = new System.Drawing.Point(0, 98);
+            this.btnBill.Location = new System.Drawing.Point(0, 147);
             this.btnBill.Name = "btnBill";
             this.btnBill.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBill.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -330,43 +313,11 @@
             this.btnBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
-            // btnProducts
-            // 
-            this.btnProducts.AnimationHoverSpeed = 0.07F;
-            this.btnProducts.AnimationSpeed = 0.03F;
-            this.btnProducts.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.btnProducts.BorderColor = System.Drawing.Color.Black;
-            this.btnProducts.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnProducts.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnProducts.CheckedForeColor = System.Drawing.Color.White;
-            this.btnProducts.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnProducts.CheckedImage")));
-            this.btnProducts.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProducts.FocusedColor = System.Drawing.Color.Empty;
-            this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducts.ForeColor = System.Drawing.Color.White;
-            this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
-            this.btnProducts.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnProducts.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnProducts.Location = new System.Drawing.Point(0, 49);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnProducts.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnProducts.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnProducts.OnHoverImage = null;
-            this.btnProducts.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnProducts.OnPressedColor = System.Drawing.Color.Black;
-            this.btnProducts.Size = new System.Drawing.Size(264, 49);
-            this.btnProducts.TabIndex = 3;
-            this.btnProducts.Text = "Products";
-            this.btnProducts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
-            // 
             // btnCustomer
             // 
             this.btnCustomer.AnimationHoverSpeed = 0.07F;
             this.btnCustomer.AnimationSpeed = 0.03F;
-            this.btnCustomer.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.btnCustomer.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
             this.btnCustomer.BorderColor = System.Drawing.Color.Black;
             this.btnCustomer.CheckedBaseColor = System.Drawing.Color.Gray;
             this.btnCustomer.CheckedBorderColor = System.Drawing.Color.Black;
@@ -406,17 +357,65 @@
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
             // 
+            // btnSaleProduct
+            // 
+            this.btnSaleProduct.AnimationHoverSpeed = 0.07F;
+            this.btnSaleProduct.AnimationSpeed = 0.03F;
+            this.btnSaleProduct.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(154)))), ((int)(((byte)(224)))));
+            this.btnSaleProduct.BorderColor = System.Drawing.Color.Black;
+            this.btnSaleProduct.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnSaleProduct.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnSaleProduct.CheckedForeColor = System.Drawing.Color.White;
+            this.btnSaleProduct.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSaleProduct.CheckedImage")));
+            this.btnSaleProduct.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnSaleProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSaleProduct.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSaleProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleProduct.ForeColor = System.Drawing.Color.White;
+            this.btnSaleProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnSaleProduct.Image")));
+            this.btnSaleProduct.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSaleProduct.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnSaleProduct.Location = new System.Drawing.Point(0, 98);
+            this.btnSaleProduct.Name = "btnSaleProduct";
+            this.btnSaleProduct.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSaleProduct.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSaleProduct.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSaleProduct.OnHoverImage = null;
+            this.btnSaleProduct.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnSaleProduct.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSaleProduct.Size = new System.Drawing.Size(264, 49);
+            this.btnSaleProduct.TabIndex = 9;
+            this.btnSaleProduct.Text = "Sale Product";
+            this.btnSaleProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSaleProduct.Click += new System.EventHandler(this.btnSaleProduct_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSell);
+            this.panel1.Controls.Add(this.btnBuy);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 196);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(264, 96);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 96);
+            this.panel2.TabIndex = 0;
+            // 
             // frmFuction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1229, 700);
-            this.Controls.Add(this.lbName);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ptbExit);
+            this.ClientSize = new System.Drawing.Size(1229, 707);
+            this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.pnlContent);
-            this.Controls.Add(this.ptbBack);
             this.Controls.Add(this.pnlTab);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFuction";
@@ -424,13 +423,13 @@
             this.Text = "frmFuction";
             this.Load += new System.EventHandler(this.frmFuction_Load);
             this.pnlTab.ResumeLayout(false);
-            this.panelMenu.ResumeLayout(false);
-            this.panelSubMenu.ResumeLayout(false);
+            this.gunaPanel1.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
+            this.gunaPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -446,16 +445,16 @@
         private Guna.UI.WinForms.GunaDragControl gunaDragControl3;
         private Guna.UI.WinForms.GunaPanel pnlLogo;
         private Guna.UI.WinForms.GunaPictureBox ptbLogo;
-        private Guna.UI.WinForms.GunaPanel panelMenu;
+        private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaAdvenceButton btnBuy;
-        private Guna.UI.WinForms.GunaAdvenceButton btnReport;
+        private Guna.UI.WinForms.GunaAdvenceButton btnStatistical;
         private Guna.UI.WinForms.GunaAdvenceButton btnSell;
         private Guna.UI.WinForms.GunaAdvenceButton btnBill;
-        private Guna.UI.WinForms.GunaAdvenceButton btnProducts;
         private Guna.UI.WinForms.GunaAdvenceButton btnCustomer;
-        private Guna.UI.WinForms.GunaAdvenceButton btnProvider;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Panel panelSubMenu;
+        private Guna.UI.WinForms.GunaAdvenceButton btnProduct;
+        private Guna.UI.WinForms.GunaPanel gunaPanel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI.WinForms.GunaAdvenceButton btnSaleProduct;
     }
 }

@@ -171,15 +171,6 @@
     <Parameter Name="pass" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.updateSP" Method="updateSP">
-    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="gia" Type="System.Double" DbType="Float" />
-    <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
-    <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.ACC_Del" Method="ACC_Del">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="ACC_DelResult">
@@ -230,6 +221,30 @@
     <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.bill_info" Method="bill_info">
+    <Parameter Name="maHdx" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="bill_infoResult">
+      <Column Name="maHDX" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="giamGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.bill_search" Method="bill_search">
     <Parameter Name="a" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="bill_searchResult">
@@ -244,12 +259,46 @@
       <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.CTHDN_Del" Method="CTHDN_Del">
+    <Parameter Name="mahd" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="masp" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CTHDN_Ins" Method="CTHDN_Ins">
+    <Parameter Name="mahd" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="masp" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gia" Type="System.Double" DbType="Float" />
+    <Parameter Name="sl" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ttien" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CTHDN_Sel" Method="CTHDN_Sel">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="CTHDN_SelResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donGia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CTHDN_Up" Method="CTHDN_Up">
+    <Parameter Name="mahd" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="masp" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gia" Type="System.Double" DbType="Float" />
+    <Parameter Name="sl" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.cthdx_insert" Method="cthdx_insert">
     <Parameter Name="maHDX" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="donGia" Type="System.Double" DbType="Float" />
     <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Parameter Name="thanhTien" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_cart" Method="delete_cart">
+    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.delete_CTcart" Method="delete_CTcart">
@@ -260,6 +309,62 @@
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Hang_in_Group" Method="Hang_in_Group">
+    <Parameter Name="loai" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="Hang_in_GroupResult">
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HDN_Del" Method="HDN_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HDN_Ins" Method="HDN_Ins">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="manv" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mancc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngNhap" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="tTien" Type="System.Double" DbType="Float" />
+    <Parameter Name="tThai" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HDN_Sel" Method="HDN_Sel">
+    <ElementType Name="HDN_SelResult">
+      <Column Name="maHDN" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ngayNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tenNCC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HDN_Sel_Date" Method="HDN_Sel_Date">
+    <Parameter Name="d1" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="d2" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="HDN_Sel_DateResult">
+      <Column Name="maHDN" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ngayNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tenNCC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HDN_Up" Method="HDN_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tThai" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.hdx_insert" Method="hdx_insert">
+    <Parameter Name="maHDX" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maNV" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maKH" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tongTien" Type="System.Double" DbType="Float" />
+    <Parameter Name="trangThai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayBan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="giamGia" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.hdx_select" Method="hdx_select">
     <ElementType Name="hdx_selectResult">
       <Column Name="maHDX" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
@@ -268,6 +373,7 @@
       <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="giamGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="maKH1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -287,6 +393,34 @@
       <Column Name="maCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tendn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.HSP_Del" Method="HSP_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HSP_Find" Method="HSP_Find">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="HSP_FindResult">
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HSP_Ins" Method="HSP_Ins">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HSP_Sel" Method="HSP_Sel">
+    <ElementType Name="HSP_SelResult">
+      <Column Name="maHang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HSP_Up" Method="HSP_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.insert_cart" Method="insert_cart">
     <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
@@ -401,6 +535,34 @@
     <Parameter Name="dt" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.NSP_Add" Method="NSP_Add">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NSP_Del" Method="NSP_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NSP_Find" Method="NSP_Find">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="NSP_FindResult">
+      <Column Name="maLoai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NSP_Sel" Method="NSP_Sel">
+    <ElementType Name="NSP_SelResult">
+      <Column Name="maLoai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NSP_Up" Method="NSP_Up">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.NV_Del" Method="NV_Del">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
@@ -452,6 +614,14 @@
     <Parameter Name="ng" Type="System.DateTime" DbType="Date" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Product_select" Method="Product_select">
+    <ElementType Name="Product_selectResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.select_cart" Method="select_cart">
     <Parameter Name="maKH" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="select_cartResult">
@@ -497,8 +667,154 @@
       <Column Name="a" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.SP_Find_Data" Method="SP_Find_Data">
+    <Parameter Name="data" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Find_DataResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page" Method="SP_Page">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_PageResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page_Filter_Amount" Method="SP_Page_Filter_Amount">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_Page_Filter_AmountResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page_Filter_NSP_Amount" Method="SP_Page_Filter_NSP_Amount">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten1" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Page_Filter_NSP_AmountResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page_Filter_NSP_HSP_Amount" Method="SP_Page_Filter_NSP_HSP_Amount">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten2" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Page_Filter_NSP_HSP_AmountResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page_Find_NSP" Method="SP_Page_Find_NSP">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Page_Find_NSPResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page_Find_NSP_HSP" Method="SP_Page_Find_NSP_HSP">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten2" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Page_Find_NSP_HSPResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page_Find_NSP_HSP_Name" Method="SP_Page_Find_NSP_HSP_Name">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Page_Find_NSP_HSP_NameResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Page_Find_NSP_Name" Method="SP_Page_Find_NSP_Name">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_Page_Find_NSP_NameResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ThemTongTienXuat" Method="ThemTongTienXuat">
     <Parameter Name="MaHDX" Parameter="maHDX" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.thongKeDoanhThu" Method="thongKeDoanhThu">
+    <ElementType Name="thongKeDoanhThuResult">
+      <Column Name="thang" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="tien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.update_soluong" Method="update_soluong">
+    <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.update_SoLuongGio" Method="update_SoLuongGio">
@@ -512,60 +828,38 @@
     <Parameter Name="status" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Product_select" Method="Product_select">
-    <ElementType Name="Product_selectResult">
+  <Function Name="dbo.SP_Find" Method="SP_Find">
+    <Parameter Name="from" Type="System.Int32" DbType="Int" />
+    <Parameter Name="to" Type="System.Int32" DbType="Int" />
+    <Parameter Name="data" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_FindResult">
       <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.bill_info" Method="bill_info">
-    <Parameter Name="maHdx" Type="System.String" DbType="NVarChar(50)" />
-    <ElementType Name="bill_infoResult">
-      <Column Name="maHDX" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sdt1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
       <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.delete_cart" Method="delete_cart">
-    <Parameter Name="maGio" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.update_soluong" Method="update_soluong">
+  <Function Name="dbo.updateSP" Method="updateSP">
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gia" Type="System.Double" DbType="Float" />
+    <Parameter Name="anh" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="ts" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="maLoai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.hdx_insert" Method="hdx_insert">
-    <Parameter Name="maHDX" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maNV" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maKH" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tongTien" Type="System.Double" DbType="Float" />
-    <Parameter Name="trangThai" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="ngayBan" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="giamGia" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.thongKeDoanhThu" Method="thongKeDoanhThu">
-    <ElementType Name="thongKeDoanhThuResult">
-      <Column Name="thang" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
-      <Column Name="tien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+  <Function Name="dbo.find_most_product_sale" Method="find_most_product_sale">
+    <Parameter Name="startDay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="endDay" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="find_most_product_saleResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="a" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

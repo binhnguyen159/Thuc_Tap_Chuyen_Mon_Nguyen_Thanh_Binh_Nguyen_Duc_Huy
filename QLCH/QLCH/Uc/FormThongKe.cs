@@ -21,9 +21,8 @@ namespace QLCH.Uc
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void FormThongKe_Load(object sender, EventArgs e)
         {
-
             Decimal total = 0;
-            foreach(var a in db.thongKeDoanhThu())
+            foreach (var a in db.thongKeDoanhThu())
             {
                 total += Convert.ToDecimal(a.tien);
             }
@@ -34,8 +33,12 @@ namespace QLCH.Uc
             chartControl1.SeriesTemplate.ArgumentDataMember = "thang";
             chartControl1.SeriesTemplate.ValueDataMembers.AddRange(new string[] { "tien" });
             chartControl1.SeriesTemplate.View = new StackedBarSeriesView();
+        }
 
-
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = db.find_most_product_sale(dateStart.Value, dateEnd.Value);
 
         }
     }

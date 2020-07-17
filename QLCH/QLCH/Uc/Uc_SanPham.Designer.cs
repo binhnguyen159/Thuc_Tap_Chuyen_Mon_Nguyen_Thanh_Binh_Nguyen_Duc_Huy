@@ -29,25 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_SanPham));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_SanPham));
             this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaGroupBox2 = new Guna.UI.WinForms.GunaGroupBox();
-            this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
-            this.cbbTimKiem = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtGia = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbbBrand = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbbType = new System.Windows.Forms.ComboBox();
-            this.txtTenSP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtMaSP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dgvProduct = new Guna.UI.WinForms.GunaDataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,230 +42,42 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ct = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.btnRefresh = new Guna.UI.WinForms.GunaButton();
-            this.btnDelete = new Guna.UI.WinForms.GunaButton();
-            this.btnSelect = new DevExpress.XtraEditors.SimpleButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lbFirst = new System.Windows.Forms.Label();
+            this.lbPrevious = new System.Windows.Forms.Label();
+            this.lbPageMax = new System.Windows.Forms.Label();
+            this.lb = new System.Windows.Forms.Label();
+            this.lbNext = new System.Windows.Forms.Label();
+            this.txtPage = new System.Windows.Forms.TextBox();
+            this.cbbPage = new System.Windows.Forms.ComboBox();
+            this.lbLast = new System.Windows.Forms.Label();
+            this.txtData = new System.Windows.Forms.TextBox();
+            this.fpnlGroupSP = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpnlBranfOfGroup = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbbTTSP = new System.Windows.Forms.ComboBox();
+            this.btnBill_Import = new Guna.UI.WinForms.GunaButton();
+            this.btnFind = new Guna.UI.WinForms.GunaButton();
+            this.btnFilter = new Guna.UI.WinForms.GunaButton();
             this.nhomSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSave = new Guna.UI.WinForms.GunaButton();
-            this.btnCancel = new Guna.UI.WinForms.GunaButton();
-            this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.panelSave_Delete = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.btnUpdate = new Guna.UI.WinForms.GunaButton();
-            this.gunaGroupBox2.SuspendLayout();
-            this.gunaElipsePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.btnCanCle = new Guna.UI.WinForms.GunaButton();
+            this.btnSeeBill = new Guna.UI.WinForms.GunaButton();
+            this.btnAddProduct = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomSPBindingSource)).BeginInit();
-            this.panelSave_Delete.SuspendLayout();
-            this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipse3
             // 
             this.gunaElipse3.Radius = 6;
-            this.gunaElipse3.TargetControl = this.gunaGroupBox2;
-            // 
-            // gunaGroupBox2
-            // 
-            this.gunaGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaGroupBox2.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox2.Controls.Add(this.btnTimKiem);
-            this.gunaGroupBox2.Controls.Add(this.cbbTimKiem);
-            this.gunaGroupBox2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.gunaGroupBox2.Location = new System.Drawing.Point(12, 11);
-            this.gunaGroupBox2.Name = "gunaGroupBox2";
-            this.gunaGroupBox2.Size = new System.Drawing.Size(317, 113);
-            this.gunaGroupBox2.TabIndex = 37;
-            this.gunaGroupBox2.Text = "Tìm kiếm";
-            this.gunaGroupBox2.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.AnimationHoverSpeed = 0.07F;
-            this.btnTimKiem.AnimationSpeed = 0.03F;
-            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btnTimKiem.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.BorderColor = System.Drawing.Color.Black;
-            this.btnTimKiem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTimKiem.Location = new System.Drawing.Point(119, 74);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnTimKiem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.OnHoverImage = null;
-            this.btnTimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Radius = 7;
-            this.btnTimKiem.Size = new System.Drawing.Size(82, 30);
-            this.btnTimKiem.TabIndex = 8;
-            this.btnTimKiem.Text = "Save";
-            // 
-            // cbbTimKiem
-            // 
-            this.cbbTimKiem.BackColor = System.Drawing.Color.Transparent;
-            this.cbbTimKiem.BaseColor = System.Drawing.Color.White;
-            this.cbbTimKiem.BorderColor = System.Drawing.Color.Silver;
-            this.cbbTimKiem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTimKiem.FocusedColor = System.Drawing.Color.Empty;
-            this.cbbTimKiem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Location = new System.Drawing.Point(30, 45);
-            this.cbbTimKiem.Name = "cbbTimKiem";
-            this.cbbTimKiem.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbbTimKiem.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbbTimKiem.Size = new System.Drawing.Size(255, 23);
-            this.cbbTimKiem.TabIndex = 0;
-            // 
-            // gunaElipsePanel1
-            // 
-            this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel1.Controls.Add(this.pictureBox1);
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(350, 11);
-            this.gunaElipsePanel1.Name = "gunaElipsePanel1";
-            this.gunaElipsePanel1.Radius = 7;
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(322, 306);
-            this.gunaElipsePanel1.TabIndex = 33;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(322, 306);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.gunaElipse3.TargetControl = this;
             // 
             // gunaElipse2
             // 
             this.gunaElipse2.Radius = 6;
-            this.gunaElipse2.TargetControl = this.panel2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtGia);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.cbbBrand);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.cbbType);
-            this.panel2.Controls.Add(this.txtTenSP);
-            this.panel2.Controls.Add(this.txtMaSP);
-            this.panel2.Location = new System.Drawing.Point(12, 130);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 219);
-            this.panel2.TabIndex = 32;
-            // 
-            // txtGia
-            // 
-            this.txtGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtGia.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtGia.HintForeColor = System.Drawing.Color.Empty;
-            this.txtGia.HintText = "Price";
-            this.txtGia.isPassword = false;
-            this.txtGia.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtGia.LineIdleColor = System.Drawing.Color.Black;
-            this.txtGia.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtGia.LineThickness = 2;
-            this.txtGia.Location = new System.Drawing.Point(0, 78);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(317, 39);
-            this.txtGia.TabIndex = 4;
-            this.txtGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Brand:";
-            // 
-            // cbbBrand
-            // 
-            this.cbbBrand.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbBrand.FormattingEnabled = true;
-            this.cbbBrand.Location = new System.Drawing.Point(153, 171);
-            this.cbbBrand.Name = "cbbBrand";
-            this.cbbBrand.Size = new System.Drawing.Size(147, 23);
-            this.cbbBrand.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Product type:";
-            // 
-            // cbbType
-            // 
-            this.cbbType.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbType.FormattingEnabled = true;
-            this.cbbType.Location = new System.Drawing.Point(153, 130);
-            this.cbbType.Name = "cbbType";
-            this.cbbType.Size = new System.Drawing.Size(147, 23);
-            this.cbbType.TabIndex = 1;
-            // 
-            // txtTenSP
-            // 
-            this.txtTenSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenSP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTenSP.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTenSP.HintForeColor = System.Drawing.Color.Empty;
-            this.txtTenSP.HintText = "Product \'s name";
-            this.txtTenSP.isPassword = false;
-            this.txtTenSP.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtTenSP.LineIdleColor = System.Drawing.Color.Black;
-            this.txtTenSP.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtTenSP.LineThickness = 2;
-            this.txtTenSP.Location = new System.Drawing.Point(0, 39);
-            this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(317, 39);
-            this.txtTenSP.TabIndex = 0;
-            this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaSP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtMaSP.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaSP.HintForeColor = System.Drawing.Color.Empty;
-            this.txtMaSP.HintText = "ID";
-            this.txtMaSP.isPassword = false;
-            this.txtMaSP.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtMaSP.LineIdleColor = System.Drawing.Color.Black;
-            this.txtMaSP.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtMaSP.LineThickness = 2;
-            this.txtMaSP.Location = new System.Drawing.Point(0, 0);
-            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(317, 39);
-            this.txtMaSP.TabIndex = 0;
-            this.txtMaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gunaElipse2.TargetControl = this;
             // 
             // dgvProduct
             // 
@@ -309,6 +108,7 @@
             this.Column4,
             this.nsp,
             this.Column1,
+            this.Column6,
             this.ct});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
@@ -320,12 +120,12 @@
             this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvProduct.Location = new System.Drawing.Point(12, 371);
+            this.dgvProduct.Location = new System.Drawing.Point(3, 325);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(941, 275);
+            this.dgvProduct.Size = new System.Drawing.Size(959, 265);
             this.dgvProduct.TabIndex = 34;
             this.dgvProduct.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Cyan;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
@@ -350,6 +150,7 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
             // Column5
             // 
@@ -395,14 +196,24 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Update";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column6.Text = "Choose";
+            this.Column6.UseColumnTextForButtonValue = true;
+            // 
             // ct
             // 
-            this.ct.HeaderText = "Detail";
+            this.ct.HeaderText = "Import";
             this.ct.Name = "ct";
             this.ct.ReadOnly = true;
             this.ct.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ct.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ct.Text = "More";
+            this.ct.Text = "Choose";
             this.ct.UseColumnTextForButtonValue = true;
             // 
             // gunaElipse1
@@ -410,274 +221,349 @@
             this.gunaElipse1.Radius = 7;
             this.gunaElipse1.TargetControl = this;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AnimationHoverSpeed = 0.07F;
-            this.btnRefresh.AnimationSpeed = 0.03F;
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnRefresh.BorderColor = System.Drawing.Color.Black;
-            this.btnRefresh.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRefresh.Location = new System.Drawing.Point(127, 45);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnRefresh.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRefresh.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRefresh.OnHoverImage = null;
-            this.btnRefresh.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRefresh.Radius = 7;
-            this.btnRefresh.Size = new System.Drawing.Size(90, 30);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AnimationHoverSpeed = 0.07F;
-            this.btnDelete.AnimationSpeed = 0.03F;
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete.Location = new System.Drawing.Point(127, 93);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDelete.OnHoverImage = null;
-            this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDelete.Radius = 7;
-            this.btnDelete.Size = new System.Drawing.Size(90, 30);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelect.Appearance.Options.UseFont = true;
-            this.btnSelect.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.ImageOptions.Image")));
-            this.btnSelect.Location = new System.Drawing.Point(442, 323);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnSelect.Size = new System.Drawing.Size(127, 42);
-            this.btnSelect.TabIndex = 36;
-            this.btnSelect.Text = "Select picture";
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // lbFirst
+            // 
+            this.lbFirst.AutoSize = true;
+            this.lbFirst.Location = new System.Drawing.Point(286, 599);
+            this.lbFirst.Name = "lbFirst";
+            this.lbFirst.Size = new System.Drawing.Size(31, 15);
+            this.lbFirst.TabIndex = 39;
+            this.lbFirst.Text = "First";
+            this.lbFirst.Click += new System.EventHandler(this.lbFirst_Click);
+            // 
+            // lbPrevious
+            // 
+            this.lbPrevious.AutoSize = true;
+            this.lbPrevious.Location = new System.Drawing.Point(352, 599);
+            this.lbPrevious.Name = "lbPrevious";
+            this.lbPrevious.Size = new System.Drawing.Size(54, 15);
+            this.lbPrevious.TabIndex = 39;
+            this.lbPrevious.Text = "Previous";
+            this.lbPrevious.Click += new System.EventHandler(this.lbPrevious_Click);
+            // 
+            // lbPageMax
+            // 
+            this.lbPageMax.AutoSize = true;
+            this.lbPageMax.Location = new System.Drawing.Point(493, 599);
+            this.lbPageMax.Name = "lbPageMax";
+            this.lbPageMax.Size = new System.Drawing.Size(17, 15);
+            this.lbPageMax.TabIndex = 39;
+            this.lbPageMax.Text = "/1";
+            // 
+            // lb
+            // 
+            this.lb.AutoSize = true;
+            this.lb.Location = new System.Drawing.Point(801, 599);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(77, 15);
+            this.lb.TabIndex = 39;
+            this.lb.Text = "Row number:";
+            // 
+            // lbNext
+            // 
+            this.lbNext.AutoSize = true;
+            this.lbNext.Location = new System.Drawing.Point(561, 599);
+            this.lbNext.Name = "lbNext";
+            this.lbNext.Size = new System.Drawing.Size(31, 15);
+            this.lbNext.TabIndex = 39;
+            this.lbNext.Text = "Next";
+            this.lbNext.Click += new System.EventHandler(this.lbNext_Click);
+            // 
+            // txtPage
+            // 
+            this.txtPage.Location = new System.Drawing.Point(437, 596);
+            this.txtPage.Name = "txtPage";
+            this.txtPage.Size = new System.Drawing.Size(50, 22);
+            this.txtPage.TabIndex = 41;
+            this.txtPage.Text = "1";
+            this.txtPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPage.TextChanged += new System.EventHandler(this.txtPage_TextChanged);
+            // 
+            // cbbPage
+            // 
+            this.cbbPage.FormattingEnabled = true;
+            this.cbbPage.Items.AddRange(new object[] {
+            "15",
+            "25",
+            "50",
+            "100",
+            "ALL"});
+            this.cbbPage.Location = new System.Drawing.Point(886, 596);
+            this.cbbPage.Name = "cbbPage";
+            this.cbbPage.Size = new System.Drawing.Size(61, 23);
+            this.cbbPage.TabIndex = 42;
+            this.cbbPage.SelectedIndexChanged += new System.EventHandler(this.cbbPage_SelectedIndexChanged);
+            // 
+            // lbLast
+            // 
+            this.lbLast.AutoSize = true;
+            this.lbLast.Location = new System.Drawing.Point(625, 599);
+            this.lbLast.Name = "lbLast";
+            this.lbLast.Size = new System.Drawing.Size(30, 15);
+            this.lbLast.TabIndex = 39;
+            this.lbLast.Text = "Last";
+            this.lbLast.Click += new System.EventHandler(this.lbLast_Click);
+            // 
+            // txtData
+            // 
+            this.txtData.Location = new System.Drawing.Point(222, 85);
+            this.txtData.Multiline = true;
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(447, 33);
+            this.txtData.TabIndex = 43;
+            // 
+            // fpnlGroupSP
+            // 
+            this.fpnlGroupSP.Location = new System.Drawing.Point(0, 0);
+            this.fpnlGroupSP.Name = "fpnlGroupSP";
+            this.fpnlGroupSP.Size = new System.Drawing.Size(965, 36);
+            this.fpnlGroupSP.TabIndex = 44;
+            // 
+            // fpnlBranfOfGroup
+            // 
+            this.fpnlBranfOfGroup.AutoScroll = true;
+            this.fpnlBranfOfGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.fpnlBranfOfGroup.Location = new System.Drawing.Point(0, 42);
+            this.fpnlBranfOfGroup.Name = "fpnlBranfOfGroup";
+            this.fpnlBranfOfGroup.Size = new System.Drawing.Size(529, 36);
+            this.fpnlBranfOfGroup.TabIndex = 45;
+            // 
+            // cbbTTSP
+            // 
+            this.cbbTTSP.FormattingEnabled = true;
+            this.cbbTTSP.Items.AddRange(new object[] {
+            "Sắp hết"});
+            this.cbbTTSP.Location = new System.Drawing.Point(298, 185);
+            this.cbbTTSP.Name = "cbbTTSP";
+            this.cbbTTSP.Size = new System.Drawing.Size(260, 23);
+            this.cbbTTSP.TabIndex = 46;
+            // 
+            // btnBill_Import
+            // 
+            this.btnBill_Import.AnimationHoverSpeed = 0.07F;
+            this.btnBill_Import.AnimationSpeed = 0.03F;
+            this.btnBill_Import.BackColor = System.Drawing.Color.Transparent;
+            this.btnBill_Import.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnBill_Import.BorderColor = System.Drawing.Color.Black;
+            this.btnBill_Import.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBill_Import.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBill_Import.ForeColor = System.Drawing.Color.White;
+            this.btnBill_Import.Image = ((System.Drawing.Image)(resources.GetObject("btnBill_Import.Image")));
+            this.btnBill_Import.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBill_Import.Location = new System.Drawing.Point(258, 289);
+            this.btnBill_Import.Name = "btnBill_Import";
+            this.btnBill_Import.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnBill_Import.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnBill_Import.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBill_Import.OnHoverImage = null;
+            this.btnBill_Import.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBill_Import.Radius = 7;
+            this.btnBill_Import.Size = new System.Drawing.Size(152, 30);
+            this.btnBill_Import.TabIndex = 0;
+            this.btnBill_Import.Text = "Create Import Bill";
+            this.btnBill_Import.Click += new System.EventHandler(this.btnBill_Import_Click);
+            // 
+            // btnFind
+            // 
+            this.btnFind.AnimationHoverSpeed = 0.07F;
+            this.btnFind.AnimationSpeed = 0.03F;
+            this.btnFind.BackColor = System.Drawing.Color.Transparent;
+            this.btnFind.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFind.BorderColor = System.Drawing.Color.Black;
+            this.btnFind.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
+            this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFind.Location = new System.Drawing.Point(397, 124);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFind.OnHoverImage = null;
+            this.btnFind.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFind.Radius = 7;
+            this.btnFind.Size = new System.Drawing.Size(90, 38);
+            this.btnFind.TabIndex = 3;
+            this.btnFind.Text = "Find";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.AnimationHoverSpeed = 0.07F;
+            this.btnFilter.AnimationSpeed = 0.03F;
+            this.btnFilter.BackColor = System.Drawing.Color.Transparent;
+            this.btnFilter.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFilter.BorderColor = System.Drawing.Color.Black;
+            this.btnFilter.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFilter.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFilter.Location = new System.Drawing.Point(397, 213);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnFilter.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFilter.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFilter.OnHoverImage = null;
+            this.btnFilter.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFilter.Radius = 7;
+            this.btnFilter.Size = new System.Drawing.Size(90, 30);
+            this.btnFilter.TabIndex = 3;
+            this.btnFilter.Text = "Filter";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // nhomSPBindingSource
             // 
             this.nhomSPBindingSource.DataMember = "nhomSP";
             // 
-            // btnSave
+            // btnCanCle
             // 
-            this.btnSave.AnimationHoverSpeed = 0.07F;
-            this.btnSave.AnimationSpeed = 0.03F;
-            this.btnSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnSave.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnSave.BorderColor = System.Drawing.Color.Black;
-            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(27, 18);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSave.OnHoverImage = null;
-            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSave.Radius = 7;
-            this.btnSave.Size = new System.Drawing.Size(90, 30);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnCanCle.AnimationHoverSpeed = 0.07F;
+            this.btnCanCle.AnimationSpeed = 0.03F;
+            this.btnCanCle.BackColor = System.Drawing.Color.Transparent;
+            this.btnCanCle.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnCanCle.BorderColor = System.Drawing.Color.Black;
+            this.btnCanCle.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCanCle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCanCle.ForeColor = System.Drawing.Color.White;
+            this.btnCanCle.Image = ((System.Drawing.Image)(resources.GetObject("btnCanCle.Image")));
+            this.btnCanCle.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCanCle.Location = new System.Drawing.Point(484, 289);
+            this.btnCanCle.Name = "btnCanCle";
+            this.btnCanCle.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCanCle.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCanCle.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCanCle.OnHoverImage = null;
+            this.btnCanCle.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCanCle.Radius = 7;
+            this.btnCanCle.Size = new System.Drawing.Size(90, 30);
+            this.btnCanCle.TabIndex = 3;
+            this.btnCanCle.Text = "Cancel";
+            this.btnCanCle.Click += new System.EventHandler(this.btnCanCle_Click);
             // 
-            // btnCancel
+            // btnSeeBill
             // 
-            this.btnCancel.AnimationHoverSpeed = 0.07F;
-            this.btnCancel.AnimationSpeed = 0.03F;
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnCancel.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancel.Location = new System.Drawing.Point(127, 18);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCancel.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCancel.OnHoverImage = null;
-            this.btnCancel.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCancel.Radius = 7;
-            this.btnCancel.Size = new System.Drawing.Size(90, 30);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnSeeBill.AnimationHoverSpeed = 0.07F;
+            this.btnSeeBill.AnimationSpeed = 0.03F;
+            this.btnSeeBill.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeeBill.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnSeeBill.BorderColor = System.Drawing.Color.Black;
+            this.btnSeeBill.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSeeBill.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeeBill.ForeColor = System.Drawing.Color.White;
+            this.btnSeeBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSeeBill.Image")));
+            this.btnSeeBill.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSeeBill.Location = new System.Drawing.Point(653, 289);
+            this.btnSeeBill.Name = "btnSeeBill";
+            this.btnSeeBill.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSeeBill.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSeeBill.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSeeBill.OnHoverImage = null;
+            this.btnSeeBill.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSeeBill.Radius = 7;
+            this.btnSeeBill.Size = new System.Drawing.Size(100, 30);
+            this.btnSeeBill.TabIndex = 3;
+            this.btnSeeBill.Text = "See Bill";
+            this.btnSeeBill.Click += new System.EventHandler(this.btnSeeBill_Click);
             // 
-            // btnAdd
+            // btnAddProduct
             // 
-            this.btnAdd.AnimationHoverSpeed = 0.07F;
-            this.btnAdd.AnimationSpeed = 0.03F;
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnAdd.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(27, 45);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAdd.OnHoverImage = null;
-            this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAdd.Radius = 7;
-            this.btnAdd.Size = new System.Drawing.Size(90, 30);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // panelSave_Delete
-            // 
-            this.panelSave_Delete.BackColor = System.Drawing.Color.Transparent;
-            this.panelSave_Delete.BaseColor = System.Drawing.Color.White;
-            this.panelSave_Delete.Controls.Add(this.btnSave);
-            this.panelSave_Delete.Controls.Add(this.btnCancel);
-            this.panelSave_Delete.Location = new System.Drawing.Point(694, 162);
-            this.panelSave_Delete.Name = "panelSave_Delete";
-            this.panelSave_Delete.Radius = 7;
-            this.panelSave_Delete.Size = new System.Drawing.Size(243, 65);
-            this.panelSave_Delete.TabIndex = 35;
-            this.panelSave_Delete.Visible = false;
-            // 
-            // gunaGroupBox1
-            // 
-            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Controls.Add(this.btnRefresh);
-            this.gunaGroupBox1.Controls.Add(this.btnDelete);
-            this.gunaGroupBox1.Controls.Add(this.btnUpdate);
-            this.gunaGroupBox1.Controls.Add(this.btnAdd);
-            this.gunaGroupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGroupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaGroupBox1.Location = new System.Drawing.Point(694, 11);
-            this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Radius = 7;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(243, 145);
-            this.gunaGroupBox1.TabIndex = 31;
-            this.gunaGroupBox1.Text = "Function";
-            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.AnimationHoverSpeed = 0.07F;
-            this.btnUpdate.AnimationSpeed = 0.03F;
-            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnUpdate.BorderColor = System.Drawing.Color.Black;
-            this.btnUpdate.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUpdate.Location = new System.Drawing.Point(27, 93);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdate.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnUpdate.OnHoverImage = null;
-            this.btnUpdate.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdate.Radius = 7;
-            this.btnUpdate.Size = new System.Drawing.Size(90, 30);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnAddProduct.AnimationHoverSpeed = 0.07F;
+            this.btnAddProduct.AnimationSpeed = 0.03F;
+            this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddProduct.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnAddProduct.BorderColor = System.Drawing.Color.Black;
+            this.btnAddProduct.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnAddProduct.Image")));
+            this.btnAddProduct.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAddProduct.Location = new System.Drawing.Point(74, 289);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnAddProduct.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAddProduct.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.OnHoverImage = null;
+            this.btnAddProduct.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAddProduct.Radius = 7;
+            this.btnAddProduct.Size = new System.Drawing.Size(90, 30);
+            this.btnAddProduct.TabIndex = 0;
+            this.btnAddProduct.Text = "Add";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // Uc_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gunaGroupBox2);
-            this.Controls.Add(this.gunaElipsePanel1);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.btnBill_Import);
+            this.Controls.Add(this.cbbTTSP);
+            this.Controls.Add(this.fpnlBranfOfGroup);
+            this.Controls.Add(this.btnSeeBill);
+            this.Controls.Add(this.btnCanCle);
+            this.Controls.Add(this.fpnlGroupSP);
+            this.Controls.Add(this.txtData);
+            this.Controls.Add(this.cbbPage);
+            this.Controls.Add(this.txtPage);
+            this.Controls.Add(this.lbLast);
+            this.Controls.Add(this.lbNext);
+            this.Controls.Add(this.lb);
+            this.Controls.Add(this.lbPageMax);
+            this.Controls.Add(this.lbPrevious);
+            this.Controls.Add(this.lbFirst);
+            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.dgvProduct);
-            this.Controls.Add(this.btnSelect);
-            this.Controls.Add(this.panelSave_Delete);
-            this.Controls.Add(this.gunaGroupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_SanPham";
-            this.Size = new System.Drawing.Size(965, 656);
+            this.Size = new System.Drawing.Size(965, 622);
             this.Load += new System.EventHandler(this.Uc_SanPham_Load);
-            this.gunaGroupBox2.ResumeLayout(false);
-            this.gunaElipsePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomSPBindingSource)).EndInit();
-            this.panelSave_Delete.ResumeLayout(false);
-            this.gunaGroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Guna.UI.WinForms.GunaElipse gunaElipse3;
-        private Guna.UI.WinForms.GunaGroupBox gunaGroupBox2;
-        private Guna.UI.WinForms.GunaButton btnTimKiem;
-        private Guna.UI.WinForms.GunaComboBox cbbTimKiem;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
-        private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtGia;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTenSP;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMaSP;
         private Guna.UI.WinForms.GunaDataGridView dgvProduct;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private DevExpress.XtraEditors.SimpleButton btnSelect;
-        private Guna.UI.WinForms.GunaElipsePanel panelSave_Delete;
-        private Guna.UI.WinForms.GunaButton btnSave;
-        private Guna.UI.WinForms.GunaButton btnCancel;
-        private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
-        private Guna.UI.WinForms.GunaButton btnRefresh;
-        private Guna.UI.WinForms.GunaButton btnDelete;
-        private Guna.UI.WinForms.GunaButton btnUpdate;
-        private Guna.UI.WinForms.GunaButton btnAdd;
+        private Guna.UI.WinForms.GunaButton btnFilter;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.BindingSource nhomSPBindingSource;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbbBrand;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbbType;
+        private System.Windows.Forms.Label lb;
+        private System.Windows.Forms.Label lbPageMax;
+        private System.Windows.Forms.Label lbPrevious;
+        private System.Windows.Forms.Label lbFirst;
+        private System.Windows.Forms.Label lbNext;
+        private System.Windows.Forms.TextBox txtPage;
+        private System.Windows.Forms.ComboBox cbbPage;
+        private System.Windows.Forms.Label lbLast;
+        private System.Windows.Forms.TextBox txtData;
+        private Guna.UI.WinForms.GunaButton btnFind;
+        private System.Windows.Forms.FlowLayoutPanel fpnlGroupSP;
+        private System.Windows.Forms.FlowLayoutPanel fpnlBranfOfGroup;
+        private System.Windows.Forms.ComboBox cbbTTSP;
+        private Guna.UI.WinForms.GunaButton btnBill_Import;
+        private Guna.UI.WinForms.GunaButton btnCanCle;
+        private Guna.UI.WinForms.GunaButton btnSeeBill;
+        private Guna.UI.WinForms.GunaButton btnAddProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nsp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn ct;
     }
 }

@@ -34,11 +34,14 @@
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
             this.ptbAvatar = new System.Windows.Forms.PictureBox();
             this.btnSelect = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rtxtParameter = new System.Windows.Forms.RichTextBox();
             this.txtGia = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbBrand = new System.Windows.Forms.ComboBox();
@@ -46,17 +49,12 @@
             this.cbbType = new System.Windows.Forms.ComboBox();
             this.txtTenSP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMaSP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rtxtParameter = new System.Windows.Forms.RichTextBox();
-            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.nmrAmount = new Guna.UI.WinForms.GunaNumeric();
             this.gunaElipsePanel1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             this.gunaElipsePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -77,7 +75,7 @@
             this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Radius = 7;
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(637, 565);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(637, 543);
             this.gunaElipsePanel1.TabIndex = 1;
             // 
             // btnSave
@@ -91,7 +89,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(450, 476);
+            this.btnSave.Location = new System.Drawing.Point(444, 437);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -113,6 +111,18 @@
             this.gunaPanel1.Size = new System.Drawing.Size(637, 69);
             this.gunaPanel1.TabIndex = 47;
             // 
+            // ptbExit
+            // 
+            this.ptbExit.BaseColor = System.Drawing.Color.White;
+            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
+            this.ptbExit.Location = new System.Drawing.Point(602, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(35, 35);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbExit.TabIndex = 1;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
+            // 
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
@@ -128,7 +138,7 @@
             this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
             this.gunaElipsePanel2.Controls.Add(this.ptbAvatar);
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(365, 95);
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(366, 76);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
             this.gunaElipsePanel2.Radius = 7;
             this.gunaElipsePanel2.Size = new System.Drawing.Size(250, 284);
@@ -150,7 +160,7 @@
             this.btnSelect.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.Appearance.Options.UseFont = true;
             this.btnSelect.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.ImageOptions.Image")));
-            this.btnSelect.Location = new System.Drawing.Point(426, 418);
+            this.btnSelect.Location = new System.Drawing.Point(426, 366);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnSelect.Size = new System.Drawing.Size(127, 42);
@@ -161,11 +171,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.nmrAmount);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.rtxtParameter);
             this.panel2.Controls.Add(this.txtGia);
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cbbBrand);
             this.panel2.Controls.Add(this.label2);
@@ -176,6 +184,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(317, 442);
             this.panel2.TabIndex = 43;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 15);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Parameter:";
+            // 
+            // rtxtParameter
+            // 
+            this.rtxtParameter.Location = new System.Drawing.Point(3, 153);
+            this.rtxtParameter.Name = "rtxtParameter";
+            this.rtxtParameter.Size = new System.Drawing.Size(311, 150);
+            this.rtxtParameter.TabIndex = 48;
+            this.rtxtParameter.Text = "";
             // 
             // txtGia
             // 
@@ -196,6 +222,7 @@
             this.txtGia.Size = new System.Drawing.Size(317, 39);
             this.txtGia.TabIndex = 4;
             this.txtGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGia_KeyPress);
             // 
             // label3
             // 
@@ -276,67 +303,11 @@
             this.txtMaSP.TabIndex = 0;
             this.txtMaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 15);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Parameter:";
-            // 
-            // rtxtParameter
-            // 
-            this.rtxtParameter.Location = new System.Drawing.Point(3, 153);
-            this.rtxtParameter.Name = "rtxtParameter";
-            this.rtxtParameter.Size = new System.Drawing.Size(311, 150);
-            this.rtxtParameter.TabIndex = 48;
-            this.rtxtParameter.Text = "";
-            // 
-            // ptbExit
-            // 
-            this.ptbExit.BaseColor = System.Drawing.Color.White;
-            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
-            this.ptbExit.Location = new System.Drawing.Point(602, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(35, 35);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbExit.TabIndex = 1;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 325);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Amount:";
-            // 
-            // nmrAmount
-            // 
-            this.nmrAmount.BaseColor = System.Drawing.Color.White;
-            this.nmrAmount.BorderColor = System.Drawing.Color.Silver;
-            this.nmrAmount.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.nmrAmount.ButtonForeColor = System.Drawing.Color.White;
-            this.nmrAmount.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nmrAmount.ForeColor = System.Drawing.Color.Black;
-            this.nmrAmount.Location = new System.Drawing.Point(102, 317);
-            this.nmrAmount.Maximum = ((long)(9999999));
-            this.nmrAmount.Minimum = ((long)(0));
-            this.nmrAmount.Name = "nmrAmount";
-            this.nmrAmount.Size = new System.Drawing.Size(75, 30);
-            this.nmrAmount.TabIndex = 49;
-            this.nmrAmount.Value = ((long)(0));
-            // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 565);
+            this.ClientSize = new System.Drawing.Size(637, 543);
             this.Controls.Add(this.gunaElipsePanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -347,11 +318,11 @@
             this.gunaElipsePanel1.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
             this.gunaElipsePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,7 +347,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox rtxtParameter;
         private Guna.UI.WinForms.GunaPictureBox ptbExit;
-        private Guna.UI.WinForms.GunaNumeric nmrAmount;
-        private System.Windows.Forms.Label label5;
     }
 }

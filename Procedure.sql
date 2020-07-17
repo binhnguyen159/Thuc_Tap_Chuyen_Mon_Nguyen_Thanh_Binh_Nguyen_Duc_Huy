@@ -21,11 +21,12 @@ where n.maLoai=s.maLoai and h.maHang=s.maHang
 end
 
 go
-create proc updateSP(
+alter proc updateSP(
 @maSP nvarchar(50),
 @tenSP nvarchar(50),
 @gia float,
 @anh image,
+@ts nvarchar(1000),
 @maLoai nvarchar(50),
 @maHang nvarchar(50))
 as begin
@@ -33,10 +34,13 @@ update sanPham set
 	tenSP = @tenSP, 
 	gia = @gia,
 	anh = @anh,
+	thongSo = @ts,
 	maLoai = @maLoai, 
 	maHang = @maHang 
 	where maSP=@maSP
 end
+go
+
 go
 create proc deleteSP(@maSP nvarchar(50))
 as begin
@@ -450,27 +454,374 @@ order by [SL đã bán] desc -- giảm dần // asc tăng dần
 end
 go
 
-CREATE proc mathuoc_banchaytrongthang
-as begin
-declare @date date
-select @date = CAST(info.value('invoiceIssuedDate[1]','date') as date) from Invoice
-cross apply Invoice.InvoiceInfo.nodes('/invoice/invoiceData') as XMLdata(info)
-where Invoice.status !=0 and datepart(YEAR, CAST(info.value('invoiceIssuedDate[1]','date') as date)) = datepart (YEAR, getdate()) 
-	and datepart(m, CAST(info.value('invoiceIssuedDate[1]','date') as date)) = datepart (m, getdate())
+--CREATE proc mathuoc_banchaytrongthang
+--as begin
+--declare @date date
+--select @date = CAST(info.value('invoiceIssuedDate[1]','date') as date) from Invoice
+--cross apply Invoice.InvoiceInfo.nodes('/invoice/invoiceData') as XMLdata(info)
+--where Invoice.status !=0 and datepart(YEAR, CAST(info.value('invoiceIssuedDate[1]','date') as date)) = datepart (YEAR, getdate()) 
+--	and datepart(m, CAST(info.value('invoiceIssuedDate[1]','date') as date)) = datepart (m, getdate())
 
-select  t.TEN as [Tên sản phẩm],t.SOLO as [Số lô],sum(CAST(info.value('quantity[1]','int')*info.value('exchangeValue[1]','int') as int)) as [SL đã bán]
-from SANPHAM t,Invoice
-cross apply Invoice.InvoiceInfo.nodes('/invoice/invoiceData/items/item') as XMLdata(info)
-where info.value('itemCode[1]','nvarchar(max)') = t.MATHUOC and 
-	datepart(m, @date) = datepart (m, getdate())  and Invoice.status !=0 and t.statusDelete = 1
-	and datepart(YEAR, @date) = datepart (YEAR, getdate())
-group by t.TEN,t.SOLO
-order by [SL đã bán] desc -- giảm dần // asc tăng dần 
+--select  t.TEN as [Tên sản phẩm],t.SOLO as [Số lô],sum(CAST(info.value('quantity[1]','int')*info.value('exchangeValue[1]','int') as int)) as [SL đã bán]
+--from SANPHAM t,Invoice
+--cross apply Invoice.InvoiceInfo.nodes('/invoice/invoiceData/items/item') as XMLdata(info)
+--where info.value('itemCode[1]','nvarchar(max)') = t.MATHUOC and 
+--	datepart(m, @date) = datepart (m, getdate())  and Invoice.status !=0 and t.statusDelete = 1
+--	and datepart(YEAR, @date) = datepart (YEAR, getdate())
+--group by t.TEN,t.SOLO
+--order by [SL đã bán] desc -- giảm dần // asc tăng dần 
 
+--end
+go
+alter proc find_most_product_sale (@startDay date,@endDay date)
+ as begin
+	select sp.maSP, sp.tenSP, SUM(cthdx.soLuong) as 'a'
+	from hoadDonXuat hdx, chiTietHDX cthdx, sanPham sp
+	where hdx.maHDX = cthdx.maHDX and sp.maSP = cthdx.maSP and hdx.trangThai = 'Priced'  
+	and hdx.ngayBan >= @startDay and hdx.ngayBan <= @endDay
+	group by sp.maSP, sp.tenSP
+	order by sp.maSP asc
+ end
+ exec find_most_product_sale '2020/07/18','2020/07/17'
+
+ go
+ create proc HSP_Sel as
+begin
+	select * from HangSP
 end
 go
-create proc find_most_product_sale
- as begin
- select sp.te
- from chiTietHDX ct,hoadDonXuat hd,sanPham sp
- end
+--thêm
+create proc HSP_Ins (@ma nvarchar(50), @ten nvarchar(50)) as
+begin
+	insert into HangSP values (@ma, @ten)
+end
+go
+--xóa
+create proc HSP_Del (@ma nvarchar(50)) as
+begin
+	delete HangSP where maHang = @ma
+end
+go
+--sửa
+create proc HSP_Up (@ma nvarchar(50), @ten nvarchar(50)) as
+begin
+	Update HangSP set tenHang = @ten where maHang = @ma
+end
+go
+--load
+create proc NSP_Sel as
+begin
+	select * from nhomSP
+end
+go
+--Thêm
+create proc NSP_Add (@ma nvarchar(50),@ten nvarchar(50)) as
+begin
+	insert into nhomSP values (@ma,@ten)
+end
+go
+--Xóa
+create proc NSP_Del (@ma nvarchar(50)) as
+begin
+	delete nhomSP where maLoai = @ma
+end
+go
+--Sửa
+create proc NSP_Up (@ma nvarchar(50),@ten nvarchar(50)) as
+begin
+	update nhomSP set tenLoai = @ten where maLoai = @ma
+end
+go
+create proc HSP_Find (@ma nvarchar(50), @ten nvarchar(50)) as
+begin
+	if (@ma is not null and @ten is not null)
+	begin
+		select * from HangSP where maHang like '%' + @ma + '%' and tenHang like '%' + @ten + '%'
+	end
+	else if(@ten is null)
+	begin
+		select * from HangSP where maHang like '%' + @ma + '%'
+	end
+	else if (@ma is null)
+	begin
+		select * from HangSP where tenHang like '%' + @ten + '%'
+	end
+end
+go
+--tìm theo id hoặc name
+create PROC	NSP_Find (@ma nvarchar(50),@ten nvarchar(50)) as
+begin
+	if (@ma is not null and @ten is not null)
+	begin
+		select * from nhomSP where maLoai like '%' + @ma + '%' and tenLoai like '%' + @ten + '%'
+	end
+	else if(@ten is null)
+	begin
+		select * from nhomSP where maLoai like '%' + @ma + '%'
+	end
+	else if (@ma is null)
+	begin
+		select * from nhomSP where tenLoai like '%' + @ten + '%'
+	end
+end
+go
+create proc SP_Page (@from int, @to int)
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang
+	) as TableRow 
+	where TableRow.rownum between @from  and @to
+end
+go
+ex
+CREATE FUNCTION [dbo].[fuConvertToUnsign1] ( @strInput NVARCHAR(4000) ) RETURNS NVARCHAR(4000) AS BEGIN IF @strInput IS NULL RETURN @strInput IF @strInput = '' RETURN @strInput DECLARE @RT NVARCHAR(4000) DECLARE @SIGN_CHARS NCHAR(136) DECLARE @UNSIGN_CHARS NCHAR (136) SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' DECLARE @COUNTER int DECLARE @COUNTER1 int SET @COUNTER = 1 WHILE (@COUNTER <=LEN(@strInput)) BEGIN SET @COUNTER1 = 1 WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) BREAK END SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END SET @strInput = replace(@strInput,' ','-') RETURN @strInput END
+
+go
+exec SP_page 1, 50
+go
+create proc SP_Find (@from int, @to int, @data nvarchar(50))
+as begin
+	select * from (
+		select s.maSP,Row_number() over (order by s.masp) as rownum,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and (
+			dbo.fuConvertToUnsign1(s.maSP)  like N'%' + dbo.fuConvertToUnsign1(@data) + N'%' 
+			or dbo.fuConvertToUnsign1(s.tenSP) like '%' + dbo.fuConvertToUnsign1(@data)  + '%'  
+			--or dbo.fuConvertToUnsign1(h.tenHang) like N'%' +  dbo.fuConvertToUnsign1(@data) + N'%' 
+			--or dbo.fuConvertToUnsign1(n.tenLoai) like N'%' + dbo.fuConvertToUnsign1(@data) + N'%'
+			)
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+
+create proc SP_Find_Data (@data nvarchar(50)) as
+begin
+	select s.maSP,s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+	from sanPham s, nhomSP n, HangSP h
+	where n.maLoai=s.maLoai and h.maHang=s.maHang and (
+		dbo.fuConvertToUnsign1(s.maSP)  like N'%' + dbo.fuConvertToUnsign1(@data) + N'%' 
+		or dbo.fuConvertToUnsign1(s.tenSP) like '%' + dbo.fuConvertToUnsign1(@data)  + '%'  
+		--or dbo.fuConvertToUnsign1(h.tenHang) like N'%' +  dbo.fuConvertToUnsign1(@data) + N'%' 
+		--or dbo.fuConvertToUnsign1(n.tenLoai) like N'%' + dbo.fuConvertToUnsign1(@data) + N'%'
+		)
+end
+go
+CREATE proc SP_Page_Find_NSP (@from int, @to int, @ten nvarchar(50))
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and (n.tenLoai = @ten)
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+
+---start here
+create proc SP_Page_Find_NSP_HSP_Name (@from int, @to int, @ten1 nvarchar(50), @ten2 nvarchar(50), @name nvarchar(50))
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and (n.tenLoai = @ten1 and h.tenHang = @ten2) and s.tenSP like '%' + @name + '%'
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+create proc SP_Page_Find_NSP_Name (@from int, @to int, @ten nvarchar(50),@name nvarchar(50))
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and (n.tenLoai = @ten) and s.tenSP like '%' + @name + '%'
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+create proc SP_Page_Find_NSP_HSP (@from int, @to int, @ten1 nvarchar(50), @ten2 nvarchar(50))
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and (n.tenLoai = @ten1 and h.tenHang = @ten2)
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+create proc Hang_in_Group (@loai nvarchar(50)) as
+begin
+	select distinct h.tenHang from HangSP h, sanPham s, nhomSP n
+	where h.maHang = s.maHang and n.maLoai=s.maLoai and n.tenLoai = @loai
+end
+go
+create proc SP_Page_Filter_Amount (@from int, @to int)
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and (s.soLuong < 10)
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+
+create proc SP_Page_Filter_NSP_Amount (@from int, @to int, @ten1 nvarchar(50))
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and s.soLuong < 10 and n.tenLoai = @ten1
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+create proc SP_Page_Filter_NSP_HSP_Amount (@from int, @to int, @ten1 nvarchar(50), @ten2 nvarchar(50))
+as begin
+	select * from (
+		select  s.maSP, Row_number() over (order by s.masp) as rownum, s.tenSP,s.anh,s.gia,s.soLuong,n.tenLoai,h.tenHang
+		from sanPham s, nhomSP n, HangSP h
+		where n.maLoai=s.maLoai and h.maHang=s.maHang and s.soLuong < 10 and n.tenLoai = @ten1 and h.tenHang = @ten2
+	) as TableRow
+	where TableRow.rownum between @from  and @to
+end
+go
+
+create proc HDN_Ins (
+	@ma nvarchar(50), 
+	@manv nvarchar(50), 
+	@mancc nvarchar(50),
+	@ngNhap date,
+	@tTien float,
+	@tThai nvarchar(50)) as
+begin
+	insert into hoadDonNhap values (@ma,@manv,@mancc,@tTien,@tThai,@ngNhap)
+end
+go
+--xóa
+create proc HDN_Del(@ma nvarchar(50)) as
+begin
+	delete chiTietHDN where maHDN = @ma
+	delete hoadDonNhap where maHDN = @ma
+end
+go
+--Sửa
+create proc HDN_Up (@ma nvarchar(50), @tThai nvarchar(50)) as
+begin
+	update hoadDonNhap set trangThai = @tThai where maHDN = @ma
+end
+go
+--Load
+create proc HDN_Sel as
+begin
+	select hdn.maHDN, hdn.ngayNhap,ncc.tenNCC,nv.tenNV,hdn.tongTien,hdn.trangThai from hoadDonNhap hdn, nhanVien nv, nhaCungCap ncc
+	where hdn.maNCC = ncc.maNCC and hdn.maNV=nv.maNV
+end
+go
+--load
+create proc HDN_Sel_Date (@d1 date, @d2 date) as
+begin
+	select hdn.maHDN, hdn.ngayNhap,ncc.tenNCC,nv.tenNV,hdn.tongTien,hdn.trangThai from hoadDonNhap hdn, nhanVien nv, nhaCungCap ncc
+	where hdn.maNCC = ncc.maNCC and hdn.maNV=nv.maNV and --hdn.ngayNhap<='2020-07-15' and hdn.ngayNhap>='2020-07-15'
+	hdn.ngayNhap>=@d1 and hdn.ngayNhap<=@d2
+end
+go
+create trigger CTHDN_Ins_tr 
+	 on chiTietHDN after insert as
+begin
+	declare @mahd nvarchar(50), @masp nvarchar(50),  @tt float, @sl int, @gia float
+	select @mahd = maHDN, @masp = maSP, 
+			@sl = soLuong, @gia=donGia from inserted
+	set @tt = @sl*@gia
+	update sanPham set soLuong +=@sl where maSP = @masp
+	update chiTietHDN set thanhTien = @tt where maHDN = @mahd and maSP = @masp
+	update hoadDonNhap set tongTien = (
+		select SUM(thanhTien) from chiTietHDN where maHDN = @mahd
+	) where maHDN = @mahd
+end
+go
+--delete chiTietHDN
+
+--Xóa
+create trigger CTHDN_Del_tr
+	on chitiethdn for delete as
+begin
+	declare @mahd nvarchar(50), @masp nvarchar(50),
+			@sl int, @gia float
+	select @mahd = maHDN, @masp = maSP, @sl = soLuong, @gia = donGia from deleted
+	update sanPham set soLuong -= @sl where maSP = @masp
+	
+	if ((select COUNT(*) as a from chiTietHDN where maHDN = @mahd)=0)
+	begin
+		update hoadDonNhap set tongTien = 0 where maHDN = @mahd
+	end
+	update hoadDonNhap set tongTien = (
+		select SUM(thanhTien) from chiTietHDN where maHDN = @mahd
+	) where maHDN=@mahd
+end
+go
+--Sửa
+create trigger CTHDN_Up_tr on chitiethdn after update as
+begin
+	declare @mahd nvarchar(50), @masp nvarchar(50),
+			@slc int, @slm int, @gia float,@tt float
+	select @mahd=maHDN,@masp=maSP,
+			@slm=soLuong,@gia=donGia from inserted
+	select @slc = soluong from deleted
+	set @tt = @slm * @gia
+	update sanPham set soLuong = soLuong - @slc + @slm where maSP = @masp
+	update chiTietHDN set thanhTien = @tt where maHDN = @mahd and maSP = @masp
+	update hoadDonNhap set tongTien = (
+		select SUM(thanhTien) from chiTietHDN where maHDN = @mahd
+	) where maHDN = @mahd
+end
+go
+create proc CTHDN_Ins (
+	@mahd nvarchar(50), 
+	@masp nvarchar(50), 
+	@gia float, 
+	@sl int, 
+	@ttien float)
+as 
+begin 
+	insert into chiTietHDN values (@mahd,@masp,@gia,@sl,@ttien)
+end
+go
+--exec CTHDN_Ins N'HDN000001','SP000001',12, 3,0
+--exec CTHDN_Ins N'HDN000001','SP000002',15, 15,0
+--exec CTHDN_Ins N'HDN000002','SP000001',11, 11,0
+--exec CTHDN_Ins N'HDN000002','SP000002',13, 13,0
+--exec CTHDN_Del N'HDN000002',N'SP000002'
+--exec CTHDN_Up N'HDN000002',N'SP000002',13,3
+--delete chiTietHDN
+--select * from sanPham
+--select * from hoadDonNhap
+--select * from chiTietHDN
+go
+--xóa
+create proc CTHDN_Del (	@mahd nvarchar(50), 
+						@masp nvarchar(50))
+as begin
+	delete chiTietHDN where maHDN = @mahd and maSP = @masp
+end
+go
+--sửa
+create proc CTHDN_Up (	@mahd nvarchar(50), 
+						@masp nvarchar(50),
+						@gia float, @sl int) as
+begin
+	update chiTietHDN set donGia = @gia, soLuong = @sl 
+						where maHDN = @mahd and maSP = @masp
+end
+go
+--load
+create proc CTHDN_Sel (@ma nvarchar(50)) as 
+begin
+	select ct.maSP,sp.tenSP,ct.donGia,ct.soLuong, ct.thanhTien from chiTietHDN ct, sanPham sp
+	where ct.maSP = sp.maSP and ct.maHDN = @ma
+end
+--exec CTHDN_Sel N'HDN000003'
+go
+

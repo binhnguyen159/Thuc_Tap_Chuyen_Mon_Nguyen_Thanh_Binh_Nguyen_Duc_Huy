@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,17 +19,20 @@ namespace QLCH.Uc.WareHouse
         {
             InitializeComponent();
         }
+        public class GetData
+        {
+            public static string name = "";
+            
+        }
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void ptbExit_Click(object sender, EventArgs e)
         {
-            Uc_WareHouse.GetChoose.choose = 0;
-            Uc_WareHouse wareHouse = new Uc_WareHouse();
-            wareHouse.Uc_WareHouse_Load(sender, e);
             this.Close();
-            
         }
+
         int stt = 0;
         string id = "";
+
         private void btnSelect_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
@@ -53,18 +57,18 @@ namespace QLCH.Uc.WareHouse
             cbbBrand.DisplayMember = "tenHang";
             cbbBrand.ValueMember = "maHang";
             cbbBrand.DataSource = hsp;
-            switch (Uc_WareHouse.GetChoose.choose)
+            switch (Uc_SanPham.GetData.choose)
             {
                 case 1:
                     lbTitle.Text = "Add new product";
                     break;
                 case 2:
-                    txtMaSP.Enabled = true;
+                    txtMaSP.Enabled = false;
                     txtTenSP.Enabled = false;
-                    sanPham sp = db.sanPhams.Where(s => s.maSP.Equals(Uc_WareHouse.GetChoose.id)).FirstOrDefault();
+                    sanPham sp = db.sanPhams.Where(s => s.maSP.Equals(Uc_SanPham.GetData.masp)).FirstOrDefault();
                     txtMaSP.Text = sp.maSP;
                     txtTenSP.Text = sp.tenSP;
-                    txtGia.Text = sp.gia.ToString();
+                    txtGia.Text = string.Format("{0:#,##0}", sp.gia);
                     rtxtParameter.Text = sp.thongSo;
                     MemoryStream stream = new MemoryStream(sp.anh.ToArray());
                     ptbAvatar.Image = Image.FromStream(stream);
@@ -72,10 +76,11 @@ namespace QLCH.Uc.WareHouse
                     break;
             }
         }
-
+       
         private void btnSave_Click(object sender, EventArgs e)
         {
-            switch (Uc_WareHouse.GetChoose.choose)
+
+            switch (Uc_SanPham.GetData.choose)
             {
                 case 1:
                     {
@@ -113,14 +118,14 @@ namespace QLCH.Uc.WareHouse
                                     else if (stt / 10 < 1)
                                         id = "SP00000" + stt;
                                     db.addSP(id, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(), 0, rtxtParameter.Text, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
-                                    Uc_WareHouse wareHouse = new Uc_WareHouse();
-                                    wareHouse.Uc_WareHouse_Load(sender, e);
                                     MessageBox.Show("Add successfull");
                                 }
-                                
+
                             }
                         }
+                        this.Close();
                         break;
+                        
                     }
                 case 2:
                     {
@@ -128,16 +133,23 @@ namespace QLCH.Uc.WareHouse
                             MessageBox.Show("Please fill all information");
                         else
                         {
-
+                            GetData.name = txtTenSP.Text;
                             MemoryStream stream = new MemoryStream();
                             ptbAvatar.Image.Save(stream, ImageFormat.Jpeg);
                             db.updateSP(txtMaSP.Text, txtTenSP.Text, Convert.ToDouble(txtGia.Text), stream.ToArray(),
                                     rtxtParameter.Text, cbbType.SelectedValue.ToString(), cbbBrand.SelectedValue.ToString());
-
+                            
                         }
+                        this.Close();
                         break;
                     }
             }
+        }
+
+        private void txtGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

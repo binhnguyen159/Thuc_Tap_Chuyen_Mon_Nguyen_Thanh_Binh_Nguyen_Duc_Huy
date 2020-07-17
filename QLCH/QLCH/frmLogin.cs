@@ -17,12 +17,14 @@ namespace QLCH
     public delegate void fFRMLOAD();
     public delegate void load_Data();
     public delegate void Exit();
+    public delegate void fFRMLOAD2(int a, int b);
     public partial class frmLogin : Form
+
     {
         public frmLogin()
         {
             InitializeComponent();
-            
+
         }
         string OTP = "";
         int counter = 0;
@@ -40,7 +42,7 @@ namespace QLCH
 
             StringBuilder sb = new StringBuilder();
 
-            for(int i = 0; i < hash.Length; i++)
+            for (int i = 0; i < hash.Length; i++)
             {
                 sb.Append(hash[i].ToString("x"));
             }
@@ -99,17 +101,18 @@ namespace QLCH
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            nhanVien nv = dt.nhanViens.Where(s =>   s.passWords.Equals(MaHoaMD5(txtPassword.Text))
+            nhanVien nv = dt.nhanViens.Where(s => s.passWords.Equals(MaHoaMD5(txtPassword.Text))
                                                     && s.tendn.Equals(txtAcount.Text))
                                                     .FirstOrDefault();
             if (nv != null)
             {
                 GetID.id = nv.maNV;
-                //frmFuction fuction = new frmFuction();
-                FrmSale fuction = new FrmSale();
+               frmFuction fuction = new frmFuction();
+                //FrmSale fuction = new FrmSale();
                 this.Hide();
                 fuction.ShowDialog();
             }
+
             else
                 MessageBox.Show("Username or password is wrong");
         }
@@ -207,10 +210,10 @@ namespace QLCH
             }
 
 
-            
+
             //GetOTP();
             //MessageBox.Show(OTP);
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -233,7 +236,7 @@ namespace QLCH
             pnlLogin.Visible = false;
             pnlOTP.Visible = false;
             pnlChangePass.Visible = true;
-          
+
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)

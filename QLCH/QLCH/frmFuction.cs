@@ -1,4 +1,5 @@
 ﻿using QLCH.Uc;
+using QLCH.Uc.WareHouse;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,7 @@ namespace QLCH
             {
                 btnBuy.Location = new Point(22, btnBill.Location.Y + btnBill.Height + 4);
                 btnSell.Location = new Point(22, btnBuy.Location.Y + btnBuy.Height + 4);
-                btnReport.Location = new Point(5, btnSell.Location.Y + btnSell.Height + 4);
+                btnStatistical.Location = new Point(5, btnSell.Location.Y + btnSell.Height + 4);
                 btnBuy.Visible = true;
                 btnSell.Visible = true;
             }
@@ -46,7 +47,7 @@ namespace QLCH
             {
                 btnBuy.Visible = false;
                 btnSell.Visible = false;
-                btnReport.Location = new Point(5, btnBill.Location.Y + btnBill.Height + 4);
+                btnStatistical.Location = new Point(5, btnBill.Location.Y + btnBill.Height + 4);
             }
         }
 
@@ -60,7 +61,7 @@ namespace QLCH
 
         private void btnProvider_Click(object sender, EventArgs e)
         {
-            Uc_SanPham uCProvider = new Uc_SanPham();
+            Uc_QLSP uCProvider = new Uc_QLSP();
             pnlContent.Controls.Clear();
             pnlContent.Controls.Add(uCProvider);
             //uCProvider.Show();
@@ -83,7 +84,60 @@ namespace QLCH
         private void frmFuction_Load(object sender, EventArgs e)
         {
             nhanVien nv = db.nhanViens.Where(s => s.maNV == frmLogin.GetID.id).FirstOrDefault();
-            lbName.Text = nv.tenNV.ToString().Trim();
+            if (nv.maCV == "cv2")
+            {
+                btnSaleProduct.Visible = false;
+            }
+            else if (nv.maCV == "cv3")
+            {
+                btnProduct.Visible = false;
+                //Uc_Employees employees = new Uc_Employees();
+                //employees.Visible = false;
+                //Uc_TaiKhoan taiKhoan = new Uc_TaiKhoan();
+                //taiKhoan.Visible = false;
+                //Uc_NCC provider = new Uc_NCC();
+                //provider.Visible = false;
+            }
+            else
+            {
+                btnSaleProduct.Visible = true;
+                btnProduct.Visible = true;
+            }
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            Uc_Bill_Buy bill_Buy = new Uc_Bill_Buy();
+            pnlContent.Controls.Clear();
+            pnlContent.Controls.Add(bill_Buy);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            pnlContent.Controls.Clear();
+            thongKe.TopLevel = false;
+            thongKe.Dock = DockStyle.Fill;
+            pnlContent.Controls.Add(thongKe);
+            thongKe.Show();
+        }
+
+        private void btnSaleProduct_Click(object sender, EventArgs e)
+        {
+            UCShowProduct product = new UCShowProduct();
+            pnlContent.Controls.Clear();
+            product.Dock = DockStyle.Fill;
+            pnlContent.Controls.Add(product);
+            product.Show();
+        }
+
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+            UcBill_Sell sell = new UcBill_Sell();
+            pnlContent.Controls.Clear();
+            sell.Dock = DockStyle.Fill;
+            pnlContent.Controls.Add(sell);
+            sell.Show();
         }
     }
 }
