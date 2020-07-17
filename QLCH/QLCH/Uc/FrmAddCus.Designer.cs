@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddCus));
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.btnCancel = new Guna.UI.WinForms.GunaButton();
-            this.btnLuu = new Guna.UI.WinForms.GunaButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dtpBirthday = new Guna.UI.WinForms.GunaDateTimePicker();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -45,64 +42,9 @@
             this.txtAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.gunaPanel1.SuspendLayout();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             this.SuspendLayout();
-            // 
-            // gunaPanel1
-            // 
-            this.gunaPanel1.Controls.Add(this.btnCancel);
-            this.gunaPanel1.Controls.Add(this.btnLuu);
-            this.gunaPanel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaPanel1.Location = new System.Drawing.Point(158, 179);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(321, 69);
-            this.gunaPanel1.TabIndex = 60;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AnimationHoverSpeed = 0.07F;
-            this.btnCancel.AnimationSpeed = 0.03F;
-            this.btnCancel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnCancel.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancel.Location = new System.Drawing.Point(188, 18);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCancel.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCancel.OnHoverImage = null;
-            this.btnCancel.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCancel.Size = new System.Drawing.Size(114, 38);
-            this.btnCancel.TabIndex = 19;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.AnimationHoverSpeed = 0.07F;
-            this.btnLuu.AnimationSpeed = 0.03F;
-            this.btnLuu.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnLuu.BorderColor = System.Drawing.Color.Black;
-            this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(27, 18);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLuu.OnHoverImage = null;
-            this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLuu.Size = new System.Drawing.Size(114, 38);
-            this.btnLuu.TabIndex = 19;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -117,7 +59,7 @@
             // dtpBirthday
             // 
             this.dtpBirthday.BaseColor = System.Drawing.Color.White;
-            this.dtpBirthday.BorderColor = System.Drawing.Color.Silver;
+            this.dtpBirthday.BorderColor = System.Drawing.Color.DimGray;
             this.dtpBirthday.CustomFormat = null;
             this.dtpBirthday.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpBirthday.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -299,13 +241,68 @@
             this.txtEmail.TabIndex = 52;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // gunaGradientButton1
+            // 
+            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.SlateBlue;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Aqua;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(249, 207);
+            this.gunaGradientButton1.Name = "gunaGradientButton1";
+            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.Aqua;
+            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.SlateBlue;
+            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = null;
+            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Radius = 8;
+            this.gunaGradientButton1.Size = new System.Drawing.Size(77, 42);
+            this.gunaGradientButton1.TabIndex = 57;
+            this.gunaGradientButton1.Text = "Save";
+            this.gunaGradientButton1.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // gunaGradientButton2
+            // 
+            this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton2.AnimationSpeed = 0.03F;
+            this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.Aqua;
+            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.SlateBlue;
+            this.gunaGradientButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaGradientButton2.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton2.Image")));
+            this.gunaGradientButton2.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton2.Location = new System.Drawing.Point(332, 207);
+            this.gunaGradientButton2.Name = "gunaGradientButton2";
+            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.SlateBlue;
+            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.Aqua;
+            this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton2.OnHoverImage = null;
+            this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.Radius = 8;
+            this.gunaGradientButton2.Size = new System.Drawing.Size(88, 42);
+            this.gunaGradientButton2.TabIndex = 58;
+            this.gunaGradientButton2.Text = "Cancel";
+            this.gunaGradientButton2.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FrmAddCus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(657, 274);
-            this.Controls.Add(this.gunaPanel1);
+            this.Controls.Add(this.gunaGradientButton2);
+            this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.bunifuCustomLabel5);
@@ -321,19 +318,15 @@
             this.Controls.Add(this.txtEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddCus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddCus";
             this.Load += new System.EventHandler(this.FrmAddCus_Load);
-            this.gunaPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaButton btnCancel;
-        private Guna.UI.WinForms.GunaButton btnLuu;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Guna.UI.WinForms.GunaDateTimePicker dtpBirthday;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
@@ -347,5 +340,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtAddress;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPhone;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
     }
 }

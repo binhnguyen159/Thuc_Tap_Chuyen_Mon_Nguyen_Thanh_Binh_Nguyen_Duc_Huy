@@ -66,5 +66,15 @@ namespace QLCH
             panelShowSP.Controls.Add(uc_New_Product);
             uc_New_Product.Show();
         }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            FormThongKe thongKe = new FormThongKe();
+            panelShowSP.Controls.Clear();
+            thongKe.TopLevel = false;
+            thongKe.Dock = DockStyle.Fill;
+            panelShowSP.Controls.Add(thongKe);
+            thongKe.Show();
+        }
     }
 }

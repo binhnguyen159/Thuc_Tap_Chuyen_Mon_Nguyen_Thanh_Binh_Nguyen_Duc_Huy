@@ -190,7 +190,7 @@ namespace QLCH.Uc
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             FrmAddCus addCus = new FrmAddCus(load_data_after_add_customer);
             addCus.Show();
         }

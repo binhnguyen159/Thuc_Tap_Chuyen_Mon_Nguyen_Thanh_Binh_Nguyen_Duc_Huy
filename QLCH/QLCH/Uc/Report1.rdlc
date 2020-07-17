@@ -22,8 +22,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>1.98833in</Top>
-        <Left>2.54823in</Left>
+        <Top>1.99875in</Top>
+        <Left>0.11073in</Left>
         <Height>0.34375in</Height>
         <Width>1.10417in</Width>
         <Style>
@@ -58,8 +58,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>0.36111in</Top>
-            <Left>0.19791in</Left>
+            <Top>0.33681in</Top>
+            <Left>1.28125in</Left>
             <Height>0.4375in</Height>
             <Width>2.9375in</Width>
             <Style>
@@ -92,8 +92,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>0.79861in</Top>
-            <Left>0.19791in</Left>
+            <Top>0.77431in</Top>
+            <Left>1.28125in</Left>
             <Height>0.3125in</Height>
             <Width>2.9375in</Width>
             <ZIndex>1</ZIndex>
@@ -112,9 +112,9 @@
             <Source>Embedded</Source>
             <Value>logo</Value>
             <Sizing>Fit</Sizing>
-            <Left>3.20486in</Left>
+            <Left>4.44444in</Left>
             <Height>1.5in</Height>
-            <Width>1.88542in</Width>
+            <Width>1.9132in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -125,166 +125,14 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>0.11333in</Top>
-        <Left>5.07253in</Left>
+        <Left>3.80517in</Left>
         <Height>1.5in</Height>
-        <Width>5.09028in</Width>
+        <Width>6.35764in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-        </Style>
-      </Rectangle>
-      <Rectangle Name="Rectangle3">
-        <ReportItems>
-          <Textbox Name="Textbox46">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!tenKH.Value, "DataSet1")</Value>
-                    <Style>
-                      <FontSize>15pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox46</rd:DefaultName>
-            <Top>2.11333in</Top>
-            <Left>0.11396in</Left>
-            <Height>0.47917in</Height>
-            <Width>1.98958in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox47">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!diaChi.Value, "DataSet1")</Value>
-                    <Style>
-                      <FontSize>13pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox46</rd:DefaultName>
-            <Top>2.66194in</Top>
-            <Left>0.11396in</Left>
-            <Height>1.08334in</Height>
-            <Width>1.98958in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox7">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>SALE INVOICE</Value>
-                    <Style>
-                      <FontSize>25pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>0.11333in</Top>
-            <Left>0.23896in</Left>
-            <Height>0.93056in</Height>
-            <Width>1.72917in</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox15">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Invoice to:</Value>
-                    <Style>
-                      <FontSize>13pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>1.72791in</Top>
-            <Left>0.11396in</Left>
-            <Height>0.34375in</Height>
-            <Width>1.98958in</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BackgroundColor>White</BackgroundColor>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>20pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-        </ReportItems>
-        <Height>6.45833in</Height>
-        <Width>2.26958in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <BackgroundColor>#56cda2</BackgroundColor>
         </Style>
       </Rectangle>
       <Textbox Name="Textbox10">
@@ -321,11 +169,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>2.43625in</Top>
-        <Left>2.54823in</Left>
+        <Top>2.44667in</Top>
+        <Left>0.11073in</Left>
         <Height>0.34375in</Height>
         <Width>1.10417in</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -356,11 +204,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>1.98833in</Top>
-        <Left>3.80517in</Left>
+        <Top>1.99875in</Top>
+        <Left>1.36767in</Left>
         <Height>0.34375in</Height>
         <Width>1.10417in</Width>
-        <ZIndex>4</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -391,11 +239,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>2.43625in</Top>
-        <Left>3.80517in</Left>
+        <Top>2.44667in</Top>
+        <Left>1.36767in</Left>
         <Height>0.34375in</Height>
         <Width>1.11783in</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -411,19 +259,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5206in</Width>
+              <Width>3.0081in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.42685in</Width>
+              <Width>1.91435in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.68726in</Width>
+              <Width>1.17476in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.46389in</Width>
+              <Width>1.95139in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.51597in</Width>
+              <Width>2.00347in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -740,13 +588,14 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>3.57167in</Top>
-        <Left>2.54823in</Left>
+        <Left>0.11073in</Left>
         <Height>1.10416in</Height>
-        <Width>7.61457in</Width>
-        <ZIndex>6</ZIndex>
+        <Width>10.05207in</Width>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
+            <Width>2pt</Width>
           </Border>
         </Style>
       </Tablix>
@@ -769,11 +618,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>4.81472in</Top>
-        <Left>7.26004in</Left>
+        <Top>4.74527in</Top>
+        <Left>7.18294in</Left>
         <Height>0.36458in</Height>
         <Width>1.4375in</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -804,11 +653,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>5.22097in</Top>
-        <Left>7.26004in</Left>
+        <Top>5.19319in</Top>
+        <Left>7.18294in</Left>
         <Height>0.36458in</Height>
         <Width>1.4375in</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -845,11 +694,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>4.81473in</Top>
-        <Left>8.72531in</Left>
+        <Top>4.74527in</Top>
+        <Left>8.72532in</Left>
         <Height>0.36458in</Height>
         <Width>1.4375in</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -886,11 +735,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>5.20708in</Top>
-        <Left>8.72531in</Left>
+        <Top>5.1793in</Top>
+        <Left>8.72532in</Left>
         <Height>0.37847in</Height>
         <Width>1.4375in</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -903,11 +752,11 @@
         </Style>
       </Textbox>
       <Line Name="Line3">
-        <Top>5.73833in</Top>
+        <Top>5.66541in</Top>
         <Left>5.56125in</Left>
         <Height>0in</Height>
         <Width>4.69792in</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Color>Silver</Color>
@@ -936,10 +785,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
         <Top>5.86979in</Top>
-        <Left>6.62611in</Left>
+        <Left>6.22184in</Left>
         <Height>0.36458in</Height>
         <Width>1.80208in</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -980,7 +829,7 @@
         <Left>8.44208in</Left>
         <Height>0.36458in</Height>
         <Width>1.72073in</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1012,11 +861,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>2.83902in</Top>
-        <Left>2.56189in</Left>
+        <Top>2.84944in</Top>
+        <Left>0.12439in</Left>
         <Height>0.34375in</Height>
         <Width>1.10417in</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1047,10 +896,45 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>2.84944in</Top>
-        <Left>3.80517in</Left>
+        <Top>2.85986in</Top>
+        <Left>1.36767in</Left>
         <Height>0.34375in</Height>
         <Width>1.11783in</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox46">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!tenKH.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox46</rd:DefaultName>
+        <Top>1.98833in</Top>
+        <Left>6.62462in</Left>
+        <Height>0.34375in</Height>
+        <Width>3.53819in</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -1063,11 +947,202 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox47">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!diaChi.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>13pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox46</rd:DefaultName>
+        <Top>2.37375in</Top>
+        <Left>6.62462in</Left>
+        <Height>0.99306in</Height>
+        <Width>3.5382in</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Customer name:</Value>
+                <Style>
+                  <FontSize>13pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>1.96055in</Top>
+        <Left>4.56559in</Left>
+        <Height>0.34375in</Height>
+        <Width>1.98958in</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>20pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Address:</Value>
+                <Style>
+                  <FontSize>13pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>2.37375in</Top>
+        <Left>4.55171in</Left>
+        <Height>0.34375in</Height>
+        <Width>1.98958in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>20pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>SALE INVOICE</Value>
+                <Style>
+                  <FontSize>25pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>0.11333in</Top>
+        <Left>0.22854in</Left>
+        <Height>0.93056in</Height>
+        <Width>3.23958in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line2">
+        <Top>6.55083in</Top>
+        <Height>0in</Height>
+        <Width>10.27283in</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Customer's signature and fullname</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>6.87375in</Top>
+        <Left>8.07948in</Left>
+        <Height>0.45833in</Height>
+        <Width>1.6901in</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>6.45833in</Height>
-    <Style />
+    <Height>9.21875in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
   </Body>
-  <Width>10.25917in</Width>
+  <Width>10.27283in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -1193,6 +1268,13 @@ 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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Annotation20200716103115">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>

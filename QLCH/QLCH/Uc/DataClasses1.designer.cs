@@ -559,6 +559,13 @@ namespace QLCH.Uc
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHDX, maNV, maKH, tongTien, trangThai, ngayBan, giamGia);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.thongKeDoanhThu")]
+		public ISingleResult<thongKeDoanhThuResult> thongKeDoanhThu()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<thongKeDoanhThuResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.chiTietHDN")]
@@ -6376,6 +6383,50 @@ namespace QLCH.Uc
 				if ((this._maSP != value))
 				{
 					this._maSP = value;
+				}
+			}
+		}
+	}
+	
+	public partial class thongKeDoanhThuResult
+	{
+		
+		private string _thang;
+		
+		private System.Nullable<decimal> _tien;
+		
+		public thongKeDoanhThuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thang", DbType="NVarChar(4)")]
+		public string thang
+		{
+			get
+			{
+				return this._thang;
+			}
+			set
+			{
+				if ((this._thang != value))
+				{
+					this._thang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tien", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> tien
+		{
+			get
+			{
+				return this._tien;
+			}
+			set
+			{
+				if ((this._tien != value))
+				{
+					this._tien = value;
 				}
 			}
 		}

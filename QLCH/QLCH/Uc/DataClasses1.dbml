@@ -562,4 +562,10 @@
     <Parameter Name="giamGia" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.thongKeDoanhThu" Method="thongKeDoanhThu">
+    <ElementType Name="thongKeDoanhThuResult">
+      <Column Name="thang" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="tien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

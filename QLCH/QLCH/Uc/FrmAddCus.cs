@@ -48,7 +48,9 @@ namespace QLCH.Uc
                 if (kh.Count() == 0)
                 {
                     id = "KH" + ma;
-                    db.KH_Ins(id, txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                    db.KH_Ins(id, txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text); 
+                    this.Close();
+                    exit();
                 }
                 else if (kh.Count() > 0)
                 {
@@ -58,10 +60,12 @@ namespace QLCH.Uc
                     ma = Convert.ToInt32(kh2.maKH.ToString().Substring(2)) + 1;
                     id = "KH" + ma;
                     db.KH_Ins(id, txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                    this.Close();
+                    exit();
                 }
             }
-            this.Close();
-            exit();
+            
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

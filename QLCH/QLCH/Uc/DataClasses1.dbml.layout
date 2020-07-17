@@ -105,7 +105,7 @@
         <classShapeMoniker Id="4b131749-9c35-49fb-8da1-0adc9eec46d0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 5.84780110677083); (4.5 : 7.63544840494792); (6.25 : 7.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.5 : 5.84780110677083); (4.5 : 7.63544840494792); (5.79166666666667 : 7.63544840494792 : JumpStart); (5.95833333333333 : 7.63544840494792 : JumpEnd); (6.25 : 7.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/sanPham/sanPham_chiTietHDX" />
       <nodes>
         <classShapeMoniker Id="99ba0b93-49e2-4799-8aa3-ce15cd7869b3" />

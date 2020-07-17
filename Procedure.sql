@@ -402,3 +402,75 @@ go
  as begin
  update sanPham set soLuong=@soLuong where maSP=@maSP
  end
+
+ 
+ go
+ alter proc thongKeDoanhThu
+ as begin
+	drop  table if exists tam
+	create table tam (thang int primary key,tien decimal)
+	declare @tongTien decimal,@i int =1
+	while (@i<13)
+		begin
+			insert into tam values (@i,0)
+			set @i=@i+1
+		end
+	set @i=1
+	while(@i<13)
+		begin
+		declare @count int =0 
+			select @count=count(*) from hoadDonXuat where DATEPart(MONTH,ngayBan)=@i and DATEPART(YEAR,ngayBan)=DATEPART(YEAR,GETDATE())
+			if(@count>0)
+				begin
+					select @tongTien=SUM(tongTien) from hoadDonXuat where DATEPart(MONTH,ngayBan)=@i and DATEPART(YEAR,ngayBan)=DATEPART(YEAR,GETDATE())
+				end
+			else
+				begin 
+					set @tongTien=0
+				end
+			update tam set tien=@tongTien where thang=@i
+			set @i=@i+1
+		end
+		select N'Month '+CAST (thang as nvarchar(2)) as [thang],tien  from tam
+ end
+
+ go 
+
+
+ go
+ create proc mathuoc_banchaytrongthang 
+as begin
+
+select  t.TEN as [Tên sản phẩm],t.SOLO as [Số lô],sum(ct.SOLUONG) as [SL đã bán]
+from HOADON hd, CT_HD CT, SANPHAM t
+where CT.MATHUOC = t.MATHUOC and hd.MAHD = ct.MAHD and datepart(m, hd.ngay) = datepart (m, getdate())  and hd.status !=0
+group by ct.MATHUOC, t.TEN,t.SOLO
+order by [SL đã bán] desc -- giảm dần // asc tăng dần 
+
+end
+go
+
+CREATE proc mathuoc_banchaytrongthang
+as begin
+declare @date date
+select @date = CAST(info.value('invoiceIssuedDate[1]','date') as date) from Invoice
+cross apply Invoice.InvoiceInfo.nodes('/invoice/invoiceData') as XMLdata(info)
+where Invoice.status !=0 and datepart(YEAR, CAST(info.value('invoiceIssuedDate[1]','date') as date)) = datepart (YEAR, getdate()) 
+	and datepart(m, CAST(info.value('invoiceIssuedDate[1]','date') as date)) = datepart (m, getdate())
+
+select  t.TEN as [Tên sản phẩm],t.SOLO as [Số lô],sum(CAST(info.value('quantity[1]','int')*info.value('exchangeValue[1]','int') as int)) as [SL đã bán]
+from SANPHAM t,Invoice
+cross apply Invoice.InvoiceInfo.nodes('/invoice/invoiceData/items/item') as XMLdata(info)
+where info.value('itemCode[1]','nvarchar(max)') = t.MATHUOC and 
+	datepart(m, @date) = datepart (m, getdate())  and Invoice.status !=0 and t.statusDelete = 1
+	and datepart(YEAR, @date) = datepart (YEAR, getdate())
+group by t.TEN,t.SOLO
+order by [SL đã bán] desc -- giảm dần // asc tăng dần 
+
+end
+go
+create proc find_most_product_sale
+ as begin
+ select sp.te
+ from chiTietHDX ct,hoadDonXuat hd,sanPham sp
+ end

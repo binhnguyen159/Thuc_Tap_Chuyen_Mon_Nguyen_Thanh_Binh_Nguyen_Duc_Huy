@@ -32,32 +32,32 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuction));
             this.pnlTab = new Guna.UI.WinForms.GunaPanel();
             this.panelMenu = new Guna.UI.WinForms.GunaPanel();
-            this.btnProvider = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnReport = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnBill = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnProducts = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnCustomer = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.panelSubMenu = new System.Windows.Forms.Panel();
             this.pnlLogo = new Guna.UI.WinForms.GunaPanel();
-            this.ptbLogo = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnlContent = new Guna.UI.WinForms.GunaPanel();
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.lbName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
             this.ptbBack = new Guna.UI.WinForms.GunaPictureBox();
-            this.lbName = new System.Windows.Forms.Label();
-            this.panelSubMenu = new System.Windows.Forms.Panel();
+            this.btnReport = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnProvider = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnBill = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnProducts = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnCustomer = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.ptbLogo = new Guna.UI.WinForms.GunaPictureBox();
             this.pnlTab.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.panelSubMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).BeginInit();
-            this.panelSubMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTab
@@ -84,6 +84,121 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(264, 445);
             this.panelMenu.TabIndex = 1;
+            // 
+            // panelSubMenu
+            // 
+            this.panelSubMenu.Controls.Add(this.btnBuy);
+            this.panelSubMenu.Controls.Add(this.btnSell);
+            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenu.Location = new System.Drawing.Point(0, 147);
+            this.panelSubMenu.Name = "panelSubMenu";
+            this.panelSubMenu.Size = new System.Drawing.Size(264, 88);
+            this.panelSubMenu.TabIndex = 0;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.ptbLogo);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(264, 255);
+            this.pnlLogo.TabIndex = 0;
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.pnlTab;
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.Color.White;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlContent.Location = new System.Drawing.Point(264, 35);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(965, 665);
+            this.pnlContent.TabIndex = 2;
+            // 
+            // gunaDragControl2
+            // 
+            this.gunaDragControl2.TargetControl = this.pnlContent;
+            // 
+            // gunaDragControl3
+            // 
+            this.gunaDragControl3.TargetControl = null;
+            // 
+            // lbName
+            // 
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(961, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(138, 35);
+            this.lbName.TabIndex = 4;
+            this.lbName.Text = "label1";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLCH.Properties.Resources.icons8_administrator_male_skin_type_7_100;
+            this.pictureBox1.Location = new System.Drawing.Point(1105, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ptbExit
+            // 
+            this.ptbExit.BaseColor = System.Drawing.Color.White;
+            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
+            this.ptbExit.Location = new System.Drawing.Point(1194, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(35, 35);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbExit.TabIndex = 0;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
+            // 
+            // ptbBack
+            // 
+            this.ptbBack.BaseColor = System.Drawing.Color.White;
+            this.ptbBack.Image = global::QLCH.Properties.Resources.icons8_back_48;
+            this.ptbBack.Location = new System.Drawing.Point(1149, 0);
+            this.ptbBack.Name = "ptbBack";
+            this.ptbBack.Size = new System.Drawing.Size(35, 35);
+            this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbBack.TabIndex = 2;
+            this.ptbBack.TabStop = false;
+            this.ptbBack.Click += new System.EventHandler(this.ptbBack_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.AnimationHoverSpeed = 0.07F;
+            this.btnReport.AnimationSpeed = 0.03F;
+            this.btnReport.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+            this.btnReport.BorderColor = System.Drawing.Color.Black;
+            this.btnReport.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnReport.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnReport.CheckedForeColor = System.Drawing.Color.White;
+            this.btnReport.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnReport.CheckedImage")));
+            this.btnReport.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FocusedColor = System.Drawing.Color.Empty;
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnReport.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnReport.Location = new System.Drawing.Point(0, 284);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnReport.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnReport.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnReport.OnHoverImage = null;
+            this.btnReport.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnReport.OnPressedColor = System.Drawing.Color.Black;
+            this.btnReport.Size = new System.Drawing.Size(264, 49);
+            this.btnReport.TabIndex = 7;
+            this.btnReport.Text = "Report";
+            this.btnReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnProvider
             // 
@@ -130,9 +245,10 @@
             this.btnBuy.CheckedLineColor = System.Drawing.Color.DimGray;
             this.btnBuy.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBuy.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuy.ForeColor = System.Drawing.Color.White;
             this.btnBuy.Image = ((System.Drawing.Image)(resources.GetObject("btnBuy.Image")));
+            this.btnBuy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBuy.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBuy.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnBuy.Location = new System.Drawing.Point(0, 45);
@@ -162,9 +278,10 @@
             this.btnSell.CheckedLineColor = System.Drawing.Color.DimGray;
             this.btnSell.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSell.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.ForeColor = System.Drawing.Color.White;
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
+            this.btnSell.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSell.ImageSize = new System.Drawing.Size(20, 20);
             this.btnSell.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnSell.Location = new System.Drawing.Point(0, 0);
@@ -181,37 +298,6 @@
             this.btnSell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSell.Visible = false;
             // 
-            // btnReport
-            // 
-            this.btnReport.AnimationHoverSpeed = 0.07F;
-            this.btnReport.AnimationSpeed = 0.03F;
-            this.btnReport.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.btnReport.BorderColor = System.Drawing.Color.Black;
-            this.btnReport.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnReport.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnReport.CheckedForeColor = System.Drawing.Color.White;
-            this.btnReport.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnReport.CheckedImage")));
-            this.btnReport.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReport.FocusedColor = System.Drawing.Color.Empty;
-            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnReport.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnReport.Location = new System.Drawing.Point(0, 284);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnReport.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnReport.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnReport.OnHoverImage = null;
-            this.btnReport.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnReport.OnPressedColor = System.Drawing.Color.Black;
-            this.btnReport.Size = new System.Drawing.Size(264, 49);
-            this.btnReport.TabIndex = 7;
-            this.btnReport.Text = "Report";
-            this.btnReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnBill
             // 
             this.btnBill.AnimationHoverSpeed = 0.07F;
@@ -227,7 +313,7 @@
             this.btnBill.FocusedColor = System.Drawing.Color.Empty;
             this.btnBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.ForeColor = System.Drawing.Color.White;
-            this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
+            this.btnBill.Image = global::QLCH.Properties.Resources.menu;
             this.btnBill.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBill.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnBill.Location = new System.Drawing.Point(0, 98);
@@ -308,15 +394,6 @@
             this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.ptbLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(264, 255);
-            this.pnlLogo.TabIndex = 0;
-            // 
             // ptbLogo
             // 
             this.ptbLogo.BaseColor = System.Drawing.Color.White;
@@ -328,81 +405,6 @@
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.pnlTab;
-            // 
-            // pnlContent
-            // 
-            this.pnlContent.BackColor = System.Drawing.Color.White;
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlContent.Location = new System.Drawing.Point(264, 35);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(965, 665);
-            this.pnlContent.TabIndex = 2;
-            // 
-            // gunaDragControl2
-            // 
-            this.gunaDragControl2.TargetControl = this.pnlContent;
-            // 
-            // gunaDragControl3
-            // 
-            this.gunaDragControl3.TargetControl = null;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLCH.Properties.Resources.icons8_administrator_male_skin_type_7_100;
-            this.pictureBox1.Location = new System.Drawing.Point(1105, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ptbExit
-            // 
-            this.ptbExit.BaseColor = System.Drawing.Color.White;
-            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
-            this.ptbExit.Location = new System.Drawing.Point(1194, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(35, 35);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbExit.TabIndex = 0;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
-            // 
-            // ptbBack
-            // 
-            this.ptbBack.BaseColor = System.Drawing.Color.White;
-            this.ptbBack.Image = global::QLCH.Properties.Resources.icons8_back_48;
-            this.ptbBack.Location = new System.Drawing.Point(1149, 0);
-            this.ptbBack.Name = "ptbBack";
-            this.ptbBack.Size = new System.Drawing.Size(35, 35);
-            this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbBack.TabIndex = 2;
-            this.ptbBack.TabStop = false;
-            this.ptbBack.Click += new System.EventHandler(this.ptbBack_Click);
-            // 
-            // lbName
-            // 
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(961, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(138, 35);
-            this.lbName.TabIndex = 4;
-            this.lbName.Text = "label1";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panelSubMenu
-            // 
-            this.panelSubMenu.Controls.Add(this.btnBuy);
-            this.panelSubMenu.Controls.Add(this.btnSell);
-            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu.Location = new System.Drawing.Point(0, 147);
-            this.panelSubMenu.Name = "panelSubMenu";
-            this.panelSubMenu.Size = new System.Drawing.Size(264, 88);
-            this.panelSubMenu.TabIndex = 0;
             // 
             // frmFuction
             // 
@@ -423,12 +425,12 @@
             this.Load += new System.EventHandler(this.frmFuction_Load);
             this.pnlTab.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            this.panelSubMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).EndInit();
-            this.panelSubMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

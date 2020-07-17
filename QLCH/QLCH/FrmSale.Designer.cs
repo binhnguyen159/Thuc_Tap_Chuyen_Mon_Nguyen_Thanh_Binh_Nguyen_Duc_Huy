@@ -101,6 +101,7 @@
             this.gunaButton1.Size = new System.Drawing.Size(177, 42);
             this.gunaButton1.TabIndex = 6;
             this.gunaButton1.Text = "Setting";
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // btnSetting
             // 
