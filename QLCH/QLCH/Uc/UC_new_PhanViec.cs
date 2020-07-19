@@ -25,6 +25,7 @@ namespace QLCH.Uc
 
         private void UC_new_PhanViec_Load(object sender, EventArgs e)
         {
+            cbbJob.Text = "";
             dgvPhanViec.AutoGenerateColumns = false;
             dgvPhanViec.DataSource = db.PV_Sel();
             cbbJob.ValueMember = "maCV";

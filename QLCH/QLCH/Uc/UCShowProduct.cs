@@ -34,47 +34,55 @@ namespace QLCH.Uc
         {
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = db.Product_select();
-
-            lbMa.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            lbTenSP.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            sanPham sp = db.sanPhams.Where(s => s.maSP == lbMa.Text).FirstOrDefault();
-            if (sp.thongSo == null)
+            var ssp = from u in db.sanPhams select u;
+            if (ssp.Count()==0)
             {
-                txtThongSo.Text = "No infomations";
+                return;
             }
             else
             {
-                txtThongSo.Text = sp.thongSo.ToString();
-            }
-            lbQuantity.Text = sp.soLuong.ToString();
-            if (Convert.ToInt32(lbQuantity.Text) == 0)
-            {
-                btnAddToCart.Enabled = false;
-            }
-            else
-            {
-                btnAddToCart.Enabled = true;
-            }
-
-            if (sp == null || sp.anh == null)
-            { }
-            else
-            {
-                MemoryStream img = new MemoryStream(sp.anh.ToArray());
-                Image image = Image.FromStream(img);
-                if (image == null) { return; }
+                lbMa.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                lbTenSP.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                sanPham sp = db.sanPhams.Where(s => s.maSP == lbMa.Text).FirstOrDefault();
+                if (sp.thongSo == null)
+                {
+                    txtThongSo.Text = "No infomations";
+                }
                 else
                 {
-                    pictureBox1.Image = image;
-                    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                    txtThongSo.Text = sp.thongSo.ToString();
                 }
+                lbQuantity.Text = sp.soLuong.ToString();
+                if (Convert.ToInt32(lbQuantity.Text) == 0)
+                {
+                    btnAddToCart.Enabled = false;
+                }
+                else
+                {
+                    btnAddToCart.Enabled = true;
+                }
+
+                if (sp == null || sp.anh == null)
+                { }
+                else
+                {
+                    MemoryStream img = new MemoryStream(sp.anh.ToArray());
+                    Image image = Image.FromStream(img);
+                    if (image == null) { return; }
+                    else
+                    {
+                        pictureBox1.Image = image;
+                        pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                }
+
+
+                nhomSP loaiSP = db.nhomSPs.Where(s => s.maLoai == sp.maLoai).FirstOrDefault();
+                lbTLSP.Text = loaiSP.tenLoai;
+                lbGia.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                panelKH.Visible = false;
             }
-
-
-            nhomSP loaiSP = db.nhomSPs.Where(s => s.maLoai == sp.maLoai).FirstOrDefault();
-            lbTLSP.Text = loaiSP.tenLoai;
-            lbGia.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            panelKH.Visible = false;
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

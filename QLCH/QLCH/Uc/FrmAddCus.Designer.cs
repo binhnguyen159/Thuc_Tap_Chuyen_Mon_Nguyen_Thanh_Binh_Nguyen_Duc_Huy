@@ -241,6 +241,7 @@
             this.txtEmail.Size = new System.Drawing.Size(193, 36);
             this.txtEmail.TabIndex = 52;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // gunaGradientButton1
             // 

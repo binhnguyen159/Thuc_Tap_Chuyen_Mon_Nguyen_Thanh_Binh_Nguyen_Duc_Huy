@@ -595,7 +595,7 @@ namespace QLCH.Uc
                 chooseProvider.ShowDialog();
                 if (frmChooseProvider.GetData.idNCC != "")
                 {
-                    db.HDN_Ins("HDN000001", frmLogin.GetID.id, frmChooseProvider.GetData.idNCC, d, 0, "Chưa thanh toán");
+                    db.HDN_Ins("HDN000001", frmLogin.GetID.id, frmChooseProvider.GetData.idNCC, d, 0, "Unpaid","");
                 }
             }
             else
@@ -619,7 +619,7 @@ namespace QLCH.Uc
                 chooseProvider.ShowDialog();
                 if (frmChooseProvider.GetData.idNCC != "")
                 {
-                    db.HDN_Ins(GetData.idBill, frmLogin.GetID.id, frmChooseProvider.GetData.idNCC, d, 0, "Chưa thanh toán");
+                    db.HDN_Ins(GetData.idBill, frmLogin.GetID.id, frmChooseProvider.GetData.idNCC, d, 0, "Unpaid","");
                 }
             }
         }

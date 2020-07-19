@@ -60,11 +60,11 @@ namespace QLCH
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            Uc_new_ProductShow uc_New_Product = new Uc_new_ProductShow();
-            panelShowSP.Controls.Clear();
-            uc_New_Product.Dock = DockStyle.Fill;
-            panelShowSP.Controls.Add(uc_New_Product);
-            uc_New_Product.Show();
+            //Uc_new_ProductShow uc_New_Product = new Uc_new_ProductShow();
+            //panelShowSP.Controls.Clear();
+            //uc_New_Product.Dock = DockStyle.Fill;
+            //panelShowSP.Controls.Add(uc_New_Product);
+            //uc_New_Product.Show();
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)

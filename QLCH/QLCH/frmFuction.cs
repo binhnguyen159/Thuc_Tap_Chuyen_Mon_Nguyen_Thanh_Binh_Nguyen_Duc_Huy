@@ -59,7 +59,7 @@ namespace QLCH
 
 
 
-        Boolean bill = false;
+        //Boolean bill = false;
         private void btnBill_Click(object sender, EventArgs e)
         {
             //bill = !bill;
@@ -105,20 +105,20 @@ namespace QLCH
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            Uc_WareHouse products = new Uc_WareHouse();
-            pnlContent.Controls.Clear();
-            pnlContent.Controls.Add(products);
+            //Uc_WareHouse products = new Uc_WareHouse();
+            //pnlContent.Controls.Clear();
+            //pnlContent.Controls.Add(products);
         }
 
         private void frmFuction_Load(object sender, EventArgs e)
         {
             nhanVien nv = db.nhanViens.Where(s => s.maNV == frmLogin.GetID.id).FirstOrDefault();
             lbName.Text = nv.tenNV.ToString();
-            if (nv.maCV == "cv2")
+            if (nv.maCV == "cv3")
             {
                 btnSaleProduct.Visible = false;
             }
-            else if (nv.maCV == "cv3")
+            else if (nv.maCV == "cv2")
             {
                 btnProduct.Visible = false;
                

@@ -91,7 +91,7 @@ namespace QLCH.Uc
         private void btnCreate_Click(object sender, EventArgs e)
         {
             GunaButton button = sender as GunaButton;
-            if (button.Text.Equals("Tạo tài khoản"))
+            if (button.Name.Equals("btnCreate"))
             {
                 
                 choose = 1;
@@ -99,20 +99,20 @@ namespace QLCH.Uc
                 btnSetPass.Enabled = false;
                 txtTenDN.Enabled = true;
             }
-            else if (button.Text.Equals("Xóa tài khoản"))
+            else if (button.Name.Equals("btnDrop"))
             {
                 choose = 2;
                 btnCreate.Enabled = false;
                 btnSetPass.Enabled = false;
             }
                 
-            else if (button.Text.Equals("Cấp mật khẩu"))
+            else if (button.Name.Equals("btnSetPass"))
             {
                 choose = 3;
                 btnDrop.Enabled = false;
                 btnCreate.Enabled = false;
             }
-            else if (button.Text.Equals("Tìm kiếm"))
+            else if (button.Name.Equals("btnTimKiem"))
             {
                 choose = 4;
                 btnDrop.Enabled = false;
@@ -149,7 +149,7 @@ namespace QLCH.Uc
                 smptClient.EnableSsl = true;
                 smptClient.Send(mail);
 
-                MessageBox.Show("Đã gửi mật khẩu về Email của nhân viên " + tenNV, "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Send, check your email " + tenNV, "Thông báo", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {
@@ -168,7 +168,7 @@ namespace QLCH.Uc
                 case 1:
                     {
                         if (txtTenDN.Text.Equals(null))
-                            MessageBox.Show("Chưa điền tên đăng nhập");
+                            MessageBox.Show("PLease enter user name");
                         else
                         {
                             if (nv2 == null)

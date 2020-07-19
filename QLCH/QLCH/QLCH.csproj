@@ -302,12 +302,6 @@
     <Compile Include="Uc\Uc_TaiKhoan.Designer.cs">
       <DependentUpon>Uc_TaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc\Uc_WareHouse.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\Uc_WareHouse.Designer.cs">
-      <DependentUpon>Uc_WareHouse.cs</DependentUpon>
-    </Compile>
     <Compile Include="Uc\WareHouse\Form_report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,24 +319,6 @@
     </Compile>
     <Compile Include="Uc\WareHouse\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Uc\WareHouse\Uc_new_showProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\WareHouse\Uc_new_showProduct.Designer.cs">
-      <DependentUpon>Uc_new_showProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Uc\WareHouse\Uc_ProductShow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\WareHouse\Uc_ProductShow.Designer.cs">
-      <DependentUpon>Uc_ProductShow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Uc\Uc_new_ProductShow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Uc\Uc_new_ProductShow.Designer.cs">
-      <DependentUpon>Uc_new_ProductShow.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -446,9 +422,6 @@
     <EmbeddedResource Include="Uc\Uc_TaiKhoan.resx">
       <DependentUpon>Uc_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Uc\Uc_WareHouse.resx">
-      <DependentUpon>Uc_WareHouse.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\Form_report.resx">
       <DependentUpon>Form_report.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,15 +430,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Uc\WareHouse\Uc_new_showProduct.resx">
-      <DependentUpon>Uc_new_showProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Uc\WareHouse\Uc_ProductShow.resx">
-      <DependentUpon>Uc_ProductShow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Uc\Uc_new_ProductShow.resx">
-      <DependentUpon>Uc_new_ProductShow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BillOfCus.xsc">
       <DependentUpon>BillOfCus.xsd</DependentUpon>
@@ -602,6 +566,10 @@
     <None Include="Resources\icons8-exit-10022.png" />
     <None Include="Resources\icons8-facebook-100.png" />
     <None Include="Resources\icons8-github-96.png" />
+    <None Include="Resources\icons8-email-send-100.png" />
+    <None Include="Resources\icons8-email-send-100 %281%29.png" />
+    <None Include="Resources\icons8-new-post-100.png" />
+    <None Include="Resources\icons8-new-post-100 %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

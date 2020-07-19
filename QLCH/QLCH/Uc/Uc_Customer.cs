@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
 using Bunifu.Framework.UI;
+using System.Text.RegularExpressions;
 
 namespace QLCH.Uc
 {
@@ -77,7 +78,7 @@ namespace QLCH.Uc
                     rdbMale.Checked = true;
                 else
                     rdbFemale.Checked = true;
-                dtpBirthday.Value = (DateTime) dgvCustomers.Rows[row].Cells[3].Value;
+                dtpBirthday.Value = (DateTime)dgvCustomers.Rows[row].Cells[3].Value;
                 txtEmail.Text = dgvCustomers.Rows[row].Cells[4].Value.ToString();
                 txtPhone.Text = dgvCustomers.Rows[row].Cells[5].Value.ToString();
                 txtAddress.Text = dgvCustomers.Rows[row].Cells[6].Value.ToString();
@@ -103,7 +104,7 @@ namespace QLCH.Uc
             btnAdd.Visible = true;
             btnUp.Visible = true;
             btnFind.Visible = true;
-            
+
             Uc_Customer_Load(sender, e);
         }
 
@@ -128,31 +129,29 @@ namespace QLCH.Uc
                             var kh = from u in db.khachHangs select u;
                             if (kh.Count() == 0)
                             {
-                                db.KH_Ins("SP000001", txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                                db.KH_Ins("KH000001", txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                             }
                             else
                             {
                                 int ma = 1;
                                 string id = "";
-                                
-                                    khachHang kkkh = db.khachHangs.OrderByDescending(s => s.maKH).FirstOrDefault();
-                                    
-                                    ma = Convert.ToInt32(kkkh.maKH.ToString().Trim().Substring(2)) + 1;
-                                    if (ma / 10 >= 100000)
-                                        id = "KH" + ma;
-                                    else if (ma / 10 >= 1000 && ma / 10 < 10000)
-                                        id = "KH0" + ma;
-                                    else if (ma / 10 >= 100 && ma / 10 < 1000)
-                                        id = "KH00" + ma;
-                                    else if (ma / 10 >= 10 && ma / 10 < 100)
-                                        id = "KH000" + ma;
-                                    else if (ma / 10 >= 1 && ma / 10 < 10)
-                                        id = "KH0000" + ma;
-                                    else if (ma / 10 < 1)
-                                        id = "KH00000" + ma;
+
+                                khachHang kkkh = db.khachHangs.OrderByDescending(s => s.maKH).FirstOrDefault();
+
+                                ma = Convert.ToInt32(kkkh.maKH.ToString().Trim().Substring(2)) + 1;
+                                if (ma / 10 >= 100000)
+                                    id = "KH" + ma;
+                                else if (ma / 10 >= 1000 && ma / 10 < 10000)
+                                    id = "KH0" + ma;
+                                else if (ma / 10 >= 100 && ma / 10 < 1000)
+                                    id = "KH00" + ma;
+                                else if (ma / 10 >= 10 && ma / 10 < 100)
+                                    id = "KH000" + ma;
+                                else if (ma / 10 >= 1 && ma / 10 < 10)
+                                    id = "KH0000" + ma;
+                                else if (ma / 10 < 1)
+                                    id = "KH00000" + ma;
                                 db.KH_Ins("KH000001", txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
-                                
-                                
 
                             }
                             Uc_Customer_Load(sender, e);
@@ -250,6 +249,26 @@ namespace QLCH.Uc
                         }
                     }
                     break;
+            }
+        }
+        private bool isEmail(string inputEmail)
+        {
+            inputEmail = inputEmail ?? string.Empty;
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                  @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                  @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(inputEmail))
+                return (true);
+            else
+                return (false);
+        }
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (!isEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Email incorrect", "Error");
+                txtEmail.Focus();
             }
         }
     }

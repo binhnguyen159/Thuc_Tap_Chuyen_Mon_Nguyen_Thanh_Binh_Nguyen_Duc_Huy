@@ -32,8 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuction));
             this.pnlTab = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnStatistical = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnGuarantee = new Guna.UI.WinForms.GunaAdvenceButton();
             this.panelSubMenu = new System.Windows.Forms.Panel();
+            this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnBill = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnSaleProduct = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnProduct = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnCustomer = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnlLogo = new Guna.UI.WinForms.GunaPanel();
+            this.ptbLogo = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnlContent = new Guna.UI.WinForms.GunaPanel();
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
@@ -43,24 +52,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ptbBack = new Guna.UI.WinForms.GunaPictureBox();
             this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnStatistical = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnGuarantee = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnBill = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnSaleProduct = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnProduct = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnCustomer = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.ptbLogo = new Guna.UI.WinForms.GunaPictureBox();
             this.pnlTab.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTab
@@ -89,106 +89,6 @@
             this.gunaPanel1.Size = new System.Drawing.Size(264, 452);
             this.gunaPanel1.TabIndex = 1;
             this.gunaPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaPanel1_Paint);
-            // 
-            // panelSubMenu
-            // 
-            this.panelSubMenu.BackColor = System.Drawing.Color.DarkGray;
-            this.panelSubMenu.Controls.Add(this.btnSell);
-            this.panelSubMenu.Controls.Add(this.btnBuy);
-            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu.Location = new System.Drawing.Point(0, 196);
-            this.panelSubMenu.Name = "panelSubMenu";
-            this.panelSubMenu.Size = new System.Drawing.Size(264, 96);
-            this.panelSubMenu.TabIndex = 7;
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.ptbLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(264, 255);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.pnlTab;
-            // 
-            // pnlContent
-            // 
-            this.pnlContent.BackColor = System.Drawing.Color.White;
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlContent.Location = new System.Drawing.Point(264, 51);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(965, 656);
-            this.pnlContent.TabIndex = 2;
-            // 
-            // gunaDragControl2
-            // 
-            this.gunaDragControl2.TargetControl = this.pnlContent;
-            // 
-            // gunaDragControl3
-            // 
-            this.gunaDragControl3.TargetControl = null;
-            // 
-            // gunaPanel2
-            // 
-            this.gunaPanel2.Controls.Add(this.lbName);
-            this.gunaPanel2.Controls.Add(this.pictureBox1);
-            this.gunaPanel2.Controls.Add(this.ptbBack);
-            this.gunaPanel2.Controls.Add(this.ptbExit);
-            this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaPanel2.Location = new System.Drawing.Point(264, 0);
-            this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(965, 35);
-            this.gunaPanel2.TabIndex = 3;
-            // 
-            // lbName
-            // 
-            this.lbName.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbName.Location = new System.Drawing.Point(756, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(100, 35);
-            this.lbName.TabIndex = 4;
-            this.lbName.Text = "label1";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::QLCH.Properties.Resources.icons8_administrator_male_skin_type_7_100;
-            this.pictureBox1.Location = new System.Drawing.Point(856, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ptbBack
-            // 
-            this.ptbBack.BaseColor = System.Drawing.Color.White;
-            this.ptbBack.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbBack.Image = global::QLCH.Properties.Resources.icons8_back_48;
-            this.ptbBack.Location = new System.Drawing.Point(895, 0);
-            this.ptbBack.Name = "ptbBack";
-            this.ptbBack.Size = new System.Drawing.Size(35, 35);
-            this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbBack.TabIndex = 2;
-            this.ptbBack.TabStop = false;
-            this.ptbBack.Click += new System.EventHandler(this.ptbBack_Click);
-            // 
-            // ptbExit
-            // 
-            this.ptbExit.BaseColor = System.Drawing.Color.White;
-            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
-            this.ptbExit.Location = new System.Drawing.Point(930, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(35, 35);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbExit.TabIndex = 0;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
             // btnStatistical
             // 
@@ -259,6 +159,17 @@
             this.btnGuarantee.Text = "Guarantee";
             this.btnGuarantee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGuarantee.Click += new System.EventHandler(this.btnGuarantee_Click);
+            // 
+            // panelSubMenu
+            // 
+            this.panelSubMenu.BackColor = System.Drawing.Color.DarkGray;
+            this.panelSubMenu.Controls.Add(this.btnSell);
+            this.panelSubMenu.Controls.Add(this.btnBuy);
+            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenu.Location = new System.Drawing.Point(0, 196);
+            this.panelSubMenu.Name = "panelSubMenu";
+            this.panelSubMenu.Size = new System.Drawing.Size(264, 96);
+            this.panelSubMenu.TabIndex = 7;
             // 
             // btnSell
             // 
@@ -464,9 +375,18 @@
             this.btnCustomer.Radius = 8;
             this.btnCustomer.Size = new System.Drawing.Size(264, 49);
             this.btnCustomer.TabIndex = 2;
-            this.btnCustomer.Text = "Danh Mục";
+            this.btnCustomer.Text = "Category";
             this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.ptbLogo);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(264, 255);
+            this.pnlLogo.TabIndex = 0;
             // 
             // ptbLogo
             // 
@@ -479,6 +399,86 @@
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.pnlTab;
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.Color.White;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlContent.Location = new System.Drawing.Point(264, 51);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(965, 656);
+            this.pnlContent.TabIndex = 2;
+            // 
+            // gunaDragControl2
+            // 
+            this.gunaDragControl2.TargetControl = this.pnlContent;
+            // 
+            // gunaDragControl3
+            // 
+            this.gunaDragControl3.TargetControl = null;
+            // 
+            // gunaPanel2
+            // 
+            this.gunaPanel2.Controls.Add(this.lbName);
+            this.gunaPanel2.Controls.Add(this.pictureBox1);
+            this.gunaPanel2.Controls.Add(this.ptbBack);
+            this.gunaPanel2.Controls.Add(this.ptbExit);
+            this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel2.Location = new System.Drawing.Point(264, 0);
+            this.gunaPanel2.Name = "gunaPanel2";
+            this.gunaPanel2.Size = new System.Drawing.Size(965, 35);
+            this.gunaPanel2.TabIndex = 3;
+            // 
+            // lbName
+            // 
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbName.Location = new System.Drawing.Point(756, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(100, 35);
+            this.lbName.TabIndex = 4;
+            this.lbName.Text = "label1";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::QLCH.Properties.Resources.icons8_administrator_male_skin_type_7_100;
+            this.pictureBox1.Location = new System.Drawing.Point(856, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ptbBack
+            // 
+            this.ptbBack.BaseColor = System.Drawing.Color.White;
+            this.ptbBack.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbBack.Image = global::QLCH.Properties.Resources.icons8_back_48;
+            this.ptbBack.Location = new System.Drawing.Point(895, 0);
+            this.ptbBack.Name = "ptbBack";
+            this.ptbBack.Size = new System.Drawing.Size(35, 35);
+            this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbBack.TabIndex = 2;
+            this.ptbBack.TabStop = false;
+            this.ptbBack.Click += new System.EventHandler(this.ptbBack_Click);
+            // 
+            // ptbExit
+            // 
+            this.ptbExit.BaseColor = System.Drawing.Color.White;
+            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
+            this.ptbExit.Location = new System.Drawing.Point(930, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(35, 35);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbExit.TabIndex = 0;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
             // frmFuction
             // 
@@ -498,11 +498,11 @@
             this.gunaPanel1.ResumeLayout(false);
             this.panelSubMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -111,18 +111,20 @@ namespace QLCH
         {
             var nvad = from u in dt.nhanViens select u;
             var cv = from u in dt.congViecs select u;
+            
+            if (cv.Count() == 0)
+            {
+                dt.CV_Ins("cv1", "Manager", 15);
+                dt.CV_Ins("cv2", "Seller", 7);
+                dt.CV_Ins("cv3", "Ware house manager", 10);
+                dt.CV_Ins("cv4", "Boss", 20);
+            }
             if (nvad.Count() == 0)
             {
+               // db.NV_Ins("NV000001", txtName.Text, gt, dtpBirthday.Value, dtpNVL.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                 dt.NV_Ins("NV000001", "", "Male", DateTime.Now, DateTime.Now, "gearharis@gmail.com", "", "");
                 dt.ACC_Add("NV000001", "AdMin", MaHoaMD5("123"));
-                if (cv == null)
-                {
-                    dt.CV_Ins("cv1", "Manager", 15);
-                    dt.CV_Ins("cv2", "Seller", 7);
-                    dt.CV_Ins("cv3", "Ware house manager", 10);
-                    dt.CV_Ins("cv4", "Boss", 20);
-                }
-                
+                dt.PV_Ins_Up("NV000001", "cv4");
             }
             nhanVien nv = dt.nhanViens.Where(s => s.passWords.Equals(MaHoaMD5(txtPassword.Text))
                                                      && s.tendn.Equals(txtAcount.Text))// && s.trangThai != "Fired")
@@ -133,11 +135,20 @@ namespace QLCH
                     MessageBox.Show("Your account was block");
                 else
                 {
-                    GetID.id = nv.maNV;
-                    frmFuction fuction = new frmFuction();
-                    //FrmSale fuction = new FrmSale();
-                    this.Hide();
-                    fuction.ShowDialog();
+                    if (nv.maCV == "" || nv.maCV == null)
+                    {
+                        MessageBox.Show("You don't have any permission");
+                    }
+                    else
+                    {
+                        GetID.id = nv.maNV;
+                       
+                        frmFuction fuction = new frmFuction();
+                        //FrmSale fuction = new FrmSale();
+                        this.Hide();
+                        fuction.ShowDialog();
+                    }
+                    
                 }
                 
             }

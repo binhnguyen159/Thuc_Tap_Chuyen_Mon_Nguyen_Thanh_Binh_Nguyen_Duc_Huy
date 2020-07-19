@@ -42,8 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAtt = new System.Windows.Forms.Button();
-            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +76,7 @@
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(333, 20);
             this.txtTo.TabIndex = 31;
+            this.txtTo.Leave += new System.EventHandler(this.txtTo_Leave);
             // 
             // label3
             // 
@@ -116,18 +117,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(243, 90);
+            this.label6.Location = new System.Drawing.Point(361, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(276, 26);
+            this.label6.Size = new System.Drawing.Size(117, 26);
             this.label6.TabIndex = 42;
-            this.label6.Text = "CẤU TRÚC GỬI GMAIL";
+            this.label6.Text = "Send Mail";
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(78, 182);
+            this.txtPass.Location = new System.Drawing.Point(78, 173);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(333, 20);
             this.txtPass.TabIndex = 41;
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // txtFrom
             // 
@@ -140,7 +142,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(4, 182);
+            this.label4.Location = new System.Drawing.Point(4, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 19);
             this.label4.TabIndex = 39;
@@ -165,6 +167,33 @@
             this.btnAtt.TabIndex = 37;
             this.btnAtt.Text = "Attach files";
             this.btnAtt.UseVisualStyleBackColor = true;
+            this.btnAtt.Click += new System.EventHandler(this.btnAtt_Click);
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BaseColor = System.Drawing.Color.White;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.BorderSize = 2;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton1.Image = global::QLCH.Properties.Resources.icons8_email_send_100;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(559, 360);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = global::QLCH.Properties.Resources.icons8_email_send_100__1_;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Radius = 8;
+            this.gunaButton1.Size = new System.Drawing.Size(85, 42);
+            this.gunaButton1.TabIndex = 43;
+            this.gunaButton1.Text = "Send";
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // gunaPictureBox3
             // 
@@ -177,33 +206,11 @@
             this.gunaPictureBox3.TabIndex = 36;
             this.gunaPictureBox3.TabStop = false;
             // 
-            // gunaButton1
-            // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.BorderSize = 2;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
-//            this.gunaButton1.Image = global::QLCH.Properties.Resources.icons8_email_send_100__1_;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(559, 360);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(85, 42);
-            this.gunaButton1.TabIndex = 43;
-            this.gunaButton1.Text = "Send";
-            // 
             // Frm_Mail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(820, 506);
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.gunaPictureBox3);

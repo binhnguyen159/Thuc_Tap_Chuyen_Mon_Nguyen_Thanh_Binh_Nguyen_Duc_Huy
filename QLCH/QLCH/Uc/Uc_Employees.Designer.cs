@@ -467,6 +467,7 @@
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.Size = new System.Drawing.Size(174, 30);
             this.txtEmail.TabIndex = 35;
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // txtName
             // 

@@ -397,6 +397,7 @@
             this.txtEmail.Size = new System.Drawing.Size(193, 36);
             this.txtEmail.TabIndex = 33;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // chbName
             // 
