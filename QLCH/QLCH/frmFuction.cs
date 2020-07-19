@@ -117,14 +117,18 @@ namespace QLCH
             if (nv.maCV == "cv3")
             {
                 btnSaleProduct.Visible = false;
+                btnStatistical.Visible = false;
+
             }
             else if (nv.maCV == "cv2")
             {
                 btnProduct.Visible = false;
-               
+                btnStatistical.Visible = false;
             }
             else
             {
+                btnStatistical.Visible = true;
+
                 btnSaleProduct.Visible = true;
                 btnProduct.Visible = true;
             }

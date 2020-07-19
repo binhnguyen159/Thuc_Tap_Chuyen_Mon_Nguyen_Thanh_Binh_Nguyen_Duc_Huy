@@ -65,10 +65,14 @@ namespace QLCH.Uc
                 if (nv2.maCV == "cv4")
                     return;
                 if (nv.maCV == "cv4")
+                {
                     btnDel.Visible = false;
+                    btnUp.Visible = false;
+                }
                 else if (nv.maCV != "cv4")
                 {
                     btnDel.Visible = true;
+                    btnUp.Visible = true;
                 }
                     
                 

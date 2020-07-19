@@ -86,6 +86,21 @@ namespace QLCH.Uc
                 {
                     txtTenDN.Text = dgvTaiKhoan.Rows[i].Cells[3].Value.ToString();
                 }
+                nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(txtMaNV.Text)).FirstOrDefault();
+                nhanVien nv2 = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id)).FirstOrDefault();
+                if (nv2.maCV == "cv4")
+                    return;
+                if (nv.maCV == "cv4")
+                {
+                    btnDrop.Visible = false;
+                    btnSetPass.Visible = false;
+                }
+
+                else if (nv.maCV != "cv4")
+                {
+                    btnDrop.Visible = true;
+                    btnSetPass.Visible = true;
+                }
             }
         }
 
@@ -173,7 +188,9 @@ namespace QLCH.Uc
                             MessageBox.Show("PLease enter user name");
                         else
                         {
-                            if (nv2 == null)
+                            if (nv.tendn != "" || nv.tendn != null)
+                                MessageBox.Show("This employee already have account");
+                            else if (nv2 == null)
                             {
                                 SendMail(nv.tenNV, nv.email);
                                 db.ACC_Add(txtMaNV.Text, txtTenDN.Text, MaHoaMD5(pass));

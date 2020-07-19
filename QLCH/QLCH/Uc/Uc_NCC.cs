@@ -168,8 +168,9 @@ namespace QLCH.Uc
                                         id = "NCC00000" + ma;
                                     db.NCC_Ins(id, txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                                 }
-                                Uc_NCC_Load(sender, e);
+                                
                             }
+                            Uc_NCC_Load(sender, e);
                             break;
                         }
                     case 2:

@@ -900,4 +900,8 @@ create proc bill_Import_info (@maHdn nvarchar(50))
  from hoadDonNhap hdn,nhaCungCap ncc,nhanVien nv,sanPham sp,chiTietHDN ctHD
  where hdn.maNCC=ncc.maNCC and hdn.maNV=nv.maNV
 		and hdn.maHDN=ctHD.maHDN and ctHD.maSP=sp.maSP and hdn.maHDN=@maHdn
+<<<<<<< HEAD
  end
+=======
+ end
+>>>>>>> 47ad08fc574c61bf5d2559ea8097e370d38b5ebb
