@@ -86,14 +86,14 @@
         <elementListCompartment Id="09a46bde-5240-4036-824a-a6609c2b1e42" absoluteBounds="3.515, 3.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.5 : 17.625); (4.5 : 11.9054996744792); (6 : 11.9054996744792); (6 : 4.63544840494792); (6.25 : 4.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.5 : 17.625); (4.5 : 11.9054996744792); (6 : 11.9054996744792); (6 : 4.63544840494792); (6.04166666666667 : 4.63544840494792 : JumpStart); (6.20833333333333 : 4.63544840494792 : JumpEnd); (6.25 : 4.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/hoadDonNhap/hoadDonNhap_chiTietHDN" />
       <nodes>
         <classShapeMoniker Id="c155e79b-6b4c-450c-9adc-b43b7453c644" />
         <classShapeMoniker Id="69f78b33-8e0a-44b7-89d7-9c8e6563332e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 9.5); (4.5 : 8.19399251302083); (5.91666666666667 : 8.19399251302083 : JumpStart); (6.08333333333333 : 8.19399251302083 : JumpEnd); (6.125 : 8.19399251302083); (6.125 : 1.63544840494792); (6.25 : 1.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.5 : 9.5); (4.5 : 8.19399251302083); (6.125 : 8.19399251302083); (6.125 : 1.63544840494792); (6.25 : 1.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/hoadDonXuat/hoadDonXuat_chiTietHDX" />
       <nodes>
         <classShapeMoniker Id="0ffe470a-ce77-4134-b28b-2abde66bc5ce" />

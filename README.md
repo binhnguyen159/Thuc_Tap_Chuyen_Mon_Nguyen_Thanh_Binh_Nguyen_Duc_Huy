@@ -21,10 +21,24 @@ Lớp: Công nghệ thông tin - K58
 8. Phân quyền tài khoản (admin, quản lý, nhân viên)
 9. Lưu trữ thông tin khách hàng qua số điện thoại (hoặc email). Tìm kiếm lịch sử mua hàng khách hàng thông qua thông tin khách hàng.
 10. Hoàn trả lại sản phẩm (khi bị các vấn đề về sản phẩm …). Chức năng giảm giá theo thời điểm.
+<<<<<<< HEAD
 11. Quản lý kho hàng.(thêm sản phẩm vào kho, nhập hàng, xem hóa đơn và chi tiết hóa đơn)
 12. Đóng gói phần mềm.
 13. Mã hóa mật khẩu bằng md5
 14. In hóa đơn, gửi hóa đơn về cho chủ cửa hàng
+=======
+<<<<<<< HEAD
+11. Quản lý kho hàng.(thêm sản phẩm vào kho, nhập hàng, xem hóa đơn và chi tiết hóa đơn)
+12. Đóng gói phần mềm.
+13. Mã hóa mật khẩu bằng md5
+14. In hóa đơn, gửi hóa đơn về cho chủ cửa hàng
+=======
+11. Quản lý kho hàng.
+12. Đóng gói phần mềm
+13. Mã hóa mật khẩu bằng md5
+14. Bắt nhập đúng định dạng mail 
+>>>>>>> 47ad08fc574c61bf5d2559ea8097e370d38b5ebb
+>>>>>>> 61a24cbedc2de2a5bb67dbae9fbfdeb7a746b758
 ...
 ## Phần 3: Các chức năng chưa hoàn thành
 
@@ -46,6 +60,7 @@ Lớp: Công nghệ thông tin - K58
 	+)Khi đã kiểm tra xong hóa đơn và muốn thanh toán có thể bấm nút pay để thanh toán hoặc tắt bằng dấu X ở góc phải và chọn cancel trong phần sản phẩm để hủy hóa đơn.
 	+) Có thể xem danh sách hóa đơn nhập ở Mục Bill->Buy. Ở mục này cũng có nút select trong cột detail để xem chi tiết hóa đơn, tương tự như nút see bill ở trong mục sản phẩm
 	+) Nếu người đăng nhập là chủ cửa hàng, tức tài khoản chủ có thể hủy đơn hàng (trong trường hợp nhân viên nhập nhầm,...). Nếu không phải tài khoản chủ thì không thể thay đổi tình trạng hóa đơn.
+<<<<<<< HEAD
 - Trong phần Sale Product: sẽ có chức năng là tạo giỏ hàng cho khách hàng và chọn sản phẩm cần mua
 	+) Trước hết phải tìm khách hàng, nếu không có khách hàng thì bấm hình dấu cộng để lập thông tin cho khách hàng, sau đó chọn khách hàng và bấm create new cart.
 	+) Bấm add to cart để thêm sản phẩm vào giỏ hàng.
@@ -73,5 +88,7 @@ Lớp: Công nghệ thông tin - K58
 	+) Bấm update để cập nhật phiếu.
 	+) Bấm save để lưu phiếu.
 	+) Bấm cancel để hủy tác vụ.
+=======
+>>>>>>> 61a24cbedc2de2a5bb67dbae9fbfdeb7a746b758
 Xin cám ơn!
 	

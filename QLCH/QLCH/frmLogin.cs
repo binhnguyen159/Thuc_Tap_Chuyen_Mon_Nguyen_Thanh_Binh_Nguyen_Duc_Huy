@@ -142,15 +142,12 @@ namespace QLCH
                     else
                     {
                         GetID.id = nv.maNV;
-                       
                         frmFuction fuction = new frmFuction();
                         //FrmSale fuction = new FrmSale();
                         this.Hide();
                         fuction.ShowDialog();
                     }
-                    
                 }
-                
             }
 
             else

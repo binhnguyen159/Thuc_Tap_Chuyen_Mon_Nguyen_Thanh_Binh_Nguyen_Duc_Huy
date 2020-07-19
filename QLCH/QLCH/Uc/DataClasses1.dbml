@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TTCM" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HT0NP1M;Initial Catalog=TTCM;Integrated Security=True" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MONKEYDASUS;Initial Catalog=TTCM;Persist Security Info=True;User ID=sa" SettingsObjectName="QLCH.Properties.Settings" SettingsPropertyName="TTCMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.chiTietHDN" Member="chiTietHDNs">
     <Type Name="chiTietHDN">
       <Column Name="maHDN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

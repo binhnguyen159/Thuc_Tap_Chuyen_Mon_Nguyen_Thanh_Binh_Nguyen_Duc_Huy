@@ -19,7 +19,19 @@ namespace QLCH.Uc
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void btnSet_Click(object sender, EventArgs e)
         {
-            db.PV_Ins_Up(txtID.Text, cbbJob.SelectedValue.ToString());
+            nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id)).FirstOrDefault();
+            //if (nv.maCV == "cv4")
+            //{
+                db.PV_Ins_Up(txtID.Text, cbbJob.SelectedValue.ToString());
+            //}
+            //else if (nv.maCV != "cv4")
+            //{
+            //    if(cbbJob.SelectedItem.ToString()== "Boss")
+            //    {
+            //        MessageBox.Show("You don't have permission to set this job");
+            //    }
+            //    cbbJob.SelectedIndex = 0;
+            //}
             UC_new_PhanViec_Load(sender, e);
         }
 
@@ -40,6 +52,26 @@ namespace QLCH.Uc
                 txtID.Text = dgvPhanViec.Rows[e.RowIndex].Cells[0].Value.ToString();
                 if (dgvPhanViec.Rows[e.RowIndex].Cells[2].Value != null)
                     cbbJob.Text = dgvPhanViec.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }
+        }
+
+        private void cbbJob_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id)).FirstOrDefault();
+            //MessageBox.Show(.ToString());
+            //if (nv.maCV == "cv4")
+            //{
+            //    db.PV_Ins_Up(txtID.Text, cbbJob.SelectedValue.ToString());
+            //}
+            //else 
+            if (nv.maCV != "cv4")
+            {
+                if (cbbJob.SelectedIndex == 3)
+                {
+                    MessageBox.Show("You don't have permission to set this job");
+                    cbbJob.SelectedIndex = 0;
+                }
+                
             }
         }
     }
