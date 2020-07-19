@@ -26,7 +26,6 @@ namespace QLCH.Uc
         {
             function = 1;
             gunaPanel1.Visible = true;
-            btnDel.Visible = false;
             btnUp.Visible = false;
             btnFind.Visible = false;
         }
@@ -45,7 +44,6 @@ namespace QLCH.Uc
             function = 3;
             gunaPanel1.Visible = true;
             btnAdd.Visible = false;
-            btnDel.Visible = false;
             btnFind.Visible = false;
         }
 
@@ -54,7 +52,6 @@ namespace QLCH.Uc
             function = 4;
             txtID.Enabled = true;
             gunaPanel1.Visible = true;
-            btnDel.Visible = false;
             btnUp.Visible = false;
             btnAdd.Visible = false;
         }
@@ -104,7 +101,6 @@ namespace QLCH.Uc
             gunaPanel1.Visible = false;
             txtID.Enabled = false;
             btnAdd.Visible = true;
-            btnDel.Visible = true;
             btnUp.Visible = true;
             btnFind.Visible = true;
             
@@ -119,9 +115,9 @@ namespace QLCH.Uc
                     {
                         string gt = "";
                         if (rdbMale.Checked)
-                            gt = "Nam";
+                            gt = "Male";
                         else
-                            gt = "Nữ";
+                            gt = "Female";
 
                         if (txtAddress.Text == "" || txtEmail.Text == "" || txtName.Text == "" || txtPhone.Text == "")
                         {
@@ -129,24 +125,39 @@ namespace QLCH.Uc
                         }
                         else
                         {
-                            int ma = 1;
-                            string id = "";
                             var kh = from u in db.khachHangs select u;
                             if (kh.Count() == 0)
                             {
-                                id = "KH" + ma;
-                                db.KH_Ins(id, txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                                db.KH_Ins("SP000001", txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                             }
-                            else if (kh.Count() > 0)
+                            else
                             {
+                                int ma = 1;
+                                string id = "";
+                                
+                                    khachHang kkkh = db.khachHangs.OrderByDescending(s => s.maKH).FirstOrDefault();
+                                    
+                                    ma = Convert.ToInt32(kkkh.maKH.ToString().Trim().Substring(2)) + 1;
+                                    if (ma / 10 >= 100000)
+                                        id = "KH" + ma;
+                                    else if (ma / 10 >= 1000 && ma / 10 < 10000)
+                                        id = "KH0" + ma;
+                                    else if (ma / 10 >= 100 && ma / 10 < 1000)
+                                        id = "KH00" + ma;
+                                    else if (ma / 10 >= 10 && ma / 10 < 100)
+                                        id = "KH000" + ma;
+                                    else if (ma / 10 >= 1 && ma / 10 < 10)
+                                        id = "KH0000" + ma;
+                                    else if (ma / 10 < 1)
+                                        id = "KH00000" + ma;
+                                db.KH_Ins("KH000001", txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                                
+                                
 
-                                kh.OrderByDescending(s => s.maKH).FirstOrDefault();
-                                var kh2 = db.khachHangs.OrderByDescending(s => s.maKH).FirstOrDefault();
-                                ma = Convert.ToInt32(kh2.maKH.ToString().Substring(2)) + 1;
-                                id = "KH" + ma;
-                                db.KH_Ins(id, txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                             }
                             Uc_Customer_Load(sender, e);
+
+
                         }
                     }
                     break;
@@ -160,9 +171,9 @@ namespace QLCH.Uc
                     {
                         string gt = "";
                         if (rdbMale.Checked)
-                            gt = "Nam";
+                            gt = "Male";
                         else
-                            gt = "Nữ";
+                            gt = "Female";
                         khachHang kh = db.khachHangs.Where(s => s.maKH.Equals(txtID.Text)).FirstOrDefault();
                         if (kh == null)
                             return;
@@ -177,9 +188,9 @@ namespace QLCH.Uc
                     {
                         string gt = "";
                         if (rdbMale.Checked)
-                            gt = "Nam";
+                            gt = "Male";
                         else
-                            gt = "Nữ";
+                            gt = "Female";
                         if (chbName.Checked == true && chbSex.Checked == true && chbBirthday.Checked == true)
                         {
                             var kh = from u in db.khachHangs

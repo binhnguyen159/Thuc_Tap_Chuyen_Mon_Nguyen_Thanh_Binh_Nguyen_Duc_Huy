@@ -38,13 +38,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTo = new Guna.UI.WinForms.GunaDateTimePicker();
             this.dtpFrom = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.btnShow = new Guna.UI.WinForms.GunaButton();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lbNote = new System.Windows.Forms.Label();
+            this.rtxtNote = new System.Windows.Forms.RichTextBox();
+            this.btnSave = new Guna.UI.WinForms.GunaButton();
+            this.btnShow = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBillBuy)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +81,8 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,12 +93,12 @@
             this.dgvBillBuy.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBillBuy.EnableHeadersVisualStyles = false;
             this.dgvBillBuy.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvBillBuy.Location = new System.Drawing.Point(16, 156);
+            this.dgvBillBuy.Location = new System.Drawing.Point(13, 110);
             this.dgvBillBuy.Name = "dgvBillBuy";
             this.dgvBillBuy.ReadOnly = true;
             this.dgvBillBuy.RowHeadersVisible = false;
             this.dgvBillBuy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBillBuy.Size = new System.Drawing.Size(932, 463);
+            this.dgvBillBuy.Size = new System.Drawing.Size(932, 394);
             this.dgvBillBuy.TabIndex = 10;
             this.dgvBillBuy.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Cyan;
             this.dgvBillBuy.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
@@ -123,7 +129,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(545, 46);
+            this.label2.Location = new System.Drawing.Point(544, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 15);
             this.label2.TabIndex = 9;
@@ -148,7 +154,7 @@
             this.dtpTo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpTo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTo.ForeColor = System.Drawing.Color.Black;
-            this.dtpTo.Location = new System.Drawing.Point(574, 38);
+            this.dtpTo.Location = new System.Drawing.Point(573, 13);
             this.dtpTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpTo.Name = "dtpTo";
@@ -170,7 +176,7 @@
             this.dtpFrom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpFrom.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFrom.ForeColor = System.Drawing.Color.Black;
-            this.dtpFrom.Location = new System.Drawing.Point(157, 38);
+            this.dtpFrom.Location = new System.Drawing.Point(156, 13);
             this.dtpFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpFrom.Name = "dtpFrom";
@@ -183,32 +189,9 @@
             this.dtpFrom.Text = "Saturday, July 4, 2020";
             this.dtpFrom.Value = new System.DateTime(2020, 7, 4, 16, 11, 25, 992);
             // 
-            // btnShow
-            // 
-            this.btnShow.AnimationHoverSpeed = 0.07F;
-            this.btnShow.AnimationSpeed = 0.03F;
-            this.btnShow.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnShow.BorderColor = System.Drawing.Color.Black;
-            this.btnShow.FocusedColor = System.Drawing.Color.Empty;
-            this.btnShow.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.ForeColor = System.Drawing.Color.White;
-            this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
-            this.btnShow.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnShow.Location = new System.Drawing.Point(430, 90);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.btnShow.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnShow.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnShow.OnHoverImage = null;
-            this.btnShow.OnPressedColor = System.Drawing.Color.Black;
-            this.btnShow.Size = new System.Drawing.Size(82, 42);
-            this.btnShow.TabIndex = 11;
-            this.btnShow.Text = "Show";
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
             // gunaElipse1
             // 
-            this.gunaElipse1.Radius = 10;
+            this.gunaElipse1.Radius = 9;
             this.gunaElipse1.TargetControl = this.btnShow;
             // 
             // Column1
@@ -249,15 +232,94 @@
             this.Column5.Text = "Select";
             this.Column5.UseColumnTextForButtonValue = true;
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Cancel";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Text = "Select";
+            this.Column6.UseColumnTextForButtonValue = true;
+            // 
+            // lbNote
+            // 
+            this.lbNote.AutoSize = true;
+            this.lbNote.Location = new System.Drawing.Point(10, 521);
+            this.lbNote.Name = "lbNote";
+            this.lbNote.Size = new System.Drawing.Size(36, 15);
+            this.lbNote.TabIndex = 15;
+            this.lbNote.Text = "Note:";
+            // 
+            // rtxtNote
+            // 
+            this.rtxtNote.Location = new System.Drawing.Point(54, 518);
+            this.rtxtNote.Name = "rtxtNote";
+            this.rtxtNote.Size = new System.Drawing.Size(791, 125);
+            this.rtxtNote.TabIndex = 14;
+            this.rtxtNote.Text = "";
+            // 
+            // btnSave
+            // 
+            this.btnSave.AnimationHoverSpeed = 0.07F;
+            this.btnSave.AnimationSpeed = 0.03F;
+            this.btnSave.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSave.Location = new System.Drawing.Point(863, 601);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSave.OnHoverImage = null;
+            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Size = new System.Drawing.Size(82, 42);
+            this.btnSave.TabIndex = 11;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnShow
+            // 
+            this.btnShow.AnimationHoverSpeed = 0.07F;
+            this.btnShow.AnimationSpeed = 0.03F;
+            this.btnShow.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnShow.BorderColor = System.Drawing.Color.Black;
+            this.btnShow.FocusedColor = System.Drawing.Color.Empty;
+            this.btnShow.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.ForeColor = System.Drawing.Color.White;
+            this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
+            this.btnShow.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnShow.Location = new System.Drawing.Point(429, 36);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.btnShow.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnShow.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnShow.OnHoverImage = null;
+            this.btnShow.OnPressedColor = System.Drawing.Color.Black;
+            this.btnShow.Size = new System.Drawing.Size(82, 42);
+            this.btnShow.TabIndex = 11;
+            this.btnShow.Text = "Show";
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 8;
+            this.gunaElipse2.TargetControl = this.btnSave;
+            // 
             // Uc_Bill_Buy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbNote);
+            this.Controls.Add(this.rtxtNote);
             this.Controls.Add(this.dgvBillBuy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpTo);
             this.Controls.Add(this.dtpFrom);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnShow);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Uc_Bill_Buy";
@@ -283,5 +345,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.Label lbNote;
+        private System.Windows.Forms.RichTextBox rtxtNote;
+        private Guna.UI.WinForms.GunaButton btnSave;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
     }
 }

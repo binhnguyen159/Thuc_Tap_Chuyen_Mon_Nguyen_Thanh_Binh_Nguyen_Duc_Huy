@@ -62,6 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrintBill = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -529,11 +530,39 @@
             this.gunaGradientButton2.Text = "Refresh";
             this.gunaGradientButton2.Click += new System.EventHandler(this.gunaGradientButton2_Click);
             // 
+            // gunaGradientButton1
+            // 
+            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.BorderSize = 2;
+            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Image = global::QLCH.Properties.Resources.icons8_print_100;
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(750, 281);
+            this.gunaGradientButton1.Name = "gunaGradientButton1";
+            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.SlateBlue;
+            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.MediumSpringGreen;
+            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = global::QLCH.Properties.Resources.icons8_print_100__1_;
+            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Radius = 7;
+            this.gunaGradientButton1.Size = new System.Drawing.Size(106, 45);
+            this.gunaGradientButton1.TabIndex = 19;
+            this.gunaGradientButton1.Text = "Print Bill";
+            // 
             // UcBill_Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.btnPrintBill);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.gunaGradientButton2);
@@ -582,5 +611,6 @@
         private Guna.UI.WinForms.GunaLineTextBox txtCusPhone;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaGradientButton btnPrintBill;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
     }
 }

@@ -58,13 +58,13 @@
             this.fpnlGroupSP = new System.Windows.Forms.FlowLayoutPanel();
             this.fpnlBranfOfGroup = new System.Windows.Forms.FlowLayoutPanel();
             this.cbbTTSP = new System.Windows.Forms.ComboBox();
+            this.btnAddProduct = new Guna.UI.WinForms.GunaButton();
             this.btnBill_Import = new Guna.UI.WinForms.GunaButton();
+            this.btnSeeBill = new Guna.UI.WinForms.GunaButton();
+            this.btnCanCle = new Guna.UI.WinForms.GunaButton();
             this.btnFind = new Guna.UI.WinForms.GunaButton();
             this.btnFilter = new Guna.UI.WinForms.GunaButton();
             this.nhomSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnCanCle = new Guna.UI.WinForms.GunaButton();
-            this.btnSeeBill = new Guna.UI.WinForms.GunaButton();
-            this.btnAddProduct = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomSPBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +85,7 @@
             this.dgvProduct.AllowUserToDeleteRows = false;
             this.dgvProduct.AllowUserToResizeColumns = false;
             this.dgvProduct.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
@@ -93,7 +93,7 @@
             this.dgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -111,15 +111,15 @@
             this.Column6,
             this.ct});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.EnableHeadersVisualStyles = false;
-            this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.dgvProduct.Location = new System.Drawing.Point(3, 325);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
@@ -127,28 +127,28 @@
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(959, 265);
             this.dgvProduct.TabIndex = 34;
-            this.dgvProduct.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Cyan;
-            this.dgvProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvProduct.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Dark;
+            this.dgvProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgvProduct.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvProduct.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvProduct.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            this.dgvProduct.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.dgvProduct.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.dgvProduct.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvProduct.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvProduct.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvProduct.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvProduct.ThemeStyle.HeaderStyle.Height = 21;
             this.dgvProduct.ThemeStyle.ReadOnly = true;
-            this.dgvProduct.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            this.dgvProduct.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.dgvProduct.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProduct.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvProduct.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvProduct.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.dgvProduct.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
@@ -342,51 +342,131 @@
             this.cbbTTSP.Size = new System.Drawing.Size(260, 23);
             this.cbbTTSP.TabIndex = 46;
             // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.AnimationHoverSpeed = 0.07F;
+            this.btnAddProduct.AnimationSpeed = 0.03F;
+            this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddProduct.BaseColor = System.Drawing.Color.White;
+            this.btnAddProduct.BorderColor = System.Drawing.Color.Black;
+            this.btnAddProduct.BorderSize = 2;
+            this.btnAddProduct.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnAddProduct.Image = global::QLCH.Properties.Resources.icons8_checkmark_100;
+            this.btnAddProduct.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAddProduct.Location = new System.Drawing.Point(74, 289);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnAddProduct.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAddProduct.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.OnHoverImage = global::QLCH.Properties.Resources.icons8_checkmark_100__1_;
+            this.btnAddProduct.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAddProduct.Radius = 8;
+            this.btnAddProduct.Size = new System.Drawing.Size(90, 30);
+            this.btnAddProduct.TabIndex = 0;
+            this.btnAddProduct.Text = "Add";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
             // btnBill_Import
             // 
             this.btnBill_Import.AnimationHoverSpeed = 0.07F;
             this.btnBill_Import.AnimationSpeed = 0.03F;
             this.btnBill_Import.BackColor = System.Drawing.Color.Transparent;
-            this.btnBill_Import.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnBill_Import.BaseColor = System.Drawing.Color.White;
             this.btnBill_Import.BorderColor = System.Drawing.Color.Black;
+            this.btnBill_Import.BorderSize = 2;
             this.btnBill_Import.FocusedColor = System.Drawing.Color.Empty;
             this.btnBill_Import.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBill_Import.ForeColor = System.Drawing.Color.White;
-            this.btnBill_Import.Image = ((System.Drawing.Image)(resources.GetObject("btnBill_Import.Image")));
+            this.btnBill_Import.ForeColor = System.Drawing.Color.Black;
+            this.btnBill_Import.Image = global::QLCH.Properties.Resources.icons8_checked_100;
             this.btnBill_Import.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBill_Import.Location = new System.Drawing.Point(258, 289);
             this.btnBill_Import.Name = "btnBill_Import";
             this.btnBill_Import.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBill_Import.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnBill_Import.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnBill_Import.OnHoverImage = null;
+            this.btnBill_Import.OnHoverImage = global::QLCH.Properties.Resources.icons8_checked_100__1_;
             this.btnBill_Import.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBill_Import.Radius = 7;
+            this.btnBill_Import.Radius = 8;
             this.btnBill_Import.Size = new System.Drawing.Size(152, 30);
             this.btnBill_Import.TabIndex = 0;
             this.btnBill_Import.Text = "Create Import Bill";
             this.btnBill_Import.Click += new System.EventHandler(this.btnBill_Import_Click);
+            // 
+            // btnSeeBill
+            // 
+            this.btnSeeBill.AnimationHoverSpeed = 0.07F;
+            this.btnSeeBill.AnimationSpeed = 0.03F;
+            this.btnSeeBill.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeeBill.BaseColor = System.Drawing.Color.White;
+            this.btnSeeBill.BorderColor = System.Drawing.Color.Black;
+            this.btnSeeBill.BorderSize = 2;
+            this.btnSeeBill.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSeeBill.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeeBill.ForeColor = System.Drawing.Color.Black;
+            this.btnSeeBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSeeBill.Image")));
+            this.btnSeeBill.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSeeBill.Location = new System.Drawing.Point(653, 289);
+            this.btnSeeBill.Name = "btnSeeBill";
+            this.btnSeeBill.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSeeBill.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSeeBill.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSeeBill.OnHoverImage = null;
+            this.btnSeeBill.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSeeBill.Radius = 8;
+            this.btnSeeBill.Size = new System.Drawing.Size(100, 30);
+            this.btnSeeBill.TabIndex = 3;
+            this.btnSeeBill.Text = "See Bill";
+            this.btnSeeBill.Click += new System.EventHandler(this.btnSeeBill_Click);
+            // 
+            // btnCanCle
+            // 
+            this.btnCanCle.AnimationHoverSpeed = 0.07F;
+            this.btnCanCle.AnimationSpeed = 0.03F;
+            this.btnCanCle.BackColor = System.Drawing.Color.Transparent;
+            this.btnCanCle.BaseColor = System.Drawing.Color.White;
+            this.btnCanCle.BorderColor = System.Drawing.Color.Black;
+            this.btnCanCle.BorderSize = 2;
+            this.btnCanCle.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCanCle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCanCle.ForeColor = System.Drawing.Color.Black;
+            this.btnCanCle.Image = global::QLCH.Properties.Resources.icons8_delete_60;
+            this.btnCanCle.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCanCle.Location = new System.Drawing.Point(484, 289);
+            this.btnCanCle.Name = "btnCanCle";
+            this.btnCanCle.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCanCle.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCanCle.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCanCle.OnHoverImage = global::QLCH.Properties.Resources.icons8_multiply_100;
+            this.btnCanCle.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCanCle.Radius = 8;
+            this.btnCanCle.Size = new System.Drawing.Size(90, 30);
+            this.btnCanCle.TabIndex = 3;
+            this.btnCanCle.Text = "Cancel";
+            this.btnCanCle.Click += new System.EventHandler(this.btnCanCle_Click);
             // 
             // btnFind
             // 
             this.btnFind.AnimationHoverSpeed = 0.07F;
             this.btnFind.AnimationSpeed = 0.03F;
             this.btnFind.BackColor = System.Drawing.Color.Transparent;
-            this.btnFind.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFind.BaseColor = System.Drawing.Color.White;
             this.btnFind.BorderColor = System.Drawing.Color.Black;
+            this.btnFind.BorderSize = 2;
             this.btnFind.FocusedColor = System.Drawing.Color.Empty;
             this.btnFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.White;
-            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
+            this.btnFind.ForeColor = System.Drawing.Color.Black;
+            this.btnFind.Image = global::QLCH.Properties.Resources.icons8_search_100;
             this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
             this.btnFind.Location = new System.Drawing.Point(397, 124);
             this.btnFind.Name = "btnFind";
             this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnFind.OnHoverImage = null;
+            this.btnFind.OnHoverImage = global::QLCH.Properties.Resources.icons8_process_100__1_;
             this.btnFind.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFind.Radius = 7;
+            this.btnFind.Radius = 8;
             this.btnFind.Size = new System.Drawing.Size(90, 38);
             this.btnFind.TabIndex = 3;
             this.btnFind.Text = "Find";
@@ -397,21 +477,22 @@
             this.btnFilter.AnimationHoverSpeed = 0.07F;
             this.btnFilter.AnimationSpeed = 0.03F;
             this.btnFilter.BackColor = System.Drawing.Color.Transparent;
-            this.btnFilter.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFilter.BaseColor = System.Drawing.Color.White;
             this.btnFilter.BorderColor = System.Drawing.Color.Black;
+            this.btnFilter.BorderSize = 2;
             this.btnFilter.FocusedColor = System.Drawing.Color.Empty;
             this.btnFilter.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ForeColor = System.Drawing.Color.Black;
+            this.btnFilter.Image = global::QLCH.Properties.Resources.icons8_filter_100;
             this.btnFilter.ImageSize = new System.Drawing.Size(20, 20);
             this.btnFilter.Location = new System.Drawing.Point(397, 213);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnFilter.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnFilter.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnFilter.OnHoverImage = null;
+            this.btnFilter.OnHoverImage = global::QLCH.Properties.Resources.icons8_filter_100__1_;
             this.btnFilter.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFilter.Radius = 7;
+            this.btnFilter.Radius = 8;
             this.btnFilter.Size = new System.Drawing.Size(90, 30);
             this.btnFilter.TabIndex = 3;
             this.btnFilter.Text = "Filter";
@@ -420,81 +501,6 @@
             // nhomSPBindingSource
             // 
             this.nhomSPBindingSource.DataMember = "nhomSP";
-            // 
-            // btnCanCle
-            // 
-            this.btnCanCle.AnimationHoverSpeed = 0.07F;
-            this.btnCanCle.AnimationSpeed = 0.03F;
-            this.btnCanCle.BackColor = System.Drawing.Color.Transparent;
-            this.btnCanCle.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnCanCle.BorderColor = System.Drawing.Color.Black;
-            this.btnCanCle.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCanCle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCanCle.ForeColor = System.Drawing.Color.White;
-            this.btnCanCle.Image = ((System.Drawing.Image)(resources.GetObject("btnCanCle.Image")));
-            this.btnCanCle.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCanCle.Location = new System.Drawing.Point(484, 289);
-            this.btnCanCle.Name = "btnCanCle";
-            this.btnCanCle.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnCanCle.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCanCle.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCanCle.OnHoverImage = null;
-            this.btnCanCle.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCanCle.Radius = 7;
-            this.btnCanCle.Size = new System.Drawing.Size(90, 30);
-            this.btnCanCle.TabIndex = 3;
-            this.btnCanCle.Text = "Cancel";
-            this.btnCanCle.Click += new System.EventHandler(this.btnCanCle_Click);
-            // 
-            // btnSeeBill
-            // 
-            this.btnSeeBill.AnimationHoverSpeed = 0.07F;
-            this.btnSeeBill.AnimationSpeed = 0.03F;
-            this.btnSeeBill.BackColor = System.Drawing.Color.Transparent;
-            this.btnSeeBill.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnSeeBill.BorderColor = System.Drawing.Color.Black;
-            this.btnSeeBill.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSeeBill.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeeBill.ForeColor = System.Drawing.Color.White;
-            this.btnSeeBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSeeBill.Image")));
-            this.btnSeeBill.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSeeBill.Location = new System.Drawing.Point(653, 289);
-            this.btnSeeBill.Name = "btnSeeBill";
-            this.btnSeeBill.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnSeeBill.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSeeBill.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSeeBill.OnHoverImage = null;
-            this.btnSeeBill.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSeeBill.Radius = 7;
-            this.btnSeeBill.Size = new System.Drawing.Size(100, 30);
-            this.btnSeeBill.TabIndex = 3;
-            this.btnSeeBill.Text = "See Bill";
-            this.btnSeeBill.Click += new System.EventHandler(this.btnSeeBill_Click);
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.AnimationHoverSpeed = 0.07F;
-            this.btnAddProduct.AnimationSpeed = 0.03F;
-            this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddProduct.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnAddProduct.BorderColor = System.Drawing.Color.Black;
-            this.btnAddProduct.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnAddProduct.Image")));
-            this.btnAddProduct.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddProduct.Location = new System.Drawing.Point(74, 289);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnAddProduct.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAddProduct.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.OnHoverImage = null;
-            this.btnAddProduct.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAddProduct.Radius = 7;
-            this.btnAddProduct.Size = new System.Drawing.Size(90, 30);
-            this.btnAddProduct.TabIndex = 0;
-            this.btnAddProduct.Text = "Add";
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // Uc_SanPham
             // 

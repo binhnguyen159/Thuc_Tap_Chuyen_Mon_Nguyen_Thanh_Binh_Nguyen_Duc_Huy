@@ -77,9 +77,9 @@
             this.lbMaHDX.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaHDX.Location = new System.Drawing.Point(3, 307);
             this.lbMaHDX.Name = "lbMaHDX";
-            this.lbMaHDX.Size = new System.Drawing.Size(68, 17);
+            this.lbMaHDX.Size = new System.Drawing.Size(0, 17);
             this.lbMaHDX.TabIndex = 48;
-            this.lbMaHDX.Text = "lbMaHDX";
+            this.lbMaHDX.Visible = false;
             // 
             // lbMa
             // 
@@ -87,9 +87,8 @@
             this.lbMa.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMa.Location = new System.Drawing.Point(3, 282);
             this.lbMa.Name = "lbMa";
-            this.lbMa.Size = new System.Drawing.Size(63, 17);
+            this.lbMa.Size = new System.Drawing.Size(0, 17);
             this.lbMa.TabIndex = 45;
-            this.lbMa.Text = "LbMaSP";
             this.lbMa.Visible = false;
             // 
             // lbGia
@@ -436,9 +435,8 @@
             this.lbMaGio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaGio.Location = new System.Drawing.Point(3, 327);
             this.lbMaGio.Name = "lbMaGio";
-            this.lbMaGio.Size = new System.Drawing.Size(57, 17);
+            this.lbMaGio.Size = new System.Drawing.Size(0, 17);
             this.lbMaGio.TabIndex = 64;
-            this.lbMaGio.Text = "lbMagio";
             this.lbMaGio.Visible = false;
             // 
             // btnCreateCart

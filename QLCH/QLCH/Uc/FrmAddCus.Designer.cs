@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddCus));
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dtpBirthday = new Guna.UI.WinForms.GunaDateTimePicker();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -248,13 +247,14 @@
             this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
             this.gunaGradientButton1.AnimationSpeed = 0.03F;
             this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Aqua;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.White;
             this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.BorderSize = 2;
             this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
             this.gunaGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Image = global::QLCH.Properties.Resources.icons8_save_100;
             this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaGradientButton1.Location = new System.Drawing.Point(249, 207);
             this.gunaGradientButton1.Name = "gunaGradientButton1";
@@ -262,7 +262,7 @@
             this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.SlateBlue;
             this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
+            this.gunaGradientButton1.OnHoverImage = global::QLCH.Properties.Resources.icons8_save_100ư;
             this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientButton1.Radius = 8;
             this.gunaGradientButton1.Size = new System.Drawing.Size(77, 42);
@@ -275,13 +275,14 @@
             this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
             this.gunaGradientButton2.AnimationSpeed = 0.03F;
             this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.Aqua;
-            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.SlateBlue;
+            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.White;
             this.gunaGradientButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.BorderSize = 2;
             this.gunaGradientButton2.FocusedColor = System.Drawing.Color.Empty;
             this.gunaGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton2.Image")));
+            this.gunaGradientButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.Image = global::QLCH.Properties.Resources.icons8_delete;
             this.gunaGradientButton2.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaGradientButton2.Location = new System.Drawing.Point(332, 207);
             this.gunaGradientButton2.Name = "gunaGradientButton2";
@@ -289,7 +290,7 @@
             this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.Aqua;
             this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.OnHoverImage = null;
+            this.gunaGradientButton2.OnHoverImage = global::QLCH.Properties.Resources.icons8_multiply_100;
             this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientButton2.Radius = 8;
             this.gunaGradientButton2.Size = new System.Drawing.Size(88, 42);

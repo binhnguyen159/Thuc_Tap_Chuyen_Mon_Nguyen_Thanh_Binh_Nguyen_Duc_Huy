@@ -22,8 +22,6 @@ namespace QLCH.Uc
 
         DataClasses1DataContext db = new DataClasses1DataContext();
         int choose;
-        int ma;
-        string str;
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -118,7 +116,7 @@ namespace QLCH.Uc
             if (choose == 4)
             {
                 if (cbbType.Text == "")
-                    MessageBox.Show("Bạn chưa chọn hình thức tìm kiếm");
+                    MessageBox.Show("You have to choose what you looking for");
                 else if (cbbType.SelectedIndex == 0)
                     dgvNCC.DataSource = db.NCC_FindiD(txtID.Text);
                 else if (cbbType.SelectedIndex == 1)
@@ -129,7 +127,7 @@ namespace QLCH.Uc
             }
             else if (txtProviderName.Text == "" || txtEmail.Text == "" || txtAddress.Text == "" || txtPhone.Text == "")
             {
-                MessageBox.Show("Vui lòng điền đầy đủ các thông tin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("PLease fill all information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtProviderName.Focus();
             }
             else
@@ -138,26 +136,39 @@ namespace QLCH.Uc
                 {
                     case 1:
                         {
-                            nhaCungCap ncc3 = db.nhaCungCaps.Where(s => s.tenNCC.Equals(txtProviderName.Text)).FirstOrDefault();
-                            if (ncc3 == null)
+                            var ncc = from u in db.nhaCungCaps select u;
+                            if (ncc.Count() == 0)
                             {
-                                var ncc2 = from u in db.nhaCungCaps
-                                           select u;
-                                if (ncc2.Count() == 0)
-                                {
-                                    db.NCC_Ins("NCC1", txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhone.Text);
-                                }
-                                else if (ncc2.Count() > 0)
-                                {
-                                    var ncc = db.nhaCungCaps.OrderByDescending(s => s.maNCC).FirstOrDefault();
-                                    ma = Convert.ToInt32(ncc.maNCC.Substring(3)) + 1;
-                                    str = "NCC" + ma;
-                                    db.NCC_Ins(str, txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhone.Text);
-                                }
+                                db.NCC_Ins("NV000001", txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                             }
                             else
-                                MessageBox.Show("Nhà cung cấp này đã có");
-                            Uc_NCC_Load(sender, e);
+                            {
+                                int ma = 1;
+                                string id = "";
+                                nhaCungCap ncc2 = db.nhaCungCaps.Where(s => s.tenNCC.Equals(txtProviderName.Text)).FirstOrDefault();
+                                if (ncc2 != null)
+                                    MessageBox.Show("Already have this provider 's name");
+                                else
+                                {
+                                    nhaCungCap ncc3 = db.nhaCungCaps.OrderByDescending(s => s.maNCC).FirstOrDefault();
+
+                                    ma = Convert.ToInt32(ncc3.maNCC.ToString().Trim().Substring(3)) + 1;
+                                    if (ma / 10 >= 100000)
+                                        id = "NCC" + ma;
+                                    else if (ma / 10 >= 1000 && ma / 10 < 10000)
+                                        id = "NCC0" + ma;
+                                    else if (ma / 10 >= 100 && ma / 10 < 1000)
+                                        id = "NCC00" + ma;
+                                    else if (ma / 10 >= 10 && ma / 10 < 100)
+                                        id = "NCC000" + ma;
+                                    else if (ma / 10 >= 1 && ma / 10 < 10)
+                                        id = "NCC0000" + ma;
+                                    else if (ma / 10 < 1)
+                                        id = "NCC00000" + ma;
+                                    db.NCC_Ins(id, txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                                }
+                                Uc_NCC_Load(sender, e);
+                            }
                             break;
                         }
                     case 2:
@@ -172,10 +183,8 @@ namespace QLCH.Uc
                             Uc_NCC_Load(sender, e);
                             break;
                         }
-                    
                 }
             }
-            
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

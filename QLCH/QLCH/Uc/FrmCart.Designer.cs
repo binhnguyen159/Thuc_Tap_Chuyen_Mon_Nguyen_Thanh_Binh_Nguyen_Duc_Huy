@@ -66,7 +66,7 @@
             this.lbTotalPrice.Name = "lbTotalPrice";
             this.lbTotalPrice.Size = new System.Drawing.Size(186, 41);
             this.lbTotalPrice.TabIndex = 12;
-            this.lbTotalPrice.Text = "label2";
+            this.lbTotalPrice.Text = "0";
             this.lbTotalPrice.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label1
@@ -109,7 +109,7 @@
             this.lbBeforeDisscount.Name = "lbBeforeDisscount";
             this.lbBeforeDisscount.Size = new System.Drawing.Size(186, 41);
             this.lbBeforeDisscount.TabIndex = 21;
-            this.lbBeforeDisscount.Text = "label2";
+            this.lbBeforeDisscount.Text = "0";
             this.lbBeforeDisscount.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label4
@@ -125,7 +125,7 @@
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = global::QLCH.Properties.Resources.icons8_exit_100;
+            this.bunifuImageButton1.Image = global::QLCH.Properties.Resources.icons8_exit_10022;
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(915, 0);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
@@ -164,8 +164,8 @@
             // 
             // gunaCirclePictureBox1
             // 
-            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaCirclePictureBox1.Image = global::QLCH.Properties.Resources.icons8_shopify_100;
             this.gunaCirclePictureBox1.Location = new System.Drawing.Point(783, 49);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(950, 656);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.lbBeforeDisscount);

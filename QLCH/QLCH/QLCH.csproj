@@ -584,6 +584,15 @@
     <None Include="Resources\icons8-search-100 %281%29.png" />
     <None Include="Resources\icons8-checkmark-100.png" />
     <None Include="Resources\icons8-checkmark-100 %281%29.png" />
+    <None Include="Resources\icons8-filter-100.png" />
+    <None Include="Resources\icons8-filter-100 %281%29.png" />
+    <None Include="Resources\icons8-delete-user-male-100.png" />
+    <None Include="Resources\icons8-delete-user-male-100 %281%29.png" />
+    <None Include="Resources\icons8-delete-bin-100.png" />
+    <None Include="Resources\icons8-delete-bin-100 %281%29.png" />
+    <None Include="Resources\icons8-exit-10022.png" />
+    <None Include="Resources\icons8-facebook-100.png" />
+    <None Include="Resources\icons8-github-96.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

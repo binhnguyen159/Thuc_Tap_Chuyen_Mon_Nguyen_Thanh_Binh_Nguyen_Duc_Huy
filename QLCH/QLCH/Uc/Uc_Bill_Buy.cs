@@ -19,9 +19,24 @@ namespace QLCH.Uc
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
         
-
+        public class GetData
+        {
+            public static string idBill = "";
+            public static string trThai = "";
+        }
         private void Uc_Bill_Buy_Load(object sender, EventArgs e)
         {
+            nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id) && s.maCV == "cv4").FirstOrDefault();
+            if (nv == null)
+            {
+                btnSave.Visible = false;
+                rtxtNote.Enabled = false;
+            }
+            else
+            {
+                rtxtNote.Enabled = true;
+                btnSave.Visible = true;
+            }
             DateTime from = DateTime.Now, to = DateTime.Now;
             dtpFrom.Value = from;
             dtpTo.Value = to;
@@ -42,6 +57,7 @@ namespace QLCH.Uc
         {
             if (e.RowIndex >= 0)
             {
+                GetData.trThai = dgvBillBuy.Rows[e.RowIndex].Cells[3].Value.ToString();
                 if (dgvBillBuy.Columns[e.ColumnIndex].Name.Equals("Column5"))
                 {
                     frmDetail_Import_Bill frmDetail_Import_Bill = new frmDetail_Import_Bill();
@@ -50,7 +66,35 @@ namespace QLCH.Uc
                     Uc_SanPham.GetData.idBill = "";
                     Uc_Bill_Buy_Load(sender, e);
                 }
-                    
+                else if (dgvBillBuy.Columns[e.ColumnIndex].Name.Equals("Column6"))
+                {
+                    if (GetData.trThai == "Paid")
+                    {
+                        nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id) && s.maCV == "cv4").FirstOrDefault();
+                        if (nv == null)
+                        {
+                            //btnSave.Visible = false;
+                            //MessageBox.Show("You do not have permission to cancel the bill was paid");
+                            //MessageBox.Show("This bill cannot be cancel.\nBecause it was cancel already or was paid");
+                            //rtxtNote.Visible = false;
+                            //lbNote.Visible = false;
+                            
+                        }
+                        else
+                        {
+                            //rtxtNote.Visible = true;
+                            //lbNote.Visible = true;
+                            //btnSave.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("This bill don't need to cancel");
+                        //rtxtNote.Visible = true;
+                        //lbNote.Visible = true;
+                        //btnSave.Visible = true;
+                    }
+                }
             }
         }
         string idSp = "";
@@ -58,7 +102,33 @@ namespace QLCH.Uc
         {
             if (e.RowIndex >= 0)
             {
+                GetData.trThai = dgvBillBuy.Rows[e.RowIndex].Cells[3].Value.ToString();
                 idSp = dgvBillBuy.Rows[e.RowIndex].Cells[0].Value.ToString();
+                GetData.idBill = idSp;
+                
+                var hdn = db.hoadDonNhaps.Where(s => s.maHDN.Equals(idSp)).FirstOrDefault();
+                rtxtNote.Text = hdn.ghiChu;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            hoadDonNhap hdn = db.hoadDonNhaps.Where(s=>s.maHDN.Equals(idSp)&& Uc_Bill_Buy.GetData.trThai == "Paid").FirstOrDefault();
+            if (hdn != null)
+            {
+                hdn.trangThai = "Cancel";
+                hdn.ghiChu = rtxtNote.Text;
+                db.SubmitChanges();
+                Uc_Bill_Buy_Load(sender, e);
+                var cthdn = from u in db.chiTietHDNs.Where(s => s.maHDN == idSp)
+                            select u;
+                foreach (var item in cthdn)
+                {
+                    var sp = db.sanPhams.Where(s => s.maSP == item.maSP).FirstOrDefault();
+                    int sl = (int)sp.soLuong;
+                    db.update_soluong(item.maSP, sl - item.soLuong);
+                }
+                MessageBox.Show("Done");
             }
         }
     }

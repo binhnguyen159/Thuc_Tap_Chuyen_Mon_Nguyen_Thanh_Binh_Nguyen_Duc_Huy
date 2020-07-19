@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btnChoose = new Guna.UI.WinForms.GunaButton();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.cbbNCC = new System.Windows.Forms.ComboBox();
-            this.btnChoose = new Guna.UI.WinForms.GunaButton();
-            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +47,9 @@
             this.gunaLabel1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(207, 7);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(197, 27);
+            this.gunaLabel1.Size = new System.Drawing.Size(173, 27);
             this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Chọn nhà cung cấp";
+            this.gunaLabel1.Text = "Choose Provider";
             // 
             // panel1
             // 
@@ -60,6 +60,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(608, 40);
             this.panel1.TabIndex = 2;
+            // 
+            // ptbExit
+            // 
+            this.ptbExit.BaseColor = System.Drawing.Color.White;
+            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
+            this.ptbExit.Location = new System.Drawing.Point(573, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(35, 40);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbExit.TabIndex = 1;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
             // gunaLabel2
             // 
@@ -75,19 +88,6 @@
             // 
             this.gunaElipse1.Radius = 6;
             this.gunaElipse1.TargetControl = this.btnChoose;
-            // 
-            // gunaElipse2
-            // 
-            this.gunaElipse2.Radius = 7;
-            this.gunaElipse2.TargetControl = this;
-            // 
-            // cbbNCC
-            // 
-            this.cbbNCC.FormattingEnabled = true;
-            this.cbbNCC.Location = new System.Drawing.Point(181, 65);
-            this.cbbNCC.Name = "cbbNCC";
-            this.cbbNCC.Size = new System.Drawing.Size(342, 23);
-            this.cbbNCC.TabIndex = 4;
             // 
             // btnChoose
             // 
@@ -115,18 +115,18 @@
             this.btnChoose.Text = "Choose";
             this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
-            // ptbExit
+            // gunaElipse2
             // 
-            this.ptbExit.BaseColor = System.Drawing.Color.White;
-            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
-            this.ptbExit.Location = new System.Drawing.Point(573, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(35, 40);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbExit.TabIndex = 1;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
+            this.gunaElipse2.Radius = 7;
+            this.gunaElipse2.TargetControl = this;
+            // 
+            // cbbNCC
+            // 
+            this.cbbNCC.FormattingEnabled = true;
+            this.cbbNCC.Location = new System.Drawing.Point(181, 65);
+            this.cbbNCC.Name = "cbbNCC";
+            this.cbbNCC.Size = new System.Drawing.Size(342, 23);
+            this.cbbNCC.TabIndex = 4;
             // 
             // frmChooseProvider
             // 

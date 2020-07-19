@@ -332,10 +332,10 @@ go
 --end
 
 go
-alter proc hdx_insert(
+create proc hdx_insert(
 @maHDX nvarchar(50),@maNV nvarchar(50),@maKH nvarchar(50),@tongTien float,@trangThai nvarchar(50),@ngayBan date,@giamGia int)
 as begin
-insert into hoadDonXuat values (@maHDX,@maNV,@maKH,@tongTien,@trangThai,@ngayBan,@giamGia)
+insert into hoadDonXuat values (@maHDX,@maNV,@maKH,@ngayBan,@giamGia,@tongTien,@trangThai)
 end
 
 go
@@ -441,18 +441,18 @@ go
  go 
 
 
- go
- create proc mathuoc_banchaytrongthang 
-as begin
+-- go
+-- create proc mathuoc_banchaytrongthang 
+--as begin
 
-select  t.TEN as [Tên sản phẩm],t.SOLO as [Số lô],sum(ct.SOLUONG) as [SL đã bán]
-from HOADON hd, CT_HD CT, SANPHAM t
-where CT.MATHUOC = t.MATHUOC and hd.MAHD = ct.MAHD and datepart(m, hd.ngay) = datepart (m, getdate())  and hd.status !=0
-group by ct.MATHUOC, t.TEN,t.SOLO
-order by [SL đã bán] desc -- giảm dần // asc tăng dần 
+--select  t.TEN as [Tên sản phẩm],t.SOLO as [Số lô],sum(ct.SOLUONG) as [SL đã bán]
+--from HOADON hd, CT_HD CT, SANPHAM t
+--where CT.MATHUOC = t.MATHUOC and hd.MAHD = ct.MAHD and datepart(m, hd.ngay) = datepart (m, getdate())  and hd.status !=0
+--group by ct.MATHUOC, t.TEN,t.SOLO
+--order by [SL đã bán] desc -- giảm dần // asc tăng dần 
 
-end
-go
+--end
+--go
 
 --CREATE proc mathuoc_banchaytrongthang
 --as begin

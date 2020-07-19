@@ -43,18 +43,18 @@
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.rdbMaNV = new System.Windows.Forms.RadioButton();
             this.rdbTenDN = new System.Windows.Forms.RadioButton();
-            this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
             this.txtMaNV = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtTenDN = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.btnCreate = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.pnlChange = new Guna.UI.WinForms.GunaPanel();
             this.btnSetPass = new Guna.UI.WinForms.GunaButton();
             this.btnDrop = new Guna.UI.WinForms.GunaButton();
-            this.pnlChange = new Guna.UI.WinForms.GunaPanel();
+            this.btnCreate = new Guna.UI.WinForms.GunaButton();
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
+            this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             this.pnlDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
@@ -91,7 +91,7 @@
             this.dgvTaiKhoan.AllowUserToDeleteRows = false;
             this.dgvTaiKhoan.AllowUserToResizeColumns = false;
             this.dgvTaiKhoan.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.dgvTaiKhoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTaiKhoan.BackgroundColor = System.Drawing.Color.White;
@@ -99,7 +99,7 @@
             this.dgvTaiKhoan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTaiKhoan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -114,16 +114,16 @@
             this.Column4,
             this.Column2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTaiKhoan.EnableHeadersVisualStyles = false;
-            this.dgvTaiKhoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvTaiKhoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.dgvTaiKhoan.Location = new System.Drawing.Point(0, 0);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
             this.dgvTaiKhoan.ReadOnly = true;
@@ -131,55 +131,55 @@
             this.dgvTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTaiKhoan.Size = new System.Drawing.Size(639, 441);
             this.dgvTaiKhoan.TabIndex = 3;
-            this.dgvTaiKhoan.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Cyan;
-            this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvTaiKhoan.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Dark;
+            this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgvTaiKhoan.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvTaiKhoan.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvTaiKhoan.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            this.dgvTaiKhoan.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.dgvTaiKhoan.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTaiKhoan.ThemeStyle.HeaderStyle.Height = 21;
             this.dgvTaiKhoan.ThemeStyle.ReadOnly = true;
-            this.dgvTaiKhoan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            this.dgvTaiKhoan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.dgvTaiKhoan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTaiKhoan.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvTaiKhoan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvTaiKhoan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.dgvTaiKhoan.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvTaiKhoan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            this.dgvTaiKhoan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvTaiKhoan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.dgvTaiKhoan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellClick);
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "maNV";
-            this.Column1.HeaderText = "Mã nhân viên";
+            this.Column1.HeaderText = "Id employee";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "tenNV";
-            this.Column3.HeaderText = "Tên nhân viên";
+            this.Column3.HeaderText = "Name employee";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "ngSinh";
-            this.Column4.HeaderText = "Ngày sinh";
+            this.Column4.HeaderText = "Birthday";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "tendn";
-            this.Column2.HeaderText = "Tên đăng nhập";
+            this.Column2.HeaderText = "User name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -197,12 +197,12 @@
             this.gunaGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaGroupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.White;
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.Black;
             this.gunaGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Size = new System.Drawing.Size(639, 175);
             this.gunaGroupBox1.TabIndex = 2;
-            this.gunaGroupBox1.Text = "Tìm kiếm";
+            this.gunaGroupBox1.Text = "Find";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
             // gunaPanel3
@@ -233,29 +233,6 @@
             this.rdbTenDN.Size = new System.Drawing.Size(14, 13);
             this.rdbTenDN.TabIndex = 7;
             this.rdbTenDN.UseVisualStyleBackColor = true;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.AnimationHoverSpeed = 0.07F;
-            this.btnTimKiem.AnimationSpeed = 0.03F;
-            this.btnTimKiem.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnTimKiem.BorderColor = System.Drawing.Color.Black;
-            this.btnTimKiem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTimKiem.Location = new System.Drawing.Point(422, 78);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnTimKiem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.OnHoverImage = null;
-            this.btnTimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Size = new System.Drawing.Size(121, 42);
-            this.btnTimKiem.TabIndex = 5;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtMaNV
             // 
@@ -293,43 +270,20 @@
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(82, 65);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(82, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(76, 15);
             this.gunaLabel1.TabIndex = 3;
-            this.gunaLabel1.Text = "Mã nhân viên:";
+            this.gunaLabel1.Text = "ID employee:";
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(76, 116);
+            this.gunaLabel2.Location = new System.Drawing.Point(92, 116);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(88, 15);
+            this.gunaLabel2.Size = new System.Drawing.Size(66, 15);
             this.gunaLabel2.TabIndex = 4;
-            this.gunaLabel2.Text = "Tên đăng nhập:";
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.AnimationHoverSpeed = 0.07F;
-            this.btnCreate.AnimationSpeed = 0.03F;
-            this.btnCreate.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnCreate.BorderColor = System.Drawing.Color.Black;
-            this.btnCreate.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCreate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
-            this.btnCreate.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCreate.Location = new System.Drawing.Point(88, 89);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnCreate.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCreate.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCreate.OnHoverImage = null;
-            this.btnCreate.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCreate.Size = new System.Drawing.Size(148, 42);
-            this.btnCreate.TabIndex = 5;
-            this.btnCreate.Text = "Tạo tài khoản";
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.gunaLabel2.Text = "User name:";
             // 
             // gunaPanel2
             // 
@@ -344,52 +298,6 @@
             this.gunaPanel2.Size = new System.Drawing.Size(314, 622);
             this.gunaPanel2.TabIndex = 1;
             // 
-            // btnSetPass
-            // 
-            this.btnSetPass.AnimationHoverSpeed = 0.07F;
-            this.btnSetPass.AnimationSpeed = 0.03F;
-            this.btnSetPass.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnSetPass.BorderColor = System.Drawing.Color.Black;
-            this.btnSetPass.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSetPass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetPass.ForeColor = System.Drawing.Color.White;
-            this.btnSetPass.Image = ((System.Drawing.Image)(resources.GetObject("btnSetPass.Image")));
-            this.btnSetPass.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSetPass.Location = new System.Drawing.Point(88, 210);
-            this.btnSetPass.Name = "btnSetPass";
-            this.btnSetPass.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnSetPass.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSetPass.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSetPass.OnHoverImage = null;
-            this.btnSetPass.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSetPass.Size = new System.Drawing.Size(148, 42);
-            this.btnSetPass.TabIndex = 5;
-            this.btnSetPass.Text = "Cấp mật khẩu";
-            this.btnSetPass.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // btnDrop
-            // 
-            this.btnDrop.AnimationHoverSpeed = 0.07F;
-            this.btnDrop.AnimationSpeed = 0.03F;
-            this.btnDrop.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
-            this.btnDrop.BorderColor = System.Drawing.Color.Black;
-            this.btnDrop.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDrop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDrop.ForeColor = System.Drawing.Color.White;
-            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
-            this.btnDrop.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDrop.Location = new System.Drawing.Point(88, 150);
-            this.btnDrop.Name = "btnDrop";
-            this.btnDrop.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnDrop.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDrop.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDrop.OnHoverImage = null;
-            this.btnDrop.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDrop.Size = new System.Drawing.Size(148, 42);
-            this.btnDrop.TabIndex = 5;
-            this.btnDrop.Text = "Xóa tài khoản";
-            this.btnDrop.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
             // pnlChange
             // 
             this.pnlChange.Controls.Add(this.btnCancel);
@@ -400,15 +308,95 @@
             this.pnlChange.Size = new System.Drawing.Size(200, 200);
             this.pnlChange.TabIndex = 1;
             // 
+            // btnSetPass
+            // 
+            this.btnSetPass.AnimationHoverSpeed = 0.07F;
+            this.btnSetPass.AnimationSpeed = 0.03F;
+            this.btnSetPass.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetPass.BaseColor = System.Drawing.Color.White;
+            this.btnSetPass.BorderColor = System.Drawing.Color.Black;
+            this.btnSetPass.BorderSize = 2;
+            this.btnSetPass.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSetPass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetPass.ForeColor = System.Drawing.Color.Black;
+            this.btnSetPass.Image = ((System.Drawing.Image)(resources.GetObject("btnSetPass.Image")));
+            this.btnSetPass.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSetPass.Location = new System.Drawing.Point(88, 210);
+            this.btnSetPass.Name = "btnSetPass";
+            this.btnSetPass.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSetPass.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSetPass.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSetPass.OnHoverImage = null;
+            this.btnSetPass.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSetPass.Radius = 8;
+            this.btnSetPass.Size = new System.Drawing.Size(148, 42);
+            this.btnSetPass.TabIndex = 5;
+            this.btnSetPass.Text = "Give password";
+            this.btnSetPass.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // btnDrop
+            // 
+            this.btnDrop.AnimationHoverSpeed = 0.07F;
+            this.btnDrop.AnimationSpeed = 0.03F;
+            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrop.BaseColor = System.Drawing.Color.White;
+            this.btnDrop.BorderColor = System.Drawing.Color.Black;
+            this.btnDrop.BorderSize = 2;
+            this.btnDrop.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDrop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDrop.ForeColor = System.Drawing.Color.Black;
+            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
+            this.btnDrop.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDrop.Location = new System.Drawing.Point(88, 150);
+            this.btnDrop.Name = "btnDrop";
+            this.btnDrop.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnDrop.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDrop.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDrop.OnHoverImage = null;
+            this.btnDrop.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDrop.Radius = 8;
+            this.btnDrop.Size = new System.Drawing.Size(148, 42);
+            this.btnDrop.TabIndex = 5;
+            this.btnDrop.Text = "Cancel account";
+            this.btnDrop.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.AnimationHoverSpeed = 0.07F;
+            this.btnCreate.AnimationSpeed = 0.03F;
+            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreate.BaseColor = System.Drawing.Color.White;
+            this.btnCreate.BorderColor = System.Drawing.Color.Black;
+            this.btnCreate.BorderSize = 2;
+            this.btnCreate.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCreate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.Black;
+            this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
+            this.btnCreate.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCreate.Location = new System.Drawing.Point(88, 89);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCreate.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCreate.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCreate.OnHoverImage = null;
+            this.btnCreate.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCreate.Radius = 8;
+            this.btnCreate.Size = new System.Drawing.Size(148, 42);
+            this.btnCreate.TabIndex = 5;
+            this.btnCreate.Text = "Create account";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.AnimationHoverSpeed = 0.07F;
             this.btnCancel.AnimationSpeed = 0.03F;
-            this.btnCancel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BaseColor = System.Drawing.Color.White;
             this.btnCancel.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel.BorderSize = 2;
             this.btnCancel.FocusedColor = System.Drawing.Color.Empty;
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCancel.Location = new System.Drawing.Point(60, 111);
@@ -418,20 +406,23 @@
             this.btnCancel.OnHoverForeColor = System.Drawing.Color.White;
             this.btnCancel.OnHoverImage = null;
             this.btnCancel.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCancel.Radius = 8;
             this.btnCancel.Size = new System.Drawing.Size(91, 42);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Hủy";
+            this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
             this.btnSave.AnimationHoverSpeed = 0.07F;
             this.btnSave.AnimationSpeed = 0.03F;
-            this.btnSave.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(165)))), ((int)(((byte)(178)))));
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BaseColor = System.Drawing.Color.White;
             this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.BorderSize = 2;
             this.btnSave.FocusedColor = System.Drawing.Color.Empty;
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
             this.btnSave.Location = new System.Drawing.Point(60, 43);
@@ -441,10 +432,36 @@
             this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
             this.btnSave.OnHoverImage = null;
             this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Radius = 8;
             this.btnSave.Size = new System.Drawing.Size(91, 42);
             this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Lưu";
+            this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AnimationHoverSpeed = 0.07F;
+            this.btnTimKiem.AnimationSpeed = 0.03F;
+            this.btnTimKiem.BaseColor = System.Drawing.Color.White;
+            this.btnTimKiem.BorderColor = System.Drawing.Color.Black;
+            this.btnTimKiem.BorderSize = 2;
+            this.btnTimKiem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnTimKiem.Location = new System.Drawing.Point(422, 78);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTimKiem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.OnHoverImage = null;
+            this.btnTimKiem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTimKiem.Radius = 8;
+            this.btnTimKiem.Size = new System.Drawing.Size(121, 42);
+            this.btnTimKiem.TabIndex = 5;
+            this.btnTimKiem.Text = "Find";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // Uc_TaiKhoan
             // 
@@ -488,12 +505,12 @@
         private Guna.UI.WinForms.GunaDataGridView dgvTaiKhoan;
         private Guna.UI.WinForms.GunaPanel pnlChange;
         private Guna.UI.WinForms.GunaPanel pnlDgv;
+        private Guna.UI.WinForms.GunaLineTextBox txtMaNV;
+        private System.Windows.Forms.RadioButton rdbTenDN;
+        private System.Windows.Forms.RadioButton rdbMaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private Guna.UI.WinForms.GunaLineTextBox txtMaNV;
-        private System.Windows.Forms.RadioButton rdbTenDN;
-        private System.Windows.Forms.RadioButton rdbMaNV;
     }
 }

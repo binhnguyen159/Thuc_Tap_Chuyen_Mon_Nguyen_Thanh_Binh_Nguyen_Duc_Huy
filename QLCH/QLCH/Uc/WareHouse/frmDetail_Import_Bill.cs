@@ -28,8 +28,23 @@ namespace QLCH.Uc.WareHouse
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void frmDetail_Import_Bill_Load(object sender, EventArgs e)
         {
+            if (Uc_Bill_Buy.GetData.trThai == "Unpaid")
+            {
+                txtGia.Enabled = true;
+                txtName.Enabled = true;
+                txtSL.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnThanhToan.Enabled = true;
+            }
+            else
+            {
+                txtGia.Enabled = false;
+                txtName.Enabled = false;
+                txtSL.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnThanhToan.Enabled = false;
+            }
             lbBillID.Text = Uc_SanPham.GetData.idBill;
-            //lbBillID.Text = Uc_WareHouse.GetData.idBill;
             dgvCTPN.AutoGenerateColumns = false;
             dgvCTPN.DataSource = db.CTHDN_Sel(lbBillID.Text);
             dgvCTPN.Columns[2].DefaultCellStyle.Format = "N0";
@@ -39,7 +54,7 @@ namespace QLCH.Uc.WareHouse
             {
                 sum += item.thanhTien.Value;
             }
-            lbTongTien.Text = sum.ToString() + " VNĐ";
+            lbTongTien.Text = sum.ToString("N0") + " $";
         }
 
         private void ptbExit_Click(object sender, EventArgs e)
@@ -50,20 +65,21 @@ namespace QLCH.Uc.WareHouse
         string idSP = "";
         private void dgvCTPN_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var hdn = db.hoadDonNhaps.Where(s => s.maHDN == lbBillID.Text && s.trangThai == "Chưa thanh toán");
-            if (hdn != null)
+            if (dgvCTPN.Columns[e.ColumnIndex].Name == "Column3")
             {
-                if (dgvCTPN.Columns[e.ColumnIndex].Name == "Column3")
+                var hdn = db.hoadDonNhaps.Where(s => s.maHDN == lbBillID.Text && s.trangThai == "Unpaid");
+                if (hdn == null)
                 {
-
                     db.CTHDN_Del(lbBillID.Text, idSP);
                     frmDetail_Import_Bill_Load(sender, e);
-
-                    //frm(Uc_WareHouse.GetData.from, Uc_WareHouse.GetData.to);
                 }
+                else
+                    MessageBox.Show("Can not delete this bill because it was paid or cancel");
+                
+
+                //frm(Uc_WareHouse.GetData.from, Uc_WareHouse.GetData.to);
             }
-            else
-                MessageBox.Show("Can not delete this bill because it was paied");
+            
 
         }
 
@@ -83,6 +99,8 @@ namespace QLCH.Uc.WareHouse
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (txtGia.Text == "" || txtName.Text == "" || txtSL.Text == "")
+                MessageBox.Show("Please fill all");
             db.CTHDN_Up(lbBillID.Text, idSP, Convert.ToDouble(txtGia.Text), Convert.ToInt32(txtSL.Text));
             frmDetail_Import_Bill_Load(sender, e);
         }
@@ -90,7 +108,15 @@ namespace QLCH.Uc.WareHouse
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             Uc_SanPham.GetData.idBill = "";
-            db.HDN_Up(lbBillID.Text, "Đã thanh toán");
+            db.HDN_Up(lbBillID.Text, "Paid");
+            var cthdn = from u in db.chiTietHDNs.Where(s => s.maHDN == lbBillID.Text)
+                      select u;
+            foreach(var item in cthdn)
+            {
+                var sp = db.sanPhams.Where(s => s.maSP == item.maSP).FirstOrDefault();
+                int sl =(int) sp.soLuong;
+                db.update_soluong(item.maSP, sl + item.soLuong);
+            }
         }
     }
 }

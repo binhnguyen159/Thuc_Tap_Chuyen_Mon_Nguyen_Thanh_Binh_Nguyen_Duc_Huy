@@ -173,5 +173,10 @@ namespace QLCH
             pnlContent.Controls.Add(guarantee);
             guarantee.Show();
         }
+
+        private void gunaPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

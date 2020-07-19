@@ -115,28 +115,43 @@ namespace QLCH.Uc
                 case 1:
                     {
                         if (txtAddress.Text == "" || txtEmail.Text == "" || txtName.Text == "" || txtPhone.Text == "")
-                            MessageBox.Show("Bạn chưa điền hết thông tin");
+                            MessageBox.Show("PLease fill all information");
                         else
                         {
                             gt = "";
                             if (rdbMale.Checked == true)
-                                gt = "Nam";
+                                gt = "Male";
                             else
-                                gt = "Nữ";
-                            int ma = 1;
-                            string id = "NV";
+                                gt = "Female";
+                            
                             var nv = from u in db.nhanViens select u;
+
                             if (nv.Count() == 0)
                             {
-                                id = id + ma;
-                                db.NV_Ins(id, txtName.Text, gt, dtpBirthday.Value, dtpNVL.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                                db.NV_Ins("NV000001", txtName.Text, gt, dtpBirthday.Value, dtpNVL.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                             }
-                            else if (nv.Count() > 0)
+                            else
                             {
-                                var nv2 = db.NV_Sel().OrderByDescending(s => s.maNV).FirstOrDefault();
-                                ma = Convert.ToInt32(nv2.maNV.ToString().Trim().Substring(2)) + 1;
-                                id = "NV" + ma;
+                                int ma = 1;
+                                string id = "";
+
+                                nhanVien kkkh = db.nhanViens.OrderByDescending(s => s.maNV).FirstOrDefault();
+
+                                ma = Convert.ToInt32(kkkh.maNV.ToString().Trim().Substring(2)) + 1;
+                                if (ma / 10 >= 100000)
+                                    id = "NV" + ma;
+                                else if (ma / 10 >= 1000 && ma / 10 < 10000)
+                                    id = "NV0" + ma;
+                                else if (ma / 10 >= 100 && ma / 10 < 1000)
+                                    id = "NV00" + ma;
+                                else if (ma / 10 >= 10 && ma / 10 < 100)
+                                    id = "NV000" + ma;
+                                else if (ma / 10 >= 1 && ma / 10 < 10)
+                                    id = "NV0000" + ma;
+                                else if (ma / 10 < 1)
+                                    id = "NV00000" + ma;
                                 db.NV_Ins(id, txtName.Text, gt, dtpBirthday.Value, dtpNVL.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+
                             }
                             Uc_Employees_Load(sender, e);
                         }
@@ -156,9 +171,9 @@ namespace QLCH.Uc
                         else
                         {
                             if (rdbMale.Checked == true)
-                                gt = "Nam";
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             db.NV_Up(txtID.Text, txtName.Text, gt, dtpBirthday.Value, dtpNVL.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                             Uc_Employees_Load(sender, e);
                         }
@@ -170,10 +185,10 @@ namespace QLCH.Uc
                         if (chbName.Checked == true && chbNS.Checked == true && chbNVL.Checked == true && chbSex.Checked == true)
                         {
 
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text && u.ngSinh == dtpBirthday.Value
                                         && u.ngVaoLam == dtpNVL.Value && u.gioiTinh == gt
@@ -182,10 +197,10 @@ namespace QLCH.Uc
                         }
                         else if (chbName.Checked == true && chbNS.Checked == true && chbNVL.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text && u.ngSinh == dtpBirthday.Value
                                         && u.ngVaoLam == dtpNVL.Value
@@ -195,9 +210,9 @@ namespace QLCH.Uc
                         else if (chbName.Checked == true && chbNS.Checked == true && chbSex.Checked == true)
                         {
                             if (rdbMale.Checked)
-                                gt = "Nam";
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text && u.ngSinh == dtpBirthday.Value
                                         && u.gioiTinh == gt
@@ -207,9 +222,9 @@ namespace QLCH.Uc
                         else if (chbName.Checked == true && chbNVL.Checked == true && chbSex.Checked == true)
                         {
                             if (rdbMale.Checked)
-                                gt = "Nam";
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text
                                         && u.ngVaoLam == dtpNVL.Value && u.gioiTinh == gt
@@ -218,10 +233,10 @@ namespace QLCH.Uc
                         }
                         else if (chbNS.Checked == true && chbNVL.Checked == true && chbSex.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.ngSinh == dtpBirthday.Value
                                         && u.ngVaoLam == dtpNVL.Value && u.gioiTinh == gt
@@ -230,10 +245,10 @@ namespace QLCH.Uc
                         }
                         else if (chbName.Checked == true && chbNS.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text && u.ngSinh == dtpBirthday.Value
                                      select u;
@@ -241,10 +256,10 @@ namespace QLCH.Uc
                         }
                         else if (chbName.Checked == true && chbNVL.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text && u.ngVaoLam == dtpNVL.Value
                                      select u;
@@ -252,10 +267,10 @@ namespace QLCH.Uc
                         }
                         else if (chbName.Checked == true && chbSex.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text && u.gioiTinh == gt
                                      select u;
@@ -263,10 +278,10 @@ namespace QLCH.Uc
                         }
                         else if (chbNS.Checked == true && chbNVL.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.ngSinh == dtpBirthday.Value
                                         && u.ngVaoLam == dtpNVL.Value
@@ -275,10 +290,10 @@ namespace QLCH.Uc
                         }
                         else if (chbNS.Checked == true && chbSex.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.ngSinh == dtpBirthday.Value && u.gioiTinh == gt
                                      select u;
@@ -286,10 +301,10 @@ namespace QLCH.Uc
                         }
                         else if (chbNVL.Checked == true && chbSex.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.ngVaoLam == dtpNVL.Value && u.gioiTinh == gt
                                      select u;
@@ -297,10 +312,10 @@ namespace QLCH.Uc
                         }
                         else if (chbName.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.tenNV == txtName.Text
                                      select u;
@@ -308,10 +323,10 @@ namespace QLCH.Uc
                         }
                         else if (chbNS.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.ngSinh == dtpBirthday.Value
                                      select u;
@@ -319,10 +334,10 @@ namespace QLCH.Uc
                         }
                         if (chbNVL.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.ngVaoLam == dtpNVL.Value
                                      select u;
@@ -330,10 +345,10 @@ namespace QLCH.Uc
                         }
                         if (chbSex.Checked == true)
                         {
-                            if (rdbMale.Checked)
-                                gt = "Nam";
+                            if (rdbMale.Checked == true)
+                                gt = "Male";
                             else
-                                gt = "Nữ";
+                                gt = "Female";
                             var nv = from u in db.nhanViens
                                      where u.gioiTinh == gt
                                      select u;
@@ -348,17 +363,6 @@ namespace QLCH.Uc
         {
             Uc_Employees_Load(sender, e);
             gunaPanel1.Visible = false;
-        }
-
-        private void dgvEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            i = e.ColumnIndex;
-            if (dgvEmployees.Columns[i].Name.Equals("cv"))
-            {
-                GetMaNV.manv = dgvEmployees.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
-                frmAssign assign = new frmAssign();
-                assign.ShowDialog();
-            }
         }
 
         private void bunifuMaterialTextbox1_KeyPress(object sender, KeyPressEventArgs e)

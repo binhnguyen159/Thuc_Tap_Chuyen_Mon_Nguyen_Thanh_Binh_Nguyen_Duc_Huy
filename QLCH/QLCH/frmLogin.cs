@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -83,6 +84,13 @@ namespace QLCH
             pnlChangePass.Visible = false;
             counter = 1;
             OTP = "";
+            txtAcount.ResetText();
+            txtUsername.ResetText();
+            txtEmail.ResetText();
+            txtPassword.ResetText();
+            txtOTP.ResetText();
+            txtNewPassword1st.ResetText();
+            txtNewPassword2nd.ResetText();
         }
 
 
@@ -101,13 +109,28 @@ namespace QLCH
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+            var nvad = from u in dt.nhanViens select u;
+            var cv = from u in dt.congViecs select u;
+            if (nvad.Count() == 0)
+            {
+                dt.NV_Ins("NV000001", "", "Male", DateTime.Now, DateTime.Now, "gearharis@gmail.com", "", "");
+                dt.ACC_Add("NV000001", "AdMin", MaHoaMD5("123"));
+                if (cv == null)
+                {
+                    dt.CV_Ins("cv1", "Manager", 15);
+                    dt.CV_Ins("cv2", "Seller", 7);
+                    dt.CV_Ins("cv3", "Ware house manager", 10);
+                    dt.CV_Ins("cv4", "Boss", 20);
+                }
+                
+            }
             nhanVien nv = dt.nhanViens.Where(s => s.passWords.Equals(MaHoaMD5(txtPassword.Text))
-                                                    && s.tendn.Equals(txtAcount.Text))
-                                                    .FirstOrDefault();
+                                                     && s.tendn.Equals(txtAcount.Text) && s.trangThai != "Fired")
+                                                     .FirstOrDefault();
             if (nv != null)
             {
                 GetID.id = nv.maNV;
-               frmFuction fuction = new frmFuction();
+                frmFuction fuction = new frmFuction();
                 //FrmSale fuction = new FrmSale();
                 this.Hide();
                 fuction.ShowDialog();
@@ -263,6 +286,16 @@ namespace QLCH
                 btLogin_Click(sender, e);
 
             }
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com/profile.php?id=100012903550778");
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/huyharis8");
         }
     }
 }

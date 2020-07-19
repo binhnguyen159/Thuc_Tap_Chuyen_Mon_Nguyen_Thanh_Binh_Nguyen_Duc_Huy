@@ -134,24 +134,6 @@
       <Association Name="nhaCungCap_hoadDonNhap" Member="hoadDonNhaps" ThisKey="maNCC" OtherKey="maNCC" Type="hoadDonNhap" />
     </Type>
   </Table>
-  <Table Name="dbo.nhanVien" Member="nhanViens">
-    <Type Name="nhanVien">
-      <Column Name="maNV" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="ngVaoLam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="passWords" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tendn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="nhanVien_hoadDonNhap" Member="hoadDonNhaps" ThisKey="maNV" OtherKey="maNV" Type="hoadDonNhap" />
-      <Association Name="nhanVien_hoadDonXuat" Member="hoadDonXuats" ThisKey="maNV" OtherKey="maNV" Type="hoadDonXuat" />
-      <Association Name="congViec_nhanVien" Member="congViec" ThisKey="maCV" OtherKey="maCV" Type="congViec" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.nhomSP" Member="nhomSPs">
     <Type Name="nhomSP">
       <Column Name="maLoai" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -175,6 +157,25 @@
       <Column Name="trThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="noiDung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="sanPham_phieuBaoHanh" Member="sanPham" ThisKey="maSP" OtherKey="maSP" Type="sanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nhanVien" Member="nhanViens">
+    <Type Name="nhanVien">
+      <Column Name="maNV" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngVaoLam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="passWords" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tendn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="nhanVien_hoadDonNhap" Member="hoadDonNhaps" ThisKey="maNV" OtherKey="maNV" Type="hoadDonNhap" />
+      <Association Name="nhanVien_hoadDonXuat" Member="hoadDonXuats" ThisKey="maNV" OtherKey="maNV" Type="hoadDonXuat" />
+      <Association Name="congViec_nhanVien" Member="congViec" ThisKey="maCV" OtherKey="maCV" Type="congViec" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.ACC_Add" Method="ACC_Add">
@@ -575,10 +576,6 @@
     <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.NV_Del" Method="NV_Del">
-    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.NV_Ins" Method="NV_Ins">
     <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
@@ -957,5 +954,15 @@
       <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.NV_Del" Method="NV_Del">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CV_Ins" Method="CV_Ins">
+    <Parameter Name="ma" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="bl" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

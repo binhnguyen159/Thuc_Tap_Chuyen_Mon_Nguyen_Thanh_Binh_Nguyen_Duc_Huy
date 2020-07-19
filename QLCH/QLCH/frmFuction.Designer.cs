@@ -44,6 +44,7 @@
             this.ptbBack = new Guna.UI.WinForms.GunaPictureBox();
             this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
             this.btnStatistical = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnGuarantee = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSell = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBuy = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBill = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -51,7 +52,6 @@
             this.btnProduct = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnCustomer = new Guna.UI.WinForms.GunaAdvenceButton();
             this.ptbLogo = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnGuarantee = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnlTab.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
@@ -88,6 +88,7 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(264, 452);
             this.gunaPanel1.TabIndex = 1;
+            this.gunaPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaPanel1_Paint);
             // 
             // panelSubMenu
             // 
@@ -223,6 +224,41 @@
             this.btnStatistical.Text = "Statistical";
             this.btnStatistical.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnStatistical.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnGuarantee
+            // 
+            this.btnGuarantee.AnimationHoverSpeed = 0.07F;
+            this.btnGuarantee.AnimationSpeed = 0.03F;
+            this.btnGuarantee.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuarantee.BaseColor = System.Drawing.Color.White;
+            this.btnGuarantee.BorderColor = System.Drawing.Color.Black;
+            this.btnGuarantee.BorderSize = 1;
+            this.btnGuarantee.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnGuarantee.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnGuarantee.CheckedForeColor = System.Drawing.Color.White;
+            this.btnGuarantee.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnGuarantee.CheckedImage")));
+            this.btnGuarantee.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnGuarantee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGuarantee.FocusedColor = System.Drawing.Color.Empty;
+            this.btnGuarantee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuarantee.ForeColor = System.Drawing.Color.Black;
+            this.btnGuarantee.Image = ((System.Drawing.Image)(resources.GetObject("btnGuarantee.Image")));
+            this.btnGuarantee.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnGuarantee.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnGuarantee.Location = new System.Drawing.Point(0, 292);
+            this.btnGuarantee.Name = "btnGuarantee";
+            this.btnGuarantee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnGuarantee.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnGuarantee.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnGuarantee.OnHoverImage = null;
+            this.btnGuarantee.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnGuarantee.OnPressedColor = System.Drawing.Color.Black;
+            this.btnGuarantee.Radius = 8;
+            this.btnGuarantee.Size = new System.Drawing.Size(264, 49);
+            this.btnGuarantee.TabIndex = 10;
+            this.btnGuarantee.Text = "Guarantee";
+            this.btnGuarantee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGuarantee.Click += new System.EventHandler(this.btnGuarantee_Click);
             // 
             // btnSell
             // 
@@ -443,41 +479,6 @@
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
-            // 
-            // btnGuarantee
-            // 
-            this.btnGuarantee.AnimationHoverSpeed = 0.07F;
-            this.btnGuarantee.AnimationSpeed = 0.03F;
-            this.btnGuarantee.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuarantee.BaseColor = System.Drawing.Color.White;
-            this.btnGuarantee.BorderColor = System.Drawing.Color.Black;
-            this.btnGuarantee.BorderSize = 1;
-            this.btnGuarantee.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnGuarantee.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnGuarantee.CheckedForeColor = System.Drawing.Color.White;
-            this.btnGuarantee.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnGuarantee.CheckedImage")));
-            this.btnGuarantee.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnGuarantee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGuarantee.FocusedColor = System.Drawing.Color.Empty;
-            this.btnGuarantee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuarantee.ForeColor = System.Drawing.Color.Black;
-            this.btnGuarantee.Image = ((System.Drawing.Image)(resources.GetObject("btnGuarantee.Image")));
-            this.btnGuarantee.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnGuarantee.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnGuarantee.Location = new System.Drawing.Point(0, 292);
-            this.btnGuarantee.Name = "btnGuarantee";
-            this.btnGuarantee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnGuarantee.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnGuarantee.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnGuarantee.OnHoverImage = null;
-            this.btnGuarantee.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnGuarantee.OnPressedColor = System.Drawing.Color.Black;
-            this.btnGuarantee.Radius = 8;
-            this.btnGuarantee.Size = new System.Drawing.Size(264, 49);
-            this.btnGuarantee.TabIndex = 10;
-            this.btnGuarantee.Text = "Guarantee";
-            this.btnGuarantee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnGuarantee.Click += new System.EventHandler(this.btnGuarantee_Click);
             // 
             // frmFuction
             // 
