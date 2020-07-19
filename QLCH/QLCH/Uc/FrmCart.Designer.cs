@@ -31,19 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCart));
             this.panelProductList = new Guna.UI.WinForms.GunaElipsePanel();
-            this.lbBill = new System.Windows.Forms.Label();
             this.lbTotalPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.btnCancel = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.lbBeforeDisscount = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCancel = new Guna.UI.WinForms.GunaButton();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelProductList
@@ -57,16 +58,6 @@
             this.panelProductList.Radius = 7;
             this.panelProductList.Size = new System.Drawing.Size(719, 656);
             this.panelProductList.TabIndex = 15;
-            // 
-            // lbBill
-            // 
-            this.lbBill.AutoSize = true;
-            this.lbBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBill.Location = new System.Drawing.Point(830, 141);
-            this.lbBill.Name = "lbBill";
-            this.lbBill.Size = new System.Drawing.Size(36, 16);
-            this.lbBill.TabIndex = 14;
-            this.lbBill.Text = "Cart";
             // 
             // lbTotalPrice
             // 
@@ -92,71 +83,6 @@
             // 
             this.gunaElipse1.Radius = 10;
             this.gunaElipse1.TargetControl = this.gunaCirclePictureBox1;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AnimationHoverSpeed = 0.07F;
-            this.btnCancel.AnimationSpeed = 0.03F;
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BaseColor = System.Drawing.Color.Red;
-            this.btnCancel.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnCancel.Location = new System.Drawing.Point(763, 595);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCancel.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCancel.OnHoverImage = null;
-            this.btnCancel.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCancel.Radius = 7;
-            this.btnCancel.Size = new System.Drawing.Size(162, 42);
-            this.btnCancel.TabIndex = 17;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = global::QLCH.Properties.Resources.icons8_shopify_100;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(787, 18);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 16;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
-            // gunaButton1
-            // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(50, 50);
-            this.gunaButton1.Location = new System.Drawing.Point(763, 547);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(221)))), ((int)(((byte)(193)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 7;
-            this.gunaButton1.Size = new System.Drawing.Size(162, 42);
-            this.gunaButton1.TabIndex = 13;
-            this.gunaButton1.Text = "Pay";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // numericUpDown1
             // 
@@ -196,18 +122,97 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Price";
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = global::QLCH.Properties.Resources.icons8_exit_100;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(915, 0);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(35, 29);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 22;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AnimationHoverSpeed = 0.07F;
+            this.btnCancel.AnimationSpeed = 0.03F;
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BaseColor = System.Drawing.Color.Red;
+            this.btnCancel.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnCancel.Location = new System.Drawing.Point(763, 595);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCancel.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCancel.OnHoverImage = null;
+            this.btnCancel.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCancel.Radius = 7;
+            this.btnCancel.Size = new System.Drawing.Size(162, 42);
+            this.btnCancel.TabIndex = 17;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // gunaCirclePictureBox1
+            // 
+            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.Image = global::QLCH.Properties.Resources.icons8_shopify_100;
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(783, 49);
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox1.TabIndex = 16;
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(205)))), ((int)(((byte)(162)))));
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
+            this.gunaButton1.ImageSize = new System.Drawing.Size(50, 50);
+            this.gunaButton1.Location = new System.Drawing.Point(763, 547);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(221)))), ((int)(((byte)(193)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Radius = 7;
+            this.gunaButton1.Size = new System.Drawing.Size(162, 42);
+            this.gunaButton1.TabIndex = 13;
+            this.gunaButton1.Text = "Pay";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
+            // 
             // FrmCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(950, 656);
+            this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.lbBeforeDisscount);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.panelProductList);
-            this.Controls.Add(this.lbBill);
             this.Controls.Add(this.lbTotalPrice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
@@ -218,8 +223,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCart";
             this.Load += new System.EventHandler(this.FrmCart_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,7 +234,6 @@
         #endregion
 
         private Guna.UI.WinForms.GunaElipsePanel panelProductList;
-        private System.Windows.Forms.Label lbBill;
         private System.Windows.Forms.Label lbTotalPrice;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
@@ -239,5 +244,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbBeforeDisscount;
         private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

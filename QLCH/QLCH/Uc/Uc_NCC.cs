@@ -185,5 +185,10 @@ namespace QLCH.Uc
                 e.Handled = true;
             }
         }
+
+        private void gunaPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

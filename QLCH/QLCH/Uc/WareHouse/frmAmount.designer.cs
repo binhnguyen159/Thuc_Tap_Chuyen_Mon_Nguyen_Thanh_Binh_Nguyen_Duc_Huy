@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAmount));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.btnSave = new Guna.UI.WinForms.GunaButton();
             this.nmrAmount = new Guna.UI.WinForms.GunaNumeric();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGia = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnSave = new Guna.UI.WinForms.GunaButton();
+            this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
             this.SuspendLayout();
@@ -53,19 +52,6 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(627, 35);
             this.gunaPanel1.TabIndex = 0;
-            // 
-            // ptbExit
-            // 
-            this.ptbExit.BaseColor = System.Drawing.Color.White;
-            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
-            this.ptbExit.Location = new System.Drawing.Point(592, 0);
-            this.ptbExit.Name = "ptbExit";
-            this.ptbExit.Size = new System.Drawing.Size(35, 35);
-            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbExit.TabIndex = 1;
-            this.ptbExit.TabStop = false;
-            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
             // gunaLabel1
             // 
@@ -86,38 +72,15 @@
             // 
             this.gunaDragControl1.TargetControl = this.gunaLabel1;
             // 
-            // btnSave
-            // 
-            this.btnSave.AnimationHoverSpeed = 0.07F;
-            this.btnSave.AnimationSpeed = 0.03F;
-            this.btnSave.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnSave.BorderColor = System.Drawing.Color.Black;
-            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(261, 155);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSave.OnHoverImage = null;
-            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSave.Size = new System.Drawing.Size(78, 30);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // nmrAmount
             // 
             this.nmrAmount.BaseColor = System.Drawing.Color.White;
             this.nmrAmount.BorderColor = System.Drawing.Color.Silver;
-            this.nmrAmount.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.nmrAmount.ButtonColor = System.Drawing.Color.Black;
             this.nmrAmount.ButtonForeColor = System.Drawing.Color.White;
             this.nmrAmount.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmrAmount.ForeColor = System.Drawing.Color.Black;
-            this.nmrAmount.Location = new System.Drawing.Point(260, 56);
+            this.nmrAmount.Location = new System.Drawing.Point(261, 56);
             this.nmrAmount.Maximum = ((long)(999999999999999));
             this.nmrAmount.Minimum = ((long)(0));
             this.nmrAmount.Name = "nmrAmount";
@@ -159,10 +122,49 @@
             this.txtGia.Location = new System.Drawing.Point(261, 95);
             this.txtGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(169, 29);
+            this.txtGia.Size = new System.Drawing.Size(144, 29);
             this.txtGia.TabIndex = 11;
             this.txtGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGia_KeyPress);
+            // 
+            // btnSave
+            // 
+            this.btnSave.AnimationHoverSpeed = 0.07F;
+            this.btnSave.AnimationSpeed = 0.03F;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BaseColor = System.Drawing.Color.White;
+            this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.BorderSize = 2;
+            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Image = global::QLCH.Properties.Resources.icons8_save_100;
+            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSave.Location = new System.Drawing.Point(281, 143);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSave.OnHoverImage = global::QLCH.Properties.Resources.icons8_save_100ư;
+            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Radius = 8;
+            this.btnSave.Size = new System.Drawing.Size(85, 44);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // ptbExit
+            // 
+            this.ptbExit.BaseColor = System.Drawing.Color.White;
+            this.ptbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbExit.Image = global::QLCH.Properties.Resources.icons8_delete_40;
+            this.ptbExit.Location = new System.Drawing.Point(592, 0);
+            this.ptbExit.Name = "ptbExit";
+            this.ptbExit.Size = new System.Drawing.Size(35, 35);
+            this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbExit.TabIndex = 1;
+            this.ptbExit.TabStop = false;
+            this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
             // frmAmount
             // 

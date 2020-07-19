@@ -65,6 +65,13 @@ namespace QLCH.Uc
                         pnlNCC.Controls.Add(provider);
                         break;
                     }
+                case 4:
+                    {
+                        pnlJob.Controls.Clear();
+                        UC_new_PhanViec phanViec = new UC_new_PhanViec();
+                        pnlJob.Controls.Add(phanViec);
+                        break;
+                    }
             }
             
         }

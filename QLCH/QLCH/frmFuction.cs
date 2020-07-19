@@ -17,6 +17,7 @@ namespace QLCH
         public frmFuction()
         {
             InitializeComponent();
+            customPanelBill();
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void ptbBack_Click(object sender, EventArgs e)
@@ -31,24 +32,52 @@ namespace QLCH
             Application.Exit();
         }
 
-        Boolean bill = false;
-        private void btnBill_Click(object sender, EventArgs e)
+
+        private void customPanelBill()
         {
-            bill = !bill;
-            if (bill == true)
+            panelSubMenu.Visible = false;
+        }
+        private void hideSubPanel()
+        {
+            if (panelSubMenu.Visible == true)
             {
-                btnBuy.Location = new Point(22, btnBill.Location.Y + btnBill.Height + 4);
-                btnSell.Location = new Point(22, btnBuy.Location.Y + btnBuy.Height + 4);
-                btnStatistical.Location = new Point(5, btnSell.Location.Y + btnSell.Height + 4);
-                btnBuy.Visible = true;
-                btnSell.Visible = true;
+                panelSubMenu.Visible = false;
+            }
+        }
+        private void showSubPanel(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubPanel();
+                subMenu.Visible = true;
             }
             else
             {
-                btnBuy.Visible = false;
-                btnSell.Visible = false;
-                btnStatistical.Location = new Point(5, btnBill.Location.Y + btnBill.Height + 4);
+                subMenu.Visible = false;
             }
+        }
+
+
+
+        Boolean bill = false;
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            //bill = !bill;
+            //if (bill == true)
+            //{
+            //    btnBuy.Location = new Point(22, btnBill.Location.Y + btnBill.Height + 4);
+            //    btnSell.Location = new Point(22, btnBuy.Location.Y + btnBuy.Height + 4);
+            //    btnStatistical.Location = new Point(5, btnSell.Location.Y + btnSell.Height + 4);
+            //    btnBuy.Visible = true;
+            //    btnSell.Visible = true;
+            //}
+            //else
+            //{
+            //    btnBuy.Visible = false;
+            //    btnSell.Visible = false;
+            //    btnStatistical.Location = new Point(5, btnBill.Location.Y + btnBill.Height + 4);
+            //}
+            showSubPanel(panelSubMenu);
         }
 
         private void btnEngineer_Click(object sender, EventArgs e)
@@ -84,6 +113,7 @@ namespace QLCH
         private void frmFuction_Load(object sender, EventArgs e)
         {
             nhanVien nv = db.nhanViens.Where(s => s.maNV == frmLogin.GetID.id).FirstOrDefault();
+            lbName.Text = nv.tenNV.ToString();
             if (nv.maCV == "cv2")
             {
                 btnSaleProduct.Visible = false;
@@ -91,12 +121,7 @@ namespace QLCH
             else if (nv.maCV == "cv3")
             {
                 btnProduct.Visible = false;
-                //Uc_Employees employees = new Uc_Employees();
-                //employees.Visible = false;
-                //Uc_TaiKhoan taiKhoan = new Uc_TaiKhoan();
-                //taiKhoan.Visible = false;
-                //Uc_NCC provider = new Uc_NCC();
-                //provider.Visible = false;
+               
             }
             else
             {
@@ -138,6 +163,15 @@ namespace QLCH
             sell.Dock = DockStyle.Fill;
             pnlContent.Controls.Add(sell);
             sell.Show();
+        }
+
+        private void btnGuarantee_Click(object sender, EventArgs e)
+        {
+            UC_Guarantee guarantee = new UC_Guarantee();
+            pnlContent.Controls.Clear();
+            guarantee.Dock = DockStyle.Fill;
+            pnlContent.Controls.Add(guarantee);
+            guarantee.Show();
         }
     }
 }

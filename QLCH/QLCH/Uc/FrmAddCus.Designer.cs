@@ -58,6 +58,7 @@
             // 
             // dtpBirthday
             // 
+            this.dtpBirthday.BackColor = System.Drawing.Color.Transparent;
             this.dtpBirthday.BaseColor = System.Drawing.Color.White;
             this.dtpBirthday.BorderColor = System.Drawing.Color.DimGray;
             this.dtpBirthday.CustomFormat = null;
@@ -74,6 +75,7 @@
             this.dtpBirthday.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpBirthday.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpBirthday.OnPressedColor = System.Drawing.Color.Black;
+            this.dtpBirthday.Radius = 7;
             this.dtpBirthday.Size = new System.Drawing.Size(128, 35);
             this.dtpBirthday.TabIndex = 56;
             this.dtpBirthday.Text = "7/5/2020";

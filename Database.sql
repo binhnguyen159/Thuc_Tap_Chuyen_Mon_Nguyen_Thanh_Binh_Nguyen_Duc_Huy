@@ -24,12 +24,7 @@ maHang nvarchar(50) primary key,
 tenHang nvarchar(50)
 )
 go
-create table chiTietSP(
-maSP nvarchar(50),
-soSerial nvarchar(50),
-color nvarchar(50),
-primary key (maSP,soSerial)
-)
+
 go
 create table nhaCungCap(
 maNCC nvarchar(50) primary key,
@@ -89,6 +84,16 @@ thanhTien float,
 primary key(maHDN,maSP)
 )
 go
+create table phieuBaoHanh(
+maPhieu nvarchar(50) primary key,
+maSP nvarchar(50),
+ngayLap date default getdate(),
+ngayKetThuc date,
+trThai nvarchar(50),
+noiDung nvarchar(50),
+)
+
+go
 create table hoadDonXuat(
 maHDX nvarchar(50) primary key,
 maNV nvarchar(50),
@@ -97,10 +102,9 @@ ngayBan date default getdate(),
 giamGia int default 0,
 tongTien float,
 trangThai nvarchar(50),
-
 )
 
---alter table hoadDonXuat add giamGia int default 0
+alter table hoadDonXuat add maPhieu nvarchar(50)
 go
 create table chiTietHDX(
 --machiTietHDX nvarchar(50) primary key,
@@ -166,5 +170,5 @@ alter table chiTietHDX add foreign key (maSP) references sanPham(maSP)
 go
 alter table chiTietHDX add foreign key (maHDX) references hoadDonXuat(maHDX)
 go
-alter table chiTietSP add foreign key (maSP) references sanPham(maSP)
-
+alter table phieuBaoHanh add foreign key (maSP) references sanPham(maSP)
+go

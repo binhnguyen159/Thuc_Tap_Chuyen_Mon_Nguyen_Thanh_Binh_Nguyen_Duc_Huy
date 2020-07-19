@@ -280,3 +280,5 @@ E:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH
 E:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.WareHouse.frmAmount.resources
 E:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.WareHouse.frmProduct.resources
 E:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.WareHouse.frmDetail_Import_Bill.resources
+E:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UC_Guarantee.resources
+E:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.UC_new_PhanViec.resources

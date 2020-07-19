@@ -151,6 +151,18 @@
     <Compile Include="Uc\FrmAddCus.Designer.cs">
       <DependentUpon>FrmAddCus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\UC_Guarantee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UC_Guarantee.Designer.cs">
+      <DependentUpon>UC_Guarantee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UC_new_PhanViec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UC_new_PhanViec.Designer.cs">
+      <DependentUpon>UC_new_PhanViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\WareHouse\frmAmount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +364,12 @@
     <EmbeddedResource Include="Uc\FrmAddCus.resx">
       <DependentUpon>FrmAddCus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UC_Guarantee.resx">
+      <DependentUpon>UC_Guarantee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UC_new_PhanViec.resx">
+      <DependentUpon>UC_new_PhanViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\frmAmount.resx">
       <DependentUpon>frmAmount.cs</DependentUpon>
     </EmbeddedResource>
@@ -541,6 +559,31 @@
     <None Include="Resources\icons8-delete.png" />
     <None Include="Resources\icons8-find-user-male-100.png" />
     <None Include="Resources\menu.png" />
+    <None Include="Resources\icons8-exit-100.png" />
+    <None Include="Resources\icons8-save-100.png" />
+    <None Include="Resources\icons8-save.png" />
+    <None Include="Resources\icons8-save-100ư.png" />
+    <None Include="Resources\icons8-add-basket-100 %281%29.png" />
+    <None Include="Resources\icons8-add-basket-100.png" />
+    <None Include="Resources\icons8-check-100 %281%29.png" />
+    <None Include="Resources\icons8-check-100.png" />
+    <None Include="Resources\icons8-add-shopping-cart-100.png" />
+    <None Include="Resources\icons8-add-shopping-cart-100 %281%29.png" />
+    <None Include="Resources\icons8-checked-100.png" />
+    <None Include="Resources\icons8-checked-100 %281%29.png" />
+    <None Include="Resources\icons8-paid-search-100.png" />
+    <None Include="Resources\icons8-update-100.png" />
+    <None Include="Resources\icons8-update-10011.png" />
+    <None Include="Resources\icons8-save-1002.png" />
+    <None Include="Resources\icons8-multiply-100.png" />
+    <None Include="Resources\icons8-process-100.png" />
+    <None Include="Resources\icons8-process-100 %281%29.png" />
+    <None Include="Resources\icons8-print-100 %281%29.png" />
+    <None Include="Resources\icons8-print-100.png" />
+    <None Include="Resources\icons8-search-100.png" />
+    <None Include="Resources\icons8-search-100 %281%29.png" />
+    <None Include="Resources\icons8-checkmark-100.png" />
+    <None Include="Resources\icons8-checkmark-100 %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -39,11 +39,14 @@
             this.tctDanhMuc = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pnlNCC = new Guna.UI.WinForms.GunaPanel();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pnlJob = new System.Windows.Forms.Panel();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tctDanhMuc.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -59,7 +62,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(957, 628);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Tài khoản";
+            this.tabPage3.Text = "Account";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // pnlTaiKhoan
@@ -79,7 +82,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(957, 628);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Khách hàng";
+            this.tabPage2.Text = "Customer";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pnlKhachhang
@@ -100,7 +103,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(957, 628);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Nhân viên";
+            this.tabPage1.Text = "Employee";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // pnlNhanVien
@@ -118,6 +121,7 @@
             this.tctDanhMuc.Controls.Add(this.tabPage2);
             this.tctDanhMuc.Controls.Add(this.tabPage3);
             this.tctDanhMuc.Controls.Add(this.tabPage4);
+            this.tctDanhMuc.Controls.Add(this.tabPage5);
             this.tctDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tctDanhMuc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tctDanhMuc.Location = new System.Drawing.Point(0, 0);
@@ -135,7 +139,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(957, 628);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Nhà cung cấp";
+            this.tabPage4.Text = "Provider";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // pnlNCC
@@ -145,6 +149,25 @@
             this.pnlNCC.Name = "pnlNCC";
             this.pnlNCC.Size = new System.Drawing.Size(951, 622);
             this.pnlNCC.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.pnlJob);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(957, 628);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Jobs";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // pnlJob
+            // 
+            this.pnlJob.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlJob.Location = new System.Drawing.Point(3, 3);
+            this.pnlJob.Name = "pnlJob";
+            this.pnlJob.Size = new System.Drawing.Size(951, 622);
+            this.pnlJob.TabIndex = 0;
             // 
             // Uc_DanhMuc
             // 
@@ -158,6 +181,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tctDanhMuc.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -174,5 +198,7 @@
         private System.Windows.Forms.TabControl tctDanhMuc;
         private System.Windows.Forms.TabPage tabPage4;
         private Guna.UI.WinForms.GunaPanel pnlNCC;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Panel pnlJob;
     }
 }

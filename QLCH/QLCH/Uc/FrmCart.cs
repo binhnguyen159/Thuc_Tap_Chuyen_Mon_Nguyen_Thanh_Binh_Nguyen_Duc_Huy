@@ -140,6 +140,11 @@ namespace QLCH.Uc
         {
             loadData_whenUpdateQuantity();
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

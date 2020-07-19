@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcBill_Sell));
             this.dataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +40,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCusName = new Guna.UI.WinForms.GunaLineTextBox();
@@ -63,6 +61,7 @@
             this.txtCusPhone = new Guna.UI.WinForms.GunaLineTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrintBill = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -208,33 +207,6 @@
             this.delete.Text = "Delete";
             this.delete.UseColumnTextForButtonValue = true;
             // 
-            // gunaGradientButton2
-            // 
-            this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton2.AnimationSpeed = 0.03F;
-            this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.gunaGradientButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton2.Image")));
-            this.gunaGradientButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton2.Location = new System.Drawing.Point(526, 283);
-            this.gunaGradientButton2.Name = "gunaGradientButton2";
-            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.OnHoverImage = null;
-            this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.Radius = 7;
-            this.gunaGradientButton2.Size = new System.Drawing.Size(106, 45);
-            this.gunaGradientButton2.TabIndex = 3;
-            this.gunaGradientButton2.Text = "Refresh";
-            this.gunaGradientButton2.Click += new System.EventHandler(this.gunaGradientButton2_Click);
-            // 
             // txtSearch
             // 
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -259,7 +231,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 42);
+            this.label2.Location = new System.Drawing.Point(62, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 19);
             this.label2.TabIndex = 0;
@@ -273,7 +245,7 @@
             this.txtCusName.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtCusName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCusName.LineColor = System.Drawing.Color.Black;
-            this.txtCusName.Location = new System.Drawing.Point(149, 37);
+            this.txtCusName.Location = new System.Drawing.Point(205, 37);
             this.txtCusName.Name = "txtCusName";
             this.txtCusName.PasswordChar = '\0';
             this.txtCusName.Size = new System.Drawing.Size(215, 26);
@@ -341,7 +313,7 @@
             this.txtCusEmail.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtCusEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCusEmail.LineColor = System.Drawing.Color.Black;
-            this.txtCusEmail.Location = new System.Drawing.Point(149, 187);
+            this.txtCusEmail.Location = new System.Drawing.Point(205, 187);
             this.txtCusEmail.Name = "txtCusEmail";
             this.txtCusEmail.PasswordChar = '\0';
             this.txtCusEmail.Size = new System.Drawing.Size(215, 26);
@@ -351,7 +323,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 192);
+            this.label8.Location = new System.Drawing.Point(61, 192);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 19);
             this.label8.TabIndex = 14;
@@ -461,7 +433,7 @@
             this.txtCusAddress.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtCusAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCusAddress.LineColor = System.Drawing.Color.Black;
-            this.txtCusAddress.Location = new System.Drawing.Point(149, 137);
+            this.txtCusAddress.Location = new System.Drawing.Point(205, 137);
             this.txtCusAddress.Name = "txtCusAddress";
             this.txtCusAddress.PasswordChar = '\0';
             this.txtCusAddress.Size = new System.Drawing.Size(215, 26);
@@ -471,7 +443,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 142);
+            this.label3.Location = new System.Drawing.Point(62, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 19);
             this.label3.TabIndex = 4;
@@ -485,7 +457,7 @@
             this.txtCusPhone.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtCusPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCusPhone.LineColor = System.Drawing.Color.Black;
-            this.txtCusPhone.Location = new System.Drawing.Point(149, 86);
+            this.txtCusPhone.Location = new System.Drawing.Point(205, 86);
             this.txtCusPhone.Name = "txtCusPhone";
             this.txtCusPhone.PasswordChar = '\0';
             this.txtCusPhone.Size = new System.Drawing.Size(215, 26);
@@ -495,7 +467,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 91);
+            this.label1.Location = new System.Drawing.Point(62, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 19);
             this.label1.TabIndex = 2;
@@ -506,27 +478,56 @@
             this.btnPrintBill.AnimationHoverSpeed = 0.07F;
             this.btnPrintBill.AnimationSpeed = 0.03F;
             this.btnPrintBill.BackColor = System.Drawing.Color.Transparent;
-            this.btnPrintBill.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.btnPrintBill.BaseColor2 = System.Drawing.Color.Fuchsia;
+            this.btnPrintBill.BaseColor1 = System.Drawing.Color.White;
+            this.btnPrintBill.BaseColor2 = System.Drawing.Color.White;
             this.btnPrintBill.BorderColor = System.Drawing.Color.Black;
+            this.btnPrintBill.BorderSize = 2;
             this.btnPrintBill.FocusedColor = System.Drawing.Color.Empty;
             this.btnPrintBill.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPrintBill.ForeColor = System.Drawing.Color.White;
-            this.btnPrintBill.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintBill.Image")));
+            this.btnPrintBill.ForeColor = System.Drawing.Color.Black;
+            this.btnPrintBill.Image = global::QLCH.Properties.Resources.icons8_print_100;
             this.btnPrintBill.ImageSize = new System.Drawing.Size(20, 20);
             this.btnPrintBill.Location = new System.Drawing.Point(638, 282);
             this.btnPrintBill.Name = "btnPrintBill";
-            this.btnPrintBill.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnPrintBill.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnPrintBill.OnHoverBaseColor1 = System.Drawing.Color.SlateBlue;
+            this.btnPrintBill.OnHoverBaseColor2 = System.Drawing.Color.MediumSpringGreen;
             this.btnPrintBill.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnPrintBill.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPrintBill.OnHoverImage = null;
+            this.btnPrintBill.OnHoverImage = global::QLCH.Properties.Resources.icons8_print_100__1_;
             this.btnPrintBill.OnPressedColor = System.Drawing.Color.Black;
             this.btnPrintBill.Radius = 7;
             this.btnPrintBill.Size = new System.Drawing.Size(106, 45);
             this.btnPrintBill.TabIndex = 18;
             this.btnPrintBill.Text = "Print Bill";
             this.btnPrintBill.Click += new System.EventHandler(this.gunaGradientButton3_Click);
+            // 
+            // gunaGradientButton2
+            // 
+            this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton2.AnimationSpeed = 0.03F;
+            this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.BorderSize = 2;
+            this.gunaGradientButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaGradientButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.Image = global::QLCH.Properties.Resources.icons8_process_100;
+            this.gunaGradientButton2.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton2.Location = new System.Drawing.Point(526, 283);
+            this.gunaGradientButton2.Name = "gunaGradientButton2";
+            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.SlateBlue;
+            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.MediumSpringGreen;
+            this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton2.OnHoverImage = global::QLCH.Properties.Resources.icons8_process_100__1_;
+            this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton2.Radius = 7;
+            this.gunaGradientButton2.Size = new System.Drawing.Size(106, 45);
+            this.gunaGradientButton2.TabIndex = 3;
+            this.gunaGradientButton2.Text = "Refresh";
+            this.gunaGradientButton2.Click += new System.EventHandler(this.gunaGradientButton2_Click);
             // 
             // UcBill_Sell
             // 

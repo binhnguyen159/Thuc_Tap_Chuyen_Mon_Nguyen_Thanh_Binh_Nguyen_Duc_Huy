@@ -824,4 +824,54 @@ begin
 end
 --exec CTHDN_Sel N'HDN000003'
 go
-
+create proc PV_Sel as
+begin
+	select nv.maNV, nv.tenNV, (select tenCV from congViec where congViec.maCV = nv.maCV) as 'tencv' from nhanVien nv
+	-- where cv.maCV = nv.maCV and nv.maCV is null
+end
+go
+--Thêm_Sửa
+create proc PV_Ins_Up (@nv nvarchar(50), @cv nvarchar(50)) as
+begin
+	Update nhanVien set maCV = @cv where maNV = @nv
+end
+go
+use TTCM
+go
+create proc phieuBaoHanh_insert (
+@maPhieu nvarchar(50),
+@maSP nvarchar(50),
+@ngaylap date,
+@ngayKetThuc date,
+@trThai nvarchar(50),
+@noiDung nvarchar(100)
+)
+as begin
+insert into phieuBaoHanh values (@maPhieu,@maSP,@ngaylap,@ngayKetThuc,@trThai,@noiDung)
+end
+go
+create proc phieuBaoHanh_update (
+@maPhieu nvarchar(50),
+@maSP nvarchar(50),
+@ngaylap date,
+@ngayKetThuc date,
+@trThai nvarchar(50),
+@noiDung nvarchar(100)
+)
+as begin
+update phieuBaoHanh set maSP=@maSP,ngayKetThuc=@ngayKetThuc,trThai=@trThai,noiDung=@noiDung where maPhieu=@maPhieu
+end
+go
+create proc Guarantee_info
+as begin
+select * from phieuBaoHanh bh,hoadDonXuat hd,chiTietHDX cthd,sanPham sp,khachHang kh
+where bh.maSP=sp.maSP and cthd.maSP=sp.maSP and cthd.maHDX=hd.maHDX and hd.maKH=kh.maKH
+end
+go
+create proc search_sp_by_bill(@maHD nvarchar(50))
+as begin
+select sp.maSP,sp.tenSP from sanPham sp, hoadDonXuat hd, chiTietHDX ct
+where sp.maSP=ct.maSP and ct.maHDX=hd.maHDX and hd.maHDX=@maHD
+end
+go
+exec search_sp_by_bill hdx000001
