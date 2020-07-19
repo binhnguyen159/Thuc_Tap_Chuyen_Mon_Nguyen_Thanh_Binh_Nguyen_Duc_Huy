@@ -37,7 +37,7 @@ go
 create table khachHang(
 maKH nvarchar(50) primary key,
 tenKH nvarchar(50),
-gioiTinh nvarchar(50) check ( gioiTinh in (N'Nam',N'Nữ')),
+gioiTinh nvarchar(50) check ( gioiTinh in (N'Male',N'Female')),
 ngSinh date,
 email nvarchar(50),
 diaChi nvarchar(50),
@@ -47,7 +47,7 @@ go
 create table nhanVien(
 maNV nvarchar(50) primary key,
 tenNV nvarchar(50),
-gioiTinh nvarchar(50) check ( gioiTinh in (N'Nam',N'Nữ')),
+gioiTinh nvarchar(50) check ( gioiTinh in (N'Male',N'Female')),
 ngSinh date,
 ngVaoLam date,
 email nvarchar(50),
@@ -55,8 +55,10 @@ diaChi nvarchar(50),
 sdt nvarchar(50),
 passWords nvarchar(50), 
 maCV nvarchar(50),
-tendn nvarchar(50)
+tendn nvarchar(50),
+trangThai nvarchar(50)
 )
+
 go
 create table congViec(
 maCV nvarchar(50) primary key,
@@ -71,8 +73,9 @@ maNCC nvarchar(50),
 ngayNhap date default getdate(),
 tongTien float,
 trangThai nvarchar(50),
+ghiChu nvarchar(100)
 )
---alter table hoadDonNhap add ngayNhap date default getdate()
+--alter table hoadDonNhap add ghiChu nvarchar(100)
 go
 create table chiTietHDN(
 --maCTHDN nvarchar(50) primary key,
@@ -104,7 +107,7 @@ tongTien float,
 trangThai nvarchar(50),
 )
 
-alter table hoadDonXuat add maPhieu nvarchar(50)
+--alter table hoadDonXuat add maPhieu nvarchar(50)
 go
 create table chiTietHDX(
 --machiTietHDX nvarchar(50) primary key,
@@ -115,8 +118,6 @@ soLuong int,
 thanhTien float,
 primary key(maHDX,maSP)
 )
-go
-use TTCM
 create table GioHang
 (
 	magio int identity  primary key,
@@ -132,20 +133,22 @@ create table CTGio(
 	thanhTien float
 
 )
-go 
-create table PhieuNhap(
-	maphieu nvarchar(50) primary key,
-	manv nvarchar(50),
-	ngLapPhieu date
-)
 go
-create table CTPhieuNhap(
-	maphieu nvarchar(50),
-	masp nvarchar(50),
-	sl int
+create table tam (thang int primary key,tien decimal)
+--go 
+--create table PhieuNhap(
+--	maphieu nvarchar(50) primary key,
+--	manv nvarchar(50),
+--	ngLapPhieu date
+--)
+--go
+--create table CTPhieuNhap(
+--	maphieu nvarchar(50),
+--	masp nvarchar(50),
+--	sl int
 
-	primary key (maphieu, masp)
-)
+--	primary key (maphieu, masp)
+--)
 
 go
 alter table nhanVien add foreign key(maCV) references congViec(maCV)

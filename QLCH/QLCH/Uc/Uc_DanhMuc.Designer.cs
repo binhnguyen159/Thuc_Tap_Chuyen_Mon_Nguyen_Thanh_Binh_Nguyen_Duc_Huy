@@ -176,6 +176,7 @@
             this.Controls.Add(this.tctDanhMuc);
             this.Name = "Uc_DanhMuc";
             this.Size = new System.Drawing.Size(965, 656);
+            this.Load += new System.EventHandler(this.Uc_DanhMuc_Load);
             this.tabPage3.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

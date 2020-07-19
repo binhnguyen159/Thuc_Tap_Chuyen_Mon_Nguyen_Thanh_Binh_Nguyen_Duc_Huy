@@ -19,21 +19,9 @@ namespace QLCH.Uc
         DataClasses1DataContext db = new DataClasses1DataContext();
         private void tctDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            nhanVien nv = db.nhanViens.Where(s => s.maNV == frmLogin.GetID.id).FirstOrDefault();
-            if (nv.maCV == "cv2")
-            {
-                pnlNhanVien.Visible = false;
-                pnlKhachhang.Visible = false;
-                pnlTaiKhoan.Visible = false;
-                pnlNCC.Visible = true;
-            }
-            else if (nv.maCV == "cv3")
-            {
-                pnlNhanVien.Visible = false;
-                pnlKhachhang.Visible = true;
-                pnlTaiKhoan.Visible = false;
-                pnlNCC.Visible = false;
-            }
+           
+            
+            
            
             switch (tctDanhMuc.SelectedIndex)
             {
@@ -74,6 +62,28 @@ namespace QLCH.Uc
                     }
             }
             
+        }
+
+        private void Uc_DanhMuc_Load(object sender, EventArgs e)
+        {
+            nhanVien nv = db.nhanViens.Where(s => s.maNV == frmLogin.GetID.id).FirstOrDefault();
+            if (nv.maCV == "cv2")
+            {
+                pnlNhanVien.Visible = false;
+                pnlKhachhang.Visible = false;
+                pnlTaiKhoan.Visible = false;
+                pnlNCC.Visible = true;
+            }
+            else if (nv.maCV == "cv3")
+            {
+                pnlNhanVien.Visible = false;
+                pnlKhachhang.Visible = true;
+                pnlTaiKhoan.Visible = false;
+                pnlNCC.Visible = false;
+            }
+            pnlNhanVien.Controls.Clear();
+            Uc_Employees uc_Employees = new Uc_Employees();
+            pnlNhanVien.Controls.Add(uc_Employees);
         }
     }
 }

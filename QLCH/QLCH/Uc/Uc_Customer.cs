@@ -74,7 +74,7 @@ namespace QLCH.Uc
                 txtID.Text = dgvCustomers.Rows[row].Cells[0].Value.ToString();
                 txtID.Text = dgvCustomers.Rows[row].Cells[0].Value.ToString();
                 txtName.Text = dgvCustomers.Rows[row].Cells[1].Value.ToString();
-                if (dgvCustomers.Rows[row].Cells[2].Value.ToString().Equals("Nam"))
+                if (dgvCustomers.Rows[row].Cells[2].Value.ToString().Equals("Male"))
                     rdbMale.Checked = true;
                 else
                     rdbFemale.Checked = true;
@@ -133,7 +133,7 @@ namespace QLCH.Uc
                             }
                             else
                             {
-                                int ma = 1;
+                                int ma = 0;
                                 string id = "";
 
                                 khachHang kkkh = db.khachHangs.OrderByDescending(s => s.maKH).FirstOrDefault();
@@ -151,7 +151,7 @@ namespace QLCH.Uc
                                     id = "KH0000" + ma;
                                 else if (ma / 10 < 1)
                                     id = "KH00000" + ma;
-                                db.KH_Ins("KH000001", txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                                db.KH_Ins(id, txtName.Text, gt, dtpBirthday.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
 
                             }
                             Uc_Customer_Load(sender, e);

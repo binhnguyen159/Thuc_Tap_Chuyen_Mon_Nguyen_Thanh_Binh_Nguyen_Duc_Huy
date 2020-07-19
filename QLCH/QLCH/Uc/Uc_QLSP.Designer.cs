@@ -30,8 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlGroupSP = new System.Windows.Forms.Panel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlHangSP = new System.Windows.Forms.Panel();
             this.tagpage3 = new System.Windows.Forms.TabPage();
             this.pnlProduct = new System.Windows.Forms.Panel();
@@ -47,6 +47,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tagpage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -65,6 +66,14 @@
             this.tabPage1.Text = "Group Product";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pnlGroupSP
+            // 
+            this.pnlGroupSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGroupSP.Location = new System.Drawing.Point(3, 3);
+            this.pnlGroupSP.Name = "pnlGroupSP";
+            this.pnlGroupSP.Size = new System.Drawing.Size(951, 622);
+            this.pnlGroupSP.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.pnlHangSP);
@@ -75,14 +84,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Brand Product";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pnlGroupSP
-            // 
-            this.pnlGroupSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGroupSP.Location = new System.Drawing.Point(3, 3);
-            this.pnlGroupSP.Name = "pnlGroupSP";
-            this.pnlGroupSP.Size = new System.Drawing.Size(951, 622);
-            this.pnlGroupSP.TabIndex = 0;
             // 
             // pnlHangSP
             // 

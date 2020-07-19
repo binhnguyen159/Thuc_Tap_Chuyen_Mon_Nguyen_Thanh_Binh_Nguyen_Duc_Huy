@@ -1,5 +1,10 @@
 ﻿use TTCM
 go
+
+
+CREATE FUNCTION [dbo].[fuConvertToUnsign1] ( @strInput NVARCHAR(4000) ) RETURNS NVARCHAR(4000) AS BEGIN IF @strInput IS NULL RETURN @strInput IF @strInput = '' RETURN @strInput DECLARE @RT NVARCHAR(4000) DECLARE @SIGN_CHARS NCHAR(136) DECLARE @UNSIGN_CHARS NCHAR (136) SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' DECLARE @COUNTER int DECLARE @COUNTER1 int SET @COUNTER = 1 WHILE (@COUNTER <=LEN(@strInput)) BEGIN SET @COUNTER1 = 1 WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) BREAK END SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END SET @strInput = replace(@strInput,' ','-') RETURN @strInput END
+
+go
 create proc addSP( @maSP nvarchar(50),
 @tenSP nvarchar(50),
 @gia float,
@@ -21,7 +26,7 @@ where n.maLoai=s.maLoai and h.maHang=s.maHang
 end
 
 go
-alter proc updateSP(
+create proc updateSP(
 @maSP nvarchar(50),
 @tenSP nvarchar(50),
 @gia float,
@@ -90,12 +95,13 @@ select * from nhanVien
 end
 --Thêm
 go
+
 create proc NV_Ins (
 @ma nvarchar(50), @ten nvarchar(50),
 @gt nvarchar(50), @ns date, @nvl date, 
 @ema nvarchar(50), @dc nvarchar(50), @sdt nvarchar(50)
 ) as begin
-insert into nhanVien values (@ma, @ten, @gt, @ns, @nvl, @ema, @dc, @sdt,null,null,null)
+insert into nhanVien values (@ma, @ten, @gt, @ns, @nvl, @ema, @dc, @sdt,null,null,null,N'Hide')
 end
 --Xóa
 go
@@ -157,8 +163,8 @@ create proc ACC_FindTenDN (@tdn nvarchar(50)) as
 begin
 	select maNV, tenNV, ngSinh, tendn from nhanVien where tendn like '%' + @tdn + '%'
 end
-exec acc_findId N'1'
-exec acc_FindTenDN N'h'
+--exec acc_findId N'1'
+--exec acc_FindTenDN N'h'
 go
 create proc select_cart(@maKH nvarchar(50))
 as begin
@@ -181,10 +187,10 @@ as begin
 select SUM(thanhTien) as 'a' from CTGio 
 end
 go
-use TTCM
+--use TTCM
 go
 
-alter proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
+create proc insert_cart(@maGio int,@maSP nvarchar(50),@soLuong int,@donGia float,@thanhTien float)
 as begin
 if(not exists(select * from CTGio where masp=@maSP))
 	begin
@@ -358,7 +364,7 @@ go
 use TTCM
 
 go
-alter proc delete_cart(@maGio int)
+create proc delete_cart(@maGio int)
 as begin
 delete CTGio where CTGio.magio=@maGio
 delete GioHang where GioHang.magio=@maGio
@@ -382,13 +388,13 @@ update hoadDonXuat set tongTien=@sum where maHDX=@MaHDX
 end
 go
 -- san pham select
-alter proc Product_select
+create proc Product_select
 as begin
 select sanPham.maSP,sanPham.tenSP,sanPham.gia,nhomSP.tenLoai from sanPham,nhomSP
 where sanPham.maLoai=nhomSP.maLoai
 end
 go
- alter proc bill_info (@maHdx nvarchar(50))
+ create proc bill_info (@maHdx nvarchar(50))
  as begin
  select hdx.maHDX,hdx.ngayBan,hdx.tongTien,hdx.trangThai,hdx.maKH,hdx.maNV,hdx.giamGia,
 		kh.tenKH,kh.email,kh.diaChi,kh.sdt,
@@ -409,7 +415,7 @@ go
 
  
  go
- alter proc thongKeDoanhThu
+ create proc thongKeDoanhThu
  as begin
 	drop  table if exists tam
 	create table tam (thang int primary key,tien decimal)
@@ -473,7 +479,7 @@ go
 
 --end
 go
-alter proc find_most_product_sale (@startDay date,@endDay date)
+create proc find_most_product_sale (@startDay date,@endDay date)
  as begin
 	select sp.maSP, sp.tenSP, SUM(cthdx.soLuong) as 'a'
 	from hoadDonXuat hdx, chiTietHDX cthdx, sanPham sp
@@ -482,7 +488,7 @@ alter proc find_most_product_sale (@startDay date,@endDay date)
 	group by sp.maSP, sp.tenSP
 	order by sp.maSP asc
  end
- exec find_most_product_sale '2020/07/18','2020/07/17'
+ --exec find_most_product_sale '2020/07/18','2020/07/17'
 
  go
  create proc HSP_Sel as
@@ -574,12 +580,9 @@ as begin
 	) as TableRow 
 	where TableRow.rownum between @from  and @to
 end
-go
-ex
-CREATE FUNCTION [dbo].[fuConvertToUnsign1] ( @strInput NVARCHAR(4000) ) RETURNS NVARCHAR(4000) AS BEGIN IF @strInput IS NULL RETURN @strInput IF @strInput = '' RETURN @strInput DECLARE @RT NVARCHAR(4000) DECLARE @SIGN_CHARS NCHAR(136) DECLARE @UNSIGN_CHARS NCHAR (136) SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' DECLARE @COUNTER int DECLARE @COUNTER1 int SET @COUNTER = 1 WHILE (@COUNTER <=LEN(@strInput)) BEGIN SET @COUNTER1 = 1 WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) BREAK END SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END SET @strInput = replace(@strInput,' ','-') RETURN @strInput END
 
 go
-exec SP_page 1, 50
+--exec SP_page 1, 50
 go
 create proc SP_Find (@from int, @to int, @data nvarchar(50))
 as begin
@@ -695,9 +698,10 @@ create proc HDN_Ins (
 	@mancc nvarchar(50),
 	@ngNhap date,
 	@tTien float,
-	@tThai nvarchar(50)) as
+	@tThai nvarchar(50),
+	@ghiChu nvarchar(100)) as
 begin
-	insert into hoadDonNhap values (@ma,@manv,@mancc,@tTien,@tThai,@ngNhap)
+	insert into hoadDonNhap values (@ma,@manv,@mancc,@ngNhap,@tTien,@tThai,@ghiChu)
 end
 go
 --xóa
@@ -735,7 +739,7 @@ begin
 	select @mahd = maHDN, @masp = maSP, 
 			@sl = soLuong, @gia=donGia from inserted
 	set @tt = @sl*@gia
-	update sanPham set soLuong +=@sl where maSP = @masp
+	--update sanPham set soLuong +=@sl where maSP = @masp
 	update chiTietHDN set thanhTien = @tt where maHDN = @mahd and maSP = @masp
 	update hoadDonNhap set tongTien = (
 		select SUM(thanhTien) from chiTietHDN where maHDN = @mahd
@@ -751,7 +755,7 @@ begin
 	declare @mahd nvarchar(50), @masp nvarchar(50),
 			@sl int, @gia float
 	select @mahd = maHDN, @masp = maSP, @sl = soLuong, @gia = donGia from deleted
-	update sanPham set soLuong -= @sl where maSP = @masp
+	--update sanPham set soLuong -= @sl where maSP = @masp
 	
 	if ((select COUNT(*) as a from chiTietHDN where maHDN = @mahd)=0)
 	begin
@@ -771,7 +775,7 @@ begin
 			@slm=soLuong,@gia=donGia from inserted
 	select @slc = soluong from deleted
 	set @tt = @slm * @gia
-	update sanPham set soLuong = soLuong - @slc + @slm where maSP = @masp
+	--update sanPham set soLuong = soLuong - @slc + @slm where maSP = @masp
 	update chiTietHDN set thanhTien = @tt where maHDN = @mahd and maSP = @masp
 	update hoadDonNhap set tongTien = (
 		select SUM(thanhTien) from chiTietHDN where maHDN = @mahd
@@ -874,4 +878,14 @@ select sp.maSP,sp.tenSP from sanPham sp, hoadDonXuat hd, chiTietHDX ct
 where sp.maSP=ct.maSP and ct.maHDX=hd.maHDX and hd.maHDX=@maHD
 end
 go
-exec search_sp_by_bill hdx000001
+--exec search_sp_by_bill hdx000001
+go
+alter proc NV_Del (@ma nvarchar(50)) 
+as begin
+update nhanVien set trangThai = 'Fired' where maNV = @ma
+end
+go
+create proc CV_Ins (@ma nvarchar(50), @ten nvarchar(50),@bl int) as
+begin
+	insert into congviec values (@ma, @ten, @bl)
+end

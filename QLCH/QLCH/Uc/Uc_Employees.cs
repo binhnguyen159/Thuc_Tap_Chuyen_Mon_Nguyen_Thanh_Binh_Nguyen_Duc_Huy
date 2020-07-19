@@ -48,9 +48,10 @@ namespace QLCH.Uc
                 return;
             else
             {
+
                 txtID.Text = dgvEmployees.Rows[i].Cells[0].Value.ToString();
                 txtName.Text = dgvEmployees.Rows[i].Cells[1].Value.ToString();
-                if (dgvEmployees.Rows[i].Cells[2].Value.ToString() == "Nam")
+                if (dgvEmployees.Rows[i].Cells[2].Value.ToString().Equals("Male"))
                     rdbMale.Checked = true;
                 else
                     rdbFemale.Checked = true;
@@ -59,6 +60,18 @@ namespace QLCH.Uc
                 txtEmail.Text = dgvEmployees.Rows[i].Cells[5].Value.ToString();
                 txtPhone.Text = dgvEmployees.Rows[i].Cells[6].Value.ToString();
                 txtAddress.Text = dgvEmployees.Rows[i].Cells[7].Value.ToString();
+                nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(txtID.Text)).FirstOrDefault();
+                nhanVien nv2 = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id)).FirstOrDefault();
+                if (nv2.maCV == "cv4")
+                    return;
+                if (nv.maCV == "cv4")
+                    btnDel.Visible = false;
+                else if (nv.maCV != "cv4")
+                {
+                    btnDel.Visible = true;
+                }
+                    
+                
             }
             
         }

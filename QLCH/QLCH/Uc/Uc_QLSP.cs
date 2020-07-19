@@ -19,7 +19,9 @@ namespace QLCH.Uc
 
         private void Uc_QLSP_Load(object sender, EventArgs e)
         {
-            
+            pnlGroupSP.Controls.Clear();
+            Uc_NSP nsp = new Uc_NSP();
+            pnlGroupSP.Controls.Add(nsp);
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)

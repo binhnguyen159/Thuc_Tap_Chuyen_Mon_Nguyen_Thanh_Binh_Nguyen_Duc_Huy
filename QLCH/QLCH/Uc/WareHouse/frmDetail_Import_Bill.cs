@@ -117,6 +117,8 @@ namespace QLCH.Uc.WareHouse
                 int sl =(int) sp.soLuong;
                 db.update_soluong(item.maSP, sl + item.soLuong);
             }
+            MessageBox.Show("Pay successful");
+            this.Close();
         }
     }
 }

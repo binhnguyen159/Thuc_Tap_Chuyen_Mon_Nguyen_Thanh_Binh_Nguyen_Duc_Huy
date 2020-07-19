@@ -84,7 +84,7 @@ namespace QLCH.Uc.WareHouse
             {
                 case 1:
                     {
-                        if (txtTenSP.Text == "" || txtGia.Text == "")
+                        if (txtTenSP.Text == "" || txtGia.Text == "" || cbbBrand.Text == "" || cbbType.Text == "")
                             MessageBox.Show("Please fill all information");
                         else
                         {
@@ -129,7 +129,8 @@ namespace QLCH.Uc.WareHouse
                     }
                 case 2:
                     {
-                        if (txtMaSP.Text == "" || txtTenSP.Text == "" || txtGia.Text == "" || rtxtParameter.Text == "")
+                        if (txtMaSP.Text == "" || txtTenSP.Text == "" || txtGia.Text == "" || rtxtParameter.Text == ""
+                            || cbbBrand.Text == "" || cbbType.Text == "")
                             MessageBox.Show("Please fill all information");
                         else
                         {

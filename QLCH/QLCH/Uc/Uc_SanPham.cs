@@ -580,6 +580,7 @@ namespace QLCH.Uc
         private void btnBill_Import_Click(object sender, EventArgs e)
         {
             btnBill_Import.Enabled = false;
+            Uc_Bill_Buy.GetData.trThai = "Unpaid";
             btnSeeBill.Visible = true;
             //btnAddProduct.Visible = false;
             ////btnImport.Visible = false;
@@ -638,8 +639,6 @@ namespace QLCH.Uc
         {
             if (e.RowIndex >= 0)
             {
-
-
                 if (dgvProduct.Columns[e.ColumnIndex].Name.Equals("ct"))
                 {
                     if (GetData.idBill == "")

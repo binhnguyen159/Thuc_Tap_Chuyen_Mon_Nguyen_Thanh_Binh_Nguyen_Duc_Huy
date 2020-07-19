@@ -55,8 +55,14 @@
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dtpNVL = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.btnAdd = new Guna.UI.WinForms.GunaButton();
+            this.btnDel = new Guna.UI.WinForms.GunaButton();
+            this.btnUp = new Guna.UI.WinForms.GunaButton();
+            this.btnFind = new Guna.UI.WinForms.GunaButton();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnHuy = new Guna.UI.WinForms.GunaButton();
+            this.btnLuu = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.chbSex = new System.Windows.Forms.CheckBox();
             this.chbNVL = new System.Windows.Forms.CheckBox();
@@ -68,12 +74,6 @@
             this.txtID = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnRefresh = new Guna.UI.WinForms.GunaButton();
-            this.btnHuy = new Guna.UI.WinForms.GunaButton();
-            this.btnLuu = new Guna.UI.WinForms.GunaButton();
-            this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.btnDel = new Guna.UI.WinForms.GunaButton();
-            this.btnUp = new Guna.UI.WinForms.GunaButton();
-            this.btnFind = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -380,6 +380,110 @@
             this.gunaGroupBox1.Text = "Function";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.AnimationHoverSpeed = 0.07F;
+            this.btnAdd.AnimationSpeed = 0.03F;
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BaseColor = System.Drawing.Color.White;
+            this.btnAdd.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.BorderSize = 2;
+            this.btnAdd.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Image = global::QLCH.Properties.Resources.icons8_checked_100;
+            this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAdd.Location = new System.Drawing.Point(22, 42);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAdd.OnHoverImage = global::QLCH.Properties.Resources.icons8_checked_100__1_;
+            this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAdd.Radius = 8;
+            this.btnAdd.Size = new System.Drawing.Size(91, 30);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.AnimationHoverSpeed = 0.07F;
+            this.btnDel.AnimationSpeed = 0.03F;
+            this.btnDel.BackColor = System.Drawing.Color.Transparent;
+            this.btnDel.BaseColor = System.Drawing.Color.White;
+            this.btnDel.BorderColor = System.Drawing.Color.Black;
+            this.btnDel.BorderSize = 2;
+            this.btnDel.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.Color.Black;
+            this.btnDel.Image = global::QLCH.Properties.Resources.icons8_delete_user_male_100;
+            this.btnDel.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDel.Location = new System.Drawing.Point(119, 42);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnDel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDel.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDel.OnHoverImage = global::QLCH.Properties.Resources.icons8_delete_user_male_100__1_;
+            this.btnDel.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDel.Radius = 8;
+            this.btnDel.Size = new System.Drawing.Size(85, 30);
+            this.btnDel.TabIndex = 7;
+            this.btnDel.Text = "Fired";
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnUp
+            // 
+            this.btnUp.AnimationHoverSpeed = 0.07F;
+            this.btnUp.AnimationSpeed = 0.03F;
+            this.btnUp.BackColor = System.Drawing.Color.Transparent;
+            this.btnUp.BaseColor = System.Drawing.Color.White;
+            this.btnUp.BorderColor = System.Drawing.Color.Black;
+            this.btnUp.BorderSize = 2;
+            this.btnUp.FocusedColor = System.Drawing.Color.Empty;
+            this.btnUp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp.ForeColor = System.Drawing.Color.Black;
+            this.btnUp.Image = global::QLCH.Properties.Resources.icons8_update_100;
+            this.btnUp.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnUp.Location = new System.Drawing.Point(22, 91);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnUp.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnUp.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnUp.OnHoverImage = global::QLCH.Properties.Resources.icons8_update_10011;
+            this.btnUp.OnPressedColor = System.Drawing.Color.Black;
+            this.btnUp.Radius = 8;
+            this.btnUp.Size = new System.Drawing.Size(91, 28);
+            this.btnUp.TabIndex = 8;
+            this.btnUp.Text = "Update";
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            // 
+            // btnFind
+            // 
+            this.btnFind.AnimationHoverSpeed = 0.07F;
+            this.btnFind.AnimationSpeed = 0.03F;
+            this.btnFind.BackColor = System.Drawing.Color.Transparent;
+            this.btnFind.BaseColor = System.Drawing.Color.White;
+            this.btnFind.BorderColor = System.Drawing.Color.Black;
+            this.btnFind.BorderSize = 2;
+            this.btnFind.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.Black;
+            this.btnFind.Image = global::QLCH.Properties.Resources.icons8_search_100;
+            this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFind.Location = new System.Drawing.Point(119, 91);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFind.OnHoverImage = global::QLCH.Properties.Resources.icons8_search_100__1_;
+            this.btnFind.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFind.Radius = 8;
+            this.btnFind.Size = new System.Drawing.Size(85, 28);
+            this.btnFind.TabIndex = 9;
+            this.btnFind.Text = "Find";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
             // gunaElipse2
             // 
             this.gunaElipse2.TargetControl = this;
@@ -393,6 +497,58 @@
             this.gunaPanel1.Size = new System.Drawing.Size(283, 69);
             this.gunaPanel1.TabIndex = 31;
             this.gunaPanel1.Visible = false;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.AnimationHoverSpeed = 0.07F;
+            this.btnHuy.AnimationSpeed = 0.03F;
+            this.btnHuy.BackColor = System.Drawing.Color.Transparent;
+            this.btnHuy.BaseColor = System.Drawing.Color.White;
+            this.btnHuy.BorderColor = System.Drawing.Color.Black;
+            this.btnHuy.BorderSize = 2;
+            this.btnHuy.FocusedColor = System.Drawing.Color.Empty;
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.Black;
+            this.btnHuy.Image = global::QLCH.Properties.Resources.icons8_delete_60;
+            this.btnHuy.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnHuy.Location = new System.Drawing.Point(163, 15);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnHuy.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnHuy.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnHuy.OnHoverImage = global::QLCH.Properties.Resources.icons8_multiply_100;
+            this.btnHuy.OnPressedColor = System.Drawing.Color.Black;
+            this.btnHuy.Radius = 8;
+            this.btnHuy.Size = new System.Drawing.Size(100, 38);
+            this.btnHuy.TabIndex = 9;
+            this.btnHuy.Text = "Cancel";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.AnimationHoverSpeed = 0.07F;
+            this.btnLuu.AnimationSpeed = 0.03F;
+            this.btnLuu.BackColor = System.Drawing.Color.Transparent;
+            this.btnLuu.BaseColor = System.Drawing.Color.White;
+            this.btnLuu.BorderColor = System.Drawing.Color.Black;
+            this.btnLuu.BorderSize = 2;
+            this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Black;
+            this.btnLuu.Image = global::QLCH.Properties.Resources.icons8_save_1002;
+            this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLuu.Location = new System.Drawing.Point(25, 15);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLuu.OnHoverImage = global::QLCH.Properties.Resources.icons8_save_100ư;
+            this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLuu.Radius = 8;
+            this.btnLuu.Size = new System.Drawing.Size(101, 38);
+            this.btnLuu.TabIndex = 8;
+            this.btnLuu.Text = "Save";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // gunaPanel2
             // 
@@ -543,162 +699,6 @@
             this.btnRefresh.TabIndex = 6;
             this.btnRefresh.Text = "Reload";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.AnimationHoverSpeed = 0.07F;
-            this.btnHuy.AnimationSpeed = 0.03F;
-            this.btnHuy.BackColor = System.Drawing.Color.Transparent;
-            this.btnHuy.BaseColor = System.Drawing.Color.White;
-            this.btnHuy.BorderColor = System.Drawing.Color.Black;
-            this.btnHuy.BorderSize = 2;
-            this.btnHuy.FocusedColor = System.Drawing.Color.Empty;
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.Black;
-            this.btnHuy.Image = global::QLCH.Properties.Resources.icons8_delete_60;
-            this.btnHuy.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHuy.Location = new System.Drawing.Point(163, 15);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnHuy.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnHuy.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnHuy.OnHoverImage = global::QLCH.Properties.Resources.icons8_multiply_100;
-            this.btnHuy.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHuy.Radius = 8;
-            this.btnHuy.Size = new System.Drawing.Size(100, 38);
-            this.btnHuy.TabIndex = 9;
-            this.btnHuy.Text = "Cancel";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.AnimationHoverSpeed = 0.07F;
-            this.btnLuu.AnimationSpeed = 0.03F;
-            this.btnLuu.BackColor = System.Drawing.Color.Transparent;
-            this.btnLuu.BaseColor = System.Drawing.Color.White;
-            this.btnLuu.BorderColor = System.Drawing.Color.Black;
-            this.btnLuu.BorderSize = 2;
-            this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Image = global::QLCH.Properties.Resources.icons8_save_1002;
-            this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(25, 15);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLuu.OnHoverImage = global::QLCH.Properties.Resources.icons8_save_100ư;
-            this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLuu.Radius = 8;
-            this.btnLuu.Size = new System.Drawing.Size(101, 38);
-            this.btnLuu.TabIndex = 8;
-            this.btnLuu.Text = "Save";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.AnimationHoverSpeed = 0.07F;
-            this.btnAdd.AnimationSpeed = 0.03F;
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BaseColor = System.Drawing.Color.White;
-            this.btnAdd.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.BorderSize = 2;
-            this.btnAdd.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Image = global::QLCH.Properties.Resources.icons8_checked_100;
-            this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(22, 42);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAdd.OnHoverImage = global::QLCH.Properties.Resources.icons8_checked_100__1_;
-            this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAdd.Radius = 8;
-            this.btnAdd.Size = new System.Drawing.Size(91, 30);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnDel
-            // 
-            this.btnDel.AnimationHoverSpeed = 0.07F;
-            this.btnDel.AnimationSpeed = 0.03F;
-            this.btnDel.BackColor = System.Drawing.Color.Transparent;
-            this.btnDel.BaseColor = System.Drawing.Color.White;
-            this.btnDel.BorderColor = System.Drawing.Color.Black;
-            this.btnDel.BorderSize = 2;
-            this.btnDel.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.ForeColor = System.Drawing.Color.Black;
-            this.btnDel.Image = global::QLCH.Properties.Resources.icons8_delete_user_male_100;
-            this.btnDel.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDel.Location = new System.Drawing.Point(119, 42);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnDel.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDel.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDel.OnHoverImage = global::QLCH.Properties.Resources.icons8_delete_user_male_100__1_;
-            this.btnDel.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDel.Radius = 8;
-            this.btnDel.Size = new System.Drawing.Size(85, 30);
-            this.btnDel.TabIndex = 7;
-            this.btnDel.Text = "Fired";
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnUp
-            // 
-            this.btnUp.AnimationHoverSpeed = 0.07F;
-            this.btnUp.AnimationSpeed = 0.03F;
-            this.btnUp.BackColor = System.Drawing.Color.Transparent;
-            this.btnUp.BaseColor = System.Drawing.Color.White;
-            this.btnUp.BorderColor = System.Drawing.Color.Black;
-            this.btnUp.BorderSize = 2;
-            this.btnUp.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.ForeColor = System.Drawing.Color.Black;
-            this.btnUp.Image = global::QLCH.Properties.Resources.icons8_update_100;
-            this.btnUp.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUp.Location = new System.Drawing.Point(22, 91);
-            this.btnUp.Name = "btnUp";
-            this.btnUp.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnUp.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUp.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnUp.OnHoverImage = global::QLCH.Properties.Resources.icons8_update_10011;
-            this.btnUp.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUp.Radius = 8;
-            this.btnUp.Size = new System.Drawing.Size(91, 28);
-            this.btnUp.TabIndex = 8;
-            this.btnUp.Text = "Update";
-            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
-            // 
-            // btnFind
-            // 
-            this.btnFind.AnimationHoverSpeed = 0.07F;
-            this.btnFind.AnimationSpeed = 0.03F;
-            this.btnFind.BackColor = System.Drawing.Color.Transparent;
-            this.btnFind.BaseColor = System.Drawing.Color.White;
-            this.btnFind.BorderColor = System.Drawing.Color.Black;
-            this.btnFind.BorderSize = 2;
-            this.btnFind.FocusedColor = System.Drawing.Color.Empty;
-            this.btnFind.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.Black;
-            this.btnFind.Image = global::QLCH.Properties.Resources.icons8_search_100;
-            this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFind.Location = new System.Drawing.Point(119, 91);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnFind.OnHoverImage = global::QLCH.Properties.Resources.icons8_search_100__1_;
-            this.btnFind.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFind.Radius = 8;
-            this.btnFind.Size = new System.Drawing.Size(85, 28);
-            this.btnFind.TabIndex = 9;
-            this.btnFind.Text = "Find";
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // Uc_Employees
             // 

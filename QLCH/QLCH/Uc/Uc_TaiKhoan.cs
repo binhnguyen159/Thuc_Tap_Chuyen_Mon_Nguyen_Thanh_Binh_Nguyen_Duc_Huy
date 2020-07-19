@@ -72,6 +72,7 @@ namespace QLCH.Uc
             dgvTaiKhoan.DataSource = db.ACC_Sel();
         }
         int i = 0;
+        
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             i = e.RowIndex;
@@ -129,6 +130,7 @@ namespace QLCH.Uc
         {
             string bodyemail = "Xin Chào " + tenNV + " Chúng Tôi Đã Nhận Được Yêu Cầu Cần Hổ Trợ Của Bạn: \n\n"
                                     + "\tChúng Tôi Sẽ cấp mật khẩu cho bạn\n"
+                                     + "\t\t=> Tên đăng nhập của bạn là: " + txtTenDN.Text + "\n"
                                     + "\t\t=> Mật khẩu Của Bạn Là: " + pass
                                     + "\nBạn có thể đổi mật khẩu trong phần đăng nhập của phần mềm";
 
@@ -149,7 +151,7 @@ namespace QLCH.Uc
                 smptClient.EnableSsl = true;
                 smptClient.Send(mail);
 
-                MessageBox.Show("Send, check your email " + tenNV, "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Sent the password by email successfull to: " + tenNV, "Note", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {
@@ -176,6 +178,10 @@ namespace QLCH.Uc
                                 SendMail(nv.tenNV, nv.email);
                                 db.ACC_Add(txtMaNV.Text, txtTenDN.Text, MaHoaMD5(pass));
                                 Uc_TaiKhoan_Load(sender, e);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Already have this username");
                             }
                         }
                         break;
