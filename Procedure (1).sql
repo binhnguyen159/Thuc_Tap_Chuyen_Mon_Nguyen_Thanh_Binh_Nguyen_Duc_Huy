@@ -889,3 +889,15 @@ create proc CV_Ins (@ma nvarchar(50), @ten nvarchar(50),@bl int) as
 begin
 	insert into congviec values (@ma, @ten, @bl)
 end
+go
+create proc bill_Import_info (@maHdn nvarchar(50))
+ as begin
+ select hdn.maHDN,hdn.ngayNhap,hdn.tongTien,hdn.trangThai, hdn.ghiChu,
+		hdn.maNCC, ncc.tenNCC,ncc.diaChi,ncc.email,ncc.sdt,
+		hdn.maNV,nv.tenNV,nv.sdt,
+		sp.tenSP,sp.thongSo,sp.gia,
+		ctHD.soLuong,ctHD.thanhTien,ctHD.maSP
+ from hoadDonNhap hdn,nhaCungCap ncc,nhanVien nv,sanPham sp,chiTietHDN ctHD
+ where hdn.maNCC=ncc.maNCC and hdn.maNV=nv.maNV
+		and hdn.maHDN=ctHD.maHDN and ctHD.maSP=sp.maSP and hdn.maHDN=@maHdn
+ end

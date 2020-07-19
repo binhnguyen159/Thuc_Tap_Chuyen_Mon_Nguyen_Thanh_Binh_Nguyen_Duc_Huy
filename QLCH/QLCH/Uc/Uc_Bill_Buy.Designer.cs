@@ -47,6 +47,8 @@
             this.lbNote = new System.Windows.Forms.Label();
             this.rtxtNote = new System.Windows.Forms.RichTextBox();
             this.btnSave = new Guna.UI.WinForms.GunaButton();
+            this.btnPrintBill = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBillBuy)).BeginInit();
             this.SuspendLayout();
             // 
@@ -288,7 +290,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Image = global::QLCH.Properties.Resources.icons8_save_100;
             this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(863, 601);
+            this.btnSave.Location = new System.Drawing.Point(863, 513);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
             this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -301,10 +303,65 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnPrintBill
+            // 
+            this.btnPrintBill.AnimationHoverSpeed = 0.07F;
+            this.btnPrintBill.AnimationSpeed = 0.03F;
+            this.btnPrintBill.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrintBill.BaseColor = System.Drawing.Color.White;
+            this.btnPrintBill.BorderColor = System.Drawing.Color.Black;
+            this.btnPrintBill.BorderSize = 2;
+            this.btnPrintBill.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPrintBill.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.ForeColor = System.Drawing.Color.Black;
+            this.btnPrintBill.Image = global::QLCH.Properties.Resources.icons8_print_100;
+            this.btnPrintBill.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPrintBill.Location = new System.Drawing.Point(858, 608);
+            this.btnPrintBill.Name = "btnPrintBill";
+            this.btnPrintBill.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.btnPrintBill.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPrintBill.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPrintBill.OnHoverImage = global::QLCH.Properties.Resources.icons8_print_100__1_;
+            this.btnPrintBill.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPrintBill.Radius = 8;
+            this.btnPrintBill.Size = new System.Drawing.Size(94, 42);
+            this.btnPrintBill.TabIndex = 16;
+            this.btnPrintBill.Text = "Print Bill";
+            this.btnPrintBill.Visible = false;
+            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
+            // 
+            // gunaButton2
+            // 
+            this.gunaButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaButton2.AnimationSpeed = 0.03F;
+            this.gunaButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton2.BaseColor = System.Drawing.Color.White;
+            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.BorderSize = 2;
+            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton2.Image = global::QLCH.Properties.Resources.icons8_new_post_100;
+            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton2.Location = new System.Drawing.Point(863, 561);
+            this.gunaButton2.Name = "gunaButton2";
+            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton2.OnHoverImage = global::QLCH.Properties.Resources.icons8_new_post_100__1_;
+            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton2.Radius = 8;
+            this.gunaButton2.Size = new System.Drawing.Size(82, 42);
+            this.gunaButton2.TabIndex = 17;
+            this.gunaButton2.Text = "Mail";
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
+            // 
             // Uc_Bill_Buy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gunaButton2);
+            this.Controls.Add(this.btnPrintBill);
             this.Controls.Add(this.lbNote);
             this.Controls.Add(this.rtxtNote);
             this.Controls.Add(this.dgvBillBuy);
@@ -341,5 +398,7 @@
         private System.Windows.Forms.Label lbNote;
         private System.Windows.Forms.RichTextBox rtxtNote;
         private Guna.UI.WinForms.GunaButton btnSave;
+        private Guna.UI.WinForms.GunaButton btnPrintBill;
+        private Guna.UI.WinForms.GunaButton gunaButton2;
     }
 }

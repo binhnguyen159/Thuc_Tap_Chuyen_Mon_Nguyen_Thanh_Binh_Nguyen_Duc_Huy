@@ -113,6 +113,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BillOfCus.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bill_Import_info.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bill_Import_info.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +325,12 @@
     <Compile Include="Uc\WareHouse\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\WareHouse\Frm_Import_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\WareHouse\Frm_Import_report.Designer.cs">
+      <DependentUpon>Frm_Import_report.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +442,10 @@
     <EmbeddedResource Include="Uc\WareHouse\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc\WareHouse\Frm_Import_report.resx">
+      <DependentUpon>Frm_Import_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\WareHouse\Report2.rdlc" />
     <None Include="BillOfCus.xsc">
       <DependentUpon>BillOfCus.xsd</DependentUpon>
     </None>
@@ -441,6 +456,17 @@
     </None>
     <None Include="BillOfCus.xss">
       <DependentUpon>BillOfCus.xsd</DependentUpon>
+    </None>
+    <None Include="bill_Import_info.xsc">
+      <DependentUpon>bill_Import_info.xsd</DependentUpon>
+    </None>
+    <None Include="bill_Import_info.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bill_Import_info.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bill_Import_info.xss">
+      <DependentUpon>bill_Import_info.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

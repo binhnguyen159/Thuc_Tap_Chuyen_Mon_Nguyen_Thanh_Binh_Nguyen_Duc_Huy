@@ -1127,3 +1127,4 @@ C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguy
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CopyComplete
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.exe
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.pdb
+C:\Users\Huyha\OneDrive\Desktop\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Uc.WareHouse.Frm_Import_report.resources

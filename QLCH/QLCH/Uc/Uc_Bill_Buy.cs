@@ -55,8 +55,10 @@ namespace QLCH.Uc
 
         private void dgvBillBuy_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnPrintBill.Visible = true;
             if (e.RowIndex >= 0)
             {
+                GetData.idBill = dgvBillBuy.Rows[e.RowIndex].Cells[0].Value.ToString();
                 GetData.trThai = dgvBillBuy.Rows[e.RowIndex].Cells[3].Value.ToString();
                 if (dgvBillBuy.Columns[e.ColumnIndex].Name.Equals("Column5"))
                 {
@@ -130,6 +132,18 @@ namespace QLCH.Uc
                 }
                 MessageBox.Show("Done");
             }
+        }
+
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+            Frm_Import_report report = new Frm_Import_report();
+            report.ShowDialog();
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            Frm_Mail mail = new Frm_Mail();
+            mail.ShowDialog();
         }
     }
 }
