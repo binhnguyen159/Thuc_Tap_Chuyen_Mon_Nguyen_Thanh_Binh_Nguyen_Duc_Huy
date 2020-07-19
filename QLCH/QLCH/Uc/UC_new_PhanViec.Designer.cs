@@ -148,6 +148,7 @@
             this.cbbJob.Name = "cbbJob";
             this.cbbJob.Size = new System.Drawing.Size(209, 21);
             this.cbbJob.TabIndex = 9;
+            this.cbbJob.SelectedIndexChanged += new System.EventHandler(this.cbbJob_SelectedIndexChanged);
             // 
             // txtID
             // 

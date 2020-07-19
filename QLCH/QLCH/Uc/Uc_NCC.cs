@@ -140,7 +140,7 @@ namespace QLCH.Uc
                             var ncc = from u in db.nhaCungCaps select u;
                             if (ncc.Count() == 0)
                             {
-                                db.NCC_Ins("NV000001", txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhone.Text);
+                                db.NCC_Ins("NCC000001", txtProviderName.Text, txtEmail.Text, txtAddress.Text, txtPhone.Text);
                             }
                             else
                             {
