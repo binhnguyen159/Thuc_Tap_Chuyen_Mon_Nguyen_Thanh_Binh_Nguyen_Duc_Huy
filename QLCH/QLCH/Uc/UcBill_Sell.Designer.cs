@@ -60,7 +60,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCusPhone = new Guna.UI.WinForms.GunaLineTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnMail = new Guna.UI.WinForms.GunaGradientButton();
             this.btnPrintBill = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -475,33 +475,34 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Customer\'s Phone";
             // 
-            // gunaGradientButton1
+            // btnMail
             // 
-            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.White;
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.BorderSize = 2;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Image = global::QLCH.Properties.Resources.icons8_new_post_100;
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(750, 281);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.SlateBlue;
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.MediumSpringGreen;
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = global::QLCH.Properties.Resources.icons8_new_post_100__1_;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Radius = 7;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(106, 45);
-            this.gunaGradientButton1.TabIndex = 19;
-            this.gunaGradientButton1.Text = "Mail";
-            this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
+            this.btnMail.AnimationHoverSpeed = 0.07F;
+            this.btnMail.AnimationSpeed = 0.03F;
+            this.btnMail.BackColor = System.Drawing.Color.Transparent;
+            this.btnMail.BaseColor1 = System.Drawing.Color.White;
+            this.btnMail.BaseColor2 = System.Drawing.Color.White;
+            this.btnMail.BorderColor = System.Drawing.Color.Black;
+            this.btnMail.BorderSize = 2;
+            this.btnMail.FocusedColor = System.Drawing.Color.Empty;
+            this.btnMail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMail.ForeColor = System.Drawing.Color.Black;
+            this.btnMail.Image = global::QLCH.Properties.Resources.icons8_new_post_100;
+            this.btnMail.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnMail.Location = new System.Drawing.Point(750, 281);
+            this.btnMail.Name = "btnMail";
+            this.btnMail.OnHoverBaseColor1 = System.Drawing.Color.SlateBlue;
+            this.btnMail.OnHoverBaseColor2 = System.Drawing.Color.MediumSpringGreen;
+            this.btnMail.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnMail.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnMail.OnHoverImage = global::QLCH.Properties.Resources.icons8_new_post_100__1_;
+            this.btnMail.OnPressedColor = System.Drawing.Color.Black;
+            this.btnMail.Radius = 7;
+            this.btnMail.Size = new System.Drawing.Size(106, 45);
+            this.btnMail.TabIndex = 19;
+            this.btnMail.Text = "Mail";
+            this.btnMail.Visible = false;
+            this.btnMail.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
             // btnPrintBill
             // 
@@ -564,7 +565,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gunaGradientButton1);
+            this.Controls.Add(this.btnMail);
             this.Controls.Add(this.btnPrintBill);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.gunaGradientButton2);
@@ -613,6 +614,6 @@
         private Guna.UI.WinForms.GunaLineTextBox txtCusPhone;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaGradientButton btnPrintBill;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private Guna.UI.WinForms.GunaGradientButton btnMail;
     }
 }

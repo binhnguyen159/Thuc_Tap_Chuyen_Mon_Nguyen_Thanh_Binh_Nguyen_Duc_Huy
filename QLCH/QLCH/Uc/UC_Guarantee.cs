@@ -76,7 +76,16 @@ namespace QLCH.Uc
                     }
                     else
                     {
-                        db.phieuBaoHanh_insert("pBH000001", cbSP.SelectedValue.ToString(), DateTime.Now, dateTimePic.Value, "Pending", rTxTInfo.Text);
+                        if (cbSP.SelectedValue == null)
+                        {
+                            MessageBox.Show("Please select product", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        else
+                        {
+                            db.phieuBaoHanh_insert("pBH000001", cbSP.SelectedValue.ToString(), DateTime.Now, dateTimePic.Value, "Pending", rTxTInfo.Text);
+
+                        }
 
                     }
                 }
@@ -108,7 +117,7 @@ namespace QLCH.Uc
                 }
             }
             if (choose == 2)
-            { 
+            {
                 if (dateTimePic.Value < DateTime.Now)
                 {
                     MessageBox.Show("Please select Expired day again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -143,6 +152,12 @@ namespace QLCH.Uc
             gunaGradientButton1.Enabled = true;
             gunaGradientButton2.Enabled = true;
             UC_Guarantee_Load(sender, e);
+            dataGridView2.Visible = false;
+        }
+
+        private void dataGridView2_MouseLeave(object sender, EventArgs e)
+        {
+            dataGridView2.Visible = false;
         }
     }
 }

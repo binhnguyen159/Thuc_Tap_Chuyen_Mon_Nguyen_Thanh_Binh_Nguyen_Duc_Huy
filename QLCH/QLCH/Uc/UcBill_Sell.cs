@@ -33,6 +33,7 @@ namespace QLCH.Uc
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnPrintBill.Visible = true;
+            btnMail.Visible = true;
             int i = dataGridView1.CurrentRow.Index;
             hoadDonXuat hdx = db.hoadDonXuats.Where(s => s.maHDX == dataGridView1.Rows[i].Cells[0].Value.ToString()).FirstOrDefault();
             tranferId.id = hdx.maHDX;
