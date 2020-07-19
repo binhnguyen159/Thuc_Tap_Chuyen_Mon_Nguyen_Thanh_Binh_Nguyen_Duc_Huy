@@ -125,15 +125,21 @@ namespace QLCH
                 
             }
             nhanVien nv = dt.nhanViens.Where(s => s.passWords.Equals(MaHoaMD5(txtPassword.Text))
-                                                     && s.tendn.Equals(txtAcount.Text) && s.trangThai != "Fired")
+                                                     && s.tendn.Equals(txtAcount.Text))// && s.trangThai != "Fired")
                                                      .FirstOrDefault();
             if (nv != null)
             {
-                GetID.id = nv.maNV;
-                frmFuction fuction = new frmFuction();
-                //FrmSale fuction = new FrmSale();
-                this.Hide();
-                fuction.ShowDialog();
+                if (nv.trangThai == "Fired")
+                    MessageBox.Show("Your account was block");
+                else
+                {
+                    GetID.id = nv.maNV;
+                    frmFuction fuction = new frmFuction();
+                    //FrmSale fuction = new FrmSale();
+                    this.Hide();
+                    fuction.ShowDialog();
+                }
+                
             }
 
             else

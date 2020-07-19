@@ -84,7 +84,7 @@ namespace QLCH.Uc
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::QLCH.Properties.Settings.Default.TTCMConnectionString1, mappingSource)
+				base(global::QLCH.Properties.Settings.Default.TTCMConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

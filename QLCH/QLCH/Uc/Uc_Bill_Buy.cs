@@ -107,7 +107,7 @@ namespace QLCH.Uc
                 GetData.idBill = idSp;
                 
                 var hdn = db.hoadDonNhaps.Where(s => s.maHDN.Equals(idSp)).FirstOrDefault();
-                rtxtNote.Text = hdn.ghiChu;
+                //rtxtNote.Text = hdn.ghiChu;
             }
         }
 
@@ -117,7 +117,7 @@ namespace QLCH.Uc
             if (hdn != null)
             {
                 hdn.trangThai = "Cancel";
-                hdn.ghiChu = rtxtNote.Text;
+                //hdn.ghiChu = rtxtNote.Text;
                 db.SubmitChanges();
                 Uc_Bill_Buy_Load(sender, e);
                 var cthdn = from u in db.chiTietHDNs.Where(s => s.maHDN == idSp)

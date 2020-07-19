@@ -151,6 +151,12 @@
     <Compile Include="Uc\FrmAddCus.Designer.cs">
       <DependentUpon>FrmAddCus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc\Frm_Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\Frm_Mail.designer.cs">
+      <DependentUpon>Frm_Mail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc\UC_Guarantee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -363,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\FrmAddCus.resx">
       <DependentUpon>FrmAddCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Frm_Mail.resx">
+      <DependentUpon>Frm_Mail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\UC_Guarantee.resx">
       <DependentUpon>UC_Guarantee.cs</DependentUpon>
