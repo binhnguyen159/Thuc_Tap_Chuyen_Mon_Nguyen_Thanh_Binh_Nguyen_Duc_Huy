@@ -10,6 +10,7 @@ Lớp: Công nghệ thông tin - K58
 - Sql server 2018
 - Bunifu framework
 - Gunua framework
+- Dev express
 ## Phần 2: Các chức năng đã hoàn thành
 1. Trình bày được các sản phẩm hiện đang có trong cửa hàng. (chia theo danh mục)
 2. Thêm sửa xóa sản phẩm.
@@ -21,35 +22,25 @@ Lớp: Công nghệ thông tin - K58
 8. Phân quyền tài khoản (admin, quản lý, nhân viên)
 9. Lưu trữ thông tin khách hàng qua số điện thoại (hoặc email). Tìm kiếm lịch sử mua hàng khách hàng thông qua thông tin khách hàng.
 10. Hoàn trả lại sản phẩm (khi bị các vấn đề về sản phẩm …). Chức năng giảm giá theo thời điểm.
-<<<<<<< HEAD
 11. Quản lý kho hàng.(thêm sản phẩm vào kho, nhập hàng, xem hóa đơn và chi tiết hóa đơn)
 12. Đóng gói phần mềm.
 13. Mã hóa mật khẩu bằng md5
 14. In hóa đơn, gửi hóa đơn về cho chủ cửa hàng
-=======
-<<<<<<< HEAD
-11. Quản lý kho hàng.(thêm sản phẩm vào kho, nhập hàng, xem hóa đơn và chi tiết hóa đơn)
-12. Đóng gói phần mềm.
-13. Mã hóa mật khẩu bằng md5
-14. In hóa đơn, gửi hóa đơn về cho chủ cửa hàng
-=======
-11. Quản lý kho hàng.
-12. Đóng gói phần mềm
-13. Mã hóa mật khẩu bằng md5
-14. Bắt nhập đúng định dạng mail 
->>>>>>> 47ad08fc574c61bf5d2559ea8097e370d38b5ebb
->>>>>>> 61a24cbedc2de2a5bb67dbae9fbfdeb7a746b758
+15. Bắt nhập đúng định dạng mail 
+
 ...
 ## Phần 3: Các chức năng chưa hoàn thành
 
 ...
 ## Hướng dẫn sử dụng
 - Tài khoản sẽ được cấp mặc định cho chủ cửa hàng là: admin, pass: 123
+- Nhân viên có thể được cấp tài khoản thông qua mục category->acount (nhưng trước hết cần lưu thông tin của nhân viên vào hệ thống category->employee).
+- Khi quên mật khẩu có thể bấm vào dòng chữ forgetpassword để xác nhận email của nhân viên và tên đăng nhập để xác nhận mã otp được gửi thông qua mail của nhân viên đó (Lưu ỳ: mã OTP này chỉ có thể dùng được sau 60s sau khi hệ thống đã gửi mail). Bấm vào dòng go change password để xác nhận mã OTP và mật khẩu mới. Nếu mã otp đúng và mật khẩu trùng nhau thì sẽ đổi được.
 - Trong phần Category: sẽ có 5 thông tin cần quản lý
 	+) Mỗi thông tin sẽ có chức năng thêm xóa sửa
 	+) Trước tiên cần bấm vào chức năng cần thực thi (Thêm xóa sửa)
 	+) Sau đó bấm nút save để lưu thông tin trong lần thực thi đó
-	+) Lần thực thi sẽ kết thúc khi bấm nút cancel
+	+) Lần thực thi sẽ kết thúc khi bấm nút cancel.
 - Trong phần Product Management: sẽ có chức năng là quản lý kho (gồm nhóm sản phẩm, hãng sản phẩm và sản phẩm)
 	+) Trước hết phải thêm nhóm sản phẩm và hãng sp để phân loại sản phẩm theo danh mục.
 	+) Muốn kinh doanh sản phẩm gì phải bấm nút add để thêm thông tin của sản phẩm đó.
@@ -60,7 +51,6 @@ Lớp: Công nghệ thông tin - K58
 	+)Khi đã kiểm tra xong hóa đơn và muốn thanh toán có thể bấm nút pay để thanh toán hoặc tắt bằng dấu X ở góc phải và chọn cancel trong phần sản phẩm để hủy hóa đơn.
 	+) Có thể xem danh sách hóa đơn nhập ở Mục Bill->Buy. Ở mục này cũng có nút select trong cột detail để xem chi tiết hóa đơn, tương tự như nút see bill ở trong mục sản phẩm
 	+) Nếu người đăng nhập là chủ cửa hàng, tức tài khoản chủ có thể hủy đơn hàng (trong trường hợp nhân viên nhập nhầm,...). Nếu không phải tài khoản chủ thì không thể thay đổi tình trạng hóa đơn.
-<<<<<<< HEAD
 - Trong phần Sale Product: sẽ có chức năng là tạo giỏ hàng cho khách hàng và chọn sản phẩm cần mua
 	+) Trước hết phải tìm khách hàng, nếu không có khách hàng thì bấm hình dấu cộng để lập thông tin cho khách hàng, sau đó chọn khách hàng và bấm create new cart.
 	+) Bấm add to cart để thêm sản phẩm vào giỏ hàng.
@@ -88,7 +78,5 @@ Lớp: Công nghệ thông tin - K58
 	+) Bấm update để cập nhật phiếu.
 	+) Bấm save để lưu phiếu.
 	+) Bấm cancel để hủy tác vụ.
-=======
->>>>>>> 61a24cbedc2de2a5bb67dbae9fbfdeb7a746b758
 Xin cám ơn!
 	
