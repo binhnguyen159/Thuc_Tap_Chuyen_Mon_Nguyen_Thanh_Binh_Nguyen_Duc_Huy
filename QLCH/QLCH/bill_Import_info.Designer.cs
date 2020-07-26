@@ -20,9 +20,9 @@ namespace QLCH {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("bill_Import_info")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Bill_import_info")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class bill_Import_info : global::System.Data.DataSet {
+    public partial class Bill_import_info : global::System.Data.DataSet {
         
         private bill_Import_infoDataTable tablebill_Import_info;
         
@@ -30,7 +30,7 @@ namespace QLCH {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bill_Import_info() {
+        public Bill_import_info() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace QLCH {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected bill_Import_info(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Bill_import_info(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -79,7 +79,7 @@ namespace QLCH {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public bill_Import_infoDataTable _bill_Import_info {
+        public bill_Import_infoDataTable bill_Import_info {
             get {
                 return this.tablebill_Import_info;
             }
@@ -127,7 +127,7 @@ namespace QLCH {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            bill_Import_info cln = ((bill_Import_info)(base.Clone()));
+            Bill_import_info cln = ((Bill_import_info)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace QLCH {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "bill_Import_info";
+            this.DataSetName = "Bill_import_info";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/bill_Import_info.xsd";
+            this.Namespace = "http://tempuri.org/Bill_import_info.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablebill_Import_info = new bill_Import_infoDataTable();
@@ -210,7 +210,7 @@ namespace QLCH {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerialize_bill_Import_info() {
+        private bool ShouldSerializebill_Import_info() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace QLCH {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            bill_Import_info ds = new bill_Import_info();
+            Bill_import_info ds = new Bill_import_info();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -680,8 +680,6 @@ namespace QLCH {
                 this.columnthongSo.MaxLength = 50;
                 this.columnmaSP.AllowDBNull = false;
                 this.columnmaSP.MaxLength = 50;
-                this.ExtendedProperties.Add("Generator_TablePropName", "_bill_Import_info");
-                this.ExtendedProperties.Add("Generator_UserTableName", "bill_Import_info");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -749,7 +747,7 @@ namespace QLCH {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                bill_Import_info ds = new bill_Import_info();
+                Bill_import_info ds = new Bill_import_info();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1356,7 +1354,7 @@ namespace QLCH {
         }
     }
 }
-namespace QLCH.bill_Import_infoTableAdapters {
+namespace QLCH.Bill_import_infoTableAdapters {
     
     
     /// <summary>
@@ -1506,7 +1504,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QLCH.Properties.Settings.Default.TTCMConnectionString1;
+            this._connection.ConnectionString = global::QLCH.Properties.Settings.Default.TTCMConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1525,7 +1523,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bill_Import_info.bill_Import_infoDataTable dataTable, string maHdn) {
+        public virtual int Fill(Bill_import_info.bill_Import_infoDataTable dataTable, string maHdn) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((maHdn == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1544,7 +1542,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bill_Import_info.bill_Import_infoDataTable GetData(string maHdn) {
+        public virtual Bill_import_info.bill_Import_infoDataTable GetData(string maHdn) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((maHdn == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1552,7 +1550,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(maHdn));
             }
-            bill_Import_info.bill_Import_infoDataTable dataTable = new bill_Import_info.bill_Import_infoDataTable();
+            Bill_import_info.bill_Import_infoDataTable dataTable = new Bill_import_info.bill_Import_infoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1626,7 +1624,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(bill_Import_info dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Bill_import_info dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1636,7 +1634,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(bill_Import_info dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Bill_import_info dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1646,7 +1644,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(bill_Import_info dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Bill_import_info dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1680,7 +1678,7 @@ namespace QLCH.bill_Import_infoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(bill_Import_info dataSet) {
+        public virtual int UpdateAll(Bill_import_info dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

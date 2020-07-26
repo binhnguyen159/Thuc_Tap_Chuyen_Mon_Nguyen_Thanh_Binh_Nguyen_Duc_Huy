@@ -33,9 +33,9 @@ namespace QLCH.Uc
         {
             string gt = "";
             if (rdbMale.Checked)
-                gt = "Nam";
+                gt = "Male";
             else
-                gt = "Nữ";
+                gt = "Female";
 
             if (txtAddress.Text == "" || txtEmail.Text == "" || txtName.Text == "" || txtPhone.Text == "")
             {

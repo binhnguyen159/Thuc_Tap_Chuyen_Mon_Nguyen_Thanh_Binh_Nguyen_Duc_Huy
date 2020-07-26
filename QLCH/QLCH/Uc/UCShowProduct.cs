@@ -146,7 +146,7 @@ namespace QLCH.Uc
             if (Convert.ToInt32(lbQuantity.Text) > 1)
             {
                 lbQuantity.Text = (sp.soLuong - Convert.ToInt32(numericSoLuong.Value)).ToString();
-
+                db.update_soluong(lbMa.Text, Convert.ToInt32(lbQuantity.Text));
             }
             else
             {
@@ -203,7 +203,7 @@ namespace QLCH.Uc
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            //this.Hide()
             FrmAddCus addCus = new FrmAddCus(load_data_after_add_customer);
             addCus.Show();
         }

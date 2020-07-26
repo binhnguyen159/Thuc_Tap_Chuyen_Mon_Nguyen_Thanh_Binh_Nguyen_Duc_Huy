@@ -24,6 +24,7 @@ namespace QLCH.Uc
             public static string idBill = "";
             public static string trThai = "";
         }
+        DateTime from = DateTime.Now, to = DateTime.Now;
         private void Uc_Bill_Buy_Load(object sender, EventArgs e)
         {
             nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id) && s.maCV == "cv4").FirstOrDefault();
@@ -37,9 +38,9 @@ namespace QLCH.Uc
                 rtxtNote.Enabled = true;
                 btnSave.Visible = true;
             }
-            DateTime from = DateTime.Now, to = DateTime.Now;
-            dtpFrom.Value = from;
-            dtpTo.Value = to;
+            
+            //dtpFrom.Value = from;
+            //dtpTo.Value = to;
             from = dtpFrom.Value;
             to = dtpTo.Value;
             //var locHD = db.hoadDonNhaps.Where(s => s.ngayNhap >= from && s.ngayNhap <= to);
@@ -55,7 +56,7 @@ namespace QLCH.Uc
 
         private void dgvBillBuy_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnPrintBill.Visible = true;
+            
             if (e.RowIndex >= 0)
             {
                 GetData.idBill = dgvBillBuy.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -104,6 +105,8 @@ namespace QLCH.Uc
         {
             if (e.RowIndex >= 0)
             {
+                btnPrintBill.Visible = true;
+                btnMail.Visible = true;
                 GetData.trThai = dgvBillBuy.Rows[e.RowIndex].Cells[3].Value.ToString();
                 idSp = dgvBillBuy.Rows[e.RowIndex].Cells[0].Value.ToString();
                 GetData.idBill = idSp;

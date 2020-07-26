@@ -127,6 +127,7 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(78, 173);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(333, 20);
             this.txtPass.TabIndex = 41;
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
@@ -231,6 +232,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Mail";
             this.Text = "Frm_Mail";
+            this.Load += new System.EventHandler(this.Frm_Mail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,8 +19,8 @@ namespace QLCH.Uc.WareHouse
 
         private void Frm_Import_report_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bill_Import_info.bill_Import_info' table. You can move, or remove it, as needed.
-            this.bill_Import_infoTableAdapter.Fill(this.bill_Import_info._bill_Import_info,Uc_Bill_Buy.GetData.idBill);
+            //// TODO: This line of code loads data into the 'bill_Import_info.bill_Import_info' table. You can move, or remove it, as needed.
+            this.bill_Import_infoTableAdapter.Fill(this.bill_import_info.bill_Import_info, Uc_Bill_Buy.GetData.idBill);
 
             this.reportViewer1.RefreshReport();
 

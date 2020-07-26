@@ -219,30 +219,6 @@
     <Parameter Name="maHang" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.bill_info" Method="bill_info">
-    <Parameter Name="maHdx" Type="System.String" DbType="NVarChar(50)" />
-    <ElementType Name="bill_infoResult">
-      <Column Name="maHDX" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="maNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="giamGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="sdt1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.bill_search" Method="bill_search">
     <Parameter Name="a" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="bill_searchResult">
@@ -951,6 +927,30 @@
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thongSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.bill_info" Method="bill_info">
+    <Parameter Name="maHdx" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="bill_infoResult">
+      <Column Name="maHDX" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ngayBan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="trangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="giamGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tenNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

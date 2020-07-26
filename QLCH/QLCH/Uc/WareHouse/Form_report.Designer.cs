@@ -30,32 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.bill_infoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.billOfCus = new QLCH.BillOfCus();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.billinfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bill_infoTableAdapter = new QLCH.BillOfCusTableAdapters.bill_infoTableAdapter();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bill_infoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.billOfCus)).BeginInit();
+            this.bill_of_cus = new QLCH.bill_of_cus();
+            this.billinfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bill_infoTableAdapter = new QLCH.bill_of_cusTableAdapters.bill_infoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bill_of_cus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billinfoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bill_infoBindingSource
-            // 
-            this.bill_infoBindingSource.DataMember = "bill_info";
-            this.bill_infoBindingSource.DataSource = this.billOfCus;
-            // 
-            // billOfCus
-            // 
-            this.billOfCus.DataSetName = "BillOfCus";
-            this.billOfCus.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.bill_infoBindingSource;
+            reportDataSource1.Value = this.billinfoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QLCH.Uc.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -63,15 +51,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(768, 706);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // billinfoBindingSource
-            // 
-            this.billinfoBindingSource.DataMember = "bill_info";
-            this.billinfoBindingSource.DataSource = this.billOfCus;
-            // 
-            // bill_infoTableAdapter
-            // 
-            this.bill_infoTableAdapter.ClearBeforeFill = true;
             // 
             // gunaControlBox1
             // 
@@ -88,6 +67,20 @@
             this.gunaControlBox1.Size = new System.Drawing.Size(45, 28);
             this.gunaControlBox1.TabIndex = 1;
             // 
+            // bill_of_cus
+            // 
+            this.bill_of_cus.DataSetName = "bill_of_cus";
+            this.bill_of_cus.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // billinfoBindingSource
+            // 
+            this.billinfoBindingSource.DataMember = "bill_info";
+            this.billinfoBindingSource.DataSource = this.bill_of_cus;
+            // 
+            // bill_infoTableAdapter
+            // 
+            this.bill_infoTableAdapter.ClearBeforeFill = true;
+            // 
             // Form_report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,8 +92,7 @@
             this.Name = "Form_report";
             this.Text = "Form_report";
             this.Load += new System.EventHandler(this.Form_report_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bill_infoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.billOfCus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bill_of_cus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billinfoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -109,10 +101,9 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource billinfoBindingSource;
-        private BillOfCus billOfCus;
-        private BillOfCusTableAdapters.bill_infoTableAdapter bill_infoTableAdapter;
-        private System.Windows.Forms.BindingSource bill_infoBindingSource;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
+        private System.Windows.Forms.BindingSource billinfoBindingSource;
+        private bill_of_cus bill_of_cus;
+        private bill_of_cusTableAdapters.bill_infoTableAdapter bill_infoTableAdapter;
     }
 }

@@ -395,11 +395,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=FormatNumber(Fields!gia.Value,0)</Value>
-                              <Style />
-                            </TextRun>
-                            <TextRun>
-                              <Value> VND</Value>
+                              <Value>=FormatCurrency(Fields!gia.Value,0)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -431,11 +427,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=FormatNumber(Fields!thanhTien.Value,0)</Value>
-                              <Style />
-                            </TextRun>
-                            <TextRun>
-                              <Value> VND</Value>
+                              <Value>=FormatCurrency(Fields!thanhTien.Value,0)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -570,13 +562,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!thanhTien.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>13pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value> VND</Value>
+                <Value>=FormatCurrency(Sum(Fields!thanhTien.Value, "DataSet1"),0)</Value>
                 <Style>
                   <FontSize>13pt</FontSize>
                 </Style>
@@ -701,13 +687,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!tongTien.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>18pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value> VND</Value>
+                <Value>=FormatCurrency(First(Fields!tongTien.Value, "DataSet1"),0)</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -1172,11 +1152,18 @@
       </ConnectionProperties>
       <rd:DataSourceID>b463c3a2-79a3-442d-ab6b-a7ff25cd0a49</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="bill_of_cus">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e5091d69-5ca9-48e6-8561-02f4a0f9f896</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>BillOfCus</DataSourceName>
+        <DataSourceName>bill_of_cus</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1203,6 +1190,10 @@
         <Field Name="maNV">
           <DataField>maNV</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="giamGia">
+          <DataField>giamGia</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="tenKH">
           <DataField>tenKH</DataField>
@@ -1252,14 +1243,10 @@
           <DataField>maSP</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="giamGia">
-          <DataField>giamGia</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BillOfCus</rd:DataSetName>
-        <rd:SchemaPath>E:\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\BillOfCus.xsd</rd:SchemaPath>
+        <rd:DataSetName>bill_of_cus</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\nguye\Desktop\New folder (7)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bill_of_cus.xsd</rd:SchemaPath>
         <rd:TableName>bill_info</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

@@ -20,10 +20,10 @@ namespace QLCH.Uc.WareHouse
         private void Form_report_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'billOfCus.bill_info' table. You can move, or remove it, as needed.
-            this.bill_infoTableAdapter.Fill(this.billOfCus.bill_info,UcBill_Sell.tranferId.id);
+            this.bill_infoTableAdapter.Fill(this.bill_of_cus.bill_info, UcBill_Sell.tranferId.id);
 
             this.reportViewer1.RefreshReport();
-          
+
         }
     }
 }

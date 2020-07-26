@@ -108,15 +108,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillOfCus.Designer.cs">
+    <Compile Include="Bill_import_info.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BillOfCus.xsd</DependentUpon>
+      <DependentUpon>Bill_import_info.xsd</DependentUpon>
     </Compile>
-    <Compile Include="bill_Import_info.Designer.cs">
+    <Compile Include="bill_of_cus.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bill_Import_info.xsd</DependentUpon>
+      <DependentUpon>bill_of_cus.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -446,27 +446,27 @@
       <DependentUpon>Frm_Import_report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc\WareHouse\Report2.rdlc" />
-    <None Include="BillOfCus.xsc">
-      <DependentUpon>BillOfCus.xsd</DependentUpon>
+    <None Include="Bill_import_info.xsc">
+      <DependentUpon>Bill_import_info.xsd</DependentUpon>
     </None>
-    <None Include="BillOfCus.xsd">
+    <None Include="Bill_import_info.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BillOfCus.Designer.cs</LastGenOutput>
+      <LastGenOutput>Bill_import_info.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BillOfCus.xss">
-      <DependentUpon>BillOfCus.xsd</DependentUpon>
+    <None Include="Bill_import_info.xss">
+      <DependentUpon>Bill_import_info.xsd</DependentUpon>
     </None>
-    <None Include="bill_Import_info.xsc">
-      <DependentUpon>bill_Import_info.xsd</DependentUpon>
+    <None Include="bill_of_cus.xsc">
+      <DependentUpon>bill_of_cus.xsd</DependentUpon>
     </None>
-    <None Include="bill_Import_info.xsd">
+    <None Include="bill_of_cus.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bill_Import_info.Designer.cs</LastGenOutput>
+      <LastGenOutput>bill_of_cus.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="bill_Import_info.xss">
-      <DependentUpon>bill_Import_info.xsd</DependentUpon>
+    <None Include="bill_of_cus.xss">
+      <DependentUpon>bill_of_cus.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

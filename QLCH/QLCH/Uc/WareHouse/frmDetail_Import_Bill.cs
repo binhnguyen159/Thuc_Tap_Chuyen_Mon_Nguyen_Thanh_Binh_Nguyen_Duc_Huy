@@ -61,7 +61,6 @@ namespace QLCH.Uc.WareHouse
         {
             this.Close();
         }
-        //int i = 0;
         string idSP = "";
         private void dgvCTPN_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -76,8 +75,6 @@ namespace QLCH.Uc.WareHouse
                 else
                     MessageBox.Show("Can not delete this bill because it was paid or cancel");
                 
-
-                //frm(Uc_WareHouse.GetData.from, Uc_WareHouse.GetData.to);
             }
             
 

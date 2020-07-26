@@ -28,7 +28,7 @@ namespace QLCH.Uc
         {
             Random r = new Random();
             int[] a = new int[5];
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 a[i] = r.Next(0, 9);
                 pass += a[i];
@@ -72,7 +72,7 @@ namespace QLCH.Uc
             dgvTaiKhoan.DataSource = db.ACC_Sel();
         }
         int i = 0;
-        
+
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             i = e.RowIndex;
@@ -89,7 +89,17 @@ namespace QLCH.Uc
                 nhanVien nv = db.nhanViens.Where(s => s.maNV.Equals(txtMaNV.Text)).FirstOrDefault();
                 nhanVien nv2 = db.nhanViens.Where(s => s.maNV.Equals(frmLogin.GetID.id)).FirstOrDefault();
                 if (nv2.maCV == "cv4")
-                    return;
+                {
+                    if (nv.tendn == "AdMin")
+                    {
+                        if (nv.tendn == "AdMin")
+                        {
+                            btnDrop.Visible = false;
+                            btnSetPass.Visible = false;
+                        }
+                    }
+                }
+
                 if (nv.maCV == "cv4")
                 {
                     btnDrop.Visible = false;
@@ -109,7 +119,7 @@ namespace QLCH.Uc
             GunaButton button = sender as GunaButton;
             if (button.Name.Equals("btnCreate"))
             {
-                
+
                 choose = 1;
                 btnDrop.Enabled = false;
                 btnSetPass.Enabled = false;
@@ -121,7 +131,7 @@ namespace QLCH.Uc
                 btnCreate.Enabled = false;
                 btnSetPass.Enabled = false;
             }
-                
+
             else if (button.Name.Equals("btnSetPass"))
             {
                 choose = 3;
@@ -189,7 +199,11 @@ namespace QLCH.Uc
                         else
                         {
                             if (nv.tendn != "" || nv.tendn != null)
-                                MessageBox.Show("This employee already have account");
+                            {
+                                SendMail(nv.tenNV, nv.email);
+                                db.ACC_Add(txtMaNV.Text, txtTenDN.Text, MaHoaMD5(pass));
+                                Uc_TaiKhoan_Load(sender, e);
+                            }
                             else if (nv2 == null)
                             {
                                 SendMail(nv.tenNV, nv.email);

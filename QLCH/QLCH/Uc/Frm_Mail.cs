@@ -110,5 +110,10 @@ namespace QLCH.Uc
         {
             this.Close();
         }
+
+        private void Frm_Mail_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

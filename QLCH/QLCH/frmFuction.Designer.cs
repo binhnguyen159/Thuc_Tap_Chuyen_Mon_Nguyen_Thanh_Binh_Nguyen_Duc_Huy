@@ -52,15 +52,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ptbBack = new Guna.UI.WinForms.GunaPictureBox();
             this.ptbExit = new Guna.UI.WinForms.GunaPictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlTab.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            this.pnlContent.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTab
@@ -407,6 +410,7 @@
             // pnlContent
             // 
             this.pnlContent.BackColor = System.Drawing.Color.White;
+            this.pnlContent.Controls.Add(this.pictureBox2);
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlContent.Location = new System.Drawing.Point(264, 51);
             this.pnlContent.Name = "pnlContent";
@@ -480,6 +484,17 @@
             this.ptbExit.TabStop = false;
             this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::QLCH.Properties.Resources.back1;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(965, 656);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmFuction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,10 +514,12 @@
             this.panelSubMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
+            this.pnlContent.ResumeLayout(false);
             this.gunaPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,5 +548,6 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaAdvenceButton btnGuarantee;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -78,7 +78,6 @@ ghiChu nvarchar(100)
 --alter table hoadDonNhap add ghiChu nvarchar(100)
 go
 create table chiTietHDN(
---maCTHDN nvarchar(50) primary key,
 maHDN nvarchar(50),
 maSP nvarchar(50),
 donGia float,
@@ -110,7 +109,6 @@ trangThai nvarchar(50),
 --alter table hoadDonXuat add maPhieu nvarchar(50)
 go
 create table chiTietHDX(
---machiTietHDX nvarchar(50) primary key,
 maHDX nvarchar(50),
 maSP nvarchar(50),
 donGia float,
@@ -131,8 +129,8 @@ create table CTGio(
 	soluong int,
 	donGia float,
 	thanhTien float
-
 )
+
 go
 create table tam (thang int primary key,tien decimal)
 --go 
