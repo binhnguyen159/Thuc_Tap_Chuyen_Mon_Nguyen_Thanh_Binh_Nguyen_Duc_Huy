@@ -43,6 +43,9 @@ namespace QLCH.Uc
                 tranferId.id = hdx.maHDX;
                 khachHang kh = db.khachHangs.Where(s => s.maKH == hdx.maKH).FirstOrDefault();
 
+            
+
+
                 txtCusName.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
                 txtCusPhone.Text = kh.sdt.ToString();
                 txtCusAddress.Text = kh.diaChi.ToString();

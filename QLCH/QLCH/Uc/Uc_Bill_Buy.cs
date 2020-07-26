@@ -56,7 +56,8 @@ namespace QLCH.Uc
 
         private void dgvBillBuy_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            btnPrintBill.Visible = true;
+            btnMail.Visible = true;
             if (e.RowIndex >= 0)
             {
                 GetData.idBill = dgvBillBuy.Rows[e.RowIndex].Cells[0].Value.ToString();

@@ -58,6 +58,7 @@
             this.dgvBillBuy.AllowUserToDeleteRows = false;
             this.dgvBillBuy.AllowUserToResizeColumns = false;
             this.dgvBillBuy.AllowUserToResizeRows = false;
+
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.dgvBillBuy.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBillBuy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -65,6 +66,7 @@
             this.dgvBillBuy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBillBuy.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBillBuy.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,6 +75,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBillBuy.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+
+
+
             this.dgvBillBuy.ColumnHeadersHeight = 21;
             this.dgvBillBuy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvBillBuy.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -82,6 +87,7 @@
             this.Column4,
             this.Column5,
             this.Column6});
+
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,6 +96,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBillBuy.DefaultCellStyle = dataGridViewCellStyle3;
+
             this.dgvBillBuy.EnableHeadersVisualStyles = false;
             this.dgvBillBuy.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.dgvBillBuy.Location = new System.Drawing.Point(13, 110);
