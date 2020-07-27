@@ -579,7 +579,7 @@ namespace QLCH.Uc
 
         private void btnBill_Import_Click(object sender, EventArgs e)
         {
-            btnBill_Import.Enabled = false;
+            //btnBill_Import.Enabled = false;
             Uc_Bill_Buy.GetData.trThai = "Unpaid";
             btnSeeBill.Visible = true;
             //btnAddProduct.Visible = false;
@@ -594,9 +594,12 @@ namespace QLCH.Uc
                 GetData.idBill = "HDN000001";
                 frmChooseProvider chooseProvider = new frmChooseProvider();
                 chooseProvider.ShowDialog();
+                //if (frmChooseProvider.GetData.idNCC == "")
+                //    btnBill_Import.Enabled = true;
                 if (frmChooseProvider.GetData.idNCC != "")
                 {
                     db.HDN_Ins("HDN000001", frmLogin.GetID.id, frmChooseProvider.GetData.idNCC, d, 0, "Unpaid","");
+                    btnBill_Import.Enabled = false;
                 }
             }
             else
@@ -627,7 +630,6 @@ namespace QLCH.Uc
 
         private void btnCanCle_Click(object sender, EventArgs e)
         {
-            
             btnBill_Import.Enabled = true;
             btnSeeBill.Visible = false;
             btnCanCle.Visible = false;

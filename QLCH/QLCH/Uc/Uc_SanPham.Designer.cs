@@ -313,7 +313,7 @@
             this.txtData.Location = new System.Drawing.Point(222, 85);
             this.txtData.Multiline = true;
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(447, 33);
+            this.txtData.Size = new System.Drawing.Size(447, 36);
             this.txtData.TabIndex = 43;
             // 
             // fpnlGroupSP
@@ -459,7 +459,7 @@
             this.btnFind.ForeColor = System.Drawing.Color.Black;
             this.btnFind.Image = global::QLCH.Properties.Resources.icons8_search_100;
             this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFind.Location = new System.Drawing.Point(397, 124);
+            this.btnFind.Location = new System.Drawing.Point(397, 141);
             this.btnFind.Name = "btnFind";
             this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
