@@ -393,6 +393,8 @@ namespace QLCH.Uc
         private void Uc_SanPham_Load(object sender, EventArgs e)
         {
             GetData.idBill = "";
+            btnCanCle.Enabled = false;
+            btnSeeBill.Enabled = false;
             //var nsp = from u in db.nhomSPs select u;
 
             //var hsp = from u in db.HangSPs select u;
@@ -579,12 +581,7 @@ namespace QLCH.Uc
 
         private void btnBill_Import_Click(object sender, EventArgs e)
         {
-            btnBill_Import.Enabled = false;
             Uc_Bill_Buy.GetData.trThai = "Unpaid";
-            btnSeeBill.Visible = true;
-            //btnAddProduct.Visible = false;
-            ////btnImport.Visible = false;
-            //btnBillImport.Enabled = false;
 
             //btnCancel.Visible = true;
             DateTime d = DateTime.Now;
@@ -594,9 +591,14 @@ namespace QLCH.Uc
                 GetData.idBill = "HDN000001";
                 frmChooseProvider chooseProvider = new frmChooseProvider();
                 chooseProvider.ShowDialog();
-                if (frmChooseProvider.GetData.idNCC != "")
+                if (frmChooseProvider.GetData.idNCC == "")
+                    btnBill_Import.Enabled = true;
+                else if (frmChooseProvider.GetData.idNCC != "")
                 {
                     db.HDN_Ins("HDN000001", frmLogin.GetID.id, frmChooseProvider.GetData.idNCC, d, 0, "Unpaid","");
+                    btnBill_Import.Enabled = false;
+                    btnSeeBill.Enabled = true;
+                    btnCanCle.Enabled = true;
                 }
             }
             else
@@ -618,19 +620,23 @@ namespace QLCH.Uc
                     GetData.idBill = "HDN00000" + stt;
                 frmChooseProvider chooseProvider = new frmChooseProvider();
                 chooseProvider.ShowDialog();
-                if (frmChooseProvider.GetData.idNCC != "")
+                if (frmChooseProvider.GetData.idNCC == "")
+                    btnBill_Import.Enabled = true;
+                else if (frmChooseProvider.GetData.idNCC != "")
                 {
                     db.HDN_Ins(GetData.idBill, frmLogin.GetID.id, frmChooseProvider.GetData.idNCC, d, 0, "Unpaid","");
+                    btnBill_Import.Enabled = false;
+                    btnSeeBill.Enabled = true;
+                    btnCanCle.Enabled = true;
                 }
             }
         }
 
         private void btnCanCle_Click(object sender, EventArgs e)
         {
-            
             btnBill_Import.Enabled = true;
-            btnSeeBill.Visible = false;
-            btnCanCle.Visible = false;
+            btnSeeBill.Enabled = false;
+            btnCanCle.Enabled = false;
             db.HDN_Del(GetData.idBill);
             GetData.idBill = "";
         }

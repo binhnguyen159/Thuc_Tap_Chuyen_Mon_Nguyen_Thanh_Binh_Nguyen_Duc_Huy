@@ -34,6 +34,7 @@ namespace QLCH.Uc.WareHouse
         private void ptbExit_Click(object sender, EventArgs e)
         {
             GetData.idNCC = "";
+            Uc_SanPham.GetData.idBill = "";
             this.Close();
         }
 

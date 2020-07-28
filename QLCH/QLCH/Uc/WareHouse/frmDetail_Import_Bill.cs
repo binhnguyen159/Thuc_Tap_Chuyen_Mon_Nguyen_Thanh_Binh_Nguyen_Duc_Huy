@@ -18,7 +18,10 @@ namespace QLCH.Uc.WareHouse
         public frmDetail_Import_Bill()
         {
             InitializeComponent();
-            
+        }
+        class GetData
+        {
+            public static int pay = 0;
         }
         public frmDetail_Import_Bill(fFRMLOAD2 frmm)
         {
