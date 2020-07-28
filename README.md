@@ -9,11 +9,7 @@ Lớp: Công nghệ thông tin - K58
 - Winform C#
 - Sql server 2018
 - Bunifu framework
-<<<<<<< HEAD
 - Guna framework
-=======
-- Gunua framework
->>>>>>> b50c49a50843adfe4e09bf73fabcb121f175495f
 - Dev express
 ## Phần 2: Các chức năng đã hoàn thành
 1. Trình bày được các sản phẩm hiện đang có trong cửa hàng. (chia theo danh mục)
@@ -30,15 +26,10 @@ Lớp: Công nghệ thông tin - K58
 12. Đóng gói phần mềm.
 13. Mã hóa mật khẩu bằng md5
 14. In hóa đơn, gửi hóa đơn về cho chủ cửa hàng
-<<<<<<< HEAD
 11. Quản lý kho hàng.
 12. Đóng gói phần mềm
 13. Mã hóa mật khẩu bằng md5
 14. Bắt nhập đúng định dạng mail 
-=======
-15. Bắt nhập đúng định dạng mail 
-
->>>>>>> b50c49a50843adfe4e09bf73fabcb121f175495f
 ...
 ## Phần 3: Các chức năng chưa hoàn thành
 
