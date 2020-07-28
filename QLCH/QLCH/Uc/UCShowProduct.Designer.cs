@@ -465,6 +465,7 @@
             this.btnCreateCart.Size = new System.Drawing.Size(97, 37);
             this.btnCreateCart.TabIndex = 63;
             this.btnCreateCart.Text = "New Cart";
+            this.btnCreateCart.Visible = false;
             this.btnCreateCart.Click += new System.EventHandler(this.btnCreateCart_Click);
             // 
             // bunifuImageButton1

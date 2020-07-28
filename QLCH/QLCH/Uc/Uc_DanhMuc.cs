@@ -73,6 +73,7 @@ namespace QLCH.Uc
                 pnlKhachhang.Visible = false;
                 pnlTaiKhoan.Visible = false;
                 pnlNCC.Visible = true;
+                pnlJob.Visible = false;
             }
             else if (nv.maCV == "cv3")
             {
@@ -80,6 +81,7 @@ namespace QLCH.Uc
                 pnlKhachhang.Visible = true;
                 pnlTaiKhoan.Visible = false;
                 pnlNCC.Visible = false;
+                pnlJob.Visible = false;
             }
             pnlNhanVien.Controls.Clear();
             Uc_Employees uc_Employees = new Uc_Employees();

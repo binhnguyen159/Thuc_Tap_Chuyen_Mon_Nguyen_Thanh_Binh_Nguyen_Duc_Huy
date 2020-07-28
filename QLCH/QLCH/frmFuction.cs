@@ -62,21 +62,7 @@ namespace QLCH
         //Boolean bill = false;
         private void btnBill_Click(object sender, EventArgs e)
         {
-            //bill = !bill;
-            //if (bill == true)
-            //{
-            //    btnBuy.Location = new Point(22, btnBill.Location.Y + btnBill.Height + 4);
-            //    btnSell.Location = new Point(22, btnBuy.Location.Y + btnBuy.Height + 4);
-            //    btnStatistical.Location = new Point(5, btnSell.Location.Y + btnSell.Height + 4);
-            //    btnBuy.Visible = true;
-            //    btnSell.Visible = true;
-            //}
-            //else
-            //{
-            //    btnBuy.Visible = false;
-            //    btnSell.Visible = false;
-            //    btnStatistical.Location = new Point(5, btnBill.Location.Y + btnBill.Height + 4);
-            //}
+            
             showSubPanel(panelSubMenu);
         }
 
@@ -128,7 +114,6 @@ namespace QLCH
             else
             {
                 btnStatistical.Visible = true;
-
                 btnSaleProduct.Visible = true;
                 btnProduct.Visible = true;
             }

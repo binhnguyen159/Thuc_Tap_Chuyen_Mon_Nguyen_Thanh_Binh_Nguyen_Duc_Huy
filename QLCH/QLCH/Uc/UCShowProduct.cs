@@ -127,6 +127,7 @@ namespace QLCH.Uc
                     pictureBox1.Image = image;
                 }
             }
+            numericSoLuong.Value = 0;
         }
 
 
@@ -167,6 +168,7 @@ namespace QLCH.Uc
             panelKH.Visible = true;
             dataGridView2.AutoGenerateColumns = false;
             dataGridView2.DataSource = db.khachHang_search(txtCusName.Text);
+            
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -176,7 +178,7 @@ namespace QLCH.Uc
             {
                 tranferIDBill.CusId = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtCusName.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-               
+                btnCreateCart.Visible = true;
                 panelKH.Visible = false;
             }
           
