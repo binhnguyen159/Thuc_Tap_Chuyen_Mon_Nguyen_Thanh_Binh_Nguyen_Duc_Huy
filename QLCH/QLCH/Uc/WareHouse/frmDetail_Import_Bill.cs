@@ -69,8 +69,8 @@ namespace QLCH.Uc.WareHouse
         {
             if (dgvCTPN.Columns[e.ColumnIndex].Name == "Column3")
             {
-                var hdn = db.hoadDonNhaps.Where(s => s.maHDN == lbBillID.Text && s.trangThai == "Unpaid");
-                if (hdn == null)
+                var hdn = db.hoadDonNhaps.Where(s => s.maHDN == lbBillID.Text && s.trangThai == "Unpaid").FirstOrDefault();
+                if (hdn != null)
                 {
                     db.CTHDN_Del(lbBillID.Text, idSP);
                     frmDetail_Import_Bill_Load(sender, e);

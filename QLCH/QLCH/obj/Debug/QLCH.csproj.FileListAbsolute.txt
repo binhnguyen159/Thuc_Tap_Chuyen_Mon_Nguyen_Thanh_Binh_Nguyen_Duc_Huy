@@ -235,7 +235,6 @@ C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguy
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.frmLogin.resources
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.FrmSale.resources
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
@@ -279,3 +278,4 @@ C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguy
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csproj.CopyComplete
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.exe
 C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.pdb
+C:\Users\nguye\Desktop\New folder (6)\Thuc_Tap_Chuyen_Mon_Nguyen_Thanh_Binh_Nguyen_Duc_Huy\QLCH\QLCH\obj\Debug\QLCH.csprojAssemblyReference.cache
