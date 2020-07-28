@@ -122,7 +122,7 @@ namespace QLCH
             if (nvad.Count() == 0)
             {
                // db.NV_Ins("NV000001", txtName.Text, gt, dtpBirthday.Value, dtpNVL.Value, txtEmail.Text, txtAddress.Text, txtPhone.Text);
-                dt.NV_Ins("NV000001", "", "Male", DateTime.Now, DateTime.Now, "gearharis@gmail.com", "", "");
+                dt.NV_Ins("NV000001", "Admin", "Male", DateTime.Now, DateTime.Now, "gearharis@gmail.com", "", "");
                 dt.ACC_Add("NV000001", "AdMin", MaHoaMD5("123"));
                 dt.PV_Ins_Up("NV000001", "cv4");
             }

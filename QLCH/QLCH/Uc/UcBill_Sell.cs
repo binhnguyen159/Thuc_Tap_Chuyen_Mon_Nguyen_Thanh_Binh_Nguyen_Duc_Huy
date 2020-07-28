@@ -31,33 +31,32 @@ namespace QLCH.Uc
             dataGridView1.DataSource = db.hdx_select();
         }
         string hd = "";
+  
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > 0)
+            if (e.RowIndex >= 0)
             {
                 btnPrintBill.Visible = true;
                 btnMail.Visible = true;
-                int i = dataGridView1.CurrentRow.Index;
-                hoadDonXuat hdx = db.hoadDonXuats.Where(s => s.maHDX == dataGridView1.Rows[i].Cells[0].Value.ToString()).FirstOrDefault();
-                hd = hdx.maHDX;
-                tranferId.id = hdx.maHDX;
+                //int i = dataGridView1.CurrentRow.Index;
+                hoadDonXuat hdx = db.hoadDonXuats.Where(s => s.maHDX == dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()).FirstOrDefault();
+                //tranferId.id = hdx.maHDX;
+                //hd = hdx.maHDX;
                 khachHang kh = db.khachHangs.Where(s => s.maKH == hdx.maKH).FirstOrDefault();
 
-            
 
-
-                txtCusName.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                txtCusName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtCusPhone.Text = kh.sdt.ToString();
                 txtCusAddress.Text = kh.diaChi.ToString();
                 txtCusEmail.Text = kh.email.ToString();
 
-                txtBillid.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                txtBillDate.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                txtBillStatus.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                txtBillid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtBillDate.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtBillStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-                txtStaffName.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                txtStaffName.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-                txtBillPrice.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                txtBillPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 
             }
             
@@ -111,18 +110,29 @@ namespace QLCH.Uc
         {
             if (e.RowIndex >= 0)
             {
+                hoadDonXuat hdx = db.hoadDonXuats.Where(s => s.maHDX == dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()).FirstOrDefault();
+                tranferId.id = hdx.maHDX;
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "detail")
                 {
+                    
                     Frm_Detail_Bill frm_Detail_Bill = new Frm_Detail_Bill();
                     frm_Detail_Bill.ShowDialog();
                 }
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "delete")
                 {
+                    //chiTietHDX ct = db.chiTietHDXes.Where(s => s.maHDX == hd).FirstOrDefault();
                     DialogResult result = MessageBox.Show("Are you sure ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
-                        // wtf:))
-                        db.update_status_hoadon(hd, "Cancel");
+                        
+                        db.update_status_hoadon(hdx.maHDX, "Cancel");
+                        db.update_tongtienHD(hdx.maHDX,0);
+                        foreach (var a in db.chiTietHDXes.Where(s => s.maHDX == hdx.maHDX))
+                        {
+                            sanPham sp = db.sanPhams.Where(s => s.maSP == a.maSP).FirstOrDefault();
+                            db.update_soluong(a.maSP, sp.soLuong + a.soLuong);
+                            db.update_chitiet(a.maHDX, 0, 0);
+                        }
                         UcBill_Sell_Load(sender, e);
                         
                     }

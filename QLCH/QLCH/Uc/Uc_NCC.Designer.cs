@@ -217,9 +217,9 @@
             this.cbbType.ForeColor = System.Drawing.Color.Black;
             this.cbbType.FormattingEnabled = true;
             this.cbbType.Items.AddRange(new object[] {
-            "Mã nhà cung cấp",
-            "Tên nhà cung cấp",
-            "Địa chỉ"});
+            "Provider\'s ID",
+            "Provider\'s Name",
+            "Provider\'s Address"});
             this.cbbType.Location = new System.Drawing.Point(218, 56);
             this.cbbType.Name = "cbbType";
             this.cbbType.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));

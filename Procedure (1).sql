@@ -294,9 +294,11 @@ go
  end 
 
  go 
- create proc hdx_select
+create proc hdx_select
  as begin
- select * from hoadDonXuat,khachHang,nhanVien 
+ select hoadDonXuat.maHDX,hoadDonXuat.ngayBan,hoadDonXuat.tongTien,hoadDonXuat.trangThai,
+ khachHang.tenKH,nhanVien.tenNV
+ from hoadDonXuat,khachHang,nhanVien 
  where hoadDonXuat.maKH=khachHang.maKH and hoadDonXuat.maNV=nhanVien.maNV
  end
  go
@@ -406,7 +408,7 @@ go
 		and hdx.maHDX=ctHD.maHDX and ctHD.maSP=sp.maSP and hdx.maHDX=@maHdx
  end
  go
- exec  bill_info N'hdx000003'
+ exec  bill_info N'hdx000001'
  go
  create proc update_soluong(@maSP nvarchar(50),@soLuong int)
  as begin
@@ -903,3 +905,13 @@ create proc bill_Import_info (@maHdn nvarchar(50))
 
  end
  exec bill_Import_info 'HDN000001'
+ go
+ create proc update_chitiet(@maHDX nvarchar(50),@soLuong int,@thanhTien float)
+ as begin
+ update chiTietHDX set soLuong=@soLuong,thanhTien=@thanhTien where maHDX=@maHDX
+ end
+go
+create proc update_tongtienHD(@maHDX nvarchar(50),@tongTien float)
+as begin
+update hoadDonXuat set tongTien=@tongTien where maHDX=@maHDX
+end

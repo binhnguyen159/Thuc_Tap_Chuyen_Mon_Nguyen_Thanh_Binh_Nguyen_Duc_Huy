@@ -22,6 +22,16 @@ namespace QLCH.Uc
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = db.bill_info(UcBill_Sell.tranferId.id);
             lbMaHDX.Text = UcBill_Sell.tranferId.id;
+            hoadDonXuat hdx = db.hoadDonXuats.Where(s => s.maHDX == UcBill_Sell.tranferId.id).FirstOrDefault();
+            lbStatus.Text = hdx.trangThai.ToString();
+            if (lbStatus.Text == "Cancel")
+            {
+                lbStatus.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbStatus.ForeColor = Color.Green;
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
