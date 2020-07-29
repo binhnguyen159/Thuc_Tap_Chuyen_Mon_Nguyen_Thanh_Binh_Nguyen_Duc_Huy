@@ -63,8 +63,10 @@ namespace QLCH.Uc.WareHouse
 
         private void ptbExit_Click(object sender, EventArgs e)
         {
+            
             GetData.sL = 0;
             this.Close();
+
         }
 
         private void txtGia_KeyPress(object sender, KeyPressEventArgs e)

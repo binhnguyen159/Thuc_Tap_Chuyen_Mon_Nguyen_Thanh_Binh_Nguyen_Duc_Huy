@@ -663,8 +663,11 @@ namespace QLCH.Uc
                         {
                             frmAmount amount = new frmAmount();
                             amount.ShowDialog();
-                            db.CTHDN_Ins(GetData.idBill, GetData.masp, frmAmount.GetData.gia, frmAmount.GetData.sL, 0);
-                            Uc_SP_Load(1);
+                            if (frmAmount.GetData.sL != 0 || frmAmount.GetData.gia != 0)
+                            {
+                                db.CTHDN_Ins(GetData.idBill, GetData.masp, frmAmount.GetData.gia, frmAmount.GetData.sL, 0);
+                                Uc_SP_Load(1);
+                            }
                         }
                     }
                 }
