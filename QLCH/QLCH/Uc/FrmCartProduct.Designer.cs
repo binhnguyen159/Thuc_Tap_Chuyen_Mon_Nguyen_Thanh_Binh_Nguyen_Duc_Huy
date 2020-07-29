@@ -69,6 +69,8 @@
             this.lbMaCTGio.Size = new System.Drawing.Size(14, 13);
             this.lbMaCTGio.TabIndex = 5;
             this.lbMaCTGio.Text = "1";
+            this.lbMaCTGio.Visible = false;
+            this.lbMaCTGio.Click += new System.EventHandler(this.lbMaCTGio_Click);
             // 
             // lbPriceDefault
             // 

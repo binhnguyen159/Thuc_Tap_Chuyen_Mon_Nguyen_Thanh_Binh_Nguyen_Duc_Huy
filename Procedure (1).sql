@@ -390,9 +390,9 @@ update hoadDonXuat set tongTien=@sum where maHDX=@MaHDX
 end
 go
 -- san pham select
-create proc Product_select
+alter proc Product_select
 as begin
-select sanPham.maSP,sanPham.tenSP,sanPham.gia,nhomSP.tenLoai from sanPham,nhomSP
+select sanPham.maSP,sanPham.tenSP,sanPham.gia,nhomSP.tenLoai, sanPham.soLuong from sanPham,nhomSP
 where sanPham.maLoai=nhomSP.maLoai
 end
 go
@@ -481,16 +481,17 @@ go
 
 --end
 go
-create proc find_most_product_sale (@startDay date,@endDay date)
+alter proc find_most_product_sale (@startDay date,@endDay date)
  as begin
 	select sp.maSP, sp.tenSP, SUM(cthdx.soLuong) as 'a'
 	from hoadDonXuat hdx, chiTietHDX cthdx, sanPham sp
-	where hdx.maHDX = cthdx.maHDX and sp.maSP = cthdx.maSP and hdx.trangThai = 'Priced'  
+	where hdx.maHDX = cthdx.maHDX and sp.maSP = cthdx.maSP
+	and hdx.trangThai = 'Paid'  
 	and hdx.ngayBan >= @startDay and hdx.ngayBan <= @endDay
 	group by sp.maSP, sp.tenSP
 	order by sp.maSP asc
  end
- --exec find_most_product_sale '2020/07/18','2020/07/17'
+ exec find_most_product_sale '2020/07/18','2020/07/30'
 
  go
  create proc HSP_Sel as
@@ -915,3 +916,5 @@ create proc update_tongtienHD(@maHDX nvarchar(50),@tongTien float)
 as begin
 update hoadDonXuat set tongTien=@tongTien where maHDX=@maHDX
 end
+
+exec find_most_product_sale '02-02-2020','09-09-2020'

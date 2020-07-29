@@ -347,15 +347,6 @@
     <Parameter Name="maSP" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.find_most_product_sale" Method="find_most_product_sale">
-    <Parameter Name="startDay" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="endDay" Type="System.DateTime" DbType="Date" />
-    <ElementType Name="find_most_product_saleResult">
-      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="a" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.Guarantee_info" Method="Guarantee_info">
     <ElementType Name="Guarantee_infoResult">
       <Column Name="maPhieu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
@@ -699,14 +690,6 @@
     <Parameter Name="ng" Type="System.DateTime" DbType="Date" />
     <Return Type="object" />
   </Function>
-  <Function Name="dbo.Product_select" Method="Product_select">
-    <ElementType Name="Product_selectResult">
-      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.PV_Ins_Up" Method="PV_Ins_Up">
     <Parameter Name="nv" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="cv" Type="System.String" DbType="NVarChar(50)" />
@@ -957,5 +940,23 @@
     <Parameter Name="maHDX" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="tongTien" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.find_most_product_sale" Method="find_most_product_sale">
+    <Parameter Name="startDay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="endDay" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="find_most_product_saleResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="a" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Product_select" Method="Product_select">
+    <ElementType Name="Product_selectResult">
+      <Column Name="maSP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

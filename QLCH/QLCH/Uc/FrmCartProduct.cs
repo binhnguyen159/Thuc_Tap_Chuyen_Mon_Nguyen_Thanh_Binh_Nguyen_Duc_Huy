@@ -43,7 +43,7 @@ namespace QLCH.Uc
                 db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
 
                 
-                db.update_soluong(idProduct, sp.soLuong + Convert.ToInt32(lbNumber.Text));
+                //db.update_soluong(idProduct, sp.soLuong + Convert.ToInt32(lbNumber.Text));
 
 
                 ldd();
@@ -63,7 +63,7 @@ namespace QLCH.Uc
 
                 db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text), Convert.ToDouble(lbPrice.Text));
                 sanPham sp = db.sanPhams.Where(s => s.maSP == idProduct).FirstOrDefault();
-                db.update_soluong(idProduct, sp.soLuong + Convert.ToInt32(lbNumber.Text));
+                //db.update_soluong(idProduct, sp.soLuong + Convert.ToInt32(lbNumber.Text));
                 ldd();
 
                 ////db.update_SoLuongGio(Convert.ToInt32(lbMaCTGio.Text), Convert.ToInt32(lbNumber.Text));
@@ -117,6 +117,11 @@ namespace QLCH.Uc
             {
                 e.Handled = true;
             }
+        }
+
+        private void lbMaCTGio_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

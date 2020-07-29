@@ -30,7 +30,6 @@ namespace QLCH.Uc
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = db.hdx_select();
         }
-        string hd = "";
   
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
